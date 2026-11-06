@@ -1,0 +1,85 @@
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-integracion}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-integracion_dev}
+      POSTGRES_DB: postgres
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./infra/postgres/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d postgres"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  despachos:
+    build: ./despachos
+    environment:
+      SERVER_PORT: 8080
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/despachos
+      SPRING_DATASOURCE_USERNAME: ${POSTGRES_USER:-integracion}
+      SPRING_DATASOURCE_PASSWORD: ${POSTGRES_PASSWORD:-integracion_dev}
+      INVENTARIO_URL: http://inventario:8080
+      TRANSPORTISTA_URL: http://transportista:8080
+      TRACKING_URL: http://tracking:8080
+    depends_on:
+      postgres: { condition: service_healthy }
+    expose: ["8080"]
+
+  inventario:
+    build: ./inventario
+    environment:
+      SERVER_PORT: 8080
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/inventario
+      SPRING_DATASOURCE_USERNAME: ${POSTGRES_USER:-integracion}
+      SPRING_DATASOURCE_PASSWORD: ${POSTGRES_PASSWORD:-integracion_dev}
+    depends_on:
+      postgres: { condition: service_healthy }
+    expose: ["8080"]
+
+  transportista:
+    build: ./transportista
+    environment:
+      SERVER_PORT: 8080
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/transportista
+      SPRING_DATASOURCE_USERNAME: ${POSTGRES_USER:-integracion}
+      SPRING_DATASOURCE_PASSWORD: ${POSTGRES_PASSWORD:-integracion_dev}
+    depends_on:
+      postgres: { condition: service_healthy }
+    expose: ["8080"]
+
+  tracking:
+    build: ./tracking
+    environment:
+      SERVER_PORT: 8080
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/tracking
+      SPRING_DATASOURCE_USERNAME: ${POSTGRES_USER:-integracion}
+      SPRING_DATASOURCE_PASSWORD: ${POSTGRES_PASSWORD:-integracion_dev}
+    depends_on:
+      postgres: { condition: service_healthy }
+    expose: ["8080"]
+
+  bff:
+    build: ./bff
+    environment:
+      SERVER_PORT: 8080
+      DESPACHOS_URL: http://despachos:8080
+      INVENTARIO_URL: http://inventario:8080
+    depends_on: [despachos, inventario]
+    expose: ["8080"]
+
+  gateway:
+    build: ./gateway
+    environment:
+      SERVER_PORT: 8080
+      BFF_URL: http://bff:8080
+      DESPACHOS_URL: http://despachos:8080
+    depends_on: [bff, despachos]
+    ports: ["8080:8080"]
+
+volumes:
+  postgres_data:
