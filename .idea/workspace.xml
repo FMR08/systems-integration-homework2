@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ed2a7798-3b67-4fa4-b3e6-bd23a6c924eb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/inventario/src/main/java/cl/edu/integracion/inventario/controller/InventarioController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventario/src/main/java/cl/edu/integracion/inventario/dto/ReservaRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventario/src/main/java/cl/edu/integracion/inventario/dto/ReservaResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventario/src/main/java/cl/edu/integracion/inventario/model/Inventario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventario/src/main/java/cl/edu/integracion/inventario/repository/InventarioRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventario/src/main/java/cl/edu/integracion/inventario/service/InventarioService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventario/src/test/java/cl/edu/integracion/inventario/controller/InventarioControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tracking/src/main/java/cl/edu/integracion/tracking/controller/TrackingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tracking/src/main/java/cl/edu/integracion/tracking/dto/TrackingRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tracking/src/main/java/cl/edu/integracion/tracking/dto/TrackingResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tracking/src/main/java/cl/edu/integracion/tracking/model/TrackingEnvio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tracking/src/main/java/cl/edu/integracion/tracking/repository/TrackingRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tracking/src/main/java/cl/edu/integracion/tracking/service/TrackingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transportista/src/main/java/cl/edu/integracion/transportista/controller/TransporteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transportista/src/main/java/cl/edu/integracion/transportista/dto/TransporteRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transportista/src/main/java/cl/edu/integracion/transportista/dto/TransporteResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transportista/src/main/java/cl/edu/integracion/transportista/model/RetiroTransporte.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transportista/src/main/java/cl/edu/integracion/transportista/repository/TransporteRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transportista/src/main/java/cl/edu/integracion/transportista/service/TransporteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bff/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bff/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bff/src/main/java/cl/edu/integracion/bff/BffApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bff/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/despachos/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/despachos/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/despachos/src/main/java/cl/edu/integracion/despachos/DespachosApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/despachos/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/cl/edu/integracion/gateway/GatewayApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/inventario/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/inventario/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tracking/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tracking/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tracking/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/tracking/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transportista/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/transportista/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transportista/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/transportista/src/main/resources/application.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1,
+  "fromUser": false
+}]]></component>
+  <component name="ProjectId" id="3LpvVMMeMo0pZMTUJVidjKSparx" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.InventarioControllerTest.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/akmak/Documentos/GitHub/systems-integration-homework2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="InventarioControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="inventario" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cl.edu.integracion.inventario.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cl.edu.integracion.inventario.controller" />
+      <option name="MAIN_CLASS_NAME" value="cl.edu.integracion.inventario.controller.InventarioControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.InventarioControllerTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-a203e0a19954-intellij.indexing.shared.core-IU-262.10968.63" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.10968.63" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ed2a7798-3b67-4fa4-b3e6-bd23a6c924eb" name="Changes" comment="" />
+      <created>1794163846679</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1794163846679</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
