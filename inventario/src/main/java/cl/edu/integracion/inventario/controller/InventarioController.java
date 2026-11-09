@@ -5,6 +5,7 @@ import cl.edu.integracion.inventario.dto.ReservaResponse;
 import cl.edu.integracion.inventario.service.InventarioService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
 @RestController
 @RequestMapping("/api/inventory")
@@ -18,21 +19,24 @@ public class InventarioController {
 
     @PostMapping("/reserve")
     public ResponseEntity<ReservaResponse> reservar(@RequestBody ReservaRequest request) {
-        boolean exito = inventarioService.reservarStock(request.getProductoId(), request.getCantidad());
-        if (exito) {
-            return ResponseEntity.ok(new ReservaResponse(true, "Stock reservado exitosamente", request.getTransaccionId()));
-        } else {
-            return ResponseEntity.badRequest().body(new ReservaResponse(false, "Stock insuficiente", request.getTransaccionId()));
+        try {
+            String msg = inventarioService.reservarStock(
+                    request.getTransaccionId(), request.getProductoId(), request.getCantidad());
+            return ResponseEntity.ok(new ReservaResponse(true, msg, request.getTransaccionId()));
+        } catch (ResponseStatusException e) {
+            return ResponseEntity.status(e.getStatusCode())
+                    .body(new ReservaResponse(false, e.getReason(), request.getTransaccionId()));
         }
     }
 
     @PostMapping("/release")
     public ResponseEntity<ReservaResponse> liberar(@RequestBody ReservaRequest request) {
         try {
-            inventarioService.liberarStock(request.getProductoId(), request.getCantidad());
-            return ResponseEntity.ok(new ReservaResponse(true, "Stock liberado (compensación aplicada)", request.getTransaccionId()));
-        } catch (Exception e) {
-            return ResponseEntity.badRequest().body(new ReservaResponse(false, e.getMessage(), request.getTransaccionId()));
+            String msg = inventarioService.liberarStock(request.getTransaccionId());
+            return ResponseEntity.ok(new ReservaResponse(true, msg, request.getTransaccionId()));
+        } catch (ResponseStatusException e) {
+            return ResponseEntity.status(e.getStatusCode())
+                    .body(new ReservaResponse(false, e.getReason(), request.getTransaccionId()));
         }
     }
 }
