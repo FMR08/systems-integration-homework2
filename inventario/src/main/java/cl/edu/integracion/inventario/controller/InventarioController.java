@@ -19,24 +19,14 @@ public class InventarioController {
 
     @PostMapping("/reserve")
     public ResponseEntity<ReservaResponse> reservar(@RequestBody ReservaRequest request) {
-        try {
-            String msg = inventarioService.reservarStock(
-                    request.getTransaccionId(), request.getProductoId(), request.getCantidad());
-            return ResponseEntity.ok(new ReservaResponse(true, msg, request.getTransaccionId()));
-        } catch (ResponseStatusException e) {
-            return ResponseEntity.status(e.getStatusCode())
-                    .body(new ReservaResponse(false, e.getReason(), request.getTransaccionId()));
-        }
+        String msg = inventarioService.reservarStock(
+                request.getTransaccionId(), request.getProductoId(), request.getCantidad());
+        return ResponseEntity.ok(new ReservaResponse(true, msg, request.getTransaccionId()));
     }
 
     @PostMapping("/release")
     public ResponseEntity<ReservaResponse> liberar(@RequestBody ReservaRequest request) {
-        try {
-            String msg = inventarioService.liberarStock(request.getTransaccionId());
-            return ResponseEntity.ok(new ReservaResponse(true, msg, request.getTransaccionId()));
-        } catch (ResponseStatusException e) {
-            return ResponseEntity.status(e.getStatusCode())
-                    .body(new ReservaResponse(false, e.getReason(), request.getTransaccionId()));
-        }
+        String msg = inventarioService.liberarStock(request.getTransaccionId());
+        return ResponseEntity.ok(new ReservaResponse(true, msg, request.getTransaccionId()));
     }
 }

@@ -11,10 +11,27 @@ public class ReservaResponse {
         this.transaccionId = transaccionId;
     }
 
-    public boolean isSuccess() { return success; }
-    public void setSuccess(boolean success) { this.success = success; }
-    public String getMessage() { return message; }
-    public void setMessage(String message) { this.message = message; }
-    public String getTransaccionId() { return transaccionId; }
-    public void setTransaccionId(String transaccionId) { this.transaccionId = transaccionId; }
+    public boolean isSuccess() {
+        return success;
+    }
+
+    public void setSuccess(boolean success) {
+        this.success = success;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public String getTransaccionId() {
+        return transaccionId;
+    }
+
+    public void setTransaccionId(String transaccionId) {
+        this.transaccionId = transaccionId;
+    }
 }

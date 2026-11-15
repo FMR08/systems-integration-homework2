@@ -5,26 +5,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed2a7798-3b67-4fa4-b3e6-bd23a6c924eb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/inventario/src/main/java/cl/edu/integracion/inventario/model/Reserva.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventario/src/main/java/cl/edu/integracion/inventario/repository/ReservaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/systems-integration-homework2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventario/src/main/java/cl/edu/integracion/inventario/dto/ErrorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventario/src/main/java/cl/edu/integracion/inventario/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventario/src/main/java/cl/edu/integracion/inventario/model/EstadoReserva.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventario/src/main/resources/data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventario/src/main/test-inventario.http" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rebuild.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventario/src/main/java/cl/edu/integracion/inventario/InventarioApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventario/src/main/java/cl/edu/integracion/inventario/InventarioApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventario/src/main/java/cl/edu/integracion/inventario/controller/InventarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventario/src/main/java/cl/edu/integracion/inventario/controller/InventarioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventario/src/main/java/cl/edu/integracion/inventario/repository/InventarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventario/src/main/java/cl/edu/integracion/inventario/repository/InventarioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario/src/main/java/cl/edu/integracion/inventario/dto/ReservaRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventario/src/main/java/cl/edu/integracion/inventario/dto/ReservaRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario/src/main/java/cl/edu/integracion/inventario/dto/ReservaResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventario/src/main/java/cl/edu/integracion/inventario/dto/ReservaResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario/src/main/java/cl/edu/integracion/inventario/model/Reserva.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventario/src/main/java/cl/edu/integracion/inventario/model/Reserva.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventario/src/main/java/cl/edu/integracion/inventario/service/InventarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventario/src/main/java/cl/edu/integracion/inventario/service/InventarioService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracking/src/main/java/cl/edu/integracion/tracking/controller/TrackingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tracking/src/main/java/cl/edu/integracion/tracking/controller/TrackingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracking/src/main/java/cl/edu/integracion/tracking/service/TrackingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/tracking/src/main/java/cl/edu/integracion/tracking/service/TrackingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/transportista/src/main/java/cl/edu/integracion/transportista/controller/TransporteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/transportista/src/main/java/cl/edu/integracion/transportista/controller/TransporteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/transportista/src/main/java/cl/edu/integracion/transportista/service/TransporteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/transportista/src/main/java/cl/edu/integracion/transportista/service/TransporteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/inventario/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario/src/test/java/cl/edu/integracion/inventario/controller/InventarioControllerTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HttpClientOnboardingState"><![CDATA[{
+  "isOnboardingCommentShown": true
+}]]></component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -45,13 +61,16 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SHELLCHECK.PATH": "/home/ignacioalejandro/.local/share/JetBrains/IntelliJIdea2026.2/Shell Script/shellcheck",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/akmak/Documentos/GitHub/systems-integration-homework2",
+    "last_opened_file_path": "/home/ignacioalejandro/Documentos/GitHub/systems-integration-homework2",
     "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.jshint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.jshint": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.lookFeel"

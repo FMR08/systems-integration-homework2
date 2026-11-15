@@ -1,5 +1,6 @@
 package cl.edu.integracion.inventario.service;
 
+import cl.edu.integracion.inventario.model.EstadoReserva;
 import cl.edu.integracion.inventario.model.Inventario;
 import cl.edu.integracion.inventario.model.Reserva;
 import cl.edu.integracion.inventario.repository.InventarioRepository;
@@ -26,25 +27,28 @@ public class InventarioService {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST,
                     "transaccionId, productoId y cantidad (> 0) son obligatorios");
         }
-        Inventario inv = inventarioRepository.findByProductoId(productoId)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,
-                        "Producto inexistente: " + productoId));
 
         Reserva previa = reservaRepository.findByTransaccionId(transaccionId).orElse(null);
         if (previa != null) {
-            if ("RESERVADA".equals(previa.getEstado())) {
+            if (previa.getEstado() == EstadoReserva.RESERVADA) {
                 return "Reserva ya existente (idempotente)";
             }
             throw new ResponseStatusException(HttpStatus.CONFLICT, "La transacción ya fue liberada");
         }
 
+        Inventario inv = inventarioRepository.findByProductoId(productoId)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,
+                        "Producto inexistente: " + productoId));
+
         if (inv.getStockDisponible() < cantidad) {
             throw new ResponseStatusException(HttpStatus.CONFLICT, "Stock insuficiente");
         }
+
         inv.setStockDisponible(inv.getStockDisponible() - cantidad);
         inv.setStockReservado(inv.getStockReservado() + cantidad);
         inventarioRepository.save(inv);
-        reservaRepository.save(new Reserva(transaccionId, productoId, cantidad, "RESERVADA"));
+
+        reservaRepository.save(new Reserva(transaccionId, productoId, cantidad, EstadoReserva.RESERVADA));
         return "Stock reservado exitosamente";
     }
 
@@ -53,21 +57,26 @@ public class InventarioService {
         if (vacio(transaccionId)) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "transaccionId es obligatorio");
         }
+
         Reserva reserva = reservaRepository.findByTransaccionId(transaccionId).orElse(null);
         if (reserva == null) {
             return "Sin reserva para esta transacción: nada que liberar";
         }
+
+        if (reserva.getEstado() == EstadoReserva.LIBERADA) {
+            return "Reserva ya liberada previamente (idempotente)";
+        }
+
         Inventario inv = inventarioRepository.findByProductoId(reserva.getProductoId())
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Producto inexistente"));
-        reservaRepository.findByTransaccionId(transaccionId).ifPresent(r -> {
-            if ("RESERVADA".equals(r.getEstado())) {
-                inv.setStockDisponible(inv.getStockDisponible() + r.getCantidad());
-                inv.setStockReservado(Math.max(0, inv.getStockReservado() - r.getCantidad()));
-                r.setEstado("LIBERADA");
-                inventarioRepository.save(inv);
-                reservaRepository.save(r);
-            }
-        });
+
+        inv.setStockDisponible(inv.getStockDisponible() + reserva.getCantidad());
+        inv.setStockReservado(Math.max(0, inv.getStockReservado() - reserva.getCantidad()));
+        reserva.setEstado(EstadoReserva.LIBERADA);
+
+        inventarioRepository.save(inv);
+        reservaRepository.save(reserva);
+
         return "Stock liberado (compensación aplicada)";
     }
 

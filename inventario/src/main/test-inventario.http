@@ -1,0 +1,37 @@
+### 1. Reserva exitosa
+POST http://localhost:8081/api/inventory/reserve
+Content-Type: application/json
+
+{
+  "transaccionId": "TX-1001",
+  "productoId": "PROD-001",
+  "cantidad": 3
+}
+
+### 2. Reintento con mismo transaccionId
+POST http://localhost:8081/api/inventory/reserve
+Content-Type: application/json
+
+{
+  "transaccionId": "TX-1001",
+  "productoId": "PROD-001",
+  "cantidad": 3
+}
+
+### 3. Stock insuficiente (409)
+POST http://localhost:8081/api/inventory/reserve
+Content-Type: application/json
+
+{
+  "transaccionId": "TX-1002",
+  "productoId": "PROD-003",
+  "cantidad": 5
+}
+
+### 4. Liberar reserva (Compensación)
+POST http://localhost:8081/api/inventory/release
+Content-Type: application/json
+
+{
+  "transaccionId": "TX-1001"
+}
