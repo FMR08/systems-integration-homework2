@@ -1,5 +1,6 @@
 package cl.edu.integracion.transportista.service;
 
+import cl.edu.integracion.transportista.model.EstadoRetiro;
 import cl.edu.integracion.transportista.model.RetiroTransporte;
 import cl.edu.integracion.transportista.repository.TransporteRepository;
 import org.springframework.http.HttpStatus;
@@ -18,33 +19,45 @@ public class TransporteService {
 
     @Transactional
     public String agendarRetiro(String transaccionId, String direccion) {
-        if (transaccionId == null || transaccionId.isBlank()) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "transaccionId es obligatorio");
+        if (vacio(transaccionId) || vacio(direccion)) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST,
+                    "transaccionId y direccion son obligatorios");
         }
+
         RetiroTransporte existente = transporteRepository.findByTransaccionId(transaccionId).orElse(null);
         if (existente != null) {
-            if ("CANCELADO".equals(existente.getEstado())) {
-                throw new ResponseStatusException(HttpStatus.CONFLICT, "El retiro de esta transacción ya fue cancelado");
+            if (existente.getEstado() == EstadoRetiro.CANCELADO) {
+                throw new ResponseStatusException(HttpStatus.CONFLICT,
+                        "El retiro de esta transacción ya fue cancelado");
             }
             return "Retiro ya agendado (idempotente)";
         }
-        transporteRepository.save(new RetiroTransporte(transaccionId, direccion, "AGENDADO"));
+
+        transporteRepository.save(new RetiroTransporte(transaccionId, direccion, EstadoRetiro.AGENDADO));
         return "Retiro agendado con éxito";
     }
 
     @Transactional
     public String cancelarRetiro(String transaccionId) {
-        if (transaccionId == null || transaccionId.isBlank()) {
+        if (vacio(transaccionId)) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "transaccionId es obligatorio");
         }
+
         RetiroTransporte retiro = transporteRepository.findByTransaccionId(transaccionId).orElse(null);
         if (retiro == null) {
             return "Sin retiro para esta transacción: nada que cancelar";
         }
-        if (!"CANCELADO".equals(retiro.getEstado())) {
-            retiro.setEstado("CANCELADO");
-            transporteRepository.save(retiro);
+
+        if (retiro.getEstado() == EstadoRetiro.CANCELADO) {
+            return "Retiro ya cancelado previamente (idempotente)";
         }
+
+        retiro.setEstado(EstadoRetiro.CANCELADO);
+        transporteRepository.save(retiro);
         return "Retiro cancelado (compensación aplicada)";
+    }
+
+    private boolean vacio(String s) {
+        return s == null || s.isBlank();
     }
 }

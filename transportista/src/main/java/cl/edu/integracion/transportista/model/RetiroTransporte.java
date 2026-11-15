@@ -14,8 +14,9 @@ public class RetiroTransporte {
     @Column(nullable = false, unique = true)
     private String transaccionId;
 
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private String estado;
+    private EstadoRetiro estado;
 
     private String direccion;
 
@@ -29,7 +30,7 @@ public class RetiroTransporte {
 
     public RetiroTransporte() {}
 
-    public RetiroTransporte(String transaccionId, String direccion, String estado) {
+    public RetiroTransporte(String transaccionId, String direccion, EstadoRetiro estado) {
         this.transaccionId = transaccionId;
         this.direccion = direccion;
         this.estado = estado;
@@ -39,8 +40,8 @@ public class RetiroTransporte {
     public void setId(Long id) { this.id = id; }
     public String getTransaccionId() { return transaccionId; }
     public void setTransaccionId(String transaccionId) { this.transaccionId = transaccionId; }
-    public String getEstado() { return estado; }
-    public void setEstado(String estado) { this.estado = estado; }
+    public EstadoRetiro getEstado() { return estado; }
+    public void setEstado(EstadoRetiro estado) { this.estado = estado; }
     public String getDireccion() { return direccion; }
     public void setDireccion(String direccion) { this.direccion = direccion; }
     public LocalDateTime getUpdatedAt() { return updatedAt; }

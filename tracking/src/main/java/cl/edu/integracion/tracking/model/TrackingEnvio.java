@@ -17,8 +17,9 @@ public class TrackingEnvio {
     @Column(nullable = false, unique = true)
     private String trackingNumber;
 
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private String estado;
+    private EstadoTracking estado;
 
     private LocalDateTime updatedAt;
 
@@ -30,7 +31,7 @@ public class TrackingEnvio {
 
     public TrackingEnvio() {}
 
-    public TrackingEnvio(String transaccionId, String trackingNumber, String estado) {
+    public TrackingEnvio(String transaccionId, String trackingNumber, EstadoTracking estado) {
         this.transaccionId = transaccionId;
         this.trackingNumber = trackingNumber;
         this.estado = estado;
@@ -42,8 +43,8 @@ public class TrackingEnvio {
     public void setTransaccionId(String transaccionId) { this.transaccionId = transaccionId; }
     public String getTrackingNumber() { return trackingNumber; }
     public void setTrackingNumber(String trackingNumber) { this.trackingNumber = trackingNumber; }
-    public String getEstado() { return estado; }
-    public void setEstado(String estado) { this.estado = estado; }
+    public EstadoTracking getEstado() { return estado; }
+    public void setEstado(EstadoTracking estado) { this.estado = estado; }
     public LocalDateTime getUpdatedAt() { return updatedAt; }
     public void setUpdatedAt(LocalDateTime updatedAt) { this.updatedAt = updatedAt; }
 }
