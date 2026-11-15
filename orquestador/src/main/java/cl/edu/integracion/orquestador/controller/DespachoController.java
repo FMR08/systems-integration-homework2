@@ -1,0 +1,34 @@
+package cl.edu.integracion.orquestador.controller;
+
+import cl.edu.integracion.orquestador.dto.DespachoRequest;
+import cl.edu.integracion.orquestador.dto.DespachoResponse;
+import cl.edu.integracion.orquestador.service.OrquestadorService;
+import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/api/despachos")
+public class DespachoController {
+
+    private final OrquestadorService orquestadorService;
+
+    public DespachoController(OrquestadorService orquestadorService) {
+        this.orquestadorService = orquestadorService;
+    }
+
+    @PostMapping
+    public ResponseEntity<DespachoResponse> crearDespacho(@RequestBody DespachoRequest request) {
+        try {
+            return ResponseEntity.ok(orquestadorService.procesarDespacho(request));
+        } catch (DataIntegrityViolationException e) {
+            // Ante colisión concurrente exacta con el mismo transaccionId, consulta el estado persistido
+            return ResponseEntity.ok(orquestadorService.consultarDespacho(request.getTransaccionId()));
+        }
+    }
+
+    @GetMapping("/{transaccionId}")
+    public ResponseEntity<DespachoResponse> obtenerDespacho(@PathVariable String transaccionId) {
+        return ResponseEntity.ok(orquestadorService.consultarDespacho(transaccionId));
+    }
+}

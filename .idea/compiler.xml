@@ -6,15 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="transportista" />
+        <module name="orquestador" />
         <module name="inventario" />
         <module name="tracking" />
-        <module name="transportista" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="inventario" options="-parameters" />
+      <module name="orquestador" options="-parameters" />
       <module name="tracking" options="-parameters" />
       <module name="transportista" options="-parameters" />
     </option>

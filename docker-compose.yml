@@ -63,6 +63,11 @@ services:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/despachos
       SPRING_DATASOURCE_USERNAME: ${POSTGRES_USER:-integracion}
       SPRING_DATASOURCE_PASSWORD: ${POSTGRES_PASSWORD:-integracion_dev}
+      INVENTARIO_URL: http://inventario:8080
+      TRANSPORTISTA_URL: http://transportista:8080
+      TRACKING_URL: http://tracking:8080
+    ports:
+      - "8084:8080"
     depends_on:
       postgres:
         condition: service_healthy
