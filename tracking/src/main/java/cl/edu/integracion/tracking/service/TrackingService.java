@@ -1,5 +1,6 @@
 package cl.edu.integracion.tracking.service;
 
+import cl.edu.integracion.tracking.chaos.ChaosState;
 import cl.edu.integracion.tracking.model.EstadoTracking;
 import cl.edu.integracion.tracking.model.TrackingEnvio;
 import cl.edu.integracion.tracking.repository.TrackingRepository;
@@ -14,9 +15,11 @@ import java.util.UUID;
 public class TrackingService {
 
     private final TrackingRepository trackingRepository;
+    private final ChaosState chaos;
 
-    public TrackingService(TrackingRepository trackingRepository) {
+    public TrackingService(TrackingRepository trackingRepository, ChaosState chaos) {
         this.trackingRepository = trackingRepository;
+        this.chaos = chaos;
     }
 
     @Transactional
@@ -32,6 +35,11 @@ public class TrackingService {
                         "El tracking de esta transacción ya fue anulado");
             }
             return existente.getTrackingNumber();
+        }
+
+        if (chaos.isFallarGenerar()) {
+            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR,
+                    "Falla inducida (chaos) en tracking");
         }
 
         String trackingNumber = "TRK-" + UUID.randomUUID().toString().substring(0, 8).toUpperCase();

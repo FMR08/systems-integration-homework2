@@ -45,7 +45,8 @@ public class TransporteService {
 
         RetiroTransporte retiro = transporteRepository.findByTransaccionId(transaccionId).orElse(null);
         if (retiro == null) {
-            return "Sin retiro para esta transacción: nada que cancelar";
+            transporteRepository.save(new RetiroTransporte(transaccionId, "N/A", EstadoRetiro.CANCELADO));
+            return "Retiro marcado como cancelado de forma preventiva";
         }
 
         if (retiro.getEstado() == EstadoRetiro.CANCELADO) {

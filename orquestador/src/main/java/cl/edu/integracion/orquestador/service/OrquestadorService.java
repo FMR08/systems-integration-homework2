@@ -1,6 +1,7 @@
-
 package cl.edu.integracion.orquestador.service;
 
+import cl.edu.integracion.orquestador.client.TransportistaClient;
+import cl.edu.integracion.orquestador.client.TransportistaNoDisponibleException;
 import cl.edu.integracion.orquestador.dto.*;
 import cl.edu.integracion.orquestador.model.Despacho;
 import cl.edu.integracion.orquestador.model.EstadoDespacho;
@@ -23,21 +24,21 @@ public class OrquestadorService {
 
     private final DespachoRepository despachoRepository;
     private final RestTemplate restTemplate;
+    private final TransportistaClient transportistaClient;
 
     @Value("${servicios.inventario.url}")
     private String inventarioUrl;
-
-    @Value("${servicios.transportista.url}")
-    private String transportistaUrl;
 
     @Value("${servicios.tracking.url}")
     private String trackingUrl;
 
     public OrquestadorService(
             DespachoRepository despachoRepository,
-            RestTemplate restTemplate) {
+            RestTemplate restTemplate,
+            TransportistaClient transportistaClient) {
         this.despachoRepository = despachoRepository;
         this.restTemplate = restTemplate;
+        this.transportistaClient = transportistaClient;
     }
 
     public DespachoResponse procesarDespacho(DespachoRequest req) {
@@ -89,12 +90,12 @@ public class OrquestadorService {
         boolean inventarioReservado = false;
         boolean transporteAgendado = false;
         boolean trackingGenerado = false;
-
         try {
 
             // PASO 1: Reservar Inventario
             log.info("[SAGA {}] Paso 1: Reservando inventario",
                     req.getTransaccionId());
+            inventarioReservado = true;
 
             restTemplate.postForEntity(
                     inventarioUrl + "/api/inventory/reserve",
@@ -106,30 +107,26 @@ public class OrquestadorService {
                     String.class
             );
 
-            inventarioReservado = true;
-
             despacho.setEstado(EstadoDespacho.INVENTARIO_RESERVADO);
             despachoRepository.save(despacho);
 
-            // PASO 2: Agendar Transporte
+            // PASO 2: Agendar Transporte (Circuit Breaker + Bulkhead dentro del cliente)
+            transporteAgendado = true;
             log.info("[SAGA {}] Paso 2: Agendando transporte",
                     req.getTransaccionId());
 
-            restTemplate.postForEntity(
-                    transportistaUrl + "/api/shipping/schedule",
+            transportistaClient.agendar(
                     new TransportePasoRequest(
                             req.getTransaccionId(),
                             req.getDireccion()
-                    ),
-                    String.class
+                    )
             );
-
-            transporteAgendado = true;
 
             despacho.setEstado(EstadoDespacho.TRANSPORTE_AGENDADO);
             despachoRepository.save(despacho);
 
             // PASO 3: Generar Tracking
+            trackingGenerado = true;
             log.info("[SAGA {}] Paso 3: Generando tracking",
                     req.getTransaccionId());
 
@@ -147,8 +144,6 @@ public class OrquestadorService {
                         "Respuesta inválida desde servicio de tracking"
                 );
             }
-
-            trackingGenerado = true;
 
             despacho.setTrackingNumber(trackingResp.getTrackingNumber());
             despacho.setEstado(EstadoDespacho.TRACKING_GENERADO);
@@ -243,8 +238,12 @@ public class OrquestadorService {
 
             despachoRepository.save(despacho);
 
+            HttpStatus status = (ex instanceof TransportistaNoDisponibleException)
+                    ? HttpStatus.SERVICE_UNAVAILABLE
+                    : HttpStatus.BAD_GATEWAY;
+
             throw new ResponseStatusException(
-                    HttpStatus.BAD_GATEWAY,
+                    status,
                     compensacionExitosa
                             ? "Despacho abortado y compensado. Motivo: " + motivo
                             : "Despacho abortado, pero la compensación fue incompleta. "
@@ -300,18 +299,14 @@ public class OrquestadorService {
         }
     }
 
-    // COMPENSACIÓN 2: Transporte
+    // COMPENSACIÓN 2: Transporte (fuera del Circuit Breaker, con retry y backoff)
     private boolean compensarTransporte(String transaccionId) {
 
         try {
             log.warn("[SAGA {}] Compensando Paso 2: Cancelando transporte",
                     transaccionId);
 
-            restTemplate.postForEntity(
-                    transportistaUrl + "/api/shipping/cancel",
-                    new TransportePasoRequest(transaccionId, null),
-                    String.class
-            );
+            transportistaClient.cancelar(transaccionId);
 
             return true;
 
