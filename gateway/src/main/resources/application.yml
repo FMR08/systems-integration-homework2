@@ -1,0 +1,41 @@
+server:
+  port: ${SERVER_PORT:8080}
+
+gateway:
+  auth:
+    token: ${GATEWAY_TOKEN:forma-l-secret-token}
+  ratelimit:
+    max-requests-per-minute: ${RATE_LIMIT_RPM:30}
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      server:
+        webflux:
+          routes:
+            - id: orquestador-despachos
+              uri: ${ORQUESTADOR_URL:http://orquestador:8080}
+              predicates:
+                - Path=/api/despachos/**
+
+            - id: bff-envios
+              uri: ${BFF_URL:http://bff:8080}
+              predicates:
+                - Path=/api/bff/**
+
+            - id: orquestador-actuator
+              uri: ${ORQUESTADOR_URL:http://orquestador:8080}
+              predicates:
+                - Path=/actuator/**
+
+            - id: transportista-chaos
+              uri: ${TRANSPORTISTA_URL:http://transportista:8080}
+              predicates:
+                - Path=/api/shipping/chaos/**
+
+            - id: tracking-chaos
+              uri: ${TRACKING_URL:http://tracking:8080}
+              predicates:
+                - Path=/api/tracking/chaos/**

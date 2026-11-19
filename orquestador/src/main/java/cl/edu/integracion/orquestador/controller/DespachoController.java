@@ -22,7 +22,6 @@ public class DespachoController {
         try {
             return ResponseEntity.ok(orquestadorService.procesarDespacho(request));
         } catch (DataIntegrityViolationException e) {
-            // Ante colisión concurrente exacta con el mismo transaccionId, consulta el estado persistido
             return ResponseEntity.ok(orquestadorService.consultarDespacho(request.getTransaccionId()));
         }
     }

@@ -22,7 +22,7 @@ public class TransporteController {
 
     @PostMapping("/schedule")
     public ResponseEntity<TransporteResponse> agendar(@RequestBody TransporteRequest request) {
-        chaos.aplicar(); // falla inducida solo en schedule; cancel queda sano para poder compensar
+        chaos.aplicar();
         String msg;
         try {
             msg = transporteService.agendarRetiro(request.getTransaccionId(), request.getDireccion());

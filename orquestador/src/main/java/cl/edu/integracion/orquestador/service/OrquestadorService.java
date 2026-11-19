@@ -45,7 +45,6 @@ public class OrquestadorService {
 
         validarSolicitud(req);
 
-        // Idempotencia a nivel de Orquestador
         Despacho existente = despachoRepository
                 .findByTransaccionId(req.getTransaccionId())
                 .orElse(null);
@@ -77,7 +76,6 @@ public class OrquestadorService {
             );
         }
 
-        // 0. Registrar inicio de Saga
         Despacho despacho = despachoRepository.save(
                 new Despacho(
                         req.getTransaccionId(),
@@ -92,7 +90,6 @@ public class OrquestadorService {
         boolean trackingGenerado = false;
         try {
 
-            // PASO 1: Reservar Inventario
             log.info("[SAGA {}] Paso 1: Reservando inventario",
                     req.getTransaccionId());
             inventarioReservado = true;
@@ -110,7 +107,6 @@ public class OrquestadorService {
             despacho.setEstado(EstadoDespacho.INVENTARIO_RESERVADO);
             despachoRepository.save(despacho);
 
-            // PASO 2: Agendar Transporte (Circuit Breaker + Bulkhead dentro del cliente)
             transporteAgendado = true;
             log.info("[SAGA {}] Paso 2: Agendando transporte",
                     req.getTransaccionId());
@@ -125,7 +121,6 @@ public class OrquestadorService {
             despacho.setEstado(EstadoDespacho.TRANSPORTE_AGENDADO);
             despachoRepository.save(despacho);
 
-            // PASO 3: Generar Tracking
             trackingGenerado = true;
             log.info("[SAGA {}] Paso 3: Generando tracking",
                     req.getTransaccionId());
@@ -153,7 +148,6 @@ public class OrquestadorService {
                     req.getTransaccionId(),
                     trackingResp.getTrackingNumber());
 
-            // ÉXITO TOTAL DE LA SAGA
             despacho.setEstado(EstadoDespacho.COMPLETADA);
             despachoRepository.save(despacho);
 
@@ -175,7 +169,6 @@ public class OrquestadorService {
             log.error("[SAGA {}] Fallo detectado: {}",
                     req.getTransaccionId(), motivo);
 
-            // Iniciar compensación
             despacho.setEstado(EstadoDespacho.COMPENSANDO);
             despacho.setDetalleError(motivo);
             despachoRepository.save(despacho);
@@ -183,9 +176,7 @@ public class OrquestadorService {
             boolean compensacionExitosa = true;
             StringBuilder erroresCompensacion = new StringBuilder();
 
-            // COMPENSACIONES EN ORDEN INVERSO
 
-            // COMPENSACIÓN 3: Tracking
             if (trackingGenerado) {
                 boolean resultado = compensarTracking(req.getTransaccionId());
 
@@ -195,7 +186,6 @@ public class OrquestadorService {
                 }
             }
 
-            // COMPENSACIÓN 2: Transporte
             if (transporteAgendado) {
                 boolean resultado = compensarTransporte(req.getTransaccionId());
 
@@ -205,7 +195,6 @@ public class OrquestadorService {
                 }
             }
 
-            // COMPENSACIÓN 1: Inventario
             if (inventarioReservado) {
                 boolean resultado = compensarInventario(req.getTransaccionId());
 
@@ -215,7 +204,6 @@ public class OrquestadorService {
                 }
             }
 
-            // ESTADO FINAL DE LA SAGA
             if (compensacionExitosa) {
 
                 despacho.setEstado(EstadoDespacho.COMPENSADA);
@@ -276,7 +264,6 @@ public class OrquestadorService {
         );
     }
 
-    // COMPENSACIÓN 3: Tracking
     private boolean compensarTracking(String transaccionId) {
 
         try {
@@ -299,7 +286,6 @@ public class OrquestadorService {
         }
     }
 
-    // COMPENSACIÓN 2: Transporte (fuera del Circuit Breaker, con retry y backoff)
     private boolean compensarTransporte(String transaccionId) {
 
         try {
@@ -318,7 +304,6 @@ public class OrquestadorService {
         }
     }
 
-    // COMPENSACIÓN 1: Inventario
     private boolean compensarInventario(String transaccionId) {
 
         try {

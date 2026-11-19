@@ -25,12 +25,10 @@ public class TransportistaClient {
     public TransportistaClient(RestTemplateBuilder builder,
                                @Value("${servicios.transportista.url}") String baseUrl) {
         this.baseUrl = baseUrl;
-        // Timeout corto: el transportista es la dependencia frágil
         this.agendarTemplate = builder
                 .connectTimeout(Duration.ofSeconds(1))
                 .readTimeout(Duration.ofSeconds(2))
                 .build();
-        // La compensación tolera más espera
         this.cancelarTemplate = builder
                 .connectTimeout(Duration.ofSeconds(2))
                 .readTimeout(Duration.ofSeconds(4))
@@ -46,7 +44,7 @@ public class TransportistaClient {
     @SuppressWarnings("unused")
     private void agendarFallback(TransportePasoRequest req, Throwable t) {
         if (t instanceof HttpClientErrorException http) {
-            throw http; // error de negocio (409, etc.): no es indisponibilidad
+            throw http;
         }
         log.warn("[TRANSPORTISTA] fallback activado: {}", t.getClass().getSimpleName());
         throw new TransportistaNoDisponibleException(
