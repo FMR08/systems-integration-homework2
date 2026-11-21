@@ -45,6 +45,7 @@ Arquitectura basada en microservicios con patrón **Saga Orquestada**, **API Gat
 | `orquestador-actuator` | `Path=/actuator/**` | `http://orquestador:8080` | Inspección en vivo de Circuit Breaker y Bulkhead. |
 | `transportista-chaos` | `Path=/api/shipping/chaos/**` | `http://transportista:8080` | Control de latencia y caída en el servicio frágil. |
 | `tracking-chaos` | `Path=/api/tracking/chaos/**` | `http://tracking:8080` | Control de falla inducida en el último paso de la Saga. |
+| `bff-actuator` | `Path=/bff-actuator/**` (reescrito a `/actuator/**`) | `http://bff:8080` | Métricas y estado de Circuit Breaker / Bulkhead del BFF. |
 
 ---
 
@@ -157,9 +158,35 @@ En `TransportistaClient`, el cliente HTTP tiene `readTimeout = 2000ms`, mientras
 
 ---
 
+### 6. BFF Web (`bff`)
+- **Estado:** Implementado.
+- **Tecnología:** Spring Boot + Resilience4j. Sin base de datos ni lógica de negocio; solo agrega lecturas.
+- **Rol:** Backend For Frontend del cliente web. `GET /api/bff/envios/{transaccionId}` compone en **una sola respuesta** datos de 4 servicios (`orquestador`, `inventario`, `transportista`, `tracking`).
+
+#### Decisiones Técnicas Clave
+1. **Fuente principal vs. secundarias:** el orquestador es obligatorio (si no responde, `503`; si el envío no existe, `404`). Inventario, transportista y tracking son secundarios.
+2. **Resiliencia por dependencia:** timeouts (`connect=500ms`, `read=1500ms`), Circuit Breaker y Bulkhead (`transportista`=3 concurrentes, `inventario` y `tracking`=10) con fallback a `{"disponible": false, "motivo": ...}`. La respuesta marca `"degradado": true` en vez de caerse.
+3. **Un `404` de un servicio secundario no es falla:** se informa `{"disponible": true, "encontrado": false}` (por ejemplo, tracking tras una compensación) y no abre el circuito.
+4. **Observabilidad:** `/bff-actuator/circuitbreakers`, `/bff-actuator/bulkheads`, `/bff-actuator/circuitbreakerevents`, `/bff-actuator/bulkheadevents` (vía gateway, con token).
+
+---
+
 ## Ejecución y Validación Rápida (Vía API Gateway)
+
+Requisitos del host: Docker (con Compose) y `bash` + `curl`. `python3` es opcional (solo da formato al JSON).
 
 1. **Levantar la infraestructura completa:**
    ```bash
    docker compose up -d --build
-   
+   ```
+2. **Token y cabeceras:** toda petición (salvo `/actuator/**`) exige `Authorization: Bearer forma-l-secret-token`. El rate limit es de 30 peticiones por minuto por `X-Client-Id`.
+3. **Crear un envío (camino feliz):**
+   ```bash
+   curl -s -X POST http://localhost:8080/api/despachos \
+     -H "Authorization: Bearer forma-l-secret-token" -H "Content-Type: application/json" \
+     -d '{"transaccionId":"TX-1","productoId":"PROD-001","cantidad":1,"direccion":"Av. Libertador 1234"}'
+   ```
+4. **Vista agregada del BFF:**
+   ```bash
+   curl -s http://localhost:8080/api/bff/envios/TX-1 -H "Authorization: Bearer forma-l-secret-token"
+   ```

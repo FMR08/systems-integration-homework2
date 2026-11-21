@@ -63,6 +63,20 @@ services:
       postgres:
         condition: service_healthy
 
+  bff:
+    build: ./bff
+    environment:
+      SERVER_PORT: 8080
+      ORQUESTADOR_URL: http://orquestador:8080
+      INVENTARIO_URL: http://inventario:8080
+      TRANSPORTISTA_URL: http://transportista:8080
+      TRACKING_URL: http://tracking:8080
+    depends_on:
+      - orquestador
+      - inventario
+      - transportista
+      - tracking
+
   gateway:
     build: ./gateway
     environment:
@@ -72,10 +86,12 @@ services:
       ORQUESTADOR_URL: http://orquestador:8080
       TRANSPORTISTA_URL: http://transportista:8080
       TRACKING_URL: http://tracking:8080
+      BFF_URL: http://bff:8080
     ports:
       - "8080:8080"
     depends_on:
       - orquestador
+      - bff
 
 volumes:
   postgres_data:

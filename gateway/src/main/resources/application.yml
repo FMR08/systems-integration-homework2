@@ -39,3 +39,10 @@ spring:
               uri: ${TRACKING_URL:http://tracking:8080}
               predicates:
                 - Path=/api/tracking/chaos/**
+
+            - id: bff-actuator
+              uri: ${BFF_URL:http://bff:8080}
+              predicates:
+                - Path=/bff-actuator/**
+              filters:
+                - RewritePath=/bff-actuator/(?<segment>.*), /actuator/$\{segment}
