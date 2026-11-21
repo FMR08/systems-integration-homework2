@@ -17,7 +17,9 @@ services:
       retries: 20
 
   inventario:
-    build: ./inventario
+    build:
+      context: .
+      dockerfile: inventario/Dockerfile
     environment:
       SERVER_PORT: 8080
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/inventario
@@ -28,7 +30,9 @@ services:
         condition: service_healthy
 
   transportista:
-    build: ./transportista
+    build:
+      context: .
+      dockerfile: transportista/Dockerfile
     environment:
       SERVER_PORT: 8080
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/transportista
@@ -39,7 +43,9 @@ services:
         condition: service_healthy
 
   tracking:
-    build: ./tracking
+    build:
+      context: .
+      dockerfile: tracking/Dockerfile
     environment:
       SERVER_PORT: 8080
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/tracking
@@ -50,7 +56,9 @@ services:
         condition: service_healthy
 
   orquestador:
-    build: ./orquestador
+    build:
+      context: .
+      dockerfile: orquestador/Dockerfile
     environment:
       SERVER_PORT: 8080
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/despachos
@@ -64,7 +72,9 @@ services:
         condition: service_healthy
 
   bff:
-    build: ./bff
+    build:
+      context: .
+      dockerfile: bff/Dockerfile
     environment:
       SERVER_PORT: 8080
       ORQUESTADOR_URL: http://orquestador:8080
@@ -78,7 +88,9 @@ services:
       - tracking
 
   gateway:
-    build: ./gateway
+    build:
+      context: .
+      dockerfile: gateway/Dockerfile
     environment:
       SERVER_PORT: 8080
       GATEWAY_TOKEN: forma-l-secret-token

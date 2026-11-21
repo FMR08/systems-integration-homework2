@@ -16,7 +16,7 @@ Arquitectura basada en microservicios con patrón **Saga Orquestada**, **API Gat
 - **Inicialización SQL Selectiva (`data.sql`):** Solo los servicios que requieren datos maestros previos para operar (como el catálogo inicial de bodega en `inventario`) ejecutan scripts de precarga automática (`spring.jpa.defer-datasource-initialization=true`). Los servicios puramente transaccionales (`transportista`, `tracking`, `orquestador`) parten con tablas limpias.
 - **Chaos Engineering Controlado por HTTP:** Los servicios susceptibles a degradación o fallo en los escenarios de evaluación (`transportista` y `tracking`) incorporan controladores dedicados (`/chaos`) para inyectar latencia artificial o fallos HTTP en caliente sin detener contenedores ni comprometer los endpoints de compensación.
 - **Exclusión Deliberada de Swagger / OpenAPI:** Se optó por no incluir dependencias de documentación interactiva en tiempo de ejecución para mantener imágenes Docker livianas, reducir la superficie de exposición de endpoints internos en la red privada y evitar sobrecarga de arranque. La validación funcional se realiza mediante pruebas HTTP directas (`.http` / `curl`) y auditoría SQL.
-- **Despliegue Modular y Automatizado:** Contenedorización mediante Docker multi-stage y scripts de reconstrucción selectiva (`rebuild.sh`) para iterar sobre servicios individuales sin reiniciar la infraestructura de datos.
+- **Despliegue Modular y Automatizado:** Build con **Gradle (Kotlin DSL)** multi-proyecto y catálogo de versiones (`gradle/libs.versions.toml`). Contenedorización con Docker multi-stage, caché de BuildKit para Gradle (`--mount=type=cache`) y scripts de reconstrucción selectiva (`rebuild.sh`) para iterar sobre servicios individuales sin reiniciar la infraestructura de datos.
 
 ---
 
@@ -173,7 +173,7 @@ En `TransportistaClient`, el cliente HTTP tiene `readTimeout = 2000ms`, mientras
 
 ## Ejecución y Validación Rápida (Vía API Gateway)
 
-Requisitos del host: Docker (con Compose) y `bash` + `curl`. `python3` es opcional (solo da formato al JSON).
+Requisitos del host: Docker (con Compose y BuildKit) y `bash` + `curl`. Para desarrollar fuera de Docker: JDK 21 y Gradle 8.14+ (`gradle :<modulo>:bootRun`). `python3` es opcional (solo da formato al JSON).
 
 1. **Levantar la infraestructura completa:**
    ```bash
