@@ -5,8 +5,6 @@ services:
       POSTGRES_USER: ${POSTGRES_USER:-integracion}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-integracion_dev}
       POSTGRES_DB: postgres
-    ports:
-      - "127.0.0.1:5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
       - ./infra/postgres/init:/docker-entrypoint-initdb.d:ro
@@ -93,7 +91,7 @@ services:
       dockerfile: gateway/Dockerfile
     environment:
       SERVER_PORT: 8080
-      GATEWAY_TOKEN: forma-l-secret-token
+      GATEWAY_TOKEN: ${GATEWAY_TOKEN:-forma-l-secret-token}
       RATE_LIMIT_RPM: 30
       ORQUESTADOR_URL: http://orquestador:8080
       TRANSPORTISTA_URL: http://transportista:8080

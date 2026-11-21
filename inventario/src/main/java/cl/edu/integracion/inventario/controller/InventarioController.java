@@ -5,6 +5,7 @@ import cl.edu.integracion.inventario.dto.ReservaDetalleResponse;
 import cl.edu.integracion.inventario.dto.ReservaRequest;
 import cl.edu.integracion.inventario.dto.ReservaResponse;
 import cl.edu.integracion.inventario.service.InventarioService;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
@@ -21,14 +22,27 @@ public class InventarioController {
 
     @PostMapping("/reserve")
     public ResponseEntity<ReservaResponse> reservar(@RequestBody ReservaRequest request) {
-        String msg = inventarioService.reservarStock(
-                request.getTransaccionId(), request.getProductoId(), request.getCantidad());
+        String msg;
+        try {
+            msg = inventarioService.reservarStock(
+                    request.getTransaccionId(), request.getProductoId(), request.getCantidad());
+        } catch (DataIntegrityViolationException e) {
+            msg = inventarioService.reservarStock(
+                    request.getTransaccionId(), request.getProductoId(), request.getCantidad());
+        }
         return ResponseEntity.ok(new ReservaResponse(true, msg, request.getTransaccionId()));
     }
 
     @PostMapping("/release")
     public ResponseEntity<ReservaResponse> liberar(@RequestBody ReservaRequest request) {
-        String msg = inventarioService.liberarStock(request.getTransaccionId());
+        String msg;
+        try {
+            msg = inventarioService.liberarStock(
+                    request.getTransaccionId(), request.getProductoId(), request.getCantidad());
+        } catch (DataIntegrityViolationException e) {
+            msg = inventarioService.liberarStock(
+                    request.getTransaccionId(), request.getProductoId(), request.getCantidad());
+        }
         return ResponseEntity.ok(new ReservaResponse(true, msg, request.getTransaccionId()));
     }
 

@@ -53,13 +53,18 @@ public class InventarioService {
     }
 
     @Transactional
-    public String liberarStock(String transaccionId) {
+    public String liberarStock(String transaccionId, String productoId, Integer cantidad) {
         if (vacio(transaccionId)) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "transaccionId es obligatorio");
         }
 
         Reserva reserva = reservaRepository.findByTransaccionId(transaccionId).orElse(null);
         if (reserva == null) {
+            if (!vacio(productoId) && cantidad != null && cantidad > 0) {
+                // Cancelación preventiva: si la reserva llega tarde (timeout), reservarStock la rechaza con 409
+                reservaRepository.save(new Reserva(transaccionId, productoId, cantidad, EstadoReserva.LIBERADA));
+                return "Reserva marcada como liberada de forma preventiva";
+            }
             return "Sin reserva para esta transacción: nada que liberar";
         }
 

@@ -7,7 +7,7 @@ Arquitectura basada en microservicios con patrón **Saga Orquestada**, **API Gat
 ## Arquitectura y Decisiones de Diseño Transversales
 
 - **Aislamiento de Datos (Database-per-Service):** Cada microservicio opera sobre su propia base de datos lógica en PostgreSQL 17, eliminando el acoplamiento a nivel de esquema y garantizando autonomía de dominio.
-- **Punto Único de Entrada y Aislamiento de Red:** En `docker-compose.yml`, únicamente el **API Gateway** expone el puerto `8080` hacia el exterior. Los microservicios internos (`inventario`, `transportista`, `tracking`, `orquestador`, `bff`) operan exclusivamente dentro de la red privada de Docker sin puertos publicados al host.
+- **Punto Único de Entrada y Aislamiento de Red:** En `docker-compose.yml`, únicamente el **API Gateway** expone el puerto `8080` hacia el exterior. Los microservicios internos (`inventario`, `transportista`, `tracking`, `orquestador`, `bff`) operan exclusivamente dentro de la red privada de Docker sin puertos publicados al host (tampoco PostgreSQL; para auditoría SQL: `docker compose exec postgres psql -U integracion -d <inventario|transportista|tracking|despachos>`).
 - **Estrategia Híbrida de Contratos API (API Response Envelope):**
   - **Respuestas Exitosas Personalizadas (`2xx`):** Cada servicio define su propio DTO de éxito (`ReservaResponse`, `TransporteResponse`, `TrackingResponse`, `DespachoResponse`) ajustado exclusivamente a los datos de su dominio para maximizar la eficiencia de serialización y lectura del orquestador.
   - **Contrato Global de Errores (`4xx` / `5xx`):** Todos los servicios —incluido el API Gateway— estandarizan los fallos bajo una estructura JSON única (`ErrorResponse` con código semántico, mensaje, timestamp y ruta), permitiendo clasificar errores y disparar compensaciones de forma determinista.
@@ -32,9 +32,10 @@ Arquitectura basada en microservicios con patrón **Saga Orquestada**, **API Gat
 1. **Separación Estricta de Responsabilidades:**
    - No contiene reglas de negocio ni persistencia; actúa exclusivamente como proxy inverso inteligente con cadena de filtros globales ordenados (`Ordered`).
 2. **Autenticación Centralizada (`AuthFilter`, orden `-2`):**
-   - Intercepta todas las peticiones entrantes (excepto `/actuator/**` para lectura rápida de métricas) exigiendo la cabecera `Authorization: Bearer <GATEWAY_TOKEN>`. Ante ausencia o invalidez del token, corta la petición de inmediato con `401 Unauthorized` y el formato estándar `ErrorResponse`.
+   - Intercepta todas las peticiones entrantes (incluido `/actuator/**`) exigiendo la cabecera `Authorization: Bearer <GATEWAY_TOKEN>`. Ante ausencia o invalidez del token, corta la petición de inmediato con `401 Unauthorized` y el formato estándar `ErrorResponse`.
 3. **Rate Limiting en Memoria sin Dependencias Externas (`RateLimitFilter`, orden `-1`):**
-   - Se ejecuta inmediatamente después de autenticar al cliente. Contabiliza peticiones por ventana de minuto (`ConcurrentHashMap` + `AtomicInteger`) identificando al consumidor mediante `X-Client-Id` o su IP remota, inyectando las cabeceras informativas `X-RateLimit-Limit` y `X-RateLimit-Remaining`, y bloqueando excesos con `429 Too Many Requests` (`RATE_LIMIT_EXCEEDED`). Esta implementación evita incorporar un contenedor adicional de Redis manteniendo el diseño minimalista.
+   - Se ejecuta inmediatamente después de autenticar al cliente. Contabiliza peticiones por ventana de minuto (`ConcurrentHashMap` + `AtomicInteger`) identificando al consumidor mediante `X-Client-Id` o su IP remota, inyectando las cabeceras informativas `X-RateLimit-Limit` y `X-RateLimit-Remaining`, y bloqueando excesos con `429 Too Many Requests` (`RATE_LIMIT_EXCEEDED`). Las rutas `/actuator/**` quedan exentas del límite (solo del límite, no de la autenticación). Esta implementación evita incorporar un contenedor adicional de Redis manteniendo el diseño minimalista.
+4. **Timeouts hacia los servicios internos:** `connect-timeout=2s` y `response-timeout=30s` (cubre el peor caso de una saga con compensación y reintentos).
 
 #### Tabla de Enrutamiento (`application.yml`)
 
@@ -58,9 +59,10 @@ Arquitectura basada en microservicios con patrón **Saga Orquestada**, **API Gat
 1. **Máquina de Estados Persistente (`EstadoDespacho` en `despachos_saga`):**
    - Evolucionó desde un flujo lineal básico hacia una bitácora transaccional granular que confirma en PostgreSQL cada transición antes de ejecutar la siguiente llamada remota:
      `INICIADA` $\rightarrow$ `INVENTARIO_RESERVADO` $\rightarrow$ `TRANSPORTE_AGENDADO` $\rightarrow$ `TRACKING_GENERADO` $\rightarrow$ `COMPLETADA`.
+   - Excepción: si el fallo del transportista es `CallNotPermittedException` (circuito abierto) o `BulkheadFullException`, la petición nunca salió y no se invoca `cancelar`, de modo que el *fail-fast* no se retrasa con reintentos.
    - Ante fallos, transita a `COMPENSANDO` y distingue explícitamente entre `COMPENSADA` (rollback limpio en todos los pasos confirmados) y `FALLIDA` (rollback incompleto que requiere auditoría manual).
 2. **Compensación Preventiva en Orden Inverso:**
-   - Las banderas de ejecución se marcan antes de invocar cada microservicio remoto para cubrir escenarios de *Read Timeout* (donde el servicio destino sí persistió el cambio pero la respuesta no llegó a tiempo). Apoyándose en la idempotencia y cancelación preventiva de los servicios de dominio, el orquestador revierte en orden estricto: `Tracking` $\rightarrow$ `Transporte` $\rightarrow$ `Inventario`.
+   - Las banderas de ejecución se marcan antes de invocar cada microservicio remoto para cubrir escenarios de *Read Timeout* (donde el servicio destino sí persistió el cambio pero la respuesta no llegó a tiempo). Apoyándose en la idempotencia y en la cancelación preventiva de los tres servicios de dominio (si no existe el registro, la compensación deja una marca `CANCELADO`/`LIBERADA`/`ANULADO` que rechaza con `409` un comando tardío), el orquestador revierte en orden estricto: `Tracking` $\rightarrow$ `Transporte` $\rightarrow$ `Inventario`.
 3. **Aislamiento de la Dependencia Frágil (`TransportistaClient` + Resilience4j):**
    - **Timeouts Diferenciados:** El agendamiento (`agendar`) opera con timeout corto (`connect=1s`, `read=2s`) para fallar rápido; la compensación (`cancelar`) opera con mayor tolerancia (`connect=2s`, `read=4s`), fuera del Circuit Breaker, y con **3 reintentos y backoff exponencial** (`500ms`, `1000ms`, `2000ms`).
    - **Circuit Breaker (`transportista`):** Ventana deslizante de 6 llamadas (`minimum-number-of-calls=4`), umbral de fallo o lentitud del `50%` y apertura por `15s` hacia un `fallback` (`503 Service Unavailable`) que dispara la compensación inmediata de inventario (*fail-fast*). Ignora errores `4xx` de negocio (`HttpClientErrorException`) para no abrir el circuito por datos inválidos del cliente.
@@ -77,7 +79,7 @@ En `TransportistaClient`, el cliente HTTP tiene `readTimeout = 2000ms`, mientras
 
 | Método | Ruta | Propósito | Códigos de Respuesta |
 | :--- | :--- | :--- | :--- |
-| `POST` | `/api/despachos` | **Orquestación Saga:** Ejecuta la creación del envío coordinando `inventario`, `transportista` y `tracking` con compensación automática. | `200 OK` (Completada / Idempotente)<br>`400 Bad Request` (Solicitud inválida)<br>`409 Conflict` (Transacción ya fallida/compensada o en curso)<br>`502 Bad Gateway` (Fallo en paso de Saga + compensación)<br>`503 Service Unavailable` (Transportista no disponible / Circuito abierto) |
+| `POST` | `/api/despachos` | **Orquestación Saga:** Ejecuta la creación del envío coordinando `inventario`, `transportista` y `tracking` con compensación automática. | `200 OK` (Completada / Idempotente)<br>`400 Bad Request` (Solicitud inválida)<br>`409 Conflict` (Transacción ya fallida/compensada o en curso, o rechazo de negocio del inventario como stock insuficiente, tras compensar)<br>`502 Bad Gateway` (Fallo en paso de Saga + compensación)<br>`503 Service Unavailable` (Transportista no disponible / Circuito abierto) |
 | `GET` | `/api/despachos/{transaccionId}` | **Consulta de Estado:** Recupera el estado actual de la bitácora de la Saga y el `trackingNumber` si fue generado. | `200 OK` (Estado recuperado)<br>`404 Not Found` (`transaccionId` inexistente) |
 
 ---
@@ -179,7 +181,7 @@ Requisitos del host: Docker (con Compose y BuildKit) y `bash` + `curl`. Para des
    ```bash
    docker compose up -d --build
    ```
-2. **Token y cabeceras:** toda petición (salvo `/actuator/**`) exige `Authorization: Bearer forma-l-secret-token`. El rate limit es de 30 peticiones por minuto por `X-Client-Id`.
+2. **Token y cabeceras:** toda petición (incluido `/actuator/**`) exige `Authorization: Bearer forma-l-secret-token`. El rate limit es de 30 peticiones por minuto por `X-Client-Id`.
 3. **Crear un envío (camino feliz):**
    ```bash
    curl -s -X POST http://localhost:8080/api/despachos \

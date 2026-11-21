@@ -36,7 +36,12 @@ public class TransporteController {
 
     @PostMapping("/cancel")
     public ResponseEntity<TransporteResponse> cancelar(@RequestBody TransporteRequest request) {
-        String msg = transporteService.cancelarRetiro(request.getTransaccionId());
+        String msg;
+        try {
+            msg = transporteService.cancelarRetiro(request.getTransaccionId());
+        } catch (DataIntegrityViolationException e) {
+            msg = transporteService.cancelarRetiro(request.getTransaccionId());
+        }
         return ResponseEntity.ok(new TransporteResponse(true, msg, request.getTransaccionId()));
     }
 

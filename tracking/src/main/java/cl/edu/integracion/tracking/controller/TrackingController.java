@@ -33,7 +33,12 @@ public class TrackingController {
 
     @PostMapping("/cancel")
     public ResponseEntity<TrackingResponse> anular(@RequestBody TrackingRequest request) {
-        String msg = trackingService.anularTracking(request.getTransaccionId());
+        String msg;
+        try {
+            msg = trackingService.anularTracking(request.getTransaccionId());
+        } catch (DataIntegrityViolationException e) {
+            msg = trackingService.anularTracking(request.getTransaccionId());
+        }
         return ResponseEntity.ok(new TrackingResponse(
                 true, msg, null, request.getTransaccionId()));
     }

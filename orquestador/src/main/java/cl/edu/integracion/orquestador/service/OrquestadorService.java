@@ -12,6 +12,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.HttpStatusCodeException;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
@@ -88,10 +89,12 @@ public class OrquestadorService {
         boolean inventarioReservado = false;
         boolean transporteAgendado = false;
         boolean trackingGenerado = false;
+        int paso = 0;
         try {
 
             log.info("[SAGA {}] Paso 1: Reservando inventario",
                     req.getTransaccionId());
+            paso = 1;
             inventarioReservado = true;
 
             restTemplate.postForEntity(
@@ -107,6 +110,7 @@ public class OrquestadorService {
             despacho.setEstado(EstadoDespacho.INVENTARIO_RESERVADO);
             despachoRepository.save(despacho);
 
+            paso = 2;
             transporteAgendado = true;
             log.info("[SAGA {}] Paso 2: Agendando transporte",
                     req.getTransaccionId());
@@ -121,6 +125,7 @@ public class OrquestadorService {
             despacho.setEstado(EstadoDespacho.TRANSPORTE_AGENDADO);
             despachoRepository.save(despacho);
 
+            paso = 3;
             trackingGenerado = true;
             log.info("[SAGA {}] Paso 3: Generando tracking",
                     req.getTransaccionId());
@@ -166,11 +171,16 @@ public class OrquestadorService {
 
             String motivo = extraerMensajeError(ex);
 
+            // Circuito abierto o bulkhead lleno: la petición nunca salió, no hay nada que cancelar.
+            if (ex instanceof TransportistaNoDisponibleException nd && nd.isNoEnviada()) {
+                transporteAgendado = false;
+            }
+
             log.error("[SAGA {}] Fallo detectado: {}",
                     req.getTransaccionId(), motivo);
 
             despacho.setEstado(EstadoDespacho.COMPENSANDO);
-            despacho.setDetalleError(motivo);
+            despacho.setDetalleError(truncar(motivo));
             despachoRepository.save(despacho);
 
             boolean compensacionExitosa = true;
@@ -196,7 +206,7 @@ public class OrquestadorService {
             }
 
             if (inventarioReservado) {
-                boolean resultado = compensarInventario(req.getTransaccionId());
+                boolean resultado = compensarInventario(req);
 
                 if (!resultado) {
                     compensacionExitosa = false;
@@ -215,10 +225,10 @@ public class OrquestadorService {
 
                 despacho.setEstado(EstadoDespacho.FALLIDA);
 
-                despacho.setDetalleError(
+                despacho.setDetalleError(truncar(
                         motivo + " | Errores de compensación: "
                                 + erroresCompensacion
-                );
+                ));
 
                 log.error("[SAGA {}] FALLIDA: compensación incompleta",
                         req.getTransaccionId());
@@ -226,9 +236,15 @@ public class OrquestadorService {
 
             despachoRepository.save(despacho);
 
-            HttpStatus status = (ex instanceof TransportistaNoDisponibleException)
-                    ? HttpStatus.SERVICE_UNAVAILABLE
-                    : HttpStatus.BAD_GATEWAY;
+            HttpStatus status;
+            if (ex instanceof TransportistaNoDisponibleException) {
+                status = HttpStatus.SERVICE_UNAVAILABLE;
+            } else if (paso == 1 && ex instanceof HttpClientErrorException http) {
+                // Rechazo de negocio del inventario (p. ej. 409 stock insuficiente), no una falla de infraestructura
+                status = HttpStatus.valueOf(http.getStatusCode().value());
+            } else {
+                status = HttpStatus.BAD_GATEWAY;
+            }
 
             throw new ResponseStatusException(
                     status,
@@ -304,7 +320,9 @@ public class OrquestadorService {
         }
     }
 
-    private boolean compensarInventario(String transaccionId) {
+    private boolean compensarInventario(DespachoRequest req) {
+
+        String transaccionId = req.getTransaccionId();
 
         try {
             log.warn("[SAGA {}] Compensando Paso 1: Liberando inventario",
@@ -312,7 +330,8 @@ public class OrquestadorService {
 
             restTemplate.postForEntity(
                     inventarioUrl + "/api/inventory/release",
-                    new InventarioPasoRequest(transaccionId, null, null),
+                    new InventarioPasoRequest(
+                            transaccionId, req.getProductoId(), req.getCantidad()),
                     String.class
             );
 
@@ -352,6 +371,10 @@ public class OrquestadorService {
         return ex.getMessage() != null
                 ? ex.getMessage()
                 : "Error de comunicación desconocido";
+    }
+
+    private String truncar(String s) {
+        return s.length() > 500 ? s.substring(0, 497) + "..." : s;
     }
 
     private boolean vacio(String s) {

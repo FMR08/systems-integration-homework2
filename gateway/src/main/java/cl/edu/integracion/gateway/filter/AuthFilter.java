@@ -25,11 +25,6 @@ public class AuthFilter implements GlobalFilter, Ordered {
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         String path = exchange.getRequest().getURI().getPath();
 
-        // Permitir lectura de métricas de actuator sin token para monitoreo rápido
-        if (path.startsWith("/actuator")) {
-            return chain.filter(exchange);
-        }
-
         String authHeader = exchange.getRequest().getHeaders().getFirst(HttpHeaders.AUTHORIZATION);
         String expectedHeader = "Bearer " + expectedToken;
 

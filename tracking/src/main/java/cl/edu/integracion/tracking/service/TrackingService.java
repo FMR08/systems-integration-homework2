@@ -55,7 +55,10 @@ public class TrackingService {
 
         TrackingEnvio tracking = trackingRepository.findByTransaccionId(transaccionId).orElse(null);
         if (tracking == null) {
-            return "Sin tracking para esta transacción: nada que anular";
+            // Anulación preventiva: si un generate llega tarde (timeout), se rechaza con 409
+            String marcador = "VOID-" + UUID.randomUUID().toString().substring(0, 8).toUpperCase();
+            trackingRepository.save(new TrackingEnvio(transaccionId, marcador, EstadoTracking.ANULADO));
+            return "Tracking marcado como anulado de forma preventiva";
         }
 
         if (tracking.getEstado() == EstadoTracking.ANULADO) {

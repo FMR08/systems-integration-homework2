@@ -21,6 +21,7 @@ public class GlobalExceptionHandler {
             case 404 -> "RESOURCE_NOT_FOUND";
             case 409 -> "BUSINESS_CONFLICT";
             case 502 -> "SAGA_EXECUTION_FAILED";
+            case 503 -> "DEPENDENCY_UNAVAILABLE";
             default -> "INTERNAL_ERROR";
         };
 

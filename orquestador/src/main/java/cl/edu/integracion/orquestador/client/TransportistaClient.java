@@ -1,7 +1,9 @@
 package cl.edu.integracion.orquestador.client;
 
 import cl.edu.integracion.orquestador.dto.TransportePasoRequest;
+import io.github.resilience4j.bulkhead.BulkheadFullException;
 import io.github.resilience4j.bulkhead.annotation.Bulkhead;
+import io.github.resilience4j.circuitbreaker.CallNotPermittedException;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -47,8 +49,9 @@ public class TransportistaClient {
             throw http;
         }
         log.warn("[TRANSPORTISTA] fallback activado: {}", t.getClass().getSimpleName());
+        boolean noEnviada = t instanceof CallNotPermittedException || t instanceof BulkheadFullException;
         throw new TransportistaNoDisponibleException(
-                "Transportista no disponible (" + t.getClass().getSimpleName() + ")");
+                "Transportista no disponible (" + t.getClass().getSimpleName() + ")", noEnviada);
     }
 
     /** Compensación: fuera del breaker, con retry y backoff. */
