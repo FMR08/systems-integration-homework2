@@ -83,4 +83,11 @@ public class InventarioService {
     private boolean vacio(String s) {
         return s == null || s.isBlank();
     }
+
+    @Transactional(readOnly = true)
+    public Reserva consultarReserva(String transaccionId) {
+        return reservaRepository.findByTransaccionId(transaccionId)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,
+                        "No existe reserva para transaccionId: " + transaccionId));
+    }
 }

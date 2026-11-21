@@ -70,4 +70,11 @@ public class TrackingService {
     private boolean vacio(String s) {
         return s == null || s.isBlank();
     }
+
+    @Transactional(readOnly = true)
+    public TrackingEnvio consultarTracking(String transaccionId) {
+        return trackingRepository.findByTransaccionId(transaccionId)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,
+                        "No existe tracking para transaccionId: " + transaccionId));
+    }
 }

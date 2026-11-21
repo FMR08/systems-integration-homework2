@@ -61,4 +61,11 @@ public class TransporteService {
     private boolean vacio(String s) {
         return s == null || s.isBlank();
     }
+
+    @Transactional(readOnly = true)
+    public RetiroTransporte consultarRetiro(String transaccionId) {
+        return transporteRepository.findByTransaccionId(transaccionId)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,
+                        "No existe retiro para transaccionId: " + transaccionId));
+    }
 }

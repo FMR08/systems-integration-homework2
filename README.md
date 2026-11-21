@@ -101,6 +101,7 @@ En `TransportistaClient`, el cliente HTTP tiene `readTimeout = 2000ms`, mientras
 | :--- | :--- | :--- | :--- |
 | `POST` | `/api/inventory/reserve` | **Paso Forward:** Bloquea la fila del producto, descuenta `stockDisponible`, incrementa `stockReservado` y registra la reserva como `RESERVADA`. | `200 OK` (Reservado / Idempotente)<br>`400 Bad Request` (Datos inválidos)<br>`404 Not Found` (Producto inexistente)<br>`409 Conflict` (Stock insuficiente o transacción ya liberada) |
 | `POST` | `/api/inventory/release` | **Paso de Compensación:** Revierte una reserva previa ante el fallo de un paso posterior en la Saga, devolviendo unidades a `stockDisponible` y marcando como `LIBERADA`. | `200 OK` (Liberado / Idempotente)<br>`400 Bad Request` (`transaccionId` faltante)<br>`404 Not Found` (Producto asociado no encontrado) |
+| `GET` | `/api/inventory/reservations/{transaccionId}` | **Lectura (BFF):** Devuelve producto, cantidad y estado (`RESERVADA` / `LIBERADA`) de la reserva. | `200 OK`<br>`404 Not Found` |
 
 ---
 
@@ -125,6 +126,7 @@ En `TransportistaClient`, el cliente HTTP tiene `readTimeout = 2000ms`, mientras
 | :--- | :--- | :--- | :--- |
 | `POST` | `/api/shipping/schedule` | **Paso Forward:** Registra y agenda el retiro hacia la dirección indicada bajo estado `AGENDADO`. | `200 OK` (Agendado / Idempotente)<br>`400 Bad Request` (Datos faltantes)<br>`409 Conflict` (Transacción cancelada)<br>`503 Service Unavailable` (Caos activo) |
 | `POST` | `/api/shipping/cancel` | **Paso de Compensación:** Anula la orden de retiro pasando su estado a `CANCELADO` (o la marca preventivamente como cancelada). | `200 OK` (Cancelado / Idempotente)<br>`400 Bad Request` (`transaccionId` faltante) |
+| `GET` | `/api/shipping/pickups/{transaccionId}` | **Lectura (BFF):** Devuelve estado y dirección del retiro. Sujeto al mismo caos que `/schedule` (dependencia frágil). | `200 OK`<br>`404 Not Found`<br>`503 Service Unavailable` (Caos activo) |
 | `POST` | `/api/shipping/chaos` | **Pruebas de Resiliencia (vía Gateway):** Configura latencia (`delayMs`) y disponibilidad (`down`) en caliente. | `200 OK` (`{"delayMs": ..., "down": ...}`) |
 | `GET` | `/api/shipping/chaos` | **Pruebas de Resiliencia (vía Gateway):** Consulta el estado actual de inyección de fallos. | `200 OK` (`{"delayMs": ..., "down": ...}`) |
 
@@ -149,6 +151,7 @@ En `TransportistaClient`, el cliente HTTP tiene `readTimeout = 2000ms`, mientras
 | :--- | :--- | :--- | :--- |
 | `POST` | `/api/tracking/generate` | **Paso Forward:** Genera un código único (`TRK-...`), lo persiste con estado `GENERADO` y lo retorna en `TrackingResponse`. | `200 OK` (Generado / Idempotente)<br>`400 Bad Request` (`transaccionId` faltante)<br>`409 Conflict` (Tracking previamente anulado)<br>`500 Internal Server Error` (Caos activo) |
 | `POST` | `/api/tracking/cancel` | **Paso de Compensación:** Invalida el código de seguimiento cambiando su estado a `ANULADO`. | `200 OK` (Anulado / Idempotente)<br>`400 Bad Request` (`transaccionId` faltante) |
+| `GET` | `/api/tracking/by-transaction/{transaccionId}` | **Lectura (BFF):** Devuelve `trackingNumber` y estado. | `200 OK`<br>`404 Not Found` |
 | `POST` | `/api/tracking/chaos` | **Pruebas de Resiliencia (vía Gateway):** Activa o desactiva la falla inducida (`fail=true|false`). | `200 OK` (`{"fallarGenerar": ...}`) |
 | `GET` | `/api/tracking/chaos` | **Pruebas de Resiliencia (vía Gateway):** Consulta el estado actual del interruptor de falla. | `200 OK` (`{"fallarGenerar": ...}`) |
 

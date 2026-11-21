@@ -1,5 +1,7 @@
 package cl.edu.integracion.transportista.controller;
 
+import cl.edu.integracion.transportista.model.RetiroTransporte;
+import cl.edu.integracion.transportista.dto.RetiroDetalleResponse;
 import cl.edu.integracion.transportista.chaos.ChaosState;
 import cl.edu.integracion.transportista.dto.TransporteRequest;
 import cl.edu.integracion.transportista.dto.TransporteResponse;
@@ -36,5 +38,14 @@ public class TransporteController {
     public ResponseEntity<TransporteResponse> cancelar(@RequestBody TransporteRequest request) {
         String msg = transporteService.cancelarRetiro(request.getTransaccionId());
         return ResponseEntity.ok(new TransporteResponse(true, msg, request.getTransaccionId()));
+    }
+
+    /** Lectura sujeta al mismo caos que /schedule: el transportista es la dependencia frágil. */
+    @GetMapping("/pickups/{transaccionId}")
+    public ResponseEntity<RetiroDetalleResponse> consultar(@PathVariable String transaccionId) {
+        chaos.aplicar();
+        RetiroTransporte r = transporteService.consultarRetiro(transaccionId);
+        return ResponseEntity.ok(new RetiroDetalleResponse(
+                r.getTransaccionId(), r.getEstado(), r.getDireccion()));
     }
 }

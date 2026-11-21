@@ -1,5 +1,7 @@
 package cl.edu.integracion.tracking.controller;
 
+import cl.edu.integracion.tracking.model.TrackingEnvio;
+import cl.edu.integracion.tracking.dto.TrackingDetalleResponse;
 import cl.edu.integracion.tracking.dto.TrackingRequest;
 import cl.edu.integracion.tracking.dto.TrackingResponse;
 import cl.edu.integracion.tracking.service.TrackingService;
@@ -34,5 +36,12 @@ public class TrackingController {
         String msg = trackingService.anularTracking(request.getTransaccionId());
         return ResponseEntity.ok(new TrackingResponse(
                 true, msg, null, request.getTransaccionId()));
+    }
+
+    @GetMapping("/by-transaction/{transaccionId}")
+    public ResponseEntity<TrackingDetalleResponse> consultar(@PathVariable String transaccionId) {
+        TrackingEnvio t = trackingService.consultarTracking(transaccionId);
+        return ResponseEntity.ok(new TrackingDetalleResponse(
+                t.getTransaccionId(), t.getTrackingNumber(), t.getEstado()));
     }
 }

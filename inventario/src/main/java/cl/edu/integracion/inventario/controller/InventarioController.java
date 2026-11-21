@@ -1,5 +1,7 @@
 package cl.edu.integracion.inventario.controller;
 
+import cl.edu.integracion.inventario.model.Reserva;
+import cl.edu.integracion.inventario.dto.ReservaDetalleResponse;
 import cl.edu.integracion.inventario.dto.ReservaRequest;
 import cl.edu.integracion.inventario.dto.ReservaResponse;
 import cl.edu.integracion.inventario.service.InventarioService;
@@ -28,5 +30,12 @@ public class InventarioController {
     public ResponseEntity<ReservaResponse> liberar(@RequestBody ReservaRequest request) {
         String msg = inventarioService.liberarStock(request.getTransaccionId());
         return ResponseEntity.ok(new ReservaResponse(true, msg, request.getTransaccionId()));
+    }
+
+    @GetMapping("/reservations/{transaccionId}")
+    public ResponseEntity<ReservaDetalleResponse> consultar(@PathVariable String transaccionId) {
+        Reserva r = inventarioService.consultarReserva(transaccionId);
+        return ResponseEntity.ok(new ReservaDetalleResponse(
+                r.getTransaccionId(), r.getProductoId(), r.getCantidad(), r.getEstado()));
     }
 }
