@@ -1,7 +1,7 @@
 [versions]
-springBoot = "3.5.6"
-springCloud = "2025.0.0"
-resilience4j = "2.2.0"
+springBoot = "3.5.16"
+springCloud = "2025.0.3"
+resilience4j = "2.4.0"
 
 [libraries]
 # BOMs

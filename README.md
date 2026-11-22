@@ -155,7 +155,7 @@ En `TransportistaClient`, el cliente HTTP tiene `readTimeout = 2000ms`, mientras
 | `POST` | `/api/tracking/generate` | **Paso Forward:** Genera un código único (`TRK-...`), lo persiste con estado `GENERADO` y lo retorna en `TrackingResponse`. | `200 OK` (Generado / Idempotente)<br>`400 Bad Request` (`transaccionId` faltante)<br>`409 Conflict` (Tracking previamente anulado)<br>`500 Internal Server Error` (Caos activo) |
 | `POST` | `/api/tracking/cancel` | **Paso de Compensación:** Invalida el código de seguimiento cambiando su estado a `ANULADO`. | `200 OK` (Anulado / Idempotente)<br>`400 Bad Request` (`transaccionId` faltante) |
 | `GET` | `/api/tracking/by-transaction/{transaccionId}` | **Lectura (BFF):** Devuelve `trackingNumber` y estado. | `200 OK`<br>`404 Not Found` |
-| `POST` | `/api/tracking/chaos` | **Pruebas de Resiliencia (vía Gateway):** Activa o desactiva la falla inducida (`fail=true|false`). | `200 OK` (`{"fallarGenerar": ...}`) |
+| `POST` | `/api/tracking/chaos` | **Pruebas de Resiliencia (vía Gateway):** Activa o desactiva la falla inducida (`fail=true\|false`). | `200 OK` (`{"fallarGenerar": ...}`) |
 | `GET` | `/api/tracking/chaos` | **Pruebas de Resiliencia (vía Gateway):** Consulta el estado actual del interruptor de falla. | `200 OK` (`{"fallarGenerar": ...}`) |
 
 ---
@@ -192,3 +192,42 @@ Requisitos del host: Docker (con Compose y BuildKit) y `bash` + `curl`. Para des
    ```bash
    curl -s http://localhost:8080/api/bff/envios/TX-1 -H "Authorization: Bearer forma-l-secret-token"
    ```
+
+---
+
+## Escenarios de Falla Reproducibles (`scripts/`)
+
+Cada script usa solo `curl`, imprime `PASS` / `FAIL` por cada verificación y guarda la salida completa en `evidence/<escenario>-<id>.txt` (listo para capturas del informe). Se ejecutan desde la raíz del repositorio. Usan `transaccionId` únicos por ejecución, así que se pueden repetir.
+
+| Script | Escenario | Qué demuestra |
+| :--- | :--- | :--- |
+| `scripts/00-reset.sh` | Reset | Apaga las fallas inducidas y muestra el estado del circuito. |
+| `scripts/01-exito.sh` | 1. Éxito | Saga `COMPLETADA`, tres pasos firmes en la vista BFF, idempotencia al repetir el `transaccionId`. |
+| `scripts/02-compensacion.sh` | 2. Fallo con compensación | Falla el último paso (tracking). Saga `COMPENSADA`, reserva `LIBERADA`, retiro `CANCELADO`, tracking `ANULADO` (ninguno activo). Logs con el orden inverso Tracking → Transporte → Inventario. |
+| `scripts/03-cascada.sh` | 3. Falla en cascada contenida | Ver detalle abajo. |
+| `scripts/04-rate-limit.sh` | Rate limiting | 40 peticiones de un cliente → `429` pasado el límite; otro cliente no se afecta; sin token → `401`. |
+
+### Detalle del escenario 3 (`03-cascada.sh`)
+1. **Antes:** circuito `CLOSED`, bulkhead con 3 cupos libres (snapshot de métricas).
+2. **Lentitud (`delayMs=1500`):** las primeras llamadas tardan ~1.5 s y se cuentan como lentas; el circuito pasa a `OPEN` y las siguientes responden en milisegundos con `503` y `CallNotPermittedException` (*fail-fast* + fallback). El orquestador compensa el inventario sin esperar.
+3. **Caída (`down=true`):** tras `15 s` el circuito pasa a `HALF_OPEN`, las 2 sondas fallan y vuelve a `OPEN`.
+4. **Recuperación:** el transportista vuelve, las sondas pasan y el circuito queda `CLOSED`.
+5. **Pico + lentitud:** 8 peticiones concurrentes con el transportista lento. El Bulkhead (3 concurrentes, sin cola) deja pasar 3 y rechaza el resto con `BulkheadFullException`; mientras tanto `GET /api/despachos/{id}` responde en milisegundos y el BFF responde con `"degradado": true` en vez de agotar hilos.
+
+**Qué habría pasado sin el patrón:** sin timeout cada petición bloquearía un hilo hasta que el transportista respondiera; sin Circuit Breaker se seguiría golpeando al servicio caído y cada saga pagaría la espera completa; sin Bulkhead, el pico concurrente acapararía los hilos del orquestador y degradaría también las consultas que no usan al transportista (falla en cascada).
+
+**Evidencia manual adicional (vía gateway, con token):**
+```bash
+H="Authorization: Bearer forma-l-secret-token"
+curl -s -H "$H" localhost:8080/actuator/circuitbreakers
+curl -s -H "$H" localhost:8080/actuator/circuitbreakerevents/transportista
+curl -s -H "$H" localhost:8080/actuator/bulkheadevents/transportista
+curl -s -H "$H" "localhost:8080/actuator/metrics/resilience4j.circuitbreaker.not.permitted.calls?tag=name:transportista"
+```
+Para los logs de la saga: `docker compose logs orquestador | grep "SAGA <transaccionId>"`.
+
+### Por qué Saga y no Two-Phase Commit
+El transportista es un servicio externo, lento y que se cae. 2PC exigiría mantener bloqueos distribuidos y un coordinador a la espera de todos los participantes (un participante lento o caído bloquea a los demás), y un sistema externo no expone un protocolo de *prepare/commit*. La Saga confirma cada paso localmente y compensa en orden inverso, aceptando consistencia eventual.
+
+### Por qué orquestación y no coreografía
+El flujo es secuencial y lineal (3 pasos). Un orquestador centraliza el estado (`despachos_saga`), el orden de las compensaciones y el manejo de la dependencia frágil (Circuit Breaker + Bulkhead en un solo punto), y hace trazable cada transición. En coreografía el estado y la lógica de compensación quedarían repartidos entre los servicios.
