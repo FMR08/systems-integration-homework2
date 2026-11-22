@@ -13,50 +13,53 @@ import java.util.UUID;
 
 @Service
 public class TrackingService {
-
     private final TrackingRepository trackingRepository;
     private final ChaosState chaos;
 
-    public TrackingService(TrackingRepository trackingRepository, ChaosState chaos) {
+    public TrackingService(final TrackingRepository trackingRepository, final ChaosState chaos) {
         this.trackingRepository = trackingRepository;
         this.chaos = chaos;
     }
 
     @Transactional
-    public String generarTracking(String transaccionId) {
+    public String generarTracking(final String transaccionId) {
         if (vacio(transaccionId)) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "transaccionId es obligatorio");
         }
 
-        TrackingEnvio existente = trackingRepository.findByTransaccionId(transaccionId).orElse(null);
+        final TrackingEnvio existente = trackingRepository.findByTransaccionId(transaccionId).orElse(null);
         if (existente != null) {
             if (existente.getEstado() == EstadoTracking.ANULADO) {
-                throw new ResponseStatusException(HttpStatus.CONFLICT,
-                        "El tracking de esta transacción ya fue anulado");
+                throw new ResponseStatusException(
+                    HttpStatus.CONFLICT,
+                    "El tracking de esta transacción ya fue anulado"
+                );
             }
             return existente.getTrackingNumber();
         }
 
         if (chaos.isFallarGenerar()) {
-            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR,
-                    "Falla inducida (chaos) en tracking");
+            throw new ResponseStatusException(
+                HttpStatus.INTERNAL_SERVER_ERROR,
+                "Falla inducida (chaos) en tracking"
+            );
         }
 
-        String trackingNumber = "TRK-" + UUID.randomUUID().toString().substring(0, 8).toUpperCase();
+        final String trackingNumber = "TRK-" + UUID.randomUUID().toString().substring(0, 8).toUpperCase();
         trackingRepository.save(new TrackingEnvio(transaccionId, trackingNumber, EstadoTracking.GENERADO));
         return trackingNumber;
     }
 
     @Transactional
-    public String anularTracking(String transaccionId) {
+    public String anularTracking(final String transaccionId) {
         if (vacio(transaccionId)) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "transaccionId es obligatorio");
         }
 
-        TrackingEnvio tracking = trackingRepository.findByTransaccionId(transaccionId).orElse(null);
+        final TrackingEnvio tracking = trackingRepository.findByTransaccionId(transaccionId).orElse(null);
         if (tracking == null) {
             // Anulación preventiva: si un generate llega tarde (timeout), se rechaza con 409
-            String marcador = "VOID-" + UUID.randomUUID().toString().substring(0, 8).toUpperCase();
+            final String marcador = "VOID-" + UUID.randomUUID().toString().substring(0, 8).toUpperCase();
             trackingRepository.save(new TrackingEnvio(transaccionId, marcador, EstadoTracking.ANULADO));
             return "Tracking marcado como anulado de forma preventiva";
         }
@@ -70,14 +73,16 @@ public class TrackingService {
         return "Tracking anulado (compensación aplicada)";
     }
 
-    private boolean vacio(String s) {
+    private boolean vacio(final String s) {
         return s == null || s.isBlank();
     }
 
     @Transactional(readOnly = true)
-    public TrackingEnvio consultarTracking(String transaccionId) {
+    public TrackingEnvio consultarTracking(final String transaccionId) {
         return trackingRepository.findByTransaccionId(transaccionId)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,
-                        "No existe tracking para transaccionId: " + transaccionId));
+            .orElseThrow(() -> new ResponseStatusException(
+                HttpStatus.NOT_FOUND,
+                "No existe tracking para transaccionId: " + transaccionId
+            ));
     }
 }

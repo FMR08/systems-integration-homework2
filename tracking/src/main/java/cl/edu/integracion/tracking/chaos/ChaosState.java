@@ -7,10 +7,9 @@ import java.util.concurrent.atomic.AtomicBoolean;
 
 @Component
 public class ChaosState {
-
     private final AtomicBoolean fallarGenerar;
 
-    public ChaosState(@Value("${chaos.tracking.fail:false}") boolean inicial) {
+    public ChaosState(@Value("${chaos.tracking.fail:false}") final boolean inicial) {
         this.fallarGenerar = new AtomicBoolean(inicial);
     }
 
@@ -18,7 +17,7 @@ public class ChaosState {
         return fallarGenerar.get();
     }
 
-    public void setFallarGenerar(boolean valor) {
+    public void setFallarGenerar(final boolean valor) {
         fallarGenerar.set(valor);
     }
 }

@@ -10,25 +10,28 @@ import org.springframework.web.server.ResponseStatusException;
 
 @Service
 public class TransporteService {
-
     private final TransporteRepository transporteRepository;
 
-    public TransporteService(TransporteRepository transporteRepository) {
+    public TransporteService(final TransporteRepository transporteRepository) {
         this.transporteRepository = transporteRepository;
     }
 
     @Transactional
-    public String agendarRetiro(String transaccionId, String direccion) {
+    public String agendarRetiro(final String transaccionId, final String direccion) {
         if (vacio(transaccionId) || vacio(direccion)) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST,
-                    "transaccionId y direccion son obligatorios");
+            throw new ResponseStatusException(
+                HttpStatus.BAD_REQUEST,
+                "transaccionId y direccion son obligatorios"
+            );
         }
 
-        RetiroTransporte existente = transporteRepository.findByTransaccionId(transaccionId).orElse(null);
+        final RetiroTransporte existente = transporteRepository.findByTransaccionId(transaccionId).orElse(null);
         if (existente != null) {
             if (existente.getEstado() == EstadoRetiro.CANCELADO) {
-                throw new ResponseStatusException(HttpStatus.CONFLICT,
-                        "El retiro de esta transacción ya fue cancelado");
+                throw new ResponseStatusException(
+                    HttpStatus.CONFLICT,
+                    "El retiro de esta transacción ya fue cancelado"
+                );
             }
             return "Retiro ya agendado (idempotente)";
         }
@@ -38,12 +41,12 @@ public class TransporteService {
     }
 
     @Transactional
-    public String cancelarRetiro(String transaccionId) {
+    public String cancelarRetiro(final String transaccionId) {
         if (vacio(transaccionId)) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "transaccionId es obligatorio");
         }
 
-        RetiroTransporte retiro = transporteRepository.findByTransaccionId(transaccionId).orElse(null);
+        final RetiroTransporte retiro = transporteRepository.findByTransaccionId(transaccionId).orElse(null);
         if (retiro == null) {
             transporteRepository.save(new RetiroTransporte(transaccionId, "N/A", EstadoRetiro.CANCELADO));
             return "Retiro marcado como cancelado de forma preventiva";
@@ -58,14 +61,16 @@ public class TransporteService {
         return "Retiro cancelado (compensación aplicada)";
     }
 
-    private boolean vacio(String s) {
+    private boolean vacio(final String s) {
         return s == null || s.isBlank();
     }
 
     @Transactional(readOnly = true)
-    public RetiroTransporte consultarRetiro(String transaccionId) {
+    public RetiroTransporte consultarRetiro(final String transaccionId) {
         return transporteRepository.findByTransaccionId(transaccionId)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,
-                        "No existe retiro para transaccionId: " + transaccionId));
+            .orElseThrow(() -> new ResponseStatusException(
+                HttpStatus.NOT_FOUND,
+                "No existe retiro para transaccionId: " + transaccionId
+            ));
     }
 }

@@ -7,15 +7,14 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/tracking/chaos")
 public class ChaosController {
-
     private final ChaosState chaos;
 
-    public ChaosController(ChaosState chaos) {
+    public ChaosController(final ChaosState chaos) {
         this.chaos = chaos;
     }
 
     @PostMapping
-    public Map<String, Object> configurar(@RequestParam boolean fail) {
+    public Map<String, Object> configurar(@RequestParam final boolean fail) {
         chaos.setFallarGenerar(fail);
         return Map.of("fallarGenerar", fail);
     }

@@ -8,7 +8,7 @@ public class TransporteRequest {
         return transaccionId;
     }
 
-    public void setTransaccionId(String transaccionId) {
+    public void setTransaccionId(final String transaccionId) {
         this.transaccionId = transaccionId;
     }
 
@@ -16,7 +16,7 @@ public class TransporteRequest {
         return direccion;
     }
 
-    public void setDireccion(String direccion) {
+    public void setDireccion(final String direccion) {
         this.direccion = direccion;
     }
 }

@@ -10,24 +10,23 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api/despachos")
 public class DespachoController {
-
     private final OrquestadorService orquestadorService;
 
-    public DespachoController(OrquestadorService orquestadorService) {
+    public DespachoController(final OrquestadorService orquestadorService) {
         this.orquestadorService = orquestadorService;
     }
 
     @PostMapping
-    public ResponseEntity<DespachoResponse> crearDespacho(@RequestBody DespachoRequest request) {
+    public ResponseEntity<DespachoResponse> crearDespacho(@RequestBody final DespachoRequest request) {
         try {
             return ResponseEntity.ok(orquestadorService.procesarDespacho(request));
-        } catch (DataIntegrityViolationException e) {
+        } catch (final DataIntegrityViolationException e) {
             return ResponseEntity.ok(orquestadorService.consultarDespacho(request.getTransaccionId()));
         }
     }
 
     @GetMapping("/{transaccionId}")
-    public ResponseEntity<DespachoResponse> obtenerDespacho(@PathVariable String transaccionId) {
+    public ResponseEntity<DespachoResponse> obtenerDespacho(@PathVariable final String transaccionId) {
         return ResponseEntity.ok(orquestadorService.consultarDespacho(transaccionId));
     }
 }

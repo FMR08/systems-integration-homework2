@@ -9,7 +9,7 @@ public class ReservaRequest {
         return productoId;
     }
 
-    public void setProductoId(String productoId) {
+    public void setProductoId(final String productoId) {
         this.productoId = productoId;
     }
 
@@ -17,7 +17,7 @@ public class ReservaRequest {
         return cantidad;
     }
 
-    public void setCantidad(Integer cantidad) {
+    public void setCantidad(final Integer cantidad) {
         this.cantidad = cantidad;
     }
 
@@ -25,7 +25,7 @@ public class ReservaRequest {
         return transaccionId;
     }
 
-    public void setTransaccionId(String transaccionId) {
+    public void setTransaccionId(final String transaccionId) {
         this.transaccionId = transaccionId;
     }
 }

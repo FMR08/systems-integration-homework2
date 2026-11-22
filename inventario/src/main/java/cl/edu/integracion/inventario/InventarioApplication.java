@@ -11,18 +11,19 @@ import java.util.List;
 
 @SpringBootApplication
 public class InventarioApplication {
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         SpringApplication.run(InventarioApplication.class, args);
     }
 
     @Bean
-    CommandLineRunner seed(InventarioRepository repo) {
+    CommandLineRunner seed(final InventarioRepository repo) {
         return args -> {
             if (repo.count() == 0) {
                 repo.saveAll(List.of(
-                        new Inventario("PROD-001", 100),
-                        new Inventario("PROD-002", 50),
-                        new Inventario("PROD-003", 10)));
+                    new Inventario("PROD-001", 100),
+                    new Inventario("PROD-002", 50),
+                    new Inventario("PROD-003", 10)
+                ));
             }
         };
     }

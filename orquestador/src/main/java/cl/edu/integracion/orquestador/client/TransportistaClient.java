@@ -17,58 +17,66 @@ import java.time.Duration;
 
 @Component
 public class TransportistaClient {
-
     private static final Logger log = LoggerFactory.getLogger(TransportistaClient.class);
 
     private final RestTemplate agendarTemplate;
     private final RestTemplate cancelarTemplate;
     private final String baseUrl;
 
-    public TransportistaClient(RestTemplateBuilder builder,
-                               @Value("${servicios.transportista.url}") String baseUrl) {
+    public TransportistaClient(
+        final RestTemplateBuilder builder,
+        @Value("${servicios.transportista.url}") final String baseUrl
+    ) {
         this.baseUrl = baseUrl;
         this.agendarTemplate = builder
-                .connectTimeout(Duration.ofSeconds(1))
-                .readTimeout(Duration.ofSeconds(2))
-                .build();
+            .connectTimeout(Duration.ofSeconds(1))
+            .readTimeout(Duration.ofSeconds(2))
+            .build();
         this.cancelarTemplate = builder
-                .connectTimeout(Duration.ofSeconds(2))
-                .readTimeout(Duration.ofSeconds(4))
-                .build();
+            .connectTimeout(Duration.ofSeconds(2))
+            .readTimeout(Duration.ofSeconds(4))
+            .build();
     }
 
     @CircuitBreaker(name = "transportista", fallbackMethod = "agendarFallback")
     @Bulkhead(name = "transportista", type = Bulkhead.Type.SEMAPHORE)
-    public void agendar(TransportePasoRequest req) {
+    public void agendar(final TransportePasoRequest req) {
         agendarTemplate.postForEntity(baseUrl + "/api/shipping/schedule", req, String.class);
     }
 
     @SuppressWarnings("unused")
-    private void agendarFallback(TransportePasoRequest req, Throwable t) {
-        if (t instanceof HttpClientErrorException http) {
+    private void agendarFallback(final TransportePasoRequest req, final Throwable t) {
+        if (t instanceof final HttpClientErrorException http) {
             throw http;
         }
         log.warn("[TRANSPORTISTA] fallback activado: {}", t.getClass().getSimpleName());
-        boolean noEnviada = t instanceof CallNotPermittedException || t instanceof BulkheadFullException;
+        final boolean noEnviada = t instanceof CallNotPermittedException || t instanceof BulkheadFullException;
         throw new TransportistaNoDisponibleException(
-                "Transportista no disponible (" + t.getClass().getSimpleName() + ")", noEnviada);
+            "Transportista no disponible (" + t.getClass().getSimpleName() + ")",
+            noEnviada
+        );
     }
 
-    /** Compensación: fuera del breaker, con retry y backoff. */
-    public void cancelar(String transaccionId) {
-        int intentos = 3;
+    /**
+     * Compensación: fuera del breaker, con retry y backoff.
+     */
+    public void cancelar(final String transaccionId) {
+        final int intentos = 3;
         RuntimeException ultimo = null;
         for (int i = 0; i < intentos; i++) {
             try {
-                cancelarTemplate.postForEntity(baseUrl + "/api/shipping/cancel",
-                        new TransportePasoRequest(transaccionId, null), String.class);
+                cancelarTemplate.postForEntity(
+                    baseUrl + "/api/shipping/cancel",
+                    new TransportePasoRequest(transaccionId, null),
+                    String.class
+                );
                 return;
-            } catch (RuntimeException e) {
+            } catch (final RuntimeException e) {
                 ultimo = e;
                 log.warn("[TRANSPORTISTA] cancel intento {}/{} falló: {}", i + 1, intentos, e.getMessage());
                 try {
                     Thread.sleep(500L * (1L << i));
-                } catch (InterruptedException ie) {
+                } catch (final InterruptedException ie) {
                     Thread.currentThread().interrupt();
                     break;
                 }

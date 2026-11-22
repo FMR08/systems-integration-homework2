@@ -6,7 +6,6 @@ import cl.edu.integracion.orquestador.dto.*;
 import cl.edu.integracion.orquestador.model.Despacho;
 import cl.edu.integracion.orquestador.model.EstadoDespacho;
 import cl.edu.integracion.orquestador.repository.DespachoRepository;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -20,7 +19,6 @@ import org.springframework.web.server.ResponseStatusException;
 
 @Service
 public class OrquestadorService {
-
     private static final Logger log = LoggerFactory.getLogger(OrquestadorService.class);
 
     private final DespachoRepository despachoRepository;
@@ -34,56 +32,56 @@ public class OrquestadorService {
     private String trackingUrl;
 
     public OrquestadorService(
-            DespachoRepository despachoRepository,
-            RestTemplate restTemplate,
-            TransportistaClient transportistaClient) {
+        final DespachoRepository despachoRepository,
+        final RestTemplate restTemplate,
+        final TransportistaClient transportistaClient
+    ) {
         this.despachoRepository = despachoRepository;
         this.restTemplate = restTemplate;
         this.transportistaClient = transportistaClient;
     }
 
-    public DespachoResponse procesarDespacho(DespachoRequest req) {
-
+    public DespachoResponse procesarDespacho(final DespachoRequest req) {
         validarSolicitud(req);
 
-        Despacho existente = despachoRepository
-                .findByTransaccionId(req.getTransaccionId())
-                .orElse(null);
+        final Despacho existente = despachoRepository
+            .findByTransaccionId(req.getTransaccionId())
+            .orElse(null);
 
         if (existente != null) {
 
             if (existente.getEstado() == EstadoDespacho.COMPLETADA) {
                 return new DespachoResponse(
-                        true,
-                        "Despacho ya completado (idempotente)",
-                        existente.getTransaccionId(),
-                        existente.getEstado(),
-                        existente.getTrackingNumber()
+                    true,
+                    "Despacho ya completado (idempotente)",
+                    existente.getTransaccionId(),
+                    existente.getEstado(),
+                    existente.getTrackingNumber()
                 );
             }
 
             if (existente.getEstado() == EstadoDespacho.FALLIDA
-                    || existente.getEstado() == EstadoDespacho.COMPENSADA) {
+                || existente.getEstado() == EstadoDespacho.COMPENSADA) {
                 throw new ResponseStatusException(
-                        HttpStatus.CONFLICT,
-                        "La transacción ya fue procesada: "
-                                + existente.getEstado()
+                    HttpStatus.CONFLICT,
+                    "La transacción ya fue procesada: "
+                        + existente.getEstado()
                 );
             }
 
             throw new ResponseStatusException(
-                    HttpStatus.CONFLICT,
-                    "La transacción se encuentra actualmente en curso"
+                HttpStatus.CONFLICT,
+                "La transacción se encuentra actualmente en curso"
             );
         }
 
-        Despacho despacho = despachoRepository.save(
-                new Despacho(
-                        req.getTransaccionId(),
-                        req.getProductoId(),
-                        req.getCantidad(),
-                        req.getDireccion()
-                )
+        final Despacho despacho = despachoRepository.save(
+            new Despacho(
+                req.getTransaccionId(),
+                req.getProductoId(),
+                req.getCantidad(),
+                req.getDireccion()
+            )
         );
 
         boolean inventarioReservado = false;
@@ -91,20 +89,14 @@ public class OrquestadorService {
         boolean trackingGenerado = false;
         int paso = 0;
         try {
-
-            log.info("[SAGA {}] Paso 1: Reservando inventario",
-                    req.getTransaccionId());
+            log.info("[SAGA {}] Paso 1: Reservando inventario", req.getTransaccionId());
             paso = 1;
             inventarioReservado = true;
 
             restTemplate.postForEntity(
-                    inventarioUrl + "/api/inventory/reserve",
-                    new InventarioPasoRequest(
-                            req.getTransaccionId(),
-                            req.getProductoId(),
-                            req.getCantidad()
-                    ),
-                    String.class
+                inventarioUrl + "/api/inventory/reserve",
+                new InventarioPasoRequest(req.getTransaccionId(), req.getProductoId(), req.getCantidad()),
+                String.class
             );
 
             despacho.setEstado(EstadoDespacho.INVENTARIO_RESERVADO);
@@ -112,83 +104,67 @@ public class OrquestadorService {
 
             paso = 2;
             transporteAgendado = true;
-            log.info("[SAGA {}] Paso 2: Agendando transporte",
-                    req.getTransaccionId());
-
-            transportistaClient.agendar(
-                    new TransportePasoRequest(
-                            req.getTransaccionId(),
-                            req.getDireccion()
-                    )
+            log.info(
+                "[SAGA {}] Paso 2: Agendando transporte",
+                req.getTransaccionId()
             );
+
+            transportistaClient.agendar(new TransportePasoRequest(req.getTransaccionId(), req.getDireccion()));
 
             despacho.setEstado(EstadoDespacho.TRANSPORTE_AGENDADO);
             despachoRepository.save(despacho);
 
             paso = 3;
             trackingGenerado = true;
-            log.info("[SAGA {}] Paso 3: Generando tracking",
-                    req.getTransaccionId());
+            log.info("[SAGA {}] Paso 3: Generando tracking", req.getTransaccionId());
 
-            TrackingPasoResponse trackingResp = restTemplate.postForObject(
-                    trackingUrl + "/api/tracking/generate",
-                    new TrackingPasoRequest(req.getTransaccionId()),
-                    TrackingPasoResponse.class
+            final TrackingPasoResponse trackingResp = restTemplate.postForObject(
+                trackingUrl + "/api/tracking/generate",
+                new TrackingPasoRequest(req.getTransaccionId()),
+                TrackingPasoResponse.class
             );
 
-            if (trackingResp == null
-                    || !trackingResp.isSuccess()
-                    || trackingResp.getTrackingNumber() == null) {
-
-                throw new RestClientException(
-                        "Respuesta inválida desde servicio de tracking"
-                );
+            if (trackingResp == null || !trackingResp.isSuccess() || trackingResp.getTrackingNumber() == null) {
+                throw new RestClientException("Respuesta inválida desde servicio de tracking");
             }
 
             despacho.setTrackingNumber(trackingResp.getTrackingNumber());
             despacho.setEstado(EstadoDespacho.TRACKING_GENERADO);
             despachoRepository.save(despacho);
 
-            log.info("[SAGA {}] Tracking generado: {}",
-                    req.getTransaccionId(),
-                    trackingResp.getTrackingNumber());
+            log.info("[SAGA {}] Tracking generado: {}", req.getTransaccionId(), trackingResp.getTrackingNumber());
 
             despacho.setEstado(EstadoDespacho.COMPLETADA);
             despachoRepository.save(despacho);
 
-            log.info("[SAGA {}] COMPLETADA",
-                    req.getTransaccionId());
+            log.info("[SAGA {}] COMPLETADA", req.getTransaccionId());
 
             return new DespachoResponse(
-                    true,
-                    "Despacho procesado con éxito",
-                    despacho.getTransaccionId(),
-                    despacho.getEstado(),
-                    despacho.getTrackingNumber()
+                true,
+                "Despacho procesado con éxito",
+                despacho.getTransaccionId(),
+                despacho.getEstado(),
+                despacho.getTrackingNumber()
             );
-
-        } catch (Exception ex) {
-
-            String motivo = extraerMensajeError(ex);
+        } catch (final Exception ex) {
+            final String motivo = extraerMensajeError(ex);
 
             // Circuito abierto o bulkhead lleno: la petición nunca salió, no hay nada que cancelar.
-            if (ex instanceof TransportistaNoDisponibleException nd && nd.isNoEnviada()) {
+            if (ex instanceof final TransportistaNoDisponibleException nd && nd.isNoEnviada()) {
                 transporteAgendado = false;
             }
 
-            log.error("[SAGA {}] Fallo detectado: {}",
-                    req.getTransaccionId(), motivo);
+            log.error("[SAGA {}] Fallo detectado: {}", req.getTransaccionId(), motivo);
 
             despacho.setEstado(EstadoDespacho.COMPENSANDO);
             despacho.setDetalleError(truncar(motivo));
             despachoRepository.save(despacho);
 
             boolean compensacionExitosa = true;
-            StringBuilder erroresCompensacion = new StringBuilder();
-
+            final StringBuilder erroresCompensacion = new StringBuilder();
 
             if (trackingGenerado) {
-                boolean resultado = compensarTracking(req.getTransaccionId());
+                final boolean resultado = compensarTracking(req.getTransaccionId());
 
                 if (!resultado) {
                     compensacionExitosa = false;
@@ -197,7 +173,7 @@ public class OrquestadorService {
             }
 
             if (transporteAgendado) {
-                boolean resultado = compensarTransporte(req.getTransaccionId());
+                final boolean resultado = compensarTransporte(req.getTransaccionId());
 
                 if (!resultado) {
                     compensacionExitosa = false;
@@ -206,7 +182,7 @@ public class OrquestadorService {
             }
 
             if (inventarioReservado) {
-                boolean resultado = compensarInventario(req);
+                final boolean resultado = compensarInventario(req);
 
                 if (!resultado) {
                     compensacionExitosa = false;
@@ -215,31 +191,22 @@ public class OrquestadorService {
             }
 
             if (compensacionExitosa) {
-
                 despacho.setEstado(EstadoDespacho.COMPENSADA);
 
-                log.info("[SAGA {}] COMPENSADA correctamente",
-                        req.getTransaccionId());
-
+                log.info("[SAGA {}] COMPENSADA correctamente", req.getTransaccionId());
             } else {
-
                 despacho.setEstado(EstadoDespacho.FALLIDA);
+                despacho.setDetalleError(truncar(motivo + " | Errores de compensación: " + erroresCompensacion));
 
-                despacho.setDetalleError(truncar(
-                        motivo + " | Errores de compensación: "
-                                + erroresCompensacion
-                ));
-
-                log.error("[SAGA {}] FALLIDA: compensación incompleta",
-                        req.getTransaccionId());
+                log.error("[SAGA {}] FALLIDA: compensación incompleta", req.getTransaccionId());
             }
 
             despachoRepository.save(despacho);
 
-            HttpStatus status;
+            final HttpStatus status;
             if (ex instanceof TransportistaNoDisponibleException) {
                 status = HttpStatus.SERVICE_UNAVAILABLE;
-            } else if (paso == 1 && ex instanceof HttpClientErrorException http) {
+            } else if (paso == 1 && ex instanceof final HttpClientErrorException http) {
                 // Rechazo de negocio del inventario (p. ej. 409 stock insuficiente), no una falla de infraestructura
                 status = HttpStatus.valueOf(http.getStatusCode().value());
             } else {
@@ -247,137 +214,120 @@ public class OrquestadorService {
             }
 
             throw new ResponseStatusException(
-                    status,
-                    compensacionExitosa
-                            ? "Despacho abortado y compensado. Motivo: " + motivo
-                            : "Despacho abortado, pero la compensación fue incompleta. "
-                                    + erroresCompensacion
+                status,
+                compensacionExitosa
+                    ? "Despacho abortado y compensado. Motivo: " + motivo
+                    : "Despacho abortado, pero la compensación fue incompleta. " + erroresCompensacion
             );
         }
     }
 
-    public DespachoResponse consultarDespacho(String transaccionId) {
+    public DespachoResponse consultarDespacho(final String transaccionId) {
+        final Despacho despacho = despachoRepository
+            .findByTransaccionId(transaccionId)
+            .orElseThrow(() -> new ResponseStatusException(
+                HttpStatus.NOT_FOUND,
+                "No existe despacho para transaccionId: " + transaccionId
+            ));
 
-        Despacho despacho = despachoRepository
-                .findByTransaccionId(transaccionId)
-                .orElseThrow(() -> new ResponseStatusException(
-                        HttpStatus.NOT_FOUND,
-                        "No existe despacho para transaccionId: " + transaccionId
-                ));
+        final boolean ok = despacho.getEstado() == EstadoDespacho.COMPLETADA;
 
-        boolean ok = despacho.getEstado() == EstadoDespacho.COMPLETADA;
-
-        String msg = ok
-                ? "Despacho completado"
-                : "Estado actual: " + despacho.getEstado();
+        final String msg = ok
+            ? "Despacho completado"
+            : "Estado actual: " + despacho.getEstado();
 
         return new DespachoResponse(
-                ok,
-                msg,
-                despacho.getTransaccionId(),
-                despacho.getEstado(),
-                despacho.getTrackingNumber()
+            ok,
+            msg,
+            despacho.getTransaccionId(),
+            despacho.getEstado(),
+            despacho.getTrackingNumber()
         );
     }
 
-    private boolean compensarTracking(String transaccionId) {
-
+    private boolean compensarTracking(final String transaccionId) {
         try {
-            log.warn("[SAGA {}] Compensando Paso 3: Cancelando tracking",
-                    transaccionId);
+            log.warn("[SAGA {}] Compensando Paso 3: Cancelando tracking", transaccionId);
 
             restTemplate.postForEntity(
-                    trackingUrl + "/api/tracking/cancel",
-                    new TrackingPasoRequest(transaccionId),
-                    String.class
+                trackingUrl + "/api/tracking/cancel",
+                new TrackingPasoRequest(transaccionId),
+                String.class
             );
 
             return true;
-
-        } catch (Exception e) {
-            log.error("[SAGA {}] Error al compensar tracking: {}",
-                    transaccionId, e.getMessage());
+        } catch (final Exception e) {
+            log.error("[SAGA {}] Error al compensar tracking: {}", transaccionId, e.getMessage());
 
             return false;
         }
     }
 
-    private boolean compensarTransporte(String transaccionId) {
-
+    private boolean compensarTransporte(final String transaccionId) {
         try {
-            log.warn("[SAGA {}] Compensando Paso 2: Cancelando transporte",
-                    transaccionId);
+            log.warn("[SAGA {}] Compensando Paso 2: Cancelando transporte", transaccionId);
 
             transportistaClient.cancelar(transaccionId);
 
             return true;
-
-        } catch (Exception e) {
-            log.error("[SAGA {}] Error al compensar transporte: {}",
-                    transaccionId, e.getMessage());
+        } catch (final Exception e) {
+            log.error("[SAGA {}] Error al compensar transporte: {}", transaccionId, e.getMessage());
 
             return false;
         }
     }
 
-    private boolean compensarInventario(DespachoRequest req) {
-
-        String transaccionId = req.getTransaccionId();
+    private boolean compensarInventario(final DespachoRequest req) {
+        final String transaccionId = req.getTransaccionId();
 
         try {
-            log.warn("[SAGA {}] Compensando Paso 1: Liberando inventario",
-                    transaccionId);
+            log.warn("[SAGA {}] Compensando Paso 1: Liberando inventario", transaccionId);
 
             restTemplate.postForEntity(
-                    inventarioUrl + "/api/inventory/release",
-                    new InventarioPasoRequest(
-                            transaccionId, req.getProductoId(), req.getCantidad()),
-                    String.class
+                inventarioUrl + "/api/inventory/release",
+                new InventarioPasoRequest(transaccionId, req.getProductoId(), req.getCantidad()),
+                String.class
             );
 
             return true;
-
-        } catch (Exception e) {
-            log.error("[SAGA {}] Error al compensar inventario: {}",
-                    transaccionId, e.getMessage());
+        } catch (final Exception e) {
+            log.error("[SAGA {}] Error al compensar inventario: {}", transaccionId, e.getMessage());
 
             return false;
         }
     }
 
-    private void validarSolicitud(DespachoRequest req) {
-
-        if (req == null
-                || vacio(req.getTransaccionId())
-                || vacio(req.getProductoId())
-                || req.getCantidad() == null
-                || req.getCantidad() <= 0
-                || vacio(req.getDireccion())) {
-
+    private void validarSolicitud(final DespachoRequest req) {
+        if (
+            req == null
+            || vacio(req.getTransaccionId())
+            || vacio(req.getProductoId())
+            || req.getCantidad() == null
+            || req.getCantidad() <= 0
+            || vacio(req.getDireccion())
+        ) {
             throw new ResponseStatusException(
-                    HttpStatus.BAD_REQUEST,
-                    "transaccionId, productoId, cantidad (>0) y direccion son obligatorios"
+                HttpStatus.BAD_REQUEST,
+                "transaccionId, productoId, cantidad (>0) y direccion son obligatorios"
             );
         }
     }
 
-    private String extraerMensajeError(Exception ex) {
-
-        if (ex instanceof HttpStatusCodeException httpEx) {
-            return "HTTP " + httpEx.getStatusCode().value()
-                    + " - " + httpEx.getResponseBodyAsString();
+    private String extraerMensajeError(final Exception ex) {
+        if (ex instanceof final HttpStatusCodeException httpEx) {
+            return "HTTP " + httpEx.getStatusCode().value() + " - " + httpEx.getResponseBodyAsString();
         }
 
         return ex.getMessage() != null
-                ? ex.getMessage()
-                : "Error de comunicación desconocido";
+            ? ex.getMessage()
+            : "Error de comunicación desconocido";
     }
 
-    private String truncar(String s) {
+    private String truncar(final String s) {
         return s.length() > 500 ? s.substring(0, 497) + "..." : s;
     }
 
-    private boolean vacio(String s) {
+    private boolean vacio(final String s) {
         return s == null || s.isBlank();
     }
 }

@@ -5,7 +5,7 @@ public class TransporteResponse {
     private String message;
     private String transaccionId;
 
-    public TransporteResponse(boolean success, String message, String transaccionId) {
+    public TransporteResponse(final boolean success, final String message, final String transaccionId) {
         this.success = success;
         this.message = message;
         this.transaccionId = transaccionId;
@@ -15,14 +15,15 @@ public class TransporteResponse {
         return success;
     }
 
-    public void setSuccess(boolean success) {
+    public void setSuccess(final boolean success) {
         this.success = success;
     }
 
     public String getMessage() {
         return message;
     }
-    public void setMessage(String message) {
+
+    public void setMessage(final String message) {
         this.message = message;
     }
 
@@ -30,7 +31,7 @@ public class TransporteResponse {
         return transaccionId;
     }
 
-    public void setTransaccionId(String transaccionId) {
+    public void setTransaccionId(final String transaccionId) {
         this.transaccionId = transaccionId;
     }
 }

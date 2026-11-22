@@ -17,35 +17,43 @@ import java.time.Instant;
 
 @Component
 public class AuthFilter implements GlobalFilter, Ordered {
-
     @Value("${gateway.auth.token}")
     private String expectedToken;
 
     @Override
-    public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
-        String path = exchange.getRequest().getURI().getPath();
+    public Mono<Void> filter(final ServerWebExchange exchange, final GatewayFilterChain chain) {
+        final String path = exchange.getRequest().getURI().getPath();
 
-        String authHeader = exchange.getRequest().getHeaders().getFirst(HttpHeaders.AUTHORIZATION);
-        String expectedHeader = "Bearer " + expectedToken;
+        final String authHeader = exchange.getRequest().getHeaders().getFirst(HttpHeaders.AUTHORIZATION);
+        final String expectedHeader = "Bearer " + expectedToken;
 
         if (authHeader == null || !authHeader.equals(expectedHeader)) {
-            return writeJsonError(exchange, HttpStatus.UNAUTHORIZED, "UNAUTHORIZED",
-                    "Token de acceso faltante o inválido", path);
+            return writeJsonError(
+                exchange, HttpStatus.UNAUTHORIZED,
+                "UNAUTHORIZED",
+                "Token de acceso faltante o inválido", path
+            );
         }
 
         return chain.filter(exchange);
     }
 
-    private Mono<Void> writeJsonError(ServerWebExchange exchange, HttpStatus status,
-                                      String code, String message, String path) {
+    @SuppressWarnings("SameParameterValue")
+    private Mono<Void> writeJsonError(
+        final ServerWebExchange exchange,
+        final HttpStatus status,
+        final String code,
+        final String message,
+        final String path
+    ) {
         exchange.getResponse().setStatusCode(status);
         exchange.getResponse().getHeaders().setContentType(MediaType.APPLICATION_JSON);
 
-        String body = """
-                {"success":false,"error":{"code":"%s","message":"%s","details":[]},"timestamp":"%s","path":"%s"}
-                """.formatted(code, message, Instant.now(), path).trim();
+        final String body = """
+            {"success":false,"error":{"code":"%s","message":"%s","details":[]},"timestamp":"%s","path":"%s"}
+            """.formatted(code, message, Instant.now(), path).trim();
 
-        DataBuffer buffer = exchange.getResponse().bufferFactory().wrap(body.getBytes(StandardCharsets.UTF_8));
+        final DataBuffer buffer = exchange.getResponse().bufferFactory().wrap(body.getBytes(StandardCharsets.UTF_8));
         return exchange.getResponse().writeWith(Mono.just(buffer));
     }
 

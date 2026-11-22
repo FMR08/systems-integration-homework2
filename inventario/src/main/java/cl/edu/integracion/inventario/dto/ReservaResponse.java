@@ -5,7 +5,7 @@ public class ReservaResponse {
     private String message;
     private String transaccionId;
 
-    public ReservaResponse(boolean success, String message, String transaccionId) {
+    public ReservaResponse(final boolean success, final String message, final String transaccionId) {
         this.success = success;
         this.message = message;
         this.transaccionId = transaccionId;
@@ -15,7 +15,7 @@ public class ReservaResponse {
         return success;
     }
 
-    public void setSuccess(boolean success) {
+    public void setSuccess(final boolean success) {
         this.success = success;
     }
 
@@ -23,7 +23,7 @@ public class ReservaResponse {
         return message;
     }
 
-    public void setMessage(String message) {
+    public void setMessage(final String message) {
         this.message = message;
     }
 
@@ -31,7 +31,7 @@ public class ReservaResponse {
         return transaccionId;
     }
 
-    public void setTransaccionId(String transaccionId) {
+    public void setTransaccionId(final String transaccionId) {
         this.transaccionId = transaccionId;
     }
 }

@@ -8,5 +8,5 @@ public enum EstadoDespacho {
     COMPLETADA,
     COMPENSANDO,
     COMPENSADA,
-    FALLIDA
+    FALLIDA,
 }

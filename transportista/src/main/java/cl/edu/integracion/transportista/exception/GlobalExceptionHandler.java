@@ -14,20 +14,21 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(ResponseStatusException.class)
     public ResponseEntity<ErrorResponse> handleStatusException(
-            ResponseStatusException ex, HttpServletRequest request) {
-
-        String errorCode = switch (ex.getStatusCode().value()) {
+        final ResponseStatusException ex,
+        final HttpServletRequest request
+    ) {
+        final String errorCode = switch (ex.getStatusCode().value()) {
             case 400 -> "VALIDATION_ERROR";
             case 404 -> "RESOURCE_NOT_FOUND";
             case 409 -> "BUSINESS_CONFLICT";
             default -> "INTERNAL_ERROR";
         };
 
-        ErrorResponse body = new ErrorResponse(
-                errorCode,
-                ex.getReason(),
-                Collections.emptyList(),
-                request.getRequestURI()
+        final ErrorResponse body = new ErrorResponse(
+            errorCode,
+            ex.getReason(),
+            Collections.emptyList(),
+            request.getRequestURI()
         );
 
         return ResponseEntity.status(ex.getStatusCode()).body(body);

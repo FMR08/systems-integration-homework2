@@ -4,5 +4,5 @@ public enum EstadoTracking {
     GENERADO,
     EN_TRANSITO,
     ENTREGADO,
-    ANULADO
+    ANULADO,
 }

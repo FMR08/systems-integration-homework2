@@ -12,23 +12,27 @@ import org.springframework.web.server.ResponseStatusException;
 
 @Service
 public class InventarioService {
-
     private final InventarioRepository inventarioRepository;
     private final ReservaRepository reservaRepository;
 
-    public InventarioService(InventarioRepository inventarioRepository, ReservaRepository reservaRepository) {
+    public InventarioService(
+        final InventarioRepository inventarioRepository,
+        final ReservaRepository reservaRepository
+    ) {
         this.inventarioRepository = inventarioRepository;
         this.reservaRepository = reservaRepository;
     }
 
     @Transactional
-    public String reservarStock(String transaccionId, String productoId, Integer cantidad) {
+    public String reservarStock(final String transaccionId, final String productoId, final Integer cantidad) {
         if (vacio(transaccionId) || vacio(productoId) || cantidad == null || cantidad <= 0) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST,
-                    "transaccionId, productoId y cantidad (> 0) son obligatorios");
+            throw new ResponseStatusException(
+                HttpStatus.BAD_REQUEST,
+                "transaccionId, productoId y cantidad (> 0) son obligatorios"
+            );
         }
 
-        Reserva previa = reservaRepository.findByTransaccionId(transaccionId).orElse(null);
+        final Reserva previa = reservaRepository.findByTransaccionId(transaccionId).orElse(null);
         if (previa != null) {
             if (previa.getEstado() == EstadoReserva.RESERVADA) {
                 return "Reserva ya existente (idempotente)";
@@ -36,9 +40,11 @@ public class InventarioService {
             throw new ResponseStatusException(HttpStatus.CONFLICT, "La transacción ya fue liberada");
         }
 
-        Inventario inv = inventarioRepository.findByProductoId(productoId)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,
-                        "Producto inexistente: " + productoId));
+        final Inventario inv = inventarioRepository.findByProductoId(productoId)
+            .orElseThrow(() -> new ResponseStatusException(
+                HttpStatus.NOT_FOUND,
+                "Producto inexistente: " + productoId
+            ));
 
         if (inv.getStockDisponible() < cantidad) {
             throw new ResponseStatusException(HttpStatus.CONFLICT, "Stock insuficiente");
@@ -53,12 +59,12 @@ public class InventarioService {
     }
 
     @Transactional
-    public String liberarStock(String transaccionId, String productoId, Integer cantidad) {
+    public String liberarStock(final String transaccionId, final String productoId, final Integer cantidad) {
         if (vacio(transaccionId)) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "transaccionId es obligatorio");
         }
 
-        Reserva reserva = reservaRepository.findByTransaccionId(transaccionId).orElse(null);
+        final Reserva reserva = reservaRepository.findByTransaccionId(transaccionId).orElse(null);
         if (reserva == null) {
             if (!vacio(productoId) && cantidad != null && cantidad > 0) {
                 // Cancelación preventiva: si la reserva llega tarde (timeout), reservarStock la rechaza con 409
@@ -72,8 +78,8 @@ public class InventarioService {
             return "Reserva ya liberada previamente (idempotente)";
         }
 
-        Inventario inv = inventarioRepository.findByProductoId(reserva.getProductoId())
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Producto inexistente"));
+        final Inventario inv = inventarioRepository.findByProductoId(reserva.getProductoId())
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Producto inexistente"));
 
         inv.setStockDisponible(inv.getStockDisponible() + reserva.getCantidad());
         inv.setStockReservado(Math.max(0, inv.getStockReservado() - reserva.getCantidad()));
@@ -85,14 +91,16 @@ public class InventarioService {
         return "Stock liberado (compensación aplicada)";
     }
 
-    private boolean vacio(String s) {
+    private boolean vacio(final String s) {
         return s == null || s.isBlank();
     }
 
     @Transactional(readOnly = true)
-    public Reserva consultarReserva(String transaccionId) {
+    public Reserva consultarReserva(final String transaccionId) {
         return reservaRepository.findByTransaccionId(transaccionId)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,
-                        "No existe reserva para transaccionId: " + transaccionId));
+            .orElseThrow(() -> new ResponseStatusException(
+                HttpStatus.NOT_FOUND,
+                "No existe reserva para transaccionId: " + transaccionId
+            ));
     }
 }
