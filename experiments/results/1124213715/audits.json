@@ -1,0 +1,270 @@
+[
+  {
+    "exp": "E1",
+    "perfil": "completo",
+    "prefijo": "E1-CO-1124213715-",
+    "producto": "X1124213715E1CO",
+    "sagas": {
+      "COMPLETADA": 15
+    },
+    "reservas": {
+      "RESERVADA": 15
+    },
+    "retiros": {
+      "AGENDADO": 15
+    },
+    "trackings": {
+      "GENERADO": 15
+    },
+    "stock": {
+      "inicial": 100000,
+      "disponible": 99985,
+      "reservado": 15
+    },
+    "controles": [
+      {
+        "control": "C1 sin sagas en estado intermedio",
+        "ok": true,
+        "detalle": "0 intermedias []"
+      },
+      {
+        "control": "C2 COMPLETADA => reserva RESERVADA + retiro AGENDADO + tracking GENERADO",
+        "ok": true,
+        "detalle": "0 incompletas []"
+      },
+      {
+        "control": "C3 sin efectos activos fuera de una saga COMPLETADA (nada comprometido sin envío)",
+        "ok": true,
+        "detalle": "0 huérfanos []"
+      },
+      {
+        "control": "C4 conservación de stock (disponible + reservado = inicial)",
+        "ok": true,
+        "detalle": "disponible=99985 reservado=15 inicial=100000"
+      },
+      {
+        "control": "C5 stock reservado = suma de reservas RESERVADA",
+        "ok": true,
+        "detalle": "stock_reservado=15 suma_reservas=15"
+      },
+      {
+        "control": "C6 a lo más un retiro por envío (idempotencia)",
+        "ok": true,
+        "detalle": "0 duplicados"
+      }
+    ],
+    "todo_ok": true,
+    "extra": {
+      "reintentos_tracking_distinto": 0,
+      "esperado_completadas": 15
+    }
+  },
+  {
+    "exp": "E2",
+    "perfil": "completo",
+    "prefijo": "E2-CO-1124213715-",
+    "producto": "X1124213715E2CO",
+    "sagas": {
+      "COMPENSADA": 10
+    },
+    "reservas": {
+      "LIBERADA": 10
+    },
+    "retiros": {
+      "CANCELADO": 10
+    },
+    "trackings": {
+      "ANULADO": 10
+    },
+    "stock": {
+      "inicial": 100000,
+      "disponible": 100000,
+      "reservado": 0
+    },
+    "controles": [
+      {
+        "control": "C1 sin sagas en estado intermedio",
+        "ok": true,
+        "detalle": "0 intermedias []"
+      },
+      {
+        "control": "C2 COMPLETADA => reserva RESERVADA + retiro AGENDADO + tracking GENERADO",
+        "ok": true,
+        "detalle": "0 incompletas []"
+      },
+      {
+        "control": "C3 sin efectos activos fuera de una saga COMPLETADA (nada comprometido sin envío)",
+        "ok": true,
+        "detalle": "0 huérfanos []"
+      },
+      {
+        "control": "C4 conservación de stock (disponible + reservado = inicial)",
+        "ok": true,
+        "detalle": "disponible=100000 reservado=0 inicial=100000"
+      },
+      {
+        "control": "C5 stock reservado = suma de reservas RESERVADA",
+        "ok": true,
+        "detalle": "stock_reservado=0 suma_reservas=0"
+      },
+      {
+        "control": "C6 a lo más un retiro por envío (idempotencia)",
+        "ok": true,
+        "detalle": "0 duplicados"
+      }
+    ],
+    "todo_ok": true,
+    "extra": {
+      "orden_compensacion": {
+        "E2-CO-1124213715-comp-000": [
+          3,
+          2,
+          1
+        ],
+        "E2-CO-1124213715-comp-001": [
+          3,
+          2,
+          1
+        ],
+        "E2-CO-1124213715-comp-002": [
+          3,
+          2,
+          1
+        ],
+        "E2-CO-1124213715-comp-003": [
+          3,
+          2,
+          1
+        ],
+        "E2-CO-1124213715-comp-004": [
+          3,
+          2,
+          1
+        ],
+        "E2-CO-1124213715-comp-005": [
+          3,
+          2,
+          1
+        ],
+        "E2-CO-1124213715-comp-006": [
+          3,
+          2,
+          1
+        ],
+        "E2-CO-1124213715-comp-007": [
+          3,
+          2,
+          1
+        ],
+        "E2-CO-1124213715-comp-008": [
+          3,
+          2,
+          1
+        ],
+        "E2-CO-1124213715-comp-009": [
+          3,
+          2,
+          1
+        ]
+      },
+      "orden_correcto": 10,
+      "n": 10
+    }
+  },
+  {
+    "exp": "E3",
+    "perfil": "completo",
+    "prefijo": "E3-CO-1124213715-",
+    "producto": "X1124213715E3CO",
+    "sagas": {},
+    "reservas": {},
+    "retiros": {},
+    "trackings": {},
+    "stock": {
+      "inicial": 100000,
+      "disponible": 100000,
+      "reservado": 0
+    },
+    "controles": [
+      {
+        "control": "C1 sin sagas en estado intermedio",
+        "ok": true,
+        "detalle": "0 intermedias []"
+      },
+      {
+        "control": "C2 COMPLETADA => reserva RESERVADA + retiro AGENDADO + tracking GENERADO",
+        "ok": true,
+        "detalle": "0 incompletas []"
+      },
+      {
+        "control": "C3 sin efectos activos fuera de una saga COMPLETADA (nada comprometido sin envío)",
+        "ok": true,
+        "detalle": "0 huérfanos []"
+      },
+      {
+        "control": "C4 conservación de stock (disponible + reservado = inicial)",
+        "ok": true,
+        "detalle": "disponible=100000 reservado=0 inicial=100000"
+      },
+      {
+        "control": "C5 stock reservado = suma de reservas RESERVADA",
+        "ok": true,
+        "detalle": "stock_reservado=0 suma_reservas=0"
+      },
+      {
+        "control": "C6 a lo más un retiro por envío (idempotencia)",
+        "ok": true,
+        "detalle": "0 duplicados"
+      }
+    ],
+    "todo_ok": true
+  },
+  {
+    "exp": "E5",
+    "perfil": "completo",
+    "prefijo": "E5-CO-1124213715-",
+    "producto": "X1124213715E5CO",
+    "sagas": {},
+    "reservas": {},
+    "retiros": {},
+    "trackings": {},
+    "stock": {
+      "inicial": 100000,
+      "disponible": 100000,
+      "reservado": 0
+    },
+    "controles": [
+      {
+        "control": "C1 sin sagas en estado intermedio",
+        "ok": true,
+        "detalle": "0 intermedias []"
+      },
+      {
+        "control": "C2 COMPLETADA => reserva RESERVADA + retiro AGENDADO + tracking GENERADO",
+        "ok": true,
+        "detalle": "0 incompletas []"
+      },
+      {
+        "control": "C3 sin efectos activos fuera de una saga COMPLETADA (nada comprometido sin envío)",
+        "ok": true,
+        "detalle": "0 huérfanos []"
+      },
+      {
+        "control": "C4 conservación de stock (disponible + reservado = inicial)",
+        "ok": true,
+        "detalle": "disponible=100000 reservado=0 inicial=100000"
+      },
+      {
+        "control": "C5 stock reservado = suma de reservas RESERVADA",
+        "ok": true,
+        "detalle": "stock_reservado=0 suma_reservas=0"
+      },
+      {
+        "control": "C6 a lo más un retiro por envío (idempotencia)",
+        "ok": true,
+        "detalle": "0 duplicados"
+      }
+    ],
+    "todo_ok": true
+  }
+]

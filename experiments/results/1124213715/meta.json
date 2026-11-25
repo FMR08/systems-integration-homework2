@@ -1,0 +1,53 @@
+{
+  "run_id": "1124213715",
+  "inicio": "2026-11-24T21:37:15",
+  "git": "9e96461",
+  "gateway": "http://localhost:8089",
+  "perfiles": [
+    "completo",
+    "solo-timeout",
+    "sin-patrones"
+  ],
+  "experimentos": [
+    "E1",
+    "E2",
+    "E3",
+    "E5",
+    "E6"
+  ],
+  "quick": false,
+  "e3_delay_ms": 3000,
+  "e5_delay_ms": 5000,
+  "e5_k": 40,
+  "verificaciones": [
+    {
+      "perfil": "completo",
+      "agendar_read_timeout_ms": 2000,
+      "cb_umbral_fallo": 50.0,
+      "bulkhead_max": 3.0,
+      "problemas": [],
+      "avisos": []
+    },
+    {
+      "perfil": "solo-timeout",
+      "agendar_read_timeout_ms": 2000,
+      "cb_umbral_fallo": 50.0,
+      "bulkhead_max": 3.0,
+      "problemas": [
+        "bulkhead máximo = 3.0, se esperaba 10000 (neutralizado)"
+      ],
+      "avisos": []
+    },
+    {
+      "perfil": "sin-patrones",
+      "agendar_read_timeout_ms": 60000,
+      "cb_umbral_fallo": 50.0,
+      "bulkhead_max": 3.0,
+      "problemas": [
+        "bulkhead máximo = 3.0, se esperaba 10000 (neutralizado)"
+      ],
+      "avisos": []
+    }
+  ],
+  "fin": "2026-11-24T21:41:11"
+}

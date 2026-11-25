@@ -1,0 +1,6 @@
+# Se aplica en TODOS los perfiles experimentales. No cambia el comportamiento:
+# solo publica las métricas de hilos de Tomcat (tomcat.threads.busy / config.max) en /actuator/metrics.
+services:
+  orquestador:
+    environment:
+      SERVER_TOMCAT_MBEANREGISTRY_ENABLED: "true"

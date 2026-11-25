@@ -1,0 +1,15 @@
+# Perfil experimental "solo-timeout": mantiene el timeout de 2 s hacia el transportista,
+# pero neutraliza el Circuit Breaker (nunca junta suficientes llamadas para evaluar) y el
+# Bulkhead (10000 llamadas concurrentes). Sirve para aislar el aporte de CB y Bulkhead.
+services:
+  orquestador:
+    environment:
+      SPRING_APPLICATION_JSON: >-
+        {
+          "resilience4j.circuitbreaker.instances.transportista.sliding-window-size": 100000,
+          "resilience4j.circuitbreaker.instances.transportista.minimum-number-of-calls": 100000,
+          "resilience4j.circuitbreaker.instances.transportista.failure-rate-threshold": 100,
+          "resilience4j.circuitbreaker.instances.transportista.slow-call-rate-threshold": 100,
+          "resilience4j.circuitbreaker.instances.transportista.slow-call-duration-threshold": "3600s",
+          "resilience4j.bulkhead.instances.transportista.max-concurrent-calls": 10000
+        }
