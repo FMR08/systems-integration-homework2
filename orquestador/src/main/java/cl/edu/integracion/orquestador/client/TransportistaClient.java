@@ -25,17 +25,23 @@ public class TransportistaClient {
 
     public TransportistaClient(
         final RestTemplateBuilder builder,
-        @Value("${servicios.transportista.url}") final String baseUrl
+        @Value("${servicios.transportista.url}") final String baseUrl,
+        @Value("${servicios.transportista.agendar.connect-timeout-ms:1000}") final long agendarConnectMs,
+        @Value("${servicios.transportista.agendar.read-timeout-ms:2000}") final long agendarReadMs,
+        @Value("${servicios.transportista.cancelar.connect-timeout-ms:2000}") final long cancelarConnectMs,
+        @Value("${servicios.transportista.cancelar.read-timeout-ms:4000}") final long cancelarReadMs
     ) {
         this.baseUrl = baseUrl;
         this.agendarTemplate = builder
-            .connectTimeout(Duration.ofSeconds(1))
-            .readTimeout(Duration.ofSeconds(2))
+            .connectTimeout(Duration.ofMillis(agendarConnectMs))
+            .readTimeout(Duration.ofMillis(agendarReadMs))
             .build();
         this.cancelarTemplate = builder
-            .connectTimeout(Duration.ofSeconds(2))
-            .readTimeout(Duration.ofSeconds(4))
+            .connectTimeout(Duration.ofMillis(cancelarConnectMs))
+            .readTimeout(Duration.ofMillis(cancelarReadMs))
             .build();
+        log.info("[TRANSPORTISTA] timeouts agendar={}ms/{}ms cancelar={}ms/{}ms",
+            agendarConnectMs, agendarReadMs, cancelarConnectMs, cancelarReadMs);
     }
 
     @CircuitBreaker(name = "transportista", fallbackMethod = "agendarFallback")
