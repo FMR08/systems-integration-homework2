@@ -1,8 +1,8 @@
 {
-  "run_id": "1124213715",
-  "inicio": "2026-11-24T21:37:15",
-  "git": "9e96461",
-  "gateway": "http://localhost:8089",
+  "run_id": "1124224225",
+  "inicio": "2026-11-24T22:42:25",
+  "git": "4d5f4a3",
+  "gateway": "http://localhost:8080",
   "perfiles": [
     "completo",
     "solo-timeout",
@@ -31,11 +31,9 @@
     {
       "perfil": "solo-timeout",
       "agendar_read_timeout_ms": 2000,
-      "cb_umbral_fallo": 50.0,
-      "bulkhead_max": 3.0,
-      "problemas": [
-        "bulkhead máximo = 3.0, se esperaba 10000 (neutralizado)"
-      ],
+      "cb_umbral_fallo": 100.0,
+      "bulkhead_max": 10000.0,
+      "problemas": [],
       "avisos": []
     },
     {
@@ -49,5 +47,5 @@
       "avisos": []
     }
   ],
-  "fin": "2026-11-24T21:41:11"
+  "fin": "2026-11-24T22:49:57"
 }

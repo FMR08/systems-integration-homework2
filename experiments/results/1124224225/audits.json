@@ -2,8 +2,8 @@
   {
     "exp": "E1",
     "perfil": "completo",
-    "prefijo": "E1-CO-1124213715-",
-    "producto": "X1124213715E1CO",
+    "prefijo": "E1-CO-1124224225-",
+    "producto": "X1124224225E1CO",
     "sagas": {
       "COMPLETADA": 15
     },
@@ -62,8 +62,8 @@
   {
     "exp": "E2",
     "perfil": "completo",
-    "prefijo": "E2-CO-1124213715-",
-    "producto": "X1124213715E2CO",
+    "prefijo": "E2-CO-1124224225-",
+    "producto": "X1124224225E2CO",
     "sagas": {
       "COMPENSADA": 10
     },
@@ -116,52 +116,52 @@
     "todo_ok": true,
     "extra": {
       "orden_compensacion": {
-        "E2-CO-1124213715-comp-000": [
+        "E2-CO-1124224225-comp-000": [
           3,
           2,
           1
         ],
-        "E2-CO-1124213715-comp-001": [
+        "E2-CO-1124224225-comp-001": [
           3,
           2,
           1
         ],
-        "E2-CO-1124213715-comp-002": [
+        "E2-CO-1124224225-comp-002": [
           3,
           2,
           1
         ],
-        "E2-CO-1124213715-comp-003": [
+        "E2-CO-1124224225-comp-003": [
           3,
           2,
           1
         ],
-        "E2-CO-1124213715-comp-004": [
+        "E2-CO-1124224225-comp-004": [
           3,
           2,
           1
         ],
-        "E2-CO-1124213715-comp-005": [
+        "E2-CO-1124224225-comp-005": [
           3,
           2,
           1
         ],
-        "E2-CO-1124213715-comp-006": [
+        "E2-CO-1124224225-comp-006": [
           3,
           2,
           1
         ],
-        "E2-CO-1124213715-comp-007": [
+        "E2-CO-1124224225-comp-007": [
           3,
           2,
           1
         ],
-        "E2-CO-1124213715-comp-008": [
+        "E2-CO-1124224225-comp-008": [
           3,
           2,
           1
         ],
-        "E2-CO-1124213715-comp-009": [
+        "E2-CO-1124224225-comp-009": [
           3,
           2,
           1
@@ -174,8 +174,126 @@
   {
     "exp": "E3",
     "perfil": "completo",
-    "prefijo": "E3-CO-1124213715-",
-    "producto": "X1124213715E3CO",
+    "prefijo": "E3-CO-1124224225-",
+    "producto": "X1124224225E3CO",
+    "sagas": {
+      "COMPLETADA": 64,
+      "COMPENSADA": 91
+    },
+    "reservas": {
+      "RESERVADA": 64,
+      "LIBERADA": 91
+    },
+    "retiros": {
+      "AGENDADO": 64,
+      "CANCELADO": 13
+    },
+    "trackings": {
+      "GENERADO": 64
+    },
+    "stock": {
+      "inicial": 100000,
+      "disponible": 99936,
+      "reservado": 64
+    },
+    "controles": [
+      {
+        "control": "C1 sin sagas en estado intermedio",
+        "ok": true,
+        "detalle": "0 intermedias []"
+      },
+      {
+        "control": "C2 COMPLETADA => reserva RESERVADA + retiro AGENDADO + tracking GENERADO",
+        "ok": true,
+        "detalle": "0 incompletas []"
+      },
+      {
+        "control": "C3 sin efectos activos fuera de una saga COMPLETADA (nada comprometido sin envío)",
+        "ok": true,
+        "detalle": "0 huérfanos []"
+      },
+      {
+        "control": "C4 conservación de stock (disponible + reservado = inicial)",
+        "ok": true,
+        "detalle": "disponible=99936 reservado=64 inicial=100000"
+      },
+      {
+        "control": "C5 stock reservado = suma de reservas RESERVADA",
+        "ok": true,
+        "detalle": "stock_reservado=64 suma_reservas=64"
+      },
+      {
+        "control": "C6 a lo más un retiro por envío (idempotencia)",
+        "ok": true,
+        "detalle": "0 duplicados"
+      }
+    ],
+    "todo_ok": true
+  },
+  {
+    "exp": "E5",
+    "perfil": "completo",
+    "prefijo": "E5-CO-1124224225-",
+    "producto": "X1124224225E5CO",
+    "sagas": {
+      "COMPLETADA": 39,
+      "COMPENSADA": 42
+    },
+    "reservas": {
+      "RESERVADA": 39,
+      "LIBERADA": 42
+    },
+    "retiros": {
+      "AGENDADO": 39,
+      "CANCELADO": 3
+    },
+    "trackings": {
+      "GENERADO": 39
+    },
+    "stock": {
+      "inicial": 100000,
+      "disponible": 99961,
+      "reservado": 39
+    },
+    "controles": [
+      {
+        "control": "C1 sin sagas en estado intermedio",
+        "ok": true,
+        "detalle": "0 intermedias []"
+      },
+      {
+        "control": "C2 COMPLETADA => reserva RESERVADA + retiro AGENDADO + tracking GENERADO",
+        "ok": true,
+        "detalle": "0 incompletas []"
+      },
+      {
+        "control": "C3 sin efectos activos fuera de una saga COMPLETADA (nada comprometido sin envío)",
+        "ok": true,
+        "detalle": "0 huérfanos []"
+      },
+      {
+        "control": "C4 conservación de stock (disponible + reservado = inicial)",
+        "ok": true,
+        "detalle": "disponible=99961 reservado=39 inicial=100000"
+      },
+      {
+        "control": "C5 stock reservado = suma de reservas RESERVADA",
+        "ok": true,
+        "detalle": "stock_reservado=39 suma_reservas=39"
+      },
+      {
+        "control": "C6 a lo más un retiro por envío (idempotencia)",
+        "ok": true,
+        "detalle": "0 duplicados"
+      }
+    ],
+    "todo_ok": true
+  },
+  {
+    "exp": "E3",
+    "perfil": "solo-timeout",
+    "prefijo": "E3-SO-1124224225-",
+    "producto": "X1124224225E3SO",
     "sagas": {},
     "reservas": {},
     "retiros": {},
@@ -221,9 +339,9 @@
   },
   {
     "exp": "E5",
-    "perfil": "completo",
-    "prefijo": "E5-CO-1124213715-",
-    "producto": "X1124213715E5CO",
+    "perfil": "solo-timeout",
+    "prefijo": "E5-SO-1124224225-",
+    "producto": "X1124224225E5SO",
     "sagas": {},
     "reservas": {},
     "retiros": {},

@@ -1,0 +1,80 @@
+2026-11-25T01:42:38.259Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-000] Paso 1: Reservando inventario
+2026-11-25T01:42:38.273Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-000] Paso 2: Agendando transporte
+2026-11-25T01:42:38.284Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-000] Paso 3: Generando tracking
+2026-11-25T01:42:38.305Z ERROR 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-000] Fallo detectado: HTTP 500 - {"path":"/api/tracking/generate","success":false,"error":{"code":"INTERNAL_ERROR","message":"Falla inducida (chaos) en tracking","details":[]},"timestamp":"2026-11-25T01:42:38.292714657Z"}
+2026-11-25T01:42:38.308Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-000] Compensando Paso 3: Cancelando tracking
+2026-11-25T01:42:38.318Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-000] Compensando Paso 2: Cancelando transporte
+2026-11-25T01:42:38.332Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-000] Compensando Paso 1: Liberando inventario
+2026-11-25T01:42:38.343Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-000] COMPENSADA correctamente
+2026-11-25T01:42:38.357Z  INFO 1 --- [io-8080-exec-19] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-001] Paso 1: Reservando inventario
+2026-11-25T01:42:38.370Z  INFO 1 --- [io-8080-exec-19] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-001] Paso 2: Agendando transporte
+2026-11-25T01:42:38.382Z  INFO 1 --- [io-8080-exec-19] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-001] Paso 3: Generando tracking
+2026-11-25T01:42:38.388Z ERROR 1 --- [io-8080-exec-19] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-001] Fallo detectado: HTTP 500 - {"path":"/api/tracking/generate","success":false,"error":{"code":"INTERNAL_ERROR","message":"Falla inducida (chaos) en tracking","details":[]},"timestamp":"2026-11-25T01:42:38.387223859Z"}
+2026-11-25T01:42:38.391Z  WARN 1 --- [io-8080-exec-19] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-001] Compensando Paso 3: Cancelando tracking
+2026-11-25T01:42:38.400Z  WARN 1 --- [io-8080-exec-19] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-001] Compensando Paso 2: Cancelando transporte
+2026-11-25T01:42:38.408Z  WARN 1 --- [io-8080-exec-19] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-001] Compensando Paso 1: Liberando inventario
+2026-11-25T01:42:38.418Z  INFO 1 --- [io-8080-exec-19] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-001] COMPENSADA correctamente
+2026-11-25T01:42:38.431Z  INFO 1 --- [io-8080-exec-16] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-002] Paso 1: Reservando inventario
+2026-11-25T01:42:38.444Z  INFO 1 --- [io-8080-exec-16] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-002] Paso 2: Agendando transporte
+2026-11-25T01:42:38.455Z  INFO 1 --- [io-8080-exec-16] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-002] Paso 3: Generando tracking
+2026-11-25T01:42:38.461Z ERROR 1 --- [io-8080-exec-16] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-002] Fallo detectado: HTTP 500 - {"path":"/api/tracking/generate","success":false,"error":{"code":"INTERNAL_ERROR","message":"Falla inducida (chaos) en tracking","details":[]},"timestamp":"2026-11-25T01:42:38.460416572Z"}
+2026-11-25T01:42:38.465Z  WARN 1 --- [io-8080-exec-16] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-002] Compensando Paso 3: Cancelando tracking
+2026-11-25T01:42:38.473Z  WARN 1 --- [io-8080-exec-16] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-002] Compensando Paso 2: Cancelando transporte
+2026-11-25T01:42:38.482Z  WARN 1 --- [io-8080-exec-16] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-002] Compensando Paso 1: Liberando inventario
+2026-11-25T01:42:38.493Z  INFO 1 --- [io-8080-exec-16] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-002] COMPENSADA correctamente
+2026-11-25T01:42:38.506Z  INFO 1 --- [nio-8080-exec-1] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-003] Paso 1: Reservando inventario
+2026-11-25T01:42:38.519Z  INFO 1 --- [nio-8080-exec-1] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-003] Paso 2: Agendando transporte
+2026-11-25T01:42:38.530Z  INFO 1 --- [nio-8080-exec-1] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-003] Paso 3: Generando tracking
+2026-11-25T01:42:38.541Z ERROR 1 --- [nio-8080-exec-1] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-003] Fallo detectado: HTTP 500 - {"path":"/api/tracking/generate","success":false,"error":{"code":"INTERNAL_ERROR","message":"Falla inducida (chaos) en tracking","details":[]},"timestamp":"2026-11-25T01:42:38.536114231Z"}
+2026-11-25T01:42:38.544Z  WARN 1 --- [nio-8080-exec-1] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-003] Compensando Paso 3: Cancelando tracking
+2026-11-25T01:42:38.552Z  WARN 1 --- [nio-8080-exec-1] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-003] Compensando Paso 2: Cancelando transporte
+2026-11-25T01:42:38.561Z  WARN 1 --- [nio-8080-exec-1] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-003] Compensando Paso 1: Liberando inventario
+2026-11-25T01:42:38.571Z  INFO 1 --- [nio-8080-exec-1] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-003] COMPENSADA correctamente
+2026-11-25T01:42:38.584Z  INFO 1 --- [io-8080-exec-11] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-004] Paso 1: Reservando inventario
+2026-11-25T01:42:38.598Z  INFO 1 --- [io-8080-exec-11] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-004] Paso 2: Agendando transporte
+2026-11-25T01:42:38.610Z  INFO 1 --- [io-8080-exec-11] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-004] Paso 3: Generando tracking
+2026-11-25T01:42:38.615Z ERROR 1 --- [io-8080-exec-11] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-004] Fallo detectado: HTTP 500 - {"path":"/api/tracking/generate","success":false,"error":{"code":"INTERNAL_ERROR","message":"Falla inducida (chaos) en tracking","details":[]},"timestamp":"2026-11-25T01:42:38.614376883Z"}
+2026-11-25T01:42:38.618Z  WARN 1 --- [io-8080-exec-11] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-004] Compensando Paso 3: Cancelando tracking
+2026-11-25T01:42:38.626Z  WARN 1 --- [io-8080-exec-11] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-004] Compensando Paso 2: Cancelando transporte
+2026-11-25T01:42:38.634Z  WARN 1 --- [io-8080-exec-11] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-004] Compensando Paso 1: Liberando inventario
+2026-11-25T01:42:38.645Z  INFO 1 --- [io-8080-exec-11] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-004] COMPENSADA correctamente
+2026-11-25T01:42:38.659Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-005] Paso 1: Reservando inventario
+2026-11-25T01:42:38.672Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-005] Paso 2: Agendando transporte
+2026-11-25T01:42:38.683Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-005] Paso 3: Generando tracking
+2026-11-25T01:42:38.688Z ERROR 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-005] Fallo detectado: HTTP 500 - {"path":"/api/tracking/generate","success":false,"error":{"code":"INTERNAL_ERROR","message":"Falla inducida (chaos) en tracking","details":[]},"timestamp":"2026-11-25T01:42:38.687234596Z"}
+2026-11-25T01:42:38.691Z  WARN 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-005] Compensando Paso 3: Cancelando tracking
+2026-11-25T01:42:38.699Z  WARN 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-005] Compensando Paso 2: Cancelando transporte
+2026-11-25T01:42:38.707Z  WARN 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-005] Compensando Paso 1: Liberando inventario
+2026-11-25T01:42:38.721Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-005] COMPENSADA correctamente
+2026-11-25T01:42:38.735Z  INFO 1 --- [io-8080-exec-15] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-006] Paso 1: Reservando inventario
+2026-11-25T01:42:38.747Z  INFO 1 --- [io-8080-exec-15] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-006] Paso 2: Agendando transporte
+2026-11-25T01:42:38.758Z  INFO 1 --- [io-8080-exec-15] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-006] Paso 3: Generando tracking
+2026-11-25T01:42:38.763Z ERROR 1 --- [io-8080-exec-15] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-006] Fallo detectado: HTTP 500 - {"path":"/api/tracking/generate","success":false,"error":{"code":"INTERNAL_ERROR","message":"Falla inducida (chaos) en tracking","details":[]},"timestamp":"2026-11-25T01:42:38.762509123Z"}
+2026-11-25T01:42:38.766Z  WARN 1 --- [io-8080-exec-15] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-006] Compensando Paso 3: Cancelando tracking
+2026-11-25T01:42:38.775Z  WARN 1 --- [io-8080-exec-15] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-006] Compensando Paso 2: Cancelando transporte
+2026-11-25T01:42:38.783Z  WARN 1 --- [io-8080-exec-15] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-006] Compensando Paso 1: Liberando inventario
+2026-11-25T01:42:38.793Z  INFO 1 --- [io-8080-exec-15] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-006] COMPENSADA correctamente
+2026-11-25T01:42:38.805Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-007] Paso 1: Reservando inventario
+2026-11-25T01:42:38.818Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-007] Paso 2: Agendando transporte
+2026-11-25T01:42:38.829Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-007] Paso 3: Generando tracking
+2026-11-25T01:42:38.835Z ERROR 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-007] Fallo detectado: HTTP 500 - {"path":"/api/tracking/generate","success":false,"error":{"code":"INTERNAL_ERROR","message":"Falla inducida (chaos) en tracking","details":[]},"timestamp":"2026-11-25T01:42:38.833939073Z"}
+2026-11-25T01:42:38.838Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-007] Compensando Paso 3: Cancelando tracking
+2026-11-25T01:42:38.845Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-007] Compensando Paso 2: Cancelando transporte
+2026-11-25T01:42:38.854Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-007] Compensando Paso 1: Liberando inventario
+2026-11-25T01:42:38.864Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-007] COMPENSADA correctamente
+2026-11-25T01:42:38.877Z  INFO 1 --- [io-8080-exec-18] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-008] Paso 1: Reservando inventario
+2026-11-25T01:42:38.891Z  INFO 1 --- [io-8080-exec-18] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-008] Paso 2: Agendando transporte
+2026-11-25T01:42:38.902Z  INFO 1 --- [io-8080-exec-18] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-008] Paso 3: Generando tracking
+2026-11-25T01:42:38.908Z ERROR 1 --- [io-8080-exec-18] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-008] Fallo detectado: HTTP 500 - {"path":"/api/tracking/generate","success":false,"error":{"code":"INTERNAL_ERROR","message":"Falla inducida (chaos) en tracking","details":[]},"timestamp":"2026-11-25T01:42:38.906836016Z"}
+2026-11-25T01:42:38.911Z  WARN 1 --- [io-8080-exec-18] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-008] Compensando Paso 3: Cancelando tracking
+2026-11-25T01:42:38.919Z  WARN 1 --- [io-8080-exec-18] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-008] Compensando Paso 2: Cancelando transporte
+2026-11-25T01:42:38.927Z  WARN 1 --- [io-8080-exec-18] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-008] Compensando Paso 1: Liberando inventario
+2026-11-25T01:42:38.936Z  INFO 1 --- [io-8080-exec-18] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-008] COMPENSADA correctamente
+2026-11-25T01:42:38.950Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-009] Paso 1: Reservando inventario
+2026-11-25T01:42:38.963Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-009] Paso 2: Agendando transporte
+2026-11-25T01:42:38.975Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-009] Paso 3: Generando tracking
+2026-11-25T01:42:38.980Z ERROR 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-009] Fallo detectado: HTTP 500 - {"path":"/api/tracking/generate","success":false,"error":{"code":"INTERNAL_ERROR","message":"Falla inducida (chaos) en tracking","details":[]},"timestamp":"2026-11-25T01:42:38.979324248Z"}
+2026-11-25T01:42:38.984Z  WARN 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-009] Compensando Paso 3: Cancelando tracking
+2026-11-25T01:42:38.991Z  WARN 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-009] Compensando Paso 2: Cancelando transporte
+2026-11-25T01:42:38.999Z  WARN 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-009] Compensando Paso 1: Liberando inventario
+2026-11-25T01:42:39.009Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E2-CO-1124224225-comp-009] COMPENSADA correctamente

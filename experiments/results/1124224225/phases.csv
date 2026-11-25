@@ -1,0 +1,30 @@
+exp,perfil,fase,t_inicio_s,t_fin_s,config
+E1,completo,secuencial,0.22,1.357,"{""n"": 10}"
+E1,completo,reintento-mismo-id,1.357,1.422,"{""n"": 10}"
+E1,completo,duplicados-concurrentes,1.422,1.535,"{""ids"": 5, ""copias"": 5}"
+E2,completo,tracking-falla,0.125,0.888,"{""n"": 10}"
+E6,completo,mismo-cliente,20.0,20.184,"{""n"": 40, ""limite"": 30}"
+E6,completo,otro-cliente,20.184,20.19,{}
+E6,completo,sin-token,20.19,20.191,{}
+E3,completo,normal,0.123,20.127,"{""delayMs"": 0, ""down"": false}"
+E3,completo,lento,20.127,65.131,"{""delayMs"": 3000, ""down"": false}"
+E3,completo,caido,65.131,110.134,"{""delayMs"": 0, ""down"": true}"
+E3,completo,recuperado,110.134,155.135,"{""delayMs"": 0, ""down"": false}"
+E5,completo,preparacion,0.117,0.359,{}
+E5,completo,control-antes,0.359,3.359,"{""delayMs"": 0}"
+E5,completo,control-pico,3.359,3.74,"{""delayMs"": 0, ""k"": 40}"
+E5,completo,control-despues,3.74,7.743,"{""delayMs"": 0}"
+E5,completo,lento-antes,7.743,10.743,"{""delayMs"": 5000}"
+E5,completo,lento-pico,10.743,12.823,"{""delayMs"": 5000, ""k"": 40}"
+E5,completo,lento-despues,12.823,16.826,"{""delayMs"": 5000}"
+E3,solo-timeout,normal,0.113,20.116,"{""delayMs"": 0, ""down"": false}"
+E3,solo-timeout,lento,20.116,65.119,"{""delayMs"": 3000, ""down"": false}"
+E3,solo-timeout,caido,65.119,110.122,"{""delayMs"": 0, ""down"": true}"
+E3,solo-timeout,recuperado,110.122,155.123,"{""delayMs"": 0, ""down"": false}"
+E5,solo-timeout,preparacion,0.109,0.133,{}
+E5,solo-timeout,control-antes,0.133,3.133,"{""delayMs"": 0}"
+E5,solo-timeout,control-pico,3.133,3.168,"{""delayMs"": 0, ""k"": 40}"
+E5,solo-timeout,control-despues,3.168,7.171,"{""delayMs"": 0}"
+E5,solo-timeout,lento-antes,7.171,10.171,"{""delayMs"": 5000}"
+E5,solo-timeout,lento-pico,10.171,10.207,"{""delayMs"": 5000, ""k"": 40}"
+E5,solo-timeout,lento-despues,10.207,14.21,"{""delayMs"": 5000}"

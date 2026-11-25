@@ -1,0 +1,105 @@
+2026-11-25T01:42:33.455Z  INFO 1 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-25T01:42:33.455Z  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-25T01:42:33.456Z  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-11-25T01:42:34.146Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-000] Paso 1: Reservando inventario
+2026-11-25T01:42:34.350Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-000] Paso 2: Agendando transporte
+2026-11-25T01:42:34.496Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-000] Paso 3: Generando tracking
+2026-11-25T01:42:34.635Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-000] Tracking generado: TRK-1870F557
+2026-11-25T01:42:34.639Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-000] COMPLETADA
+2026-11-25T01:42:34.653Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-001] Paso 1: Reservando inventario
+2026-11-25T01:42:34.668Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-001] Paso 2: Agendando transporte
+2026-11-25T01:42:34.681Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-001] Paso 3: Generando tracking
+2026-11-25T01:42:34.693Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-001] Tracking generado: TRK-2FB1942A
+2026-11-25T01:42:34.696Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-001] COMPLETADA
+2026-11-25T01:42:34.707Z  INFO 1 --- [nio-8080-exec-6] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-002] Paso 1: Reservando inventario
+2026-11-25T01:42:34.721Z  INFO 1 --- [nio-8080-exec-6] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-002] Paso 2: Agendando transporte
+2026-11-25T01:42:34.734Z  INFO 1 --- [nio-8080-exec-6] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-002] Paso 3: Generando tracking
+2026-11-25T01:42:34.752Z  INFO 1 --- [nio-8080-exec-6] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-002] Tracking generado: TRK-5CF7C885
+2026-11-25T01:42:34.758Z  INFO 1 --- [nio-8080-exec-6] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-002] COMPLETADA
+2026-11-25T01:42:34.770Z  INFO 1 --- [nio-8080-exec-7] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-003] Paso 1: Reservando inventario
+2026-11-25T01:42:34.788Z  INFO 1 --- [nio-8080-exec-7] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-003] Paso 2: Agendando transporte
+2026-11-25T01:42:34.802Z  INFO 1 --- [nio-8080-exec-7] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-003] Paso 3: Generando tracking
+2026-11-25T01:42:34.816Z  INFO 1 --- [nio-8080-exec-7] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-003] Tracking generado: TRK-87C8149F
+2026-11-25T01:42:34.820Z  INFO 1 --- [nio-8080-exec-7] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-003] COMPLETADA
+2026-11-25T01:42:34.832Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-004] Paso 1: Reservando inventario
+2026-11-25T01:42:34.847Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-004] Paso 2: Agendando transporte
+2026-11-25T01:42:34.860Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-004] Paso 3: Generando tracking
+2026-11-25T01:42:34.872Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-004] Tracking generado: TRK-9C280689
+2026-11-25T01:42:34.875Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-004] COMPLETADA
+2026-11-25T01:42:34.886Z  INFO 1 --- [nio-8080-exec-9] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-005] Paso 1: Reservando inventario
+2026-11-25T01:42:34.901Z  INFO 1 --- [nio-8080-exec-9] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-005] Paso 2: Agendando transporte
+2026-11-25T01:42:34.913Z  INFO 1 --- [nio-8080-exec-9] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-005] Paso 3: Generando tracking
+2026-11-25T01:42:34.926Z  INFO 1 --- [nio-8080-exec-9] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-005] Tracking generado: TRK-20C136A1
+2026-11-25T01:42:34.929Z  INFO 1 --- [nio-8080-exec-9] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-005] COMPLETADA
+2026-11-25T01:42:34.940Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-006] Paso 1: Reservando inventario
+2026-11-25T01:42:34.955Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-006] Paso 2: Agendando transporte
+2026-11-25T01:42:34.967Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-006] Paso 3: Generando tracking
+2026-11-25T01:42:34.980Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-006] Tracking generado: TRK-D1072513
+2026-11-25T01:42:34.983Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-006] COMPLETADA
+2026-11-25T01:42:34.994Z  INFO 1 --- [nio-8080-exec-1] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-007] Paso 1: Reservando inventario
+2026-11-25T01:42:35.009Z  INFO 1 --- [nio-8080-exec-1] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-007] Paso 2: Agendando transporte
+2026-11-25T01:42:35.021Z  INFO 1 --- [nio-8080-exec-1] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-007] Paso 3: Generando tracking
+2026-11-25T01:42:35.034Z  INFO 1 --- [nio-8080-exec-1] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-007] Tracking generado: TRK-E3956FD7
+2026-11-25T01:42:35.037Z  INFO 1 --- [nio-8080-exec-1] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-007] COMPLETADA
+2026-11-25T01:42:35.048Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-008] Paso 1: Reservando inventario
+2026-11-25T01:42:35.062Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-008] Paso 2: Agendando transporte
+2026-11-25T01:42:35.075Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-008] Paso 3: Generando tracking
+2026-11-25T01:42:35.087Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-008] Tracking generado: TRK-80120F79
+2026-11-25T01:42:35.090Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-008] COMPLETADA
+2026-11-25T01:42:35.100Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-009] Paso 1: Reservando inventario
+2026-11-25T01:42:35.115Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-009] Paso 2: Agendando transporte
+2026-11-25T01:42:35.127Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-009] Paso 3: Generando tracking
+2026-11-25T01:42:35.139Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-009] Tracking generado: TRK-F660A261
+2026-11-25T01:42:35.142Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-ok-009] COMPLETADA
+2026-11-25T01:42:35.221Z  INFO 1 --- [nio-8080-exec-7] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-dup-0] Paso 1: Reservando inventario
+2026-11-25T01:42:35.225Z  WARN 1 --- [nio-8080-exec-8] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23505
+2026-11-25T01:42:35.226Z  WARN 1 --- [nio-8080-exec-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23505
+2026-11-25T01:42:35.226Z ERROR 1 --- [nio-8080-exec-8] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: duplicate key value violates unique constraint "ukpd8t79qv200sfuwvvebq7po5a"
+  Detail: Key (transaccion_id)=(E1-CO-1124224225-dup-0) already exists.
+2026-11-25T01:42:35.226Z ERROR 1 --- [nio-8080-exec-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: duplicate key value violates unique constraint "ukpd8t79qv200sfuwvvebq7po5a"
+  Detail: Key (transaccion_id)=(E1-CO-1124224225-dup-0) already exists.
+2026-11-25T01:42:35.227Z  WARN 1 --- [nio-8080-exec-5] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23505
+2026-11-25T01:42:35.227Z ERROR 1 --- [nio-8080-exec-5] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: duplicate key value violates unique constraint "ukpd8t79qv200sfuwvvebq7po5a"
+  Detail: Key (transaccion_id)=(E1-CO-1124224225-dup-0) already exists.
+2026-11-25T01:42:35.228Z  WARN 1 --- [nio-8080-exec-4] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23505
+2026-11-25T01:42:35.228Z ERROR 1 --- [nio-8080-exec-4] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: duplicate key value violates unique constraint "ukpd8t79qv200sfuwvvebq7po5a"
+  Detail: Key (transaccion_id)=(E1-CO-1124224225-dup-0) already exists.
+2026-11-25T01:42:35.246Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-dup-2] Paso 1: Reservando inventario
+2026-11-25T01:42:35.247Z  WARN 1 --- [io-8080-exec-16] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23505
+2026-11-25T01:42:35.247Z ERROR 1 --- [io-8080-exec-16] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: duplicate key value violates unique constraint "ukpd8t79qv200sfuwvvebq7po5a"
+  Detail: Key (transaccion_id)=(E1-CO-1124224225-dup-2) already exists.
+2026-11-25T01:42:35.247Z  WARN 1 --- [io-8080-exec-19] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23505
+2026-11-25T01:42:35.247Z ERROR 1 --- [io-8080-exec-19] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: duplicate key value violates unique constraint "ukpd8t79qv200sfuwvvebq7po5a"
+  Detail: Key (transaccion_id)=(E1-CO-1124224225-dup-2) already exists.
+2026-11-25T01:42:35.249Z  INFO 1 --- [nio-8080-exec-7] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-dup-0] Paso 2: Agendando transporte
+2026-11-25T01:42:35.249Z  INFO 1 --- [nio-8080-exec-9] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-dup-1] Paso 1: Reservando inventario
+2026-11-25T01:42:35.249Z  WARN 1 --- [nio-8080-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23505
+2026-11-25T01:42:35.249Z ERROR 1 --- [nio-8080-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: duplicate key value violates unique constraint "ukpd8t79qv200sfuwvvebq7po5a"
+  Detail: Key (transaccion_id)=(E1-CO-1124224225-dup-1) already exists.
+2026-11-25T01:42:35.249Z  WARN 1 --- [io-8080-exec-11] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23505
+2026-11-25T01:42:35.249Z  INFO 1 --- [io-8080-exec-13] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-dup-3] Paso 1: Reservando inventario
+2026-11-25T01:42:35.249Z ERROR 1 --- [io-8080-exec-11] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: duplicate key value violates unique constraint "ukpd8t79qv200sfuwvvebq7po5a"
+  Detail: Key (transaccion_id)=(E1-CO-1124224225-dup-1) already exists.
+2026-11-25T01:42:35.250Z  WARN 1 --- [nio-8080-exec-3] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23505
+2026-11-25T01:42:35.251Z ERROR 1 --- [nio-8080-exec-3] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: duplicate key value violates unique constraint "ukpd8t79qv200sfuwvvebq7po5a"
+  Detail: Key (transaccion_id)=(E1-CO-1124224225-dup-3) already exists.
+2026-11-25T01:42:35.251Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-dup-4] Paso 1: Reservando inventario
+2026-11-25T01:42:35.267Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-dup-2] Paso 2: Agendando transporte
+2026-11-25T01:42:35.273Z  INFO 1 --- [nio-8080-exec-7] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-dup-0] Paso 3: Generando tracking
+2026-11-25T01:42:35.278Z  INFO 1 --- [nio-8080-exec-9] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-dup-1] Paso 2: Agendando transporte
+2026-11-25T01:42:35.284Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-dup-4] Paso 2: Agendando transporte
+2026-11-25T01:42:35.285Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-dup-2] Paso 3: Generando tracking
+2026-11-25T01:42:35.288Z  INFO 1 --- [nio-8080-exec-7] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-dup-0] Tracking generado: TRK-006749F7
+2026-11-25T01:42:35.292Z  INFO 1 --- [io-8080-exec-13] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-dup-3] Paso 2: Agendando transporte
+2026-11-25T01:42:35.292Z  INFO 1 --- [nio-8080-exec-7] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-dup-0] COMPLETADA
+2026-11-25T01:42:35.296Z  INFO 1 --- [nio-8080-exec-9] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-dup-1] Paso 3: Generando tracking
+2026-11-25T01:42:35.299Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-dup-2] Tracking generado: TRK-1035BA67
+2026-11-25T01:42:35.301Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-dup-4] Paso 3: Generando tracking
+2026-11-25T01:42:35.303Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-dup-2] COMPLETADA
+2026-11-25T01:42:35.306Z  INFO 1 --- [io-8080-exec-13] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-dup-3] Paso 3: Generando tracking
+2026-11-25T01:42:35.309Z  INFO 1 --- [nio-8080-exec-9] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-dup-1] Tracking generado: TRK-1D25C5A7
+2026-11-25T01:42:35.314Z  INFO 1 --- [nio-8080-exec-9] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-dup-1] COMPLETADA
+2026-11-25T01:42:35.316Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-dup-4] Tracking generado: TRK-728ECE70
+2026-11-25T01:42:35.318Z  INFO 1 --- [io-8080-exec-13] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-dup-3] Tracking generado: TRK-F44598DB
+2026-11-25T01:42:35.320Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-dup-4] COMPLETADA
+2026-11-25T01:42:35.322Z  INFO 1 --- [io-8080-exec-13] c.e.i.o.service.OrquestadorService       : [SAGA E1-CO-1124224225-dup-3] COMPLETADA

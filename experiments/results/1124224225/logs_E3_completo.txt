@@ -1,0 +1,879 @@
+2026-11-25T01:43:09.312Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0000] Paso 1: Reservando inventario
+2026-11-25T01:43:09.376Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0000] Paso 2: Agendando transporte
+2026-11-25T01:43:09.400Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0000] Paso 3: Generando tracking
+2026-11-25T01:43:09.415Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0000] Tracking generado: TRK-22AD2102
+2026-11-25T01:43:09.418Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0000] COMPLETADA
+2026-11-25T01:43:10.180Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0001] Paso 1: Reservando inventario
+2026-11-25T01:43:10.196Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0001] Paso 2: Agendando transporte
+2026-11-25T01:43:10.209Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0001] Paso 3: Generando tracking
+2026-11-25T01:43:10.221Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0001] Tracking generado: TRK-5044DC04
+2026-11-25T01:43:10.224Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0001] COMPLETADA
+2026-11-25T01:43:11.188Z  INFO 1 --- [nio-8080-exec-6] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0002] Paso 1: Reservando inventario
+2026-11-25T01:43:11.202Z  INFO 1 --- [nio-8080-exec-6] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0002] Paso 2: Agendando transporte
+2026-11-25T01:43:11.213Z  INFO 1 --- [nio-8080-exec-6] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0002] Paso 3: Generando tracking
+2026-11-25T01:43:11.226Z  INFO 1 --- [nio-8080-exec-6] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0002] Tracking generado: TRK-A59BCA93
+2026-11-25T01:43:11.229Z  INFO 1 --- [nio-8080-exec-6] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0002] COMPLETADA
+2026-11-25T01:43:12.189Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0003] Paso 1: Reservando inventario
+2026-11-25T01:43:12.203Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0003] Paso 2: Agendando transporte
+2026-11-25T01:43:12.216Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0003] Paso 3: Generando tracking
+2026-11-25T01:43:12.228Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0003] Tracking generado: TRK-F679798B
+2026-11-25T01:43:12.231Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0003] COMPLETADA
+2026-11-25T01:43:13.188Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0004] Paso 1: Reservando inventario
+2026-11-25T01:43:13.202Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0004] Paso 2: Agendando transporte
+2026-11-25T01:43:13.215Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0004] Paso 3: Generando tracking
+2026-11-25T01:43:13.227Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0004] Tracking generado: TRK-7193BB78
+2026-11-25T01:43:13.230Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0004] COMPLETADA
+2026-11-25T01:43:14.188Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0005] Paso 1: Reservando inventario
+2026-11-25T01:43:14.203Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0005] Paso 2: Agendando transporte
+2026-11-25T01:43:14.215Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0005] Paso 3: Generando tracking
+2026-11-25T01:43:14.226Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0005] Tracking generado: TRK-30187013
+2026-11-25T01:43:14.229Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0005] COMPLETADA
+2026-11-25T01:43:15.188Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0006] Paso 1: Reservando inventario
+2026-11-25T01:43:15.202Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0006] Paso 2: Agendando transporte
+2026-11-25T01:43:15.216Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0006] Paso 3: Generando tracking
+2026-11-25T01:43:15.230Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0006] Tracking generado: TRK-AF78931D
+2026-11-25T01:43:15.233Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0006] COMPLETADA
+2026-11-25T01:43:16.189Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0007] Paso 1: Reservando inventario
+2026-11-25T01:43:16.203Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0007] Paso 2: Agendando transporte
+2026-11-25T01:43:16.216Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0007] Paso 3: Generando tracking
+2026-11-25T01:43:16.228Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0007] Tracking generado: TRK-26664D2B
+2026-11-25T01:43:16.231Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0007] COMPLETADA
+2026-11-25T01:43:17.188Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0008] Paso 1: Reservando inventario
+2026-11-25T01:43:17.201Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0008] Paso 2: Agendando transporte
+2026-11-25T01:43:17.213Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0008] Paso 3: Generando tracking
+2026-11-25T01:43:17.225Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0008] Tracking generado: TRK-7B1C4C85
+2026-11-25T01:43:17.228Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0008] COMPLETADA
+2026-11-25T01:43:18.180Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0009] Paso 1: Reservando inventario
+2026-11-25T01:43:18.193Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0009] Paso 2: Agendando transporte
+2026-11-25T01:43:18.205Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0009] Paso 3: Generando tracking
+2026-11-25T01:43:18.218Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0009] Tracking generado: TRK-89B99D18
+2026-11-25T01:43:18.221Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0009] COMPLETADA
+2026-11-25T01:43:19.187Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0010] Paso 1: Reservando inventario
+2026-11-25T01:43:19.201Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0010] Paso 2: Agendando transporte
+2026-11-25T01:43:19.213Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0010] Paso 3: Generando tracking
+2026-11-25T01:43:19.227Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0010] Tracking generado: TRK-C993034F
+2026-11-25T01:43:19.231Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0010] COMPLETADA
+2026-11-25T01:43:20.188Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0011] Paso 1: Reservando inventario
+2026-11-25T01:43:20.202Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0011] Paso 2: Agendando transporte
+2026-11-25T01:43:20.214Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0011] Paso 3: Generando tracking
+2026-11-25T01:43:20.226Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0011] Tracking generado: TRK-B45500F8
+2026-11-25T01:43:20.228Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0011] COMPLETADA
+2026-11-25T01:43:21.179Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0012] Paso 1: Reservando inventario
+2026-11-25T01:43:21.194Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0012] Paso 2: Agendando transporte
+2026-11-25T01:43:21.205Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0012] Paso 3: Generando tracking
+2026-11-25T01:43:21.217Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0012] Tracking generado: TRK-A30FBB7B
+2026-11-25T01:43:21.220Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0012] COMPLETADA
+2026-11-25T01:43:22.187Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0013] Paso 1: Reservando inventario
+2026-11-25T01:43:22.201Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0013] Paso 2: Agendando transporte
+2026-11-25T01:43:22.212Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0013] Paso 3: Generando tracking
+2026-11-25T01:43:22.224Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0013] Tracking generado: TRK-9B1A0578
+2026-11-25T01:43:22.226Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0013] COMPLETADA
+2026-11-25T01:43:23.188Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0014] Paso 1: Reservando inventario
+2026-11-25T01:43:23.201Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0014] Paso 2: Agendando transporte
+2026-11-25T01:43:23.213Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0014] Paso 3: Generando tracking
+2026-11-25T01:43:23.224Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0014] Tracking generado: TRK-08C6D7B7
+2026-11-25T01:43:23.227Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0014] COMPLETADA
+2026-11-25T01:43:24.187Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0015] Paso 1: Reservando inventario
+2026-11-25T01:43:24.200Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0015] Paso 2: Agendando transporte
+2026-11-25T01:43:24.211Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0015] Paso 3: Generando tracking
+2026-11-25T01:43:24.223Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0015] Tracking generado: TRK-4B407DDA
+2026-11-25T01:43:24.227Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0015] COMPLETADA
+2026-11-25T01:43:25.187Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0016] Paso 1: Reservando inventario
+2026-11-25T01:43:25.200Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0016] Paso 2: Agendando transporte
+2026-11-25T01:43:25.211Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0016] Paso 3: Generando tracking
+2026-11-25T01:43:25.222Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0016] Tracking generado: TRK-2B08431C
+2026-11-25T01:43:25.225Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0016] COMPLETADA
+2026-11-25T01:43:26.188Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0017] Paso 1: Reservando inventario
+2026-11-25T01:43:26.201Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0017] Paso 2: Agendando transporte
+2026-11-25T01:43:26.213Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0017] Paso 3: Generando tracking
+2026-11-25T01:43:26.224Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0017] Tracking generado: TRK-E35926E3
+2026-11-25T01:43:26.227Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0017] COMPLETADA
+2026-11-25T01:43:27.187Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0018] Paso 1: Reservando inventario
+2026-11-25T01:43:27.201Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0018] Paso 2: Agendando transporte
+2026-11-25T01:43:27.211Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0018] Paso 3: Generando tracking
+2026-11-25T01:43:27.222Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0018] Tracking generado: TRK-D9193B26
+2026-11-25T01:43:27.225Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0018] COMPLETADA
+2026-11-25T01:43:28.187Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0019] Paso 1: Reservando inventario
+2026-11-25T01:43:28.200Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0019] Paso 2: Agendando transporte
+2026-11-25T01:43:28.211Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0019] Paso 3: Generando tracking
+2026-11-25T01:43:28.222Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0019] Tracking generado: TRK-78933309
+2026-11-25T01:43:28.225Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-n-0019] COMPLETADA
+2026-11-25T01:43:29.191Z  INFO 1 --- [nio-8080-exec-1] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0000] Paso 1: Reservando inventario
+2026-11-25T01:43:29.204Z  INFO 1 --- [nio-8080-exec-1] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0000] Paso 2: Agendando transporte
+2026-11-25T01:43:30.195Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0001] Paso 1: Reservando inventario
+2026-11-25T01:43:30.209Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0001] Paso 2: Agendando transporte
+2026-11-25T01:43:31.196Z  INFO 1 --- [nio-8080-exec-7] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0002] Paso 1: Reservando inventario
+2026-11-25T01:43:31.208Z  WARN 1 --- [nio-8080-exec-1] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: ResourceAccessException
+2026-11-25T01:43:31.208Z ERROR 1 --- [nio-8080-exec-1] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0000] Fallo detectado: Transportista no disponible (ResourceAccessException)
+2026-11-25T01:43:31.210Z  INFO 1 --- [nio-8080-exec-7] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0002] Paso 2: Agendando transporte
+2026-11-25T01:43:31.212Z  WARN 1 --- [nio-8080-exec-1] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0000] Compensando Paso 2: Cancelando transporte
+2026-11-25T01:43:31.221Z  WARN 1 --- [nio-8080-exec-1] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0000] Compensando Paso 1: Liberando inventario
+2026-11-25T01:43:31.230Z  INFO 1 --- [nio-8080-exec-1] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0000] COMPENSADA correctamente
+2026-11-25T01:43:32.191Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0003] Paso 1: Reservando inventario
+2026-11-25T01:43:32.204Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0003] Paso 2: Agendando transporte
+2026-11-25T01:43:32.210Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: ResourceAccessException
+2026-11-25T01:43:32.210Z ERROR 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0001] Fallo detectado: Transportista no disponible (ResourceAccessException)
+2026-11-25T01:43:32.214Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0001] Compensando Paso 2: Cancelando transporte
+2026-11-25T01:43:32.223Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0001] Compensando Paso 1: Liberando inventario
+2026-11-25T01:43:32.233Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0001] COMPENSADA correctamente
+2026-11-25T01:43:33.191Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0004] Paso 1: Reservando inventario
+2026-11-25T01:43:33.205Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0004] Paso 2: Agendando transporte
+2026-11-25T01:43:33.214Z  WARN 1 --- [nio-8080-exec-7] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: ResourceAccessException
+2026-11-25T01:43:33.214Z ERROR 1 --- [nio-8080-exec-7] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0002] Fallo detectado: Transportista no disponible (ResourceAccessException)
+2026-11-25T01:43:33.217Z  WARN 1 --- [nio-8080-exec-7] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0002] Compensando Paso 2: Cancelando transporte
+2026-11-25T01:43:33.225Z  WARN 1 --- [nio-8080-exec-7] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0002] Compensando Paso 1: Liberando inventario
+2026-11-25T01:43:33.235Z  INFO 1 --- [nio-8080-exec-7] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0002] COMPENSADA correctamente
+2026-11-25T01:43:34.193Z  INFO 1 --- [nio-8080-exec-6] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0005] Paso 1: Reservando inventario
+2026-11-25T01:43:34.205Z  WARN 1 --- [io-8080-exec-10] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: ResourceAccessException
+2026-11-25T01:43:34.205Z ERROR 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0003] Fallo detectado: Transportista no disponible (ResourceAccessException)
+2026-11-25T01:43:34.208Z  WARN 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0003] Compensando Paso 2: Cancelando transporte
+2026-11-25T01:43:34.210Z  INFO 1 --- [nio-8080-exec-6] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0005] Paso 2: Agendando transporte
+2026-11-25T01:43:34.210Z  WARN 1 --- [nio-8080-exec-6] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:43:34.210Z ERROR 1 --- [nio-8080-exec-6] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0005] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:43:34.213Z  WARN 1 --- [nio-8080-exec-6] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0005] Compensando Paso 1: Liberando inventario
+2026-11-25T01:43:34.216Z  WARN 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0003] Compensando Paso 1: Liberando inventario
+2026-11-25T01:43:34.223Z  INFO 1 --- [nio-8080-exec-6] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0005] COMPENSADA correctamente
+2026-11-25T01:43:34.227Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0003] COMPENSADA correctamente
+2026-11-25T01:43:35.191Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0006] Paso 1: Reservando inventario
+2026-11-25T01:43:35.204Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0006] Paso 2: Agendando transporte
+2026-11-25T01:43:35.204Z  WARN 1 --- [nio-8080-exec-4] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:43:35.204Z ERROR 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0006] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:43:35.206Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: ResourceAccessException
+2026-11-25T01:43:35.206Z ERROR 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0004] Fallo detectado: Transportista no disponible (ResourceAccessException)
+2026-11-25T01:43:35.207Z  WARN 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0006] Compensando Paso 1: Liberando inventario
+2026-11-25T01:43:35.209Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0004] Compensando Paso 2: Cancelando transporte
+2026-11-25T01:43:35.217Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0004] Compensando Paso 1: Liberando inventario
+2026-11-25T01:43:35.219Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0006] COMPENSADA correctamente
+2026-11-25T01:43:35.227Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0004] COMPENSADA correctamente
+2026-11-25T01:43:36.192Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0007] Paso 1: Reservando inventario
+2026-11-25T01:43:36.204Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0007] Paso 2: Agendando transporte
+2026-11-25T01:43:36.205Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:43:36.205Z ERROR 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0007] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:43:36.208Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0007] Compensando Paso 1: Liberando inventario
+2026-11-25T01:43:36.217Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0007] COMPENSADA correctamente
+2026-11-25T01:43:37.191Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0008] Paso 1: Reservando inventario
+2026-11-25T01:43:37.203Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0008] Paso 2: Agendando transporte
+2026-11-25T01:43:37.203Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:43:37.204Z ERROR 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0008] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:43:37.206Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0008] Compensando Paso 1: Liberando inventario
+2026-11-25T01:43:37.215Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0008] COMPENSADA correctamente
+2026-11-25T01:43:38.183Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0009] Paso 1: Reservando inventario
+2026-11-25T01:43:38.195Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0009] Paso 2: Agendando transporte
+2026-11-25T01:43:38.195Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:43:38.196Z ERROR 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0009] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:43:38.198Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0009] Compensando Paso 1: Liberando inventario
+2026-11-25T01:43:38.207Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0009] COMPENSADA correctamente
+2026-11-25T01:43:39.191Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0010] Paso 1: Reservando inventario
+2026-11-25T01:43:39.204Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0010] Paso 2: Agendando transporte
+2026-11-25T01:43:39.204Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:43:39.204Z ERROR 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0010] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:43:39.207Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0010] Compensando Paso 1: Liberando inventario
+2026-11-25T01:43:39.216Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0010] COMPENSADA correctamente
+2026-11-25T01:43:40.191Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0011] Paso 1: Reservando inventario
+2026-11-25T01:43:40.205Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0011] Paso 2: Agendando transporte
+2026-11-25T01:43:40.206Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:43:40.206Z ERROR 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0011] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:43:40.208Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0011] Compensando Paso 1: Liberando inventario
+2026-11-25T01:43:40.218Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0011] COMPENSADA correctamente
+2026-11-25T01:43:41.191Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0012] Paso 1: Reservando inventario
+2026-11-25T01:43:41.204Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0012] Paso 2: Agendando transporte
+2026-11-25T01:43:41.204Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:43:41.204Z ERROR 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0012] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:43:41.207Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0012] Compensando Paso 1: Liberando inventario
+2026-11-25T01:43:41.215Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0012] COMPENSADA correctamente
+2026-11-25T01:43:42.191Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0013] Paso 1: Reservando inventario
+2026-11-25T01:43:42.203Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0013] Paso 2: Agendando transporte
+2026-11-25T01:43:42.204Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:43:42.204Z ERROR 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0013] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:43:42.207Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0013] Compensando Paso 1: Liberando inventario
+2026-11-25T01:43:42.219Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0013] COMPENSADA correctamente
+2026-11-25T01:43:43.191Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0014] Paso 1: Reservando inventario
+2026-11-25T01:43:43.204Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0014] Paso 2: Agendando transporte
+2026-11-25T01:43:43.204Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:43:43.204Z ERROR 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0014] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:43:43.207Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0014] Compensando Paso 1: Liberando inventario
+2026-11-25T01:43:43.215Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0014] COMPENSADA correctamente
+2026-11-25T01:43:44.191Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0015] Paso 1: Reservando inventario
+2026-11-25T01:43:44.203Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0015] Paso 2: Agendando transporte
+2026-11-25T01:43:44.204Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:43:44.204Z ERROR 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0015] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:43:44.206Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0015] Compensando Paso 1: Liberando inventario
+2026-11-25T01:43:44.215Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0015] COMPENSADA correctamente
+2026-11-25T01:43:45.191Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0016] Paso 1: Reservando inventario
+2026-11-25T01:43:45.203Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0016] Paso 2: Agendando transporte
+2026-11-25T01:43:45.203Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:43:45.203Z ERROR 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0016] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:43:45.206Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0016] Compensando Paso 1: Liberando inventario
+2026-11-25T01:43:45.215Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0016] COMPENSADA correctamente
+2026-11-25T01:43:46.192Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0017] Paso 1: Reservando inventario
+2026-11-25T01:43:46.203Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0017] Paso 2: Agendando transporte
+2026-11-25T01:43:46.203Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:43:46.203Z ERROR 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0017] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:43:46.206Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0017] Compensando Paso 1: Liberando inventario
+2026-11-25T01:43:46.214Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0017] COMPENSADA correctamente
+2026-11-25T01:43:47.191Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0018] Paso 1: Reservando inventario
+2026-11-25T01:43:47.203Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0018] Paso 2: Agendando transporte
+2026-11-25T01:43:47.203Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:43:47.203Z ERROR 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0018] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:43:47.206Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0018] Compensando Paso 1: Liberando inventario
+2026-11-25T01:43:47.215Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0018] COMPENSADA correctamente
+2026-11-25T01:43:48.191Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0019] Paso 1: Reservando inventario
+2026-11-25T01:43:48.203Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0019] Paso 2: Agendando transporte
+2026-11-25T01:43:48.204Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:43:48.204Z ERROR 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0019] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:43:48.206Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0019] Compensando Paso 1: Liberando inventario
+2026-11-25T01:43:48.215Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0019] COMPENSADA correctamente
+2026-11-25T01:43:49.191Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0020] Paso 1: Reservando inventario
+2026-11-25T01:43:49.203Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0020] Paso 2: Agendando transporte
+2026-11-25T01:43:50.191Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0021] Paso 1: Reservando inventario
+2026-11-25T01:43:50.205Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0021] Paso 2: Agendando transporte
+2026-11-25T01:43:51.192Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0022] Paso 1: Reservando inventario
+2026-11-25T01:43:51.204Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0022] Paso 2: Agendando transporte
+2026-11-25T01:43:51.205Z  WARN 1 --- [nio-8080-exec-4] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:43:51.205Z ERROR 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0022] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:43:51.206Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: ResourceAccessException
+2026-11-25T01:43:51.206Z ERROR 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0020] Fallo detectado: Transportista no disponible (ResourceAccessException)
+2026-11-25T01:43:51.207Z  WARN 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0022] Compensando Paso 1: Liberando inventario
+2026-11-25T01:43:51.209Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0020] Compensando Paso 2: Cancelando transporte
+2026-11-25T01:43:51.218Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0022] COMPENSADA correctamente
+2026-11-25T01:43:51.220Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0020] Compensando Paso 1: Liberando inventario
+2026-11-25T01:43:51.229Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0020] COMPENSADA correctamente
+2026-11-25T01:43:52.193Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0023] Paso 1: Reservando inventario
+2026-11-25T01:43:52.206Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: ResourceAccessException
+2026-11-25T01:43:52.206Z ERROR 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0021] Fallo detectado: Transportista no disponible (ResourceAccessException)
+2026-11-25T01:43:52.207Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0023] Paso 2: Agendando transporte
+2026-11-25T01:43:52.207Z  WARN 1 --- [nio-8080-exec-3] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:43:52.207Z ERROR 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0023] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:43:52.209Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0021] Compensando Paso 2: Cancelando transporte
+2026-11-25T01:43:52.211Z  WARN 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0023] Compensando Paso 1: Liberando inventario
+2026-11-25T01:43:52.217Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0021] Compensando Paso 1: Liberando inventario
+2026-11-25T01:43:52.219Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0023] COMPENSADA correctamente
+2026-11-25T01:43:52.225Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0021] COMPENSADA correctamente
+2026-11-25T01:43:53.190Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0024] Paso 1: Reservando inventario
+2026-11-25T01:43:53.202Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0024] Paso 2: Agendando transporte
+2026-11-25T01:43:53.203Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:43:53.203Z ERROR 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0024] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:43:53.206Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0024] Compensando Paso 1: Liberando inventario
+2026-11-25T01:43:53.215Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0024] COMPENSADA correctamente
+2026-11-25T01:43:54.190Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0025] Paso 1: Reservando inventario
+2026-11-25T01:43:54.203Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0025] Paso 2: Agendando transporte
+2026-11-25T01:43:54.203Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:43:54.203Z ERROR 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0025] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:43:54.206Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0025] Compensando Paso 1: Liberando inventario
+2026-11-25T01:43:54.214Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0025] COMPENSADA correctamente
+2026-11-25T01:43:55.190Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0026] Paso 1: Reservando inventario
+2026-11-25T01:43:55.202Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0026] Paso 2: Agendando transporte
+2026-11-25T01:43:55.202Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:43:55.202Z ERROR 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0026] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:43:55.205Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0026] Compensando Paso 1: Liberando inventario
+2026-11-25T01:43:55.214Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0026] COMPENSADA correctamente
+2026-11-25T01:43:56.191Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0027] Paso 1: Reservando inventario
+2026-11-25T01:43:56.203Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0027] Paso 2: Agendando transporte
+2026-11-25T01:43:56.203Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:43:56.203Z ERROR 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0027] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:43:56.206Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0027] Compensando Paso 1: Liberando inventario
+2026-11-25T01:43:56.214Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0027] COMPENSADA correctamente
+2026-11-25T01:43:57.190Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0028] Paso 1: Reservando inventario
+2026-11-25T01:43:57.202Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0028] Paso 2: Agendando transporte
+2026-11-25T01:43:57.202Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:43:57.202Z ERROR 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0028] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:43:57.205Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0028] Compensando Paso 1: Liberando inventario
+2026-11-25T01:43:57.214Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0028] COMPENSADA correctamente
+2026-11-25T01:43:58.182Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0029] Paso 1: Reservando inventario
+2026-11-25T01:43:58.194Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0029] Paso 2: Agendando transporte
+2026-11-25T01:43:58.195Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:43:58.195Z ERROR 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0029] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:43:58.197Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0029] Compensando Paso 1: Liberando inventario
+2026-11-25T01:43:58.206Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0029] COMPENSADA correctamente
+2026-11-25T01:43:59.182Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0030] Paso 1: Reservando inventario
+2026-11-25T01:43:59.195Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0030] Paso 2: Agendando transporte
+2026-11-25T01:43:59.195Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:43:59.195Z ERROR 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0030] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:43:59.198Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0030] Compensando Paso 1: Liberando inventario
+2026-11-25T01:43:59.207Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0030] COMPENSADA correctamente
+2026-11-25T01:44:00.190Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0031] Paso 1: Reservando inventario
+2026-11-25T01:44:00.202Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0031] Paso 2: Agendando transporte
+2026-11-25T01:44:00.203Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:00.203Z ERROR 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0031] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:00.205Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0031] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:00.214Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0031] COMPENSADA correctamente
+2026-11-25T01:44:01.190Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0032] Paso 1: Reservando inventario
+2026-11-25T01:44:01.202Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0032] Paso 2: Agendando transporte
+2026-11-25T01:44:01.202Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:01.202Z ERROR 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0032] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:01.205Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0032] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:01.215Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0032] COMPENSADA correctamente
+2026-11-25T01:44:02.190Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0033] Paso 1: Reservando inventario
+2026-11-25T01:44:02.202Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0033] Paso 2: Agendando transporte
+2026-11-25T01:44:02.202Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:02.202Z ERROR 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0033] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:02.205Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0033] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:02.214Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0033] COMPENSADA correctamente
+2026-11-25T01:44:03.184Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0034] Paso 1: Reservando inventario
+2026-11-25T01:44:03.196Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0034] Paso 2: Agendando transporte
+2026-11-25T01:44:03.197Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:03.197Z ERROR 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0034] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:03.199Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0034] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:03.207Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0034] COMPENSADA correctamente
+2026-11-25T01:44:04.190Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0035] Paso 1: Reservando inventario
+2026-11-25T01:44:04.202Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0035] Paso 2: Agendando transporte
+2026-11-25T01:44:04.203Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:04.203Z ERROR 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0035] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:04.205Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0035] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:04.214Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0035] COMPENSADA correctamente
+2026-11-25T01:44:05.190Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0036] Paso 1: Reservando inventario
+2026-11-25T01:44:05.204Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0036] Paso 2: Agendando transporte
+2026-11-25T01:44:05.205Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:05.205Z ERROR 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0036] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:05.207Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0036] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:05.216Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0036] COMPENSADA correctamente
+2026-11-25T01:44:06.190Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0037] Paso 1: Reservando inventario
+2026-11-25T01:44:06.202Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0037] Paso 2: Agendando transporte
+2026-11-25T01:44:06.202Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:06.203Z ERROR 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0037] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:06.205Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0037] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:06.214Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0037] COMPENSADA correctamente
+2026-11-25T01:44:07.190Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0038] Paso 1: Reservando inventario
+2026-11-25T01:44:07.202Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0038] Paso 2: Agendando transporte
+2026-11-25T01:44:07.202Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:07.202Z ERROR 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0038] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:07.205Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0038] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:07.213Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0038] COMPENSADA correctamente
+2026-11-25T01:44:08.191Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0039] Paso 1: Reservando inventario
+2026-11-25T01:44:08.202Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0039] Paso 2: Agendando transporte
+2026-11-25T01:44:09.190Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0040] Paso 1: Reservando inventario
+2026-11-25T01:44:09.201Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0040] Paso 2: Agendando transporte
+2026-11-25T01:44:10.194Z  INFO 1 --- [nio-8080-exec-7] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0041] Paso 1: Reservando inventario
+2026-11-25T01:44:10.203Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: ResourceAccessException
+2026-11-25T01:44:10.203Z ERROR 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0039] Fallo detectado: Transportista no disponible (ResourceAccessException)
+2026-11-25T01:44:10.209Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0039] Compensando Paso 2: Cancelando transporte
+2026-11-25T01:44:10.211Z  INFO 1 --- [nio-8080-exec-7] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0041] Paso 2: Agendando transporte
+2026-11-25T01:44:10.211Z  WARN 1 --- [nio-8080-exec-7] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:10.211Z ERROR 1 --- [nio-8080-exec-7] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0041] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:10.214Z  WARN 1 --- [nio-8080-exec-7] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0041] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:10.217Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0039] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:10.222Z  INFO 1 --- [nio-8080-exec-7] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0041] COMPENSADA correctamente
+2026-11-25T01:44:10.225Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0039] COMPENSADA correctamente
+2026-11-25T01:44:11.194Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0042] Paso 1: Reservando inventario
+2026-11-25T01:44:11.202Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: ResourceAccessException
+2026-11-25T01:44:11.203Z ERROR 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0040] Fallo detectado: Transportista no disponible (ResourceAccessException)
+2026-11-25T01:44:11.209Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0040] Compensando Paso 2: Cancelando transporte
+2026-11-25T01:44:11.211Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0042] Paso 2: Agendando transporte
+2026-11-25T01:44:11.211Z  WARN 1 --- [io-8080-exec-10] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:11.211Z ERROR 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0042] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:11.214Z  WARN 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0042] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:11.217Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0040] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:11.223Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0042] COMPENSADA correctamente
+2026-11-25T01:44:11.226Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0040] COMPENSADA correctamente
+2026-11-25T01:44:12.190Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0043] Paso 1: Reservando inventario
+2026-11-25T01:44:12.205Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0043] Paso 2: Agendando transporte
+2026-11-25T01:44:12.206Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:12.206Z ERROR 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0043] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:12.209Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0043] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:12.217Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0043] COMPENSADA correctamente
+2026-11-25T01:44:13.184Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0044] Paso 1: Reservando inventario
+2026-11-25T01:44:13.195Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0044] Paso 2: Agendando transporte
+2026-11-25T01:44:13.196Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:13.196Z ERROR 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0044] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:13.198Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0044] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:13.207Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-l-0044] COMPENSADA correctamente
+2026-11-25T01:44:14.194Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0000] Paso 1: Reservando inventario
+2026-11-25T01:44:14.209Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0000] Paso 2: Agendando transporte
+2026-11-25T01:44:14.209Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:14.209Z ERROR 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0000] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:14.212Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0000] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:14.224Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0000] COMPENSADA correctamente
+2026-11-25T01:44:15.198Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0001] Paso 1: Reservando inventario
+2026-11-25T01:44:15.210Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0001] Paso 2: Agendando transporte
+2026-11-25T01:44:15.210Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:15.210Z ERROR 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0001] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:15.213Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0001] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:15.221Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0001] COMPENSADA correctamente
+2026-11-25T01:44:16.194Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0002] Paso 1: Reservando inventario
+2026-11-25T01:44:16.206Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0002] Paso 2: Agendando transporte
+2026-11-25T01:44:16.206Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:16.206Z ERROR 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0002] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:16.209Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0002] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:16.220Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0002] COMPENSADA correctamente
+2026-11-25T01:44:17.194Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0003] Paso 1: Reservando inventario
+2026-11-25T01:44:17.209Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0003] Paso 2: Agendando transporte
+2026-11-25T01:44:17.209Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:17.209Z ERROR 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0003] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:17.212Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0003] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:17.220Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0003] COMPENSADA correctamente
+2026-11-25T01:44:18.198Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0004] Paso 1: Reservando inventario
+2026-11-25T01:44:18.209Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0004] Paso 2: Agendando transporte
+2026-11-25T01:44:18.210Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:18.210Z ERROR 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0004] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:18.213Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0004] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:18.221Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0004] COMPENSADA correctamente
+2026-11-25T01:44:19.188Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0005] Paso 1: Reservando inventario
+2026-11-25T01:44:19.200Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0005] Paso 2: Agendando transporte
+2026-11-25T01:44:19.200Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:19.200Z ERROR 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0005] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:19.203Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0005] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:19.211Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0005] COMPENSADA correctamente
+2026-11-25T01:44:20.195Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0006] Paso 1: Reservando inventario
+2026-11-25T01:44:20.208Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0006] Paso 2: Agendando transporte
+2026-11-25T01:44:20.208Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:20.208Z ERROR 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0006] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:20.211Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0006] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:20.219Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0006] COMPENSADA correctamente
+2026-11-25T01:44:21.195Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0007] Paso 1: Reservando inventario
+2026-11-25T01:44:21.207Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0007] Paso 2: Agendando transporte
+2026-11-25T01:44:21.208Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:21.208Z ERROR 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0007] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:21.210Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0007] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:21.219Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0007] COMPENSADA correctamente
+2026-11-25T01:44:22.194Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0008] Paso 1: Reservando inventario
+2026-11-25T01:44:22.206Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0008] Paso 2: Agendando transporte
+2026-11-25T01:44:22.206Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:22.206Z ERROR 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0008] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:22.209Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0008] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:22.217Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0008] COMPENSADA correctamente
+2026-11-25T01:44:23.194Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0009] Paso 1: Reservando inventario
+2026-11-25T01:44:23.205Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0009] Paso 2: Agendando transporte
+2026-11-25T01:44:23.206Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:23.206Z ERROR 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0009] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:23.208Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0009] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:23.217Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0009] COMPENSADA correctamente
+2026-11-25T01:44:24.194Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0010] Paso 1: Reservando inventario
+2026-11-25T01:44:24.206Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0010] Paso 2: Agendando transporte
+2026-11-25T01:44:24.206Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:24.206Z ERROR 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0010] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:24.209Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0010] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:24.217Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0010] COMPENSADA correctamente
+2026-11-25T01:44:25.194Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0011] Paso 1: Reservando inventario
+2026-11-25T01:44:25.205Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0011] Paso 2: Agendando transporte
+2026-11-25T01:44:25.206Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:25.206Z ERROR 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0011] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:25.208Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0011] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:25.217Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0011] COMPENSADA correctamente
+2026-11-25T01:44:26.194Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0012] Paso 1: Reservando inventario
+2026-11-25T01:44:26.206Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0012] Paso 2: Agendando transporte
+2026-11-25T01:44:26.212Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: ServiceUnavailable
+2026-11-25T01:44:26.212Z ERROR 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0012] Fallo detectado: Transportista no disponible (ServiceUnavailable)
+2026-11-25T01:44:26.215Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0012] Compensando Paso 2: Cancelando transporte
+2026-11-25T01:44:26.223Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0012] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:26.232Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0012] COMPENSADA correctamente
+2026-11-25T01:44:27.194Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0013] Paso 1: Reservando inventario
+2026-11-25T01:44:27.205Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0013] Paso 2: Agendando transporte
+2026-11-25T01:44:27.209Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: ServiceUnavailable
+2026-11-25T01:44:27.210Z ERROR 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0013] Fallo detectado: Transportista no disponible (ServiceUnavailable)
+2026-11-25T01:44:27.212Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0013] Compensando Paso 2: Cancelando transporte
+2026-11-25T01:44:27.220Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0013] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:27.229Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0013] COMPENSADA correctamente
+2026-11-25T01:44:28.194Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0014] Paso 1: Reservando inventario
+2026-11-25T01:44:28.205Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0014] Paso 2: Agendando transporte
+2026-11-25T01:44:28.206Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:28.206Z ERROR 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0014] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:28.208Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0014] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:28.216Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0014] COMPENSADA correctamente
+2026-11-25T01:44:29.194Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0015] Paso 1: Reservando inventario
+2026-11-25T01:44:29.205Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0015] Paso 2: Agendando transporte
+2026-11-25T01:44:29.206Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:29.206Z ERROR 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0015] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:29.209Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0015] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:29.217Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0015] COMPENSADA correctamente
+2026-11-25T01:44:30.194Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0016] Paso 1: Reservando inventario
+2026-11-25T01:44:30.205Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0016] Paso 2: Agendando transporte
+2026-11-25T01:44:30.206Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:30.206Z ERROR 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0016] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:30.208Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0016] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:30.216Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0016] COMPENSADA correctamente
+2026-11-25T01:44:31.194Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0017] Paso 1: Reservando inventario
+2026-11-25T01:44:31.205Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0017] Paso 2: Agendando transporte
+2026-11-25T01:44:31.206Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:31.206Z ERROR 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0017] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:31.208Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0017] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:31.217Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0017] COMPENSADA correctamente
+2026-11-25T01:44:32.194Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0018] Paso 1: Reservando inventario
+2026-11-25T01:44:32.205Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0018] Paso 2: Agendando transporte
+2026-11-25T01:44:32.206Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:32.206Z ERROR 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0018] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:32.208Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0018] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:32.216Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0018] COMPENSADA correctamente
+2026-11-25T01:44:33.194Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0019] Paso 1: Reservando inventario
+2026-11-25T01:44:33.205Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0019] Paso 2: Agendando transporte
+2026-11-25T01:44:33.206Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:33.206Z ERROR 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0019] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:33.208Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0019] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:33.215Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0019] COMPENSADA correctamente
+2026-11-25T01:44:34.194Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0020] Paso 1: Reservando inventario
+2026-11-25T01:44:34.206Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0020] Paso 2: Agendando transporte
+2026-11-25T01:44:34.206Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:34.206Z ERROR 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0020] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:34.209Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0020] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:34.217Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0020] COMPENSADA correctamente
+2026-11-25T01:44:35.194Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0021] Paso 1: Reservando inventario
+2026-11-25T01:44:35.206Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0021] Paso 2: Agendando transporte
+2026-11-25T01:44:35.206Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:35.206Z ERROR 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0021] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:35.209Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0021] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:35.217Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0021] COMPENSADA correctamente
+2026-11-25T01:44:36.185Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0022] Paso 1: Reservando inventario
+2026-11-25T01:44:36.197Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0022] Paso 2: Agendando transporte
+2026-11-25T01:44:36.197Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:36.197Z ERROR 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0022] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:36.199Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0022] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:36.209Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0022] COMPENSADA correctamente
+2026-11-25T01:44:37.194Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0023] Paso 1: Reservando inventario
+2026-11-25T01:44:37.206Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0023] Paso 2: Agendando transporte
+2026-11-25T01:44:37.206Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:37.206Z ERROR 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0023] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:37.209Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0023] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:37.217Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0023] COMPENSADA correctamente
+2026-11-25T01:44:38.194Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0024] Paso 1: Reservando inventario
+2026-11-25T01:44:38.204Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0024] Paso 2: Agendando transporte
+2026-11-25T01:44:38.205Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:38.205Z ERROR 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0024] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:38.207Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0024] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:38.215Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0024] COMPENSADA correctamente
+2026-11-25T01:44:39.194Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0025] Paso 1: Reservando inventario
+2026-11-25T01:44:39.205Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0025] Paso 2: Agendando transporte
+2026-11-25T01:44:39.205Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:39.205Z ERROR 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0025] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:39.208Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0025] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:39.216Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0025] COMPENSADA correctamente
+2026-11-25T01:44:40.193Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0026] Paso 1: Reservando inventario
+2026-11-25T01:44:40.205Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0026] Paso 2: Agendando transporte
+2026-11-25T01:44:40.205Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:40.205Z ERROR 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0026] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:40.208Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0026] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:40.216Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0026] COMPENSADA correctamente
+2026-11-25T01:44:41.193Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0027] Paso 1: Reservando inventario
+2026-11-25T01:44:41.205Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0027] Paso 2: Agendando transporte
+2026-11-25T01:44:41.205Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:41.205Z ERROR 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0027] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:41.208Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0027] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:41.215Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0027] COMPENSADA correctamente
+2026-11-25T01:44:42.194Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0028] Paso 1: Reservando inventario
+2026-11-25T01:44:42.207Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0028] Paso 2: Agendando transporte
+2026-11-25T01:44:42.207Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:42.207Z ERROR 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0028] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:42.209Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0028] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:42.217Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0028] COMPENSADA correctamente
+2026-11-25T01:44:43.185Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0029] Paso 1: Reservando inventario
+2026-11-25T01:44:43.196Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0029] Paso 2: Agendando transporte
+2026-11-25T01:44:43.200Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: ServiceUnavailable
+2026-11-25T01:44:43.200Z ERROR 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0029] Fallo detectado: Transportista no disponible (ServiceUnavailable)
+2026-11-25T01:44:43.203Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0029] Compensando Paso 2: Cancelando transporte
+2026-11-25T01:44:43.210Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0029] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:43.218Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0029] COMPENSADA correctamente
+2026-11-25T01:44:44.194Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0030] Paso 1: Reservando inventario
+2026-11-25T01:44:44.206Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0030] Paso 2: Agendando transporte
+2026-11-25T01:44:44.210Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: ServiceUnavailable
+2026-11-25T01:44:44.210Z ERROR 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0030] Fallo detectado: Transportista no disponible (ServiceUnavailable)
+2026-11-25T01:44:44.213Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0030] Compensando Paso 2: Cancelando transporte
+2026-11-25T01:44:44.220Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0030] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:44.228Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0030] COMPENSADA correctamente
+2026-11-25T01:44:45.194Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0031] Paso 1: Reservando inventario
+2026-11-25T01:44:45.205Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0031] Paso 2: Agendando transporte
+2026-11-25T01:44:45.205Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:45.205Z ERROR 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0031] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:45.207Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0031] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:45.215Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0031] COMPENSADA correctamente
+2026-11-25T01:44:46.193Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0032] Paso 1: Reservando inventario
+2026-11-25T01:44:46.204Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0032] Paso 2: Agendando transporte
+2026-11-25T01:44:46.204Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:46.204Z ERROR 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0032] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:46.207Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0032] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:46.215Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0032] COMPENSADA correctamente
+2026-11-25T01:44:47.194Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0033] Paso 1: Reservando inventario
+2026-11-25T01:44:47.205Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0033] Paso 2: Agendando transporte
+2026-11-25T01:44:47.205Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:47.206Z ERROR 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0033] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:47.208Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0033] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:47.216Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0033] COMPENSADA correctamente
+2026-11-25T01:44:48.194Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0034] Paso 1: Reservando inventario
+2026-11-25T01:44:48.205Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0034] Paso 2: Agendando transporte
+2026-11-25T01:44:48.205Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:48.205Z ERROR 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0034] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:48.208Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0034] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:48.215Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0034] COMPENSADA correctamente
+2026-11-25T01:44:49.194Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0035] Paso 1: Reservando inventario
+2026-11-25T01:44:49.205Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0035] Paso 2: Agendando transporte
+2026-11-25T01:44:49.205Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:49.205Z ERROR 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0035] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:49.208Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0035] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:49.215Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0035] COMPENSADA correctamente
+2026-11-25T01:44:50.194Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0036] Paso 1: Reservando inventario
+2026-11-25T01:44:50.205Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0036] Paso 2: Agendando transporte
+2026-11-25T01:44:50.206Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:50.206Z ERROR 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0036] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:50.208Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0036] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:50.216Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0036] COMPENSADA correctamente
+2026-11-25T01:44:51.194Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0037] Paso 1: Reservando inventario
+2026-11-25T01:44:51.206Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0037] Paso 2: Agendando transporte
+2026-11-25T01:44:51.206Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:51.207Z ERROR 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0037] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:51.209Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0037] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:51.217Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0037] COMPENSADA correctamente
+2026-11-25T01:44:52.194Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0038] Paso 1: Reservando inventario
+2026-11-25T01:44:52.205Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0038] Paso 2: Agendando transporte
+2026-11-25T01:44:52.205Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:52.205Z ERROR 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0038] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:52.208Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0038] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:52.216Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0038] COMPENSADA correctamente
+2026-11-25T01:44:53.194Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0039] Paso 1: Reservando inventario
+2026-11-25T01:44:53.205Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0039] Paso 2: Agendando transporte
+2026-11-25T01:44:53.205Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:53.205Z ERROR 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0039] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:53.208Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0039] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:53.216Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0039] COMPENSADA correctamente
+2026-11-25T01:44:54.194Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0040] Paso 1: Reservando inventario
+2026-11-25T01:44:54.205Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0040] Paso 2: Agendando transporte
+2026-11-25T01:44:54.205Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:54.205Z ERROR 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0040] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:54.208Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0040] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:54.217Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0040] COMPENSADA correctamente
+2026-11-25T01:44:55.194Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0041] Paso 1: Reservando inventario
+2026-11-25T01:44:55.205Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0041] Paso 2: Agendando transporte
+2026-11-25T01:44:55.205Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:55.205Z ERROR 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0041] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:55.207Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0041] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:55.215Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0041] COMPENSADA correctamente
+2026-11-25T01:44:56.194Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0042] Paso 1: Reservando inventario
+2026-11-25T01:44:56.205Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0042] Paso 2: Agendando transporte
+2026-11-25T01:44:56.205Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:56.206Z ERROR 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0042] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:56.208Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0042] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:56.216Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0042] COMPENSADA correctamente
+2026-11-25T01:44:57.194Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0043] Paso 1: Reservando inventario
+2026-11-25T01:44:57.205Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0043] Paso 2: Agendando transporte
+2026-11-25T01:44:57.205Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:57.205Z ERROR 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0043] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:57.207Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0043] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:57.215Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0043] COMPENSADA correctamente
+2026-11-25T01:44:58.194Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0044] Paso 1: Reservando inventario
+2026-11-25T01:44:58.205Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0044] Paso 2: Agendando transporte
+2026-11-25T01:44:58.205Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:58.205Z ERROR 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0044] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:58.208Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0044] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:58.216Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-c-0044] COMPENSADA correctamente
+2026-11-25T01:44:59.196Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0000] Paso 1: Reservando inventario
+2026-11-25T01:44:59.208Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0000] Paso 2: Agendando transporte
+2026-11-25T01:44:59.208Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: CallNotPermittedException
+2026-11-25T01:44:59.208Z ERROR 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0000] Fallo detectado: Transportista no disponible (CallNotPermittedException)
+2026-11-25T01:44:59.210Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0000] Compensando Paso 1: Liberando inventario
+2026-11-25T01:44:59.218Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0000] COMPENSADA correctamente
+2026-11-25T01:45:00.197Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0001] Paso 1: Reservando inventario
+2026-11-25T01:45:00.208Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0001] Paso 2: Agendando transporte
+2026-11-25T01:45:00.220Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0001] Paso 3: Generando tracking
+2026-11-25T01:45:00.232Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0001] Tracking generado: TRK-B649D618
+2026-11-25T01:45:00.234Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0001] COMPLETADA
+2026-11-25T01:45:01.197Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0002] Paso 1: Reservando inventario
+2026-11-25T01:45:01.208Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0002] Paso 2: Agendando transporte
+2026-11-25T01:45:01.219Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0002] Paso 3: Generando tracking
+2026-11-25T01:45:01.230Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0002] Tracking generado: TRK-A99ABFC7
+2026-11-25T01:45:01.232Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0002] COMPLETADA
+2026-11-25T01:45:02.197Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0003] Paso 1: Reservando inventario
+2026-11-25T01:45:02.208Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0003] Paso 2: Agendando transporte
+2026-11-25T01:45:02.218Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0003] Paso 3: Generando tracking
+2026-11-25T01:45:02.229Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0003] Tracking generado: TRK-BA864638
+2026-11-25T01:45:02.231Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0003] COMPLETADA
+2026-11-25T01:45:03.188Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0004] Paso 1: Reservando inventario
+2026-11-25T01:45:03.199Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0004] Paso 2: Agendando transporte
+2026-11-25T01:45:03.210Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0004] Paso 3: Generando tracking
+2026-11-25T01:45:03.220Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0004] Tracking generado: TRK-1CB68F2D
+2026-11-25T01:45:03.223Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0004] COMPLETADA
+2026-11-25T01:45:04.188Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0005] Paso 1: Reservando inventario
+2026-11-25T01:45:04.203Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0005] Paso 2: Agendando transporte
+2026-11-25T01:45:04.213Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0005] Paso 3: Generando tracking
+2026-11-25T01:45:04.224Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0005] Tracking generado: TRK-7CB8370E
+2026-11-25T01:45:04.226Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0005] COMPLETADA
+2026-11-25T01:45:05.188Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0006] Paso 1: Reservando inventario
+2026-11-25T01:45:05.200Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0006] Paso 2: Agendando transporte
+2026-11-25T01:45:05.210Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0006] Paso 3: Generando tracking
+2026-11-25T01:45:05.221Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0006] Tracking generado: TRK-166435B8
+2026-11-25T01:45:05.223Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0006] COMPLETADA
+2026-11-25T01:45:06.188Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0007] Paso 1: Reservando inventario
+2026-11-25T01:45:06.199Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0007] Paso 2: Agendando transporte
+2026-11-25T01:45:06.210Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0007] Paso 3: Generando tracking
+2026-11-25T01:45:06.220Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0007] Tracking generado: TRK-E2DF26E5
+2026-11-25T01:45:06.223Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0007] COMPLETADA
+2026-11-25T01:45:07.197Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0008] Paso 1: Reservando inventario
+2026-11-25T01:45:07.208Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0008] Paso 2: Agendando transporte
+2026-11-25T01:45:07.219Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0008] Paso 3: Generando tracking
+2026-11-25T01:45:07.230Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0008] Tracking generado: TRK-BC7171F2
+2026-11-25T01:45:07.232Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0008] COMPLETADA
+2026-11-25T01:45:08.196Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0009] Paso 1: Reservando inventario
+2026-11-25T01:45:08.208Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0009] Paso 2: Agendando transporte
+2026-11-25T01:45:08.219Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0009] Paso 3: Generando tracking
+2026-11-25T01:45:08.229Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0009] Tracking generado: TRK-6CA6903D
+2026-11-25T01:45:08.232Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0009] COMPLETADA
+2026-11-25T01:45:09.197Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0010] Paso 1: Reservando inventario
+2026-11-25T01:45:09.207Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0010] Paso 2: Agendando transporte
+2026-11-25T01:45:09.218Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0010] Paso 3: Generando tracking
+2026-11-25T01:45:09.228Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0010] Tracking generado: TRK-4648BC97
+2026-11-25T01:45:09.231Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0010] COMPLETADA
+2026-11-25T01:45:10.196Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0011] Paso 1: Reservando inventario
+2026-11-25T01:45:10.208Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0011] Paso 2: Agendando transporte
+2026-11-25T01:45:10.218Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0011] Paso 3: Generando tracking
+2026-11-25T01:45:10.228Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0011] Tracking generado: TRK-8E800D62
+2026-11-25T01:45:10.231Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0011] COMPLETADA
+2026-11-25T01:45:11.197Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0012] Paso 1: Reservando inventario
+2026-11-25T01:45:11.208Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0012] Paso 2: Agendando transporte
+2026-11-25T01:45:11.219Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0012] Paso 3: Generando tracking
+2026-11-25T01:45:11.229Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0012] Tracking generado: TRK-EBB4DBEF
+2026-11-25T01:45:11.232Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0012] COMPLETADA
+2026-11-25T01:45:12.197Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0013] Paso 1: Reservando inventario
+2026-11-25T01:45:12.208Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0013] Paso 2: Agendando transporte
+2026-11-25T01:45:12.219Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0013] Paso 3: Generando tracking
+2026-11-25T01:45:12.229Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0013] Tracking generado: TRK-B4C37409
+2026-11-25T01:45:12.232Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0013] COMPLETADA
+2026-11-25T01:45:13.188Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0014] Paso 1: Reservando inventario
+2026-11-25T01:45:13.200Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0014] Paso 2: Agendando transporte
+2026-11-25T01:45:13.210Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0014] Paso 3: Generando tracking
+2026-11-25T01:45:13.220Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0014] Tracking generado: TRK-29C393D7
+2026-11-25T01:45:13.223Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0014] COMPLETADA
+2026-11-25T01:45:14.197Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0015] Paso 1: Reservando inventario
+2026-11-25T01:45:14.208Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0015] Paso 2: Agendando transporte
+2026-11-25T01:45:14.218Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0015] Paso 3: Generando tracking
+2026-11-25T01:45:14.228Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0015] Tracking generado: TRK-C7AB93BB
+2026-11-25T01:45:14.230Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0015] COMPLETADA
+2026-11-25T01:45:15.197Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0016] Paso 1: Reservando inventario
+2026-11-25T01:45:15.208Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0016] Paso 2: Agendando transporte
+2026-11-25T01:45:15.218Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0016] Paso 3: Generando tracking
+2026-11-25T01:45:15.229Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0016] Tracking generado: TRK-52603C96
+2026-11-25T01:45:15.232Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0016] COMPLETADA
+2026-11-25T01:45:16.198Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0017] Paso 1: Reservando inventario
+2026-11-25T01:45:16.209Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0017] Paso 2: Agendando transporte
+2026-11-25T01:45:16.219Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0017] Paso 3: Generando tracking
+2026-11-25T01:45:16.229Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0017] Tracking generado: TRK-3BA53AE2
+2026-11-25T01:45:16.232Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0017] COMPLETADA
+2026-11-25T01:45:17.189Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0018] Paso 1: Reservando inventario
+2026-11-25T01:45:17.201Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0018] Paso 2: Agendando transporte
+2026-11-25T01:45:17.212Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0018] Paso 3: Generando tracking
+2026-11-25T01:45:17.222Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0018] Tracking generado: TRK-9DF7A65D
+2026-11-25T01:45:17.224Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0018] COMPLETADA
+2026-11-25T01:45:18.188Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0019] Paso 1: Reservando inventario
+2026-11-25T01:45:18.203Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0019] Paso 2: Agendando transporte
+2026-11-25T01:45:18.213Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0019] Paso 3: Generando tracking
+2026-11-25T01:45:18.223Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0019] Tracking generado: TRK-46426C0E
+2026-11-25T01:45:18.226Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0019] COMPLETADA
+2026-11-25T01:45:19.189Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0020] Paso 1: Reservando inventario
+2026-11-25T01:45:19.201Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0020] Paso 2: Agendando transporte
+2026-11-25T01:45:19.211Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0020] Paso 3: Generando tracking
+2026-11-25T01:45:19.221Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0020] Tracking generado: TRK-FC733498
+2026-11-25T01:45:19.224Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0020] COMPLETADA
+2026-11-25T01:45:20.197Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0021] Paso 1: Reservando inventario
+2026-11-25T01:45:20.208Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0021] Paso 2: Agendando transporte
+2026-11-25T01:45:20.218Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0021] Paso 3: Generando tracking
+2026-11-25T01:45:20.228Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0021] Tracking generado: TRK-676452DC
+2026-11-25T01:45:20.230Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0021] COMPLETADA
+2026-11-25T01:45:21.197Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0022] Paso 1: Reservando inventario
+2026-11-25T01:45:21.208Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0022] Paso 2: Agendando transporte
+2026-11-25T01:45:21.218Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0022] Paso 3: Generando tracking
+2026-11-25T01:45:21.228Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0022] Tracking generado: TRK-D2E6823E
+2026-11-25T01:45:21.230Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0022] COMPLETADA
+2026-11-25T01:45:22.196Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0023] Paso 1: Reservando inventario
+2026-11-25T01:45:22.207Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0023] Paso 2: Agendando transporte
+2026-11-25T01:45:22.217Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0023] Paso 3: Generando tracking
+2026-11-25T01:45:22.227Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0023] Tracking generado: TRK-F9F56146
+2026-11-25T01:45:22.230Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0023] COMPLETADA
+2026-11-25T01:45:23.196Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0024] Paso 1: Reservando inventario
+2026-11-25T01:45:23.207Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0024] Paso 2: Agendando transporte
+2026-11-25T01:45:23.217Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0024] Paso 3: Generando tracking
+2026-11-25T01:45:23.227Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0024] Tracking generado: TRK-A8120C96
+2026-11-25T01:45:23.229Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0024] COMPLETADA
+2026-11-25T01:45:24.196Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0025] Paso 1: Reservando inventario
+2026-11-25T01:45:24.207Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0025] Paso 2: Agendando transporte
+2026-11-25T01:45:24.217Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0025] Paso 3: Generando tracking
+2026-11-25T01:45:24.228Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0025] Tracking generado: TRK-1AD80BD5
+2026-11-25T01:45:24.230Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0025] COMPLETADA
+2026-11-25T01:45:25.197Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0026] Paso 1: Reservando inventario
+2026-11-25T01:45:25.208Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0026] Paso 2: Agendando transporte
+2026-11-25T01:45:25.217Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0026] Paso 3: Generando tracking
+2026-11-25T01:45:25.228Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0026] Tracking generado: TRK-76EC3F78
+2026-11-25T01:45:25.230Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0026] COMPLETADA
+2026-11-25T01:45:26.188Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0027] Paso 1: Reservando inventario
+2026-11-25T01:45:26.199Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0027] Paso 2: Agendando transporte
+2026-11-25T01:45:26.209Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0027] Paso 3: Generando tracking
+2026-11-25T01:45:26.219Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0027] Tracking generado: TRK-58677078
+2026-11-25T01:45:26.222Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0027] COMPLETADA
+2026-11-25T01:45:27.196Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0028] Paso 1: Reservando inventario
+2026-11-25T01:45:27.207Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0028] Paso 2: Agendando transporte
+2026-11-25T01:45:27.217Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0028] Paso 3: Generando tracking
+2026-11-25T01:45:27.227Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0028] Tracking generado: TRK-BFCE3BA8
+2026-11-25T01:45:27.230Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0028] COMPLETADA
+2026-11-25T01:45:28.196Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0029] Paso 1: Reservando inventario
+2026-11-25T01:45:28.208Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0029] Paso 2: Agendando transporte
+2026-11-25T01:45:28.218Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0029] Paso 3: Generando tracking
+2026-11-25T01:45:28.229Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0029] Tracking generado: TRK-B02A2B7F
+2026-11-25T01:45:28.231Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0029] COMPLETADA
+2026-11-25T01:45:29.197Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0030] Paso 1: Reservando inventario
+2026-11-25T01:45:29.208Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0030] Paso 2: Agendando transporte
+2026-11-25T01:45:29.218Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0030] Paso 3: Generando tracking
+2026-11-25T01:45:29.228Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0030] Tracking generado: TRK-7C8D7E60
+2026-11-25T01:45:29.231Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0030] COMPLETADA
+2026-11-25T01:45:30.197Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0031] Paso 1: Reservando inventario
+2026-11-25T01:45:30.209Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0031] Paso 2: Agendando transporte
+2026-11-25T01:45:30.220Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0031] Paso 3: Generando tracking
+2026-11-25T01:45:30.231Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0031] Tracking generado: TRK-14B1BA03
+2026-11-25T01:45:30.234Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0031] COMPLETADA
+2026-11-25T01:45:31.196Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0032] Paso 1: Reservando inventario
+2026-11-25T01:45:31.207Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0032] Paso 2: Agendando transporte
+2026-11-25T01:45:31.218Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0032] Paso 3: Generando tracking
+2026-11-25T01:45:31.229Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0032] Tracking generado: TRK-083F95F3
+2026-11-25T01:45:31.232Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0032] COMPLETADA
+2026-11-25T01:45:32.197Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0033] Paso 1: Reservando inventario
+2026-11-25T01:45:32.208Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0033] Paso 2: Agendando transporte
+2026-11-25T01:45:32.219Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0033] Paso 3: Generando tracking
+2026-11-25T01:45:32.229Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0033] Tracking generado: TRK-4B394479
+2026-11-25T01:45:32.232Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0033] COMPLETADA
+2026-11-25T01:45:33.188Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0034] Paso 1: Reservando inventario
+2026-11-25T01:45:33.199Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0034] Paso 2: Agendando transporte
+2026-11-25T01:45:33.209Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0034] Paso 3: Generando tracking
+2026-11-25T01:45:33.220Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0034] Tracking generado: TRK-2FDB98EA
+2026-11-25T01:45:33.222Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0034] COMPLETADA
+2026-11-25T01:45:34.196Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0035] Paso 1: Reservando inventario
+2026-11-25T01:45:34.207Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0035] Paso 2: Agendando transporte
+2026-11-25T01:45:34.217Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0035] Paso 3: Generando tracking
+2026-11-25T01:45:34.228Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0035] Tracking generado: TRK-A5AECF6B
+2026-11-25T01:45:34.231Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0035] COMPLETADA
+2026-11-25T01:45:35.197Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0036] Paso 1: Reservando inventario
+2026-11-25T01:45:35.208Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0036] Paso 2: Agendando transporte
+2026-11-25T01:45:35.218Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0036] Paso 3: Generando tracking
+2026-11-25T01:45:35.229Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0036] Tracking generado: TRK-2D54B612
+2026-11-25T01:45:35.231Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0036] COMPLETADA
+2026-11-25T01:45:36.196Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0037] Paso 1: Reservando inventario
+2026-11-25T01:45:36.207Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0037] Paso 2: Agendando transporte
+2026-11-25T01:45:36.218Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0037] Paso 3: Generando tracking
+2026-11-25T01:45:36.228Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0037] Tracking generado: TRK-D19178C9
+2026-11-25T01:45:36.230Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0037] COMPLETADA
+2026-11-25T01:45:37.197Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0038] Paso 1: Reservando inventario
+2026-11-25T01:45:37.208Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0038] Paso 2: Agendando transporte
+2026-11-25T01:45:37.219Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0038] Paso 3: Generando tracking
+2026-11-25T01:45:37.229Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0038] Tracking generado: TRK-C186BAF2
+2026-11-25T01:45:37.232Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0038] COMPLETADA
+2026-11-25T01:45:38.197Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0039] Paso 1: Reservando inventario
+2026-11-25T01:45:38.208Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0039] Paso 2: Agendando transporte
+2026-11-25T01:45:38.219Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0039] Paso 3: Generando tracking
+2026-11-25T01:45:38.229Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0039] Tracking generado: TRK-E1879908
+2026-11-25T01:45:38.232Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0039] COMPLETADA
+2026-11-25T01:45:39.196Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0040] Paso 1: Reservando inventario
+2026-11-25T01:45:39.208Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0040] Paso 2: Agendando transporte
+2026-11-25T01:45:39.220Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0040] Paso 3: Generando tracking
+2026-11-25T01:45:39.230Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0040] Tracking generado: TRK-9AA7857C
+2026-11-25T01:45:39.233Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0040] COMPLETADA
+2026-11-25T01:45:40.196Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0041] Paso 1: Reservando inventario
+2026-11-25T01:45:40.207Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0041] Paso 2: Agendando transporte
+2026-11-25T01:45:40.218Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0041] Paso 3: Generando tracking
+2026-11-25T01:45:40.228Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0041] Tracking generado: TRK-7AD31836
+2026-11-25T01:45:40.230Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0041] COMPLETADA
+2026-11-25T01:45:41.188Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0042] Paso 1: Reservando inventario
+2026-11-25T01:45:41.199Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0042] Paso 2: Agendando transporte
+2026-11-25T01:45:41.210Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0042] Paso 3: Generando tracking
+2026-11-25T01:45:41.220Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0042] Tracking generado: TRK-B40A683C
+2026-11-25T01:45:41.222Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0042] COMPLETADA
+2026-11-25T01:45:42.196Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0043] Paso 1: Reservando inventario
+2026-11-25T01:45:42.208Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0043] Paso 2: Agendando transporte
+2026-11-25T01:45:42.218Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0043] Paso 3: Generando tracking
+2026-11-25T01:45:42.228Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0043] Tracking generado: TRK-71187DD3
+2026-11-25T01:45:42.230Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0043] COMPLETADA
+2026-11-25T01:45:43.188Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0044] Paso 1: Reservando inventario
+2026-11-25T01:45:43.198Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0044] Paso 2: Agendando transporte
+2026-11-25T01:45:43.209Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0044] Paso 3: Generando tracking
+2026-11-25T01:45:43.219Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0044] Tracking generado: TRK-36A7230F
+2026-11-25T01:45:43.222Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E3-CO-1124224225-r-0044] COMPLETADA

@@ -1,0 +1,786 @@
+exp,perfil,fase,tipo,tx,t_envio_s,latencia_ms,http,resultado,mensaje
+E1,completo,secuencial,saga,E1-CO-1124224225-ok-000,0.228,627.7,200,OK,Despacho procesado con éxito
+E1,completo,secuencial,saga,E1-CO-1124224225-ok-001,0.856,54.2,200,OK,Despacho procesado con éxito
+E1,completo,secuencial,saga,E1-CO-1124224225-ok-002,0.91,62.0,200,OK,Despacho procesado con éxito
+E1,completo,secuencial,saga,E1-CO-1124224225-ok-003,0.973,61.9,200,OK,Despacho procesado con éxito
+E1,completo,secuencial,saga,E1-CO-1124224225-ok-004,1.035,55.0,200,OK,Despacho procesado con éxito
+E1,completo,secuencial,saga,E1-CO-1124224225-ok-005,1.09,53.8,200,OK,Despacho procesado con éxito
+E1,completo,secuencial,saga,E1-CO-1124224225-ok-006,1.144,54.4,200,OK,Despacho procesado con éxito
+E1,completo,secuencial,saga,E1-CO-1124224225-ok-007,1.198,53.3,200,OK,Despacho procesado con éxito
+E1,completo,secuencial,saga,E1-CO-1124224225-ok-008,1.251,52.4,200,OK,Despacho procesado con éxito
+E1,completo,secuencial,saga,E1-CO-1124224225-ok-009,1.304,52.9,200,OK,Despacho procesado con éxito
+E1,completo,reintento-mismo-id,saga-reintento,E1-CO-1124224225-ok-000,1.357,9.8,200,OK_IDEMPOTENTE,Despacho ya completado (idempotente)
+E1,completo,reintento-mismo-id,saga-reintento,E1-CO-1124224225-ok-001,1.367,6.8,200,OK_IDEMPOTENTE,Despacho ya completado (idempotente)
+E1,completo,reintento-mismo-id,saga-reintento,E1-CO-1124224225-ok-002,1.374,6.5,200,OK_IDEMPOTENTE,Despacho ya completado (idempotente)
+E1,completo,reintento-mismo-id,saga-reintento,E1-CO-1124224225-ok-003,1.38,6.3,200,OK_IDEMPOTENTE,Despacho ya completado (idempotente)
+E1,completo,reintento-mismo-id,saga-reintento,E1-CO-1124224225-ok-004,1.387,5.8,200,OK_IDEMPOTENTE,Despacho ya completado (idempotente)
+E1,completo,reintento-mismo-id,saga-reintento,E1-CO-1124224225-ok-005,1.393,6.1,200,OK_IDEMPOTENTE,Despacho ya completado (idempotente)
+E1,completo,reintento-mismo-id,saga-reintento,E1-CO-1124224225-ok-006,1.399,5.8,200,OK_IDEMPOTENTE,Despacho ya completado (idempotente)
+E1,completo,reintento-mismo-id,saga-reintento,E1-CO-1124224225-ok-007,1.405,5.4,200,OK_IDEMPOTENTE,Despacho ya completado (idempotente)
+E1,completo,reintento-mismo-id,saga-reintento,E1-CO-1124224225-ok-008,1.41,5.6,200,OK_IDEMPOTENTE,Despacho ya completado (idempotente)
+E1,completo,reintento-mismo-id,saga-reintento,E1-CO-1124224225-ok-009,1.416,6.0,200,OK_IDEMPOTENTE,Despacho ya completado (idempotente)
+E1,completo,duplicados-concurrentes,saga-duplicada,E1-CO-1124224225-dup-0,1.423,29.5,200,DUPLICADO_EN_CURSO,Estado actual: INICIADA
+E1,completo,duplicados-concurrentes,saga-duplicada,E1-CO-1124224225-dup-0,1.423,30.5,200,DUPLICADO_EN_CURSO,Estado actual: INICIADA
+E1,completo,duplicados-concurrentes,saga-duplicada,E1-CO-1124224225-dup-0,1.423,33.6,200,DUPLICADO_EN_CURSO,Estado actual: INICIADA
+E1,completo,duplicados-concurrentes,saga-duplicada,E1-CO-1124224225-dup-0,1.423,40.3,200,DUPLICADO_EN_CURSO,Estado actual: INICIADA
+E1,completo,duplicados-concurrentes,saga-duplicada,E1-CO-1124224225-dup-2,1.428,38.2,200,DUPLICADO_EN_CURSO,Estado actual: INICIADA
+E1,completo,duplicados-concurrentes,saga-duplicada,E1-CO-1124224225-dup-2,1.428,38.8,200,DUPLICADO_EN_CURSO,Estado actual: INICIADA
+E1,completo,duplicados-concurrentes,saga-duplicada,E1-CO-1124224225-dup-1,1.425,42.3,200,DUPLICADO_EN_CURSO,Estado actual: INICIADA
+E1,completo,duplicados-concurrentes,saga-duplicada,E1-CO-1124224225-dup-1,1.425,42.5,200,DUPLICADO_EN_CURSO,Estado actual: INICIADA
+E1,completo,duplicados-concurrentes,saga-duplicada,E1-CO-1124224225-dup-3,1.431,39.4,200,DUPLICADO_EN_CURSO,Estado actual: INICIADA
+E1,completo,duplicados-concurrentes,saga-duplicada,E1-CO-1124224225-dup-4,1.436,41.4,409,CONFLICTO_409,La transacción se encuentra actualmente en curso
+E1,completo,duplicados-concurrentes,saga-duplicada,E1-CO-1124224225-dup-2,1.427,50.2,409,CONFLICTO_409,La transacción se encuentra actualmente en curso
+E1,completo,duplicados-concurrentes,saga-duplicada,E1-CO-1124224225-dup-3,1.431,46.5,409,CONFLICTO_409,La transacción se encuentra actualmente en curso
+E1,completo,duplicados-concurrentes,saga-duplicada,E1-CO-1124224225-dup-4,1.436,43.9,409,CONFLICTO_409,La transacción se encuentra actualmente en curso
+E1,completo,duplicados-concurrentes,saga-duplicada,E1-CO-1124224225-dup-3,1.431,49.0,409,CONFLICTO_409,La transacción se encuentra actualmente en curso
+E1,completo,duplicados-concurrentes,saga-duplicada,E1-CO-1124224225-dup-4,1.436,44.6,409,CONFLICTO_409,La transacción se encuentra actualmente en curso
+E1,completo,duplicados-concurrentes,saga-duplicada,E1-CO-1124224225-dup-2,1.427,55.6,409,CONFLICTO_409,La transacción se encuentra actualmente en curso
+E1,completo,duplicados-concurrentes,saga-duplicada,E1-CO-1124224225-dup-3,1.431,51.8,409,CONFLICTO_409,La transacción se encuentra actualmente en curso
+E1,completo,duplicados-concurrentes,saga-duplicada,E1-CO-1124224225-dup-4,1.436,46.7,409,CONFLICTO_409,La transacción se encuentra actualmente en curso
+E1,completo,duplicados-concurrentes,saga-duplicada,E1-CO-1124224225-dup-1,1.425,58.4,409,CONFLICTO_409,La transacción se encuentra actualmente en curso
+E1,completo,duplicados-concurrentes,saga-duplicada,E1-CO-1124224225-dup-1,1.425,57.8,409,CONFLICTO_409,La transacción se encuentra actualmente en curso
+E1,completo,duplicados-concurrentes,saga-duplicada,E1-CO-1124224225-dup-0,1.423,83.6,200,OK,Despacho procesado con éxito
+E1,completo,duplicados-concurrentes,saga-duplicada,E1-CO-1124224225-dup-2,1.427,89.8,200,OK,Despacho procesado con éxito
+E1,completo,duplicados-concurrentes,saga-duplicada,E1-CO-1124224225-dup-1,1.425,102.8,200,OK,Despacho procesado con éxito
+E1,completo,duplicados-concurrentes,saga-duplicada,E1-CO-1124224225-dup-4,1.436,98.1,200,OK,Despacho procesado con éxito
+E1,completo,duplicados-concurrentes,saga-duplicada,E1-CO-1124224225-dup-3,1.432,103.0,200,OK,Despacho procesado con éxito
+E2,completo,tracking-falla,saga,E2-CO-1124224225-comp-000,0.125,98.4,502,SAGA_COMPENSADA_502,"Despacho abortado y compensado. Motivo: HTTP 500 - {""path"":""/api/tracking/generate"",""success"":false,""error"":{""code"":""INTERNAL_ERROR"",""message"":""Falla inducida (chaos) en tracking"",""details"":[]},""times"
+E2,completo,tracking-falla,saga,E2-CO-1124224225-comp-001,0.224,74.0,502,SAGA_COMPENSADA_502,"Despacho abortado y compensado. Motivo: HTTP 500 - {""path"":""/api/tracking/generate"",""success"":false,""error"":{""code"":""INTERNAL_ERROR"",""message"":""Falla inducida (chaos) en tracking"",""details"":[]},""times"
+E2,completo,tracking-falla,saga,E2-CO-1124224225-comp-002,0.298,74.5,502,SAGA_COMPENSADA_502,"Despacho abortado y compensado. Motivo: HTTP 500 - {""path"":""/api/tracking/generate"",""success"":false,""error"":{""code"":""INTERNAL_ERROR"",""message"":""Falla inducida (chaos) en tracking"",""details"":[]},""times"
+E2,completo,tracking-falla,saga,E2-CO-1124224225-comp-003,0.372,78.0,502,SAGA_COMPENSADA_502,"Despacho abortado y compensado. Motivo: HTTP 500 - {""path"":""/api/tracking/generate"",""success"":false,""error"":{""code"":""INTERNAL_ERROR"",""message"":""Falla inducida (chaos) en tracking"",""details"":[]},""times"
+E2,completo,tracking-falla,saga,E2-CO-1124224225-comp-004,0.45,74.5,502,SAGA_COMPENSADA_502,"Despacho abortado y compensado. Motivo: HTTP 500 - {""path"":""/api/tracking/generate"",""success"":false,""error"":{""code"":""INTERNAL_ERROR"",""message"":""Falla inducida (chaos) en tracking"",""details"":[]},""times"
+E2,completo,tracking-falla,saga,E2-CO-1124224225-comp-005,0.525,75.9,502,SAGA_COMPENSADA_502,"Despacho abortado y compensado. Motivo: HTTP 500 - {""path"":""/api/tracking/generate"",""success"":false,""error"":{""code"":""INTERNAL_ERROR"",""message"":""Falla inducida (chaos) en tracking"",""details"":[]},""times"
+E2,completo,tracking-falla,saga,E2-CO-1124224225-comp-006,0.601,70.8,502,SAGA_COMPENSADA_502,"Despacho abortado y compensado. Motivo: HTTP 500 - {""path"":""/api/tracking/generate"",""success"":false,""error"":{""code"":""INTERNAL_ERROR"",""message"":""Falla inducida (chaos) en tracking"",""details"":[]},""times"
+E2,completo,tracking-falla,saga,E2-CO-1124224225-comp-007,0.672,71.1,502,SAGA_COMPENSADA_502,"Despacho abortado y compensado. Motivo: HTTP 500 - {""path"":""/api/tracking/generate"",""success"":false,""error"":{""code"":""INTERNAL_ERROR"",""message"":""Falla inducida (chaos) en tracking"",""details"":[]},""times"
+E2,completo,tracking-falla,saga,E2-CO-1124224225-comp-008,0.743,72.3,502,SAGA_COMPENSADA_502,"Despacho abortado y compensado. Motivo: HTTP 500 - {""path"":""/api/tracking/generate"",""success"":false,""error"":{""code"":""INTERNAL_ERROR"",""message"":""Falla inducida (chaos) en tracking"",""details"":[]},""times"
+E2,completo,tracking-falla,saga,E2-CO-1124224225-comp-009,0.815,72.8,502,SAGA_COMPENSADA_502,"Despacho abortado y compensado. Motivo: HTTP 500 - {""path"":""/api/tracking/generate"",""success"":false,""error"":{""code"":""INTERNAL_ERROR"",""message"":""Falla inducida (chaos) en tracking"",""details"":[]},""times"
+E6,completo,mismo-cliente,rate-limit,,20.0,10.4,404,HTTP_404,No existe despacho para transaccionId: rl-none-0
+E6,completo,mismo-cliente,rate-limit,,20.011,6.5,404,HTTP_404,No existe despacho para transaccionId: rl-none-1
+E6,completo,mismo-cliente,rate-limit,,20.017,5.9,404,HTTP_404,No existe despacho para transaccionId: rl-none-2
+E6,completo,mismo-cliente,rate-limit,,20.023,5.6,404,HTTP_404,No existe despacho para transaccionId: rl-none-3
+E6,completo,mismo-cliente,rate-limit,,20.029,5.4,404,HTTP_404,No existe despacho para transaccionId: rl-none-4
+E6,completo,mismo-cliente,rate-limit,,20.034,5.6,404,HTTP_404,No existe despacho para transaccionId: rl-none-5
+E6,completo,mismo-cliente,rate-limit,,20.04,5.5,404,HTTP_404,No existe despacho para transaccionId: rl-none-6
+E6,completo,mismo-cliente,rate-limit,,20.045,5.9,404,HTTP_404,No existe despacho para transaccionId: rl-none-7
+E6,completo,mismo-cliente,rate-limit,,20.051,5.7,404,HTTP_404,No existe despacho para transaccionId: rl-none-8
+E6,completo,mismo-cliente,rate-limit,,20.057,5.4,404,HTTP_404,No existe despacho para transaccionId: rl-none-9
+E6,completo,mismo-cliente,rate-limit,,20.063,5.5,404,HTTP_404,No existe despacho para transaccionId: rl-none-10
+E6,completo,mismo-cliente,rate-limit,,20.068,5.8,404,HTTP_404,No existe despacho para transaccionId: rl-none-11
+E6,completo,mismo-cliente,rate-limit,,20.074,5.8,404,HTTP_404,No existe despacho para transaccionId: rl-none-12
+E6,completo,mismo-cliente,rate-limit,,20.08,5.5,404,HTTP_404,No existe despacho para transaccionId: rl-none-13
+E6,completo,mismo-cliente,rate-limit,,20.086,5.5,404,HTTP_404,No existe despacho para transaccionId: rl-none-14
+E6,completo,mismo-cliente,rate-limit,,20.091,5.8,404,HTTP_404,No existe despacho para transaccionId: rl-none-15
+E6,completo,mismo-cliente,rate-limit,,20.097,5.3,404,HTTP_404,No existe despacho para transaccionId: rl-none-16
+E6,completo,mismo-cliente,rate-limit,,20.102,5.4,404,HTTP_404,No existe despacho para transaccionId: rl-none-17
+E6,completo,mismo-cliente,rate-limit,,20.108,5.6,404,HTTP_404,No existe despacho para transaccionId: rl-none-18
+E6,completo,mismo-cliente,rate-limit,,20.113,4.9,404,HTTP_404,No existe despacho para transaccionId: rl-none-19
+E6,completo,mismo-cliente,rate-limit,,20.118,4.8,404,HTTP_404,No existe despacho para transaccionId: rl-none-20
+E6,completo,mismo-cliente,rate-limit,,20.123,4.6,404,HTTP_404,No existe despacho para transaccionId: rl-none-21
+E6,completo,mismo-cliente,rate-limit,,20.128,5.0,404,HTTP_404,No existe despacho para transaccionId: rl-none-22
+E6,completo,mismo-cliente,rate-limit,,20.133,5.1,404,HTTP_404,No existe despacho para transaccionId: rl-none-23
+E6,completo,mismo-cliente,rate-limit,,20.138,5.1,404,HTTP_404,No existe despacho para transaccionId: rl-none-24
+E6,completo,mismo-cliente,rate-limit,,20.143,5.6,404,HTTP_404,No existe despacho para transaccionId: rl-none-25
+E6,completo,mismo-cliente,rate-limit,,20.149,5.9,404,HTTP_404,No existe despacho para transaccionId: rl-none-26
+E6,completo,mismo-cliente,rate-limit,,20.155,6.6,404,HTTP_404,No existe despacho para transaccionId: rl-none-27
+E6,completo,mismo-cliente,rate-limit,,20.162,5.6,404,HTTP_404,No existe despacho para transaccionId: rl-none-28
+E6,completo,mismo-cliente,rate-limit,,20.167,5.2,404,HTTP_404,No existe despacho para transaccionId: rl-none-29
+E6,completo,mismo-cliente,rate-limit,,20.172,1.5,429,HTTP_429,Límite de peticiones por minuto excedido
+E6,completo,mismo-cliente,rate-limit,,20.174,1.3,429,HTTP_429,Límite de peticiones por minuto excedido
+E6,completo,mismo-cliente,rate-limit,,20.175,1.2,429,HTTP_429,Límite de peticiones por minuto excedido
+E6,completo,mismo-cliente,rate-limit,,20.177,1.3,429,HTTP_429,Límite de peticiones por minuto excedido
+E6,completo,mismo-cliente,rate-limit,,20.178,1.0,429,HTTP_429,Límite de peticiones por minuto excedido
+E6,completo,mismo-cliente,rate-limit,,20.179,1.0,429,HTTP_429,Límite de peticiones por minuto excedido
+E6,completo,mismo-cliente,rate-limit,,20.18,1.0,429,HTTP_429,Límite de peticiones por minuto excedido
+E6,completo,mismo-cliente,rate-limit,,20.181,1.0,429,HTTP_429,Límite de peticiones por minuto excedido
+E6,completo,mismo-cliente,rate-limit,,20.182,1.0,429,HTTP_429,Límite de peticiones por minuto excedido
+E6,completo,mismo-cliente,rate-limit,,20.183,0.8,429,HTTP_429,Límite de peticiones por minuto excedido
+E6,completo,otro-cliente,rate-limit-otro,,20.184,5.3,404,HTTP_404,No existe despacho para transaccionId: rl-none
+E6,completo,sin-token,sin-token,,20.19,1.4,401,HTTP_401,Token de acceso faltante o inválido
+E3,completo,normal,saga,E3-CO-1124224225-n-0000,0.123,251.8,200,OK,Despacho procesado con éxito
+E3,completo,normal,saga,E3-CO-1124224225-n-0001,1.123,55.1,200,OK,Despacho procesado con éxito
+E3,completo,normal,saga,E3-CO-1124224225-n-0002,2.123,60.0,200,OK,Despacho procesado con éxito
+E3,completo,normal,saga,E3-CO-1124224225-n-0003,3.123,61.9,200,OK,Despacho procesado con éxito
+E3,completo,normal,saga,E3-CO-1124224225-n-0004,4.123,60.9,200,OK,Despacho procesado con éxito
+E3,completo,normal,saga,E3-CO-1124224225-n-0005,5.123,60.0,200,OK,Despacho procesado con éxito
+E3,completo,normal,saga,E3-CO-1124224225-n-0006,6.123,64.4,200,OK,Despacho procesado con éxito
+E3,completo,normal,saga,E3-CO-1124224225-n-0007,7.123,61.9,200,OK,Despacho procesado con éxito
+E3,completo,normal,saga,E3-CO-1124224225-n-0008,8.123,58.7,200,OK,Despacho procesado con éxito
+E3,completo,normal,saga,E3-CO-1124224225-n-0009,9.123,51.5,200,OK,Despacho procesado con éxito
+E3,completo,normal,saga,E3-CO-1124224225-n-0010,10.123,61.7,200,OK,Despacho procesado con éxito
+E3,completo,normal,saga,E3-CO-1124224225-n-0011,11.123,59.3,200,OK,Despacho procesado con éxito
+E3,completo,normal,saga,E3-CO-1124224225-n-0012,12.123,51.0,200,OK,Despacho procesado con éxito
+E3,completo,normal,saga,E3-CO-1124224225-n-0013,13.123,57.1,200,OK,Despacho procesado con éxito
+E3,completo,normal,saga,E3-CO-1124224225-n-0014,14.123,57.9,200,OK,Despacho procesado con éxito
+E3,completo,normal,saga,E3-CO-1124224225-n-0015,15.123,57.2,200,OK,Despacho procesado con éxito
+E3,completo,normal,saga,E3-CO-1124224225-n-0016,16.123,55.9,200,OK,Despacho procesado con éxito
+E3,completo,normal,saga,E3-CO-1124224225-n-0017,17.123,57.4,200,OK,Despacho procesado con éxito
+E3,completo,normal,saga,E3-CO-1124224225-n-0018,18.123,55.3,200,OK,Despacho procesado con éxito
+E3,completo,normal,saga,E3-CO-1124224225-n-0019,19.123,55.7,200,OK,Despacho procesado con éxito
+E3,completo,lento,saga,E3-CO-1124224225-l-0000,20.127,2066.1,503,TIMEOUT,Despacho abortado y compensado. Motivo: Transportista no disponible (ResourceAccessException)
+E3,completo,lento,saga,E3-CO-1124224225-l-0001,21.127,2063.4,503,TIMEOUT,Despacho abortado y compensado. Motivo: Transportista no disponible (ResourceAccessException)
+E3,completo,lento,saga,E3-CO-1124224225-l-0002,22.127,2064.5,503,TIMEOUT,Despacho abortado y compensado. Motivo: Transportista no disponible (ResourceAccessException)
+E3,completo,lento,saga,E3-CO-1124224225-l-0005,25.127,53.8,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,lento,saga,E3-CO-1124224225-l-0003,23.127,2055.6,503,TIMEOUT,Despacho abortado y compensado. Motivo: Transportista no disponible (ResourceAccessException)
+E3,completo,lento,saga,E3-CO-1124224225-l-0006,26.127,48.7,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,lento,saga,E3-CO-1124224225-l-0004,24.127,2056.6,503,TIMEOUT,Despacho abortado y compensado. Motivo: Transportista no disponible (ResourceAccessException)
+E3,completo,lento,saga,E3-CO-1124224225-l-0007,27.127,46.9,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,lento,saga,E3-CO-1124224225-l-0008,28.127,44.4,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,lento,saga,E3-CO-1124224225-l-0009,29.127,36.4,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,lento,saga,E3-CO-1124224225-l-0010,30.127,45.6,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,lento,saga,E3-CO-1124224225-l-0011,31.127,47.5,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,lento,saga,E3-CO-1124224225-l-0012,32.127,44.7,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,lento,saga,E3-CO-1124224225-l-0013,33.127,48.7,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,lento,saga,E3-CO-1124224225-l-0014,34.127,44.8,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,lento,saga,E3-CO-1124224225-l-0015,35.127,45.9,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,lento,saga,E3-CO-1124224225-l-0016,36.127,44.3,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,lento,saga,E3-CO-1124224225-l-0017,37.127,43.7,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,lento,saga,E3-CO-1124224225-l-0018,38.127,44.2,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,lento,saga,E3-CO-1124224225-l-0019,39.127,44.2,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,lento,saga,E3-CO-1124224225-l-0022,42.127,47.8,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,lento,saga,E3-CO-1124224225-l-0020,40.127,2058.1,503,TIMEOUT,Despacho abortado y compensado. Motivo: Transportista no disponible (ResourceAccessException)
+E3,completo,lento,saga,E3-CO-1124224225-l-0023,43.127,48.5,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,lento,saga,E3-CO-1124224225-l-0021,41.127,2054.3,503,TIMEOUT,Despacho abortado y compensado. Motivo: Transportista no disponible (ResourceAccessException)
+E3,completo,lento,saga,E3-CO-1124224225-l-0024,44.127,44.5,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,lento,saga,E3-CO-1124224225-l-0025,45.127,43.5,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,lento,saga,E3-CO-1124224225-l-0026,46.127,43.6,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,lento,saga,E3-CO-1124224225-l-0027,47.127,43.6,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,lento,saga,E3-CO-1124224225-l-0028,48.127,43.3,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,lento,saga,E3-CO-1124224225-l-0029,49.127,35.1,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,lento,saga,E3-CO-1124224225-l-0030,50.127,36.2,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,lento,saga,E3-CO-1124224225-l-0031,51.127,43.6,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,lento,saga,E3-CO-1124224225-l-0032,52.127,44.0,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,lento,saga,E3-CO-1124224225-l-0033,53.127,43.3,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,lento,saga,E3-CO-1124224225-l-0034,54.127,36.8,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,lento,saga,E3-CO-1124224225-l-0035,55.127,43.5,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,lento,saga,E3-CO-1124224225-l-0036,56.127,45.6,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,lento,saga,E3-CO-1124224225-l-0037,57.127,43.0,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,lento,saga,E3-CO-1124224225-l-0038,58.127,42.4,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,lento,saga,E3-CO-1124224225-l-0041,61.127,52.3,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,lento,saga,E3-CO-1124224225-l-0039,59.127,2053.8,503,TIMEOUT,Despacho abortado y compensado. Motivo: Transportista no disponible (ResourceAccessException)
+E3,completo,lento,saga,E3-CO-1124224225-l-0042,62.127,52.9,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,lento,saga,E3-CO-1124224225-l-0040,60.127,2054.2,503,TIMEOUT,Despacho abortado y compensado. Motivo: Transportista no disponible (ResourceAccessException)
+E3,completo,lento,saga,E3-CO-1124224225-l-0043,63.127,47.8,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,lento,saga,E3-CO-1124224225-l-0044,64.127,36.2,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,caido,saga,E3-CO-1124224225-c-0000,65.131,49.7,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,caido,saga,E3-CO-1124224225-c-0001,66.131,47.5,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,caido,saga,E3-CO-1124224225-c-0002,67.131,45.9,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,caido,saga,E3-CO-1124224225-c-0003,68.131,46.4,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,caido,saga,E3-CO-1124224225-c-0004,69.131,46.9,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,caido,saga,E3-CO-1124224225-c-0005,70.131,36.8,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,caido,saga,E3-CO-1124224225-c-0006,71.131,43.9,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,caido,saga,E3-CO-1124224225-c-0007,72.131,44.6,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,caido,saga,E3-CO-1124224225-c-0008,73.131,42.3,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,caido,saga,E3-CO-1124224225-c-0009,74.131,42.3,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,caido,saga,E3-CO-1124224225-c-0010,75.131,41.7,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,caido,saga,E3-CO-1124224225-c-0011,76.131,42.0,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,caido,saga,E3-CO-1124224225-c-0012,77.131,57.4,503,TRANSPORTISTA_503,Despacho abortado y compensado. Motivo: Transportista no disponible (ServiceUnavailable)
+E3,completo,caido,saga,E3-CO-1124224225-c-0013,78.131,54.4,503,TRANSPORTISTA_503,Despacho abortado y compensado. Motivo: Transportista no disponible (ServiceUnavailable)
+E3,completo,caido,saga,E3-CO-1124224225-c-0014,79.131,40.9,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,caido,saga,E3-CO-1124224225-c-0015,80.131,41.7,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,caido,saga,E3-CO-1124224225-c-0016,81.131,41.4,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,caido,saga,E3-CO-1124224225-c-0017,82.131,41.7,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,caido,saga,E3-CO-1124224225-c-0018,83.131,41.4,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,caido,saga,E3-CO-1124224225-c-0019,84.131,40.4,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,caido,saga,E3-CO-1124224225-c-0020,85.131,42.6,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,caido,saga,E3-CO-1124224225-c-0021,86.131,41.8,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,caido,saga,E3-CO-1124224225-c-0022,87.131,33.9,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,caido,saga,E3-CO-1124224225-c-0023,88.131,42.2,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,caido,saga,E3-CO-1124224225-c-0024,89.131,40.1,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,caido,saga,E3-CO-1124224225-c-0025,90.131,41.2,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,caido,saga,E3-CO-1124224225-c-0026,91.131,41.0,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,caido,saga,E3-CO-1124224225-c-0027,92.131,40.3,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,caido,saga,E3-CO-1124224225-c-0028,93.131,45.9,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,caido,saga,E3-CO-1124224225-c-0029,94.131,43.1,503,TRANSPORTISTA_503,Despacho abortado y compensado. Motivo: Transportista no disponible (ServiceUnavailable)
+E3,completo,caido,saga,E3-CO-1124224225-c-0030,95.131,53.7,503,TRANSPORTISTA_503,Despacho abortado y compensado. Motivo: Transportista no disponible (ServiceUnavailable)
+E3,completo,caido,saga,E3-CO-1124224225-c-0031,96.131,40.8,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,caido,saga,E3-CO-1124224225-c-0032,97.131,39.9,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,caido,saga,E3-CO-1124224225-c-0033,98.131,41.2,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,caido,saga,E3-CO-1124224225-c-0034,99.131,40.6,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,caido,saga,E3-CO-1124224225-c-0035,100.131,40.2,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,caido,saga,E3-CO-1124224225-c-0036,101.131,40.9,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,caido,saga,E3-CO-1124224225-c-0037,102.131,42.7,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,caido,saga,E3-CO-1124224225-c-0038,103.131,40.6,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,caido,saga,E3-CO-1124224225-c-0039,104.131,40.7,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,caido,saga,E3-CO-1124224225-c-0040,105.131,42.2,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,caido,saga,E3-CO-1124224225-c-0041,106.131,39.7,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,caido,saga,E3-CO-1124224225-c-0042,107.131,40.7,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,caido,saga,E3-CO-1124224225-c-0043,108.131,40.2,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,caido,saga,E3-CO-1124224225-c-0044,109.131,41.2,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,recuperado,saga,E3-CO-1124224225-r-0000,110.134,39.3,503,CB_ABIERTO,Despacho abortado y compensado. Motivo: Transportista no disponible (CallNotPermittedException)
+E3,completo,recuperado,saga,E3-CO-1124224225-r-0001,111.134,53.1,200,OK,Despacho procesado con éxito
+E3,completo,recuperado,saga,E3-CO-1124224225-r-0002,112.134,51.1,200,OK,Despacho procesado con éxito
+E3,completo,recuperado,saga,E3-CO-1124224225-r-0003,113.134,50.4,200,OK,Despacho procesado con éxito
+E3,completo,recuperado,saga,E3-CO-1124224225-r-0004,114.134,41.7,200,OK,Despacho procesado con éxito
+E3,completo,recuperado,saga,E3-CO-1124224225-r-0005,115.134,45.6,200,OK,Despacho procesado con éxito
+E3,completo,recuperado,saga,E3-CO-1124224225-r-0006,116.134,42.1,200,OK,Despacho procesado con éxito
+E3,completo,recuperado,saga,E3-CO-1124224225-r-0007,117.134,41.6,200,OK,Despacho procesado con éxito
+E3,completo,recuperado,saga,E3-CO-1124224225-r-0008,118.134,51.6,200,OK,Despacho procesado con éxito
+E3,completo,recuperado,saga,E3-CO-1124224225-r-0009,119.134,50.9,200,OK,Despacho procesado con éxito
+E3,completo,recuperado,saga,E3-CO-1124224225-r-0010,120.134,50.0,200,OK,Despacho procesado con éxito
+E3,completo,recuperado,saga,E3-CO-1124224225-r-0011,121.134,50.2,200,OK,Despacho procesado con éxito
+E3,completo,recuperado,saga,E3-CO-1124224225-r-0012,122.134,50.9,200,OK,Despacho procesado con éxito
+E3,completo,recuperado,saga,E3-CO-1124224225-r-0013,123.134,50.6,200,OK,Despacho procesado con éxito
+E3,completo,recuperado,saga,E3-CO-1124224225-r-0014,124.134,41.8,200,OK,Despacho procesado con éxito
+E3,completo,recuperado,saga,E3-CO-1124224225-r-0015,125.134,49.4,200,OK,Despacho procesado con éxito
+E3,completo,recuperado,saga,E3-CO-1124224225-r-0016,126.134,50.6,200,OK,Despacho procesado con éxito
+E3,completo,recuperado,saga,E3-CO-1124224225-r-0017,127.134,50.7,200,OK,Despacho procesado con éxito
+E3,completo,recuperado,saga,E3-CO-1124224225-r-0018,128.134,43.4,200,OK,Despacho procesado con éxito
+E3,completo,recuperado,saga,E3-CO-1124224225-r-0019,129.134,44.7,200,OK,Despacho procesado con éxito
+E3,completo,recuperado,saga,E3-CO-1124224225-r-0020,130.134,42.7,200,OK,Despacho procesado con éxito
+E3,completo,recuperado,saga,E3-CO-1124224225-r-0021,131.134,49.3,200,OK,Despacho procesado con éxito
+E3,completo,recuperado,saga,E3-CO-1124224225-r-0022,132.134,49.3,200,OK,Despacho procesado con éxito
+E3,completo,recuperado,saga,E3-CO-1124224225-r-0023,133.134,49.0,200,OK,Despacho procesado con éxito
+E3,completo,recuperado,saga,E3-CO-1124224225-r-0024,134.134,48.4,200,OK,Despacho procesado con éxito
+E3,completo,recuperado,saga,E3-CO-1124224225-r-0025,135.134,49.3,200,OK,Despacho procesado con éxito
+E3,completo,recuperado,saga,E3-CO-1124224225-r-0026,136.134,48.9,200,OK,Despacho procesado con éxito
+E3,completo,recuperado,saga,E3-CO-1124224225-r-0027,137.134,40.6,200,OK,Despacho procesado con éxito
+E3,completo,recuperado,saga,E3-CO-1124224225-r-0028,138.134,48.5,200,OK,Despacho procesado con éxito
+E3,completo,recuperado,saga,E3-CO-1124224225-r-0029,139.134,49.9,200,OK,Despacho procesado con éxito
+E3,completo,recuperado,saga,E3-CO-1124224225-r-0030,140.134,49.9,200,OK,Despacho procesado con éxito
+E3,completo,recuperado,saga,E3-CO-1124224225-r-0031,141.134,52.4,200,OK,Despacho procesado con éxito
+E3,completo,recuperado,saga,E3-CO-1124224225-r-0032,142.134,50.8,200,OK,Despacho procesado con éxito
+E3,completo,recuperado,saga,E3-CO-1124224225-r-0033,143.134,50.9,200,OK,Despacho procesado con éxito
+E3,completo,recuperado,saga,E3-CO-1124224225-r-0034,144.134,41.1,200,OK,Despacho procesado con éxito
+E3,completo,recuperado,saga,E3-CO-1124224225-r-0035,145.134,49.7,200,OK,Despacho procesado con éxito
+E3,completo,recuperado,saga,E3-CO-1124224225-r-0036,146.134,49.8,200,OK,Despacho procesado con éxito
+E3,completo,recuperado,saga,E3-CO-1124224225-r-0037,147.134,49.1,200,OK,Despacho procesado con éxito
+E3,completo,recuperado,saga,E3-CO-1124224225-r-0038,148.134,50.7,200,OK,Despacho procesado con éxito
+E3,completo,recuperado,saga,E3-CO-1124224225-r-0039,149.134,50.9,200,OK,Despacho procesado con éxito
+E3,completo,recuperado,saga,E3-CO-1124224225-r-0040,150.134,51.7,200,OK,Despacho procesado con éxito
+E3,completo,recuperado,saga,E3-CO-1124224225-r-0041,151.134,49.2,200,OK,Despacho procesado con éxito
+E3,completo,recuperado,saga,E3-CO-1124224225-r-0042,152.134,40.8,200,OK,Despacho procesado con éxito
+E3,completo,recuperado,saga,E3-CO-1124224225-r-0043,153.134,49.1,200,OK,Despacho procesado con éxito
+E3,completo,recuperado,saga,E3-CO-1124224225-r-0044,154.134,40.8,200,OK,Despacho procesado con éxito
+E5,completo,preparacion,saga-base,E5-CO-1124224225-base,0.117,237.0,200,OK,Despacho procesado con éxito
+E5,completo,preparacion,sonda-estado,E5-CO-1124224225-base,0.355,12.8,200,OK,Despacho completado
+E5,completo,preparacion,sonda-bff,E5-CO-1124224225-base,0.355,129.6,200,OK,degradado=false
+E5,completo,control-antes,sonda-estado,E5-CO-1124224225-base,0.555,5.2,200,OK,Despacho completado
+E5,completo,control-antes,sonda-estado,E5-CO-1124224225-base,0.755,7.3,200,OK,Despacho completado
+E5,completo,control-antes,sonda-bff,E5-CO-1124224225-base,0.855,26.4,200,OK,degradado=false
+E5,completo,control-antes,sonda-estado,E5-CO-1124224225-base,0.955,5.1,200,OK,Despacho completado
+E5,completo,control-antes,sonda-estado,E5-CO-1124224225-base,1.155,5.1,200,OK,Despacho completado
+E5,completo,control-antes,sonda-estado,E5-CO-1124224225-base,1.355,5.4,200,OK,Despacho completado
+E5,completo,control-antes,sonda-bff,E5-CO-1124224225-base,1.355,25.6,200,OK,degradado=false
+E5,completo,control-antes,sonda-estado,E5-CO-1124224225-base,1.555,5.2,200,OK,Despacho completado
+E5,completo,control-antes,sonda-estado,E5-CO-1124224225-base,1.755,6.0,200,OK,Despacho completado
+E5,completo,control-antes,sonda-bff,E5-CO-1124224225-base,1.855,26.3,200,OK,degradado=false
+E5,completo,control-antes,sonda-estado,E5-CO-1124224225-base,1.955,5.5,200,OK,Despacho completado
+E5,completo,control-antes,sonda-estado,E5-CO-1124224225-base,2.155,4.5,200,OK,Despacho completado
+E5,completo,control-antes,sonda-estado,E5-CO-1124224225-base,2.355,6.4,200,OK,Despacho completado
+E5,completo,control-antes,sonda-bff,E5-CO-1124224225-base,2.355,33.5,200,OK,degradado=false
+E5,completo,control-antes,sonda-estado,E5-CO-1124224225-base,2.555,5.4,200,OK,Despacho completado
+E5,completo,control-antes,sonda-estado,E5-CO-1124224225-base,2.755,4.9,200,OK,Despacho completado
+E5,completo,control-antes,sonda-bff,E5-CO-1124224225-base,2.855,30.9,200,OK,degradado=false
+E5,completo,control-antes,sonda-estado,E5-CO-1124224225-base,2.955,4.8,200,OK,Despacho completado
+E5,completo,control-antes,sonda-estado,E5-CO-1124224225-base,3.155,5.1,200,OK,Despacho completado
+E5,completo,control-antes,sonda-estado,E5-CO-1124224225-base,3.355,6.5,200,OK,Despacho completado
+E5,completo,control-antes,sonda-bff,E5-CO-1124224225-base,3.355,36.1,200,OK,degradado=false
+E5,completo,control-pico,saga,E5-CO-1124224225-c-022,3.369,85.7,200,OK,Despacho procesado con éxito
+E5,completo,control-pico,saga,E5-CO-1124224225-c-037,3.368,93.2,200,OK,Despacho procesado con éxito
+E5,completo,control-pico,saga,E5-CO-1124224225-c-035,3.366,106.2,200,OK,Despacho procesado con éxito
+E5,completo,control-pico,saga,E5-CO-1124224225-c-000,3.365,105.7,200,OK,Despacho procesado con éxito
+E5,completo,control-pico,saga,E5-CO-1124224225-c-038,3.366,118.0,200,OK,Despacho procesado con éxito
+E5,completo,control-pico,saga,E5-CO-1124224225-c-031,3.368,120.4,200,OK,Despacho procesado con éxito
+E5,completo,control-pico,saga,E5-CO-1124224225-c-036,3.366,134.4,200,OK,Despacho procesado con éxito
+E5,completo,control-pico,saga,E5-CO-1124224225-c-008,3.366,141.0,200,OK,Despacho procesado con éxito
+E5,completo,control-pico,saga,E5-CO-1124224225-c-032,3.366,152.9,200,OK,Despacho procesado con éxito
+E5,completo,control-pico,saga,E5-CO-1124224225-c-004,3.365,159.4,200,OK,Despacho procesado con éxito
+E5,completo,control-pico,saga,E5-CO-1124224225-c-025,3.366,167.3,200,OK,Despacho procesado con éxito
+E5,completo,control-pico,saga,E5-CO-1124224225-c-019,3.365,178.3,200,OK,Despacho procesado con éxito
+E5,completo,control-pico,saga,E5-CO-1124224225-c-005,3.365,180.9,200,OK,Despacho procesado con éxito
+E5,completo,control-pico,saga,E5-CO-1124224225-c-018,3.365,188.2,200,OK,Despacho procesado con éxito
+E5,completo,control-pico,saga,E5-CO-1124224225-c-039,3.365,190.8,503,BULKHEAD_LLENO,Despacho abortado y compensado. Motivo: Transportista no disponible (BulkheadFullException)
+E5,completo,control-pico,saga,E5-CO-1124224225-c-009,3.367,203.3,200,OK,Despacho procesado con éxito
+E5,completo,control-pico,saga,E5-CO-1124224225-c-033,3.366,208.1,200,OK,Despacho procesado con éxito
+E5,completo,control-pico,saga,E5-CO-1124224225-c-007,3.368,213.2,200,OK,Despacho procesado con éxito
+E5,completo,control-pico,saga,E5-CO-1124224225-c-003,3.365,224.7,200,OK,Despacho procesado con éxito
+E5,completo,control-pico,saga,E5-CO-1124224225-c-015,3.365,243.1,200,OK,Despacho procesado con éxito
+E5,completo,control-pico,saga,E5-CO-1124224225-c-021,3.369,242.7,200,OK,Despacho procesado con éxito
+E5,completo,control-pico,saga,E5-CO-1124224225-c-002,3.368,243.7,200,OK,Despacho procesado con éxito
+E5,completo,control-pico,saga,E5-CO-1124224225-c-023,3.367,260.9,200,OK,Despacho procesado con éxito
+E5,completo,control-pico,saga,E5-CO-1124224225-c-028,3.366,263.5,200,OK,Despacho procesado con éxito
+E5,completo,control-pico,saga,E5-CO-1124224225-c-020,3.367,265.2,200,OK,Despacho procesado con éxito
+E5,completo,control-pico,saga,E5-CO-1124224225-c-027,3.366,279.9,200,OK,Despacho procesado con éxito
+E5,completo,control-pico,saga,E5-CO-1124224225-c-016,3.367,285.3,200,OK,Despacho procesado con éxito
+E5,completo,control-pico,saga,E5-CO-1124224225-c-012,3.365,289.7,200,OK,Despacho procesado con éxito
+E5,completo,control-pico,saga,E5-CO-1124224225-c-034,3.368,287.0,200,OK,Despacho procesado con éxito
+E5,completo,control-pico,saga,E5-CO-1124224225-c-011,3.367,325.7,503,BULKHEAD_LLENO,Despacho abortado y compensado. Motivo: Transportista no disponible (BulkheadFullException)
+E5,completo,control-pico,saga,E5-CO-1124224225-c-001,3.367,326.0,200,OK,Despacho procesado con éxito
+E5,completo,control-pico,sonda-estado,E5-CO-1124224225-base,3.556,137.9,200,OK,Despacho completado
+E5,completo,control-pico,saga,E5-CO-1124224225-c-014,3.367,328.9,200,OK,Despacho procesado con éxito
+E5,completo,control-pico,saga,E5-CO-1124224225-c-010,3.365,331.9,200,OK,Despacho procesado con éxito
+E5,completo,control-pico,saga,E5-CO-1124224225-c-029,3.368,332.8,200,OK,Despacho procesado con éxito
+E5,completo,control-pico,saga,E5-CO-1124224225-c-024,3.369,331.9,200,OK,Despacho procesado con éxito
+E5,completo,control-pico,saga,E5-CO-1124224225-c-026,3.366,346.1,200,OK,Despacho procesado con éxito
+E5,completo,control-pico,saga,E5-CO-1124224225-c-013,3.365,353.3,200,OK,Despacho procesado con éxito
+E5,completo,control-pico,saga,E5-CO-1124224225-c-017,3.367,359.4,200,OK,Despacho procesado con éxito
+E5,completo,control-pico,saga,E5-CO-1124224225-c-006,3.368,358.4,200,OK,Despacho procesado con éxito
+E5,completo,control-pico,saga,E5-CO-1124224225-c-030,3.371,368.5,200,OK,Despacho procesado con éxito
+E5,completo,control-despues,sonda-estado,E5-CO-1124224225-base,3.755,4.7,200,OK,Despacho completado
+E5,completo,control-despues,sonda-bff,E5-CO-1124224225-base,3.855,23.1,200,OK,degradado=false
+E5,completo,control-despues,sonda-estado,E5-CO-1124224225-base,3.955,4.4,200,OK,Despacho completado
+E5,completo,control-despues,sonda-estado,E5-CO-1124224225-base,4.155,4.5,200,OK,Despacho completado
+E5,completo,control-despues,sonda-estado,E5-CO-1124224225-base,4.355,5.1,200,OK,Despacho completado
+E5,completo,control-despues,sonda-bff,E5-CO-1124224225-base,4.355,24.7,200,OK,degradado=false
+E5,completo,control-despues,sonda-estado,E5-CO-1124224225-base,4.555,4.3,200,OK,Despacho completado
+E5,completo,control-despues,sonda-estado,E5-CO-1124224225-base,4.755,4.5,200,OK,Despacho completado
+E5,completo,control-despues,sonda-bff,E5-CO-1124224225-base,4.855,23.6,200,OK,degradado=false
+E5,completo,control-despues,sonda-estado,E5-CO-1124224225-base,4.955,4.6,200,OK,Despacho completado
+E5,completo,control-despues,sonda-estado,E5-CO-1124224225-base,5.155,4.3,200,OK,Despacho completado
+E5,completo,control-despues,sonda-estado,E5-CO-1124224225-base,5.355,4.9,200,OK,Despacho completado
+E5,completo,control-despues,sonda-bff,E5-CO-1124224225-base,5.355,23.4,200,OK,degradado=false
+E5,completo,control-despues,sonda-estado,E5-CO-1124224225-base,5.555,4.5,200,OK,Despacho completado
+E5,completo,control-despues,sonda-estado,E5-CO-1124224225-base,5.755,4.6,200,OK,Despacho completado
+E5,completo,control-despues,sonda-bff,E5-CO-1124224225-base,5.855,23.2,200,OK,degradado=false
+E5,completo,control-despues,sonda-estado,E5-CO-1124224225-base,5.955,4.4,200,OK,Despacho completado
+E5,completo,control-despues,sonda-estado,E5-CO-1124224225-base,6.155,5.2,200,OK,Despacho completado
+E5,completo,control-despues,sonda-estado,E5-CO-1124224225-base,6.355,4.8,200,OK,Despacho completado
+E5,completo,control-despues,sonda-bff,E5-CO-1124224225-base,6.355,22.8,200,OK,degradado=false
+E5,completo,control-despues,sonda-estado,E5-CO-1124224225-base,6.555,4.9,200,OK,Despacho completado
+E5,completo,control-despues,sonda-estado,E5-CO-1124224225-base,6.755,4.4,200,OK,Despacho completado
+E5,completo,control-despues,sonda-bff,E5-CO-1124224225-base,6.855,23.8,200,OK,degradado=false
+E5,completo,control-despues,sonda-estado,E5-CO-1124224225-base,6.955,4.5,200,OK,Despacho completado
+E5,completo,control-despues,sonda-estado,E5-CO-1124224225-base,7.155,4.3,200,OK,Despacho completado
+E5,completo,control-despues,sonda-estado,E5-CO-1124224225-base,7.355,11.0,200,OK,Despacho completado
+E5,completo,control-despues,sonda-bff,E5-CO-1124224225-base,7.355,49.3,200,OK,degradado=false
+E5,completo,control-despues,sonda-estado,E5-CO-1124224225-base,7.555,4.3,200,OK,Despacho completado
+E5,completo,lento-antes,sonda-estado,E5-CO-1124224225-base,7.755,4.9,200,OK,Despacho completado
+E5,completo,lento-antes,sonda-estado,E5-CO-1124224225-base,7.955,4.3,200,OK,Despacho completado
+E5,completo,lento-antes,sonda-estado,E5-CO-1124224225-base,8.155,4.4,200,OK,Despacho completado
+E5,completo,lento-antes,sonda-estado,E5-CO-1124224225-base,8.355,4.8,200,OK,Despacho completado
+E5,completo,lento-antes,sonda-estado,E5-CO-1124224225-base,8.555,4.3,200,OK,Despacho completado
+E5,completo,lento-antes,sonda-estado,E5-CO-1124224225-base,8.755,4.4,200,OK,Despacho completado
+E5,completo,lento-antes,sonda-estado,E5-CO-1124224225-base,8.955,4.5,200,OK,Despacho completado
+E5,completo,lento-antes,sonda-estado,E5-CO-1124224225-base,9.155,4.5,200,OK,Despacho completado
+E5,completo,lento-antes,sonda-estado,E5-CO-1124224225-base,9.355,4.8,200,OK,Despacho completado
+E5,completo,lento-antes,sonda-bff,E5-CO-1124224225-base,7.855,1521.2,200,OK_DEGRADADO,degradado=true
+E5,completo,lento-antes,sonda-bff,E5-CO-1124224225-base,9.355,21.3,200,OK_DEGRADADO,degradado=true
+E5,completo,lento-antes,sonda-estado,E5-CO-1124224225-base,9.555,4.7,200,OK,Despacho completado
+E5,completo,lento-antes,sonda-estado,E5-CO-1124224225-base,9.755,4.4,200,OK,Despacho completado
+E5,completo,lento-antes,sonda-bff,E5-CO-1124224225-base,8.355,1520.7,200,OK_DEGRADADO,degradado=true
+E5,completo,lento-antes,sonda-estado,E5-CO-1124224225-base,9.955,4.3,200,OK,Despacho completado
+E5,completo,lento-antes,sonda-estado,E5-CO-1124224225-base,10.155,4.0,200,OK,Despacho completado
+E5,completo,lento-antes,sonda-estado,E5-CO-1124224225-base,10.355,4.7,200,OK,Despacho completado
+E5,completo,lento-antes,sonda-bff,E5-CO-1124224225-base,8.855,1523.2,200,OK_DEGRADADO,degradado=true
+E5,completo,lento-antes,sonda-estado,E5-CO-1124224225-base,10.555,4.2,200,OK,Despacho completado
+E5,completo,lento-pico,saga,E5-CO-1124224225-l-010,10.746,72.4,503,BULKHEAD_LLENO,Despacho abortado y compensado. Motivo: Transportista no disponible (BulkheadFullException)
+E5,completo,lento-pico,saga,E5-CO-1124224225-l-037,10.749,76.9,503,BULKHEAD_LLENO,Despacho abortado y compensado. Motivo: Transportista no disponible (BulkheadFullException)
+E5,completo,lento-pico,saga,E5-CO-1124224225-l-033,10.747,82.7,503,BULKHEAD_LLENO,Despacho abortado y compensado. Motivo: Transportista no disponible (BulkheadFullException)
+E5,completo,lento-pico,saga,E5-CO-1124224225-l-012,10.748,85.4,503,BULKHEAD_LLENO,Despacho abortado y compensado. Motivo: Transportista no disponible (BulkheadFullException)
+E5,completo,lento-pico,saga,E5-CO-1124224225-l-009,10.746,90.9,503,BULKHEAD_LLENO,Despacho abortado y compensado. Motivo: Transportista no disponible (BulkheadFullException)
+E5,completo,lento-pico,saga,E5-CO-1124224225-l-019,10.747,94.3,503,BULKHEAD_LLENO,Despacho abortado y compensado. Motivo: Transportista no disponible (BulkheadFullException)
+E5,completo,lento-pico,saga,E5-CO-1124224225-l-025,10.749,95.7,503,BULKHEAD_LLENO,Despacho abortado y compensado. Motivo: Transportista no disponible (BulkheadFullException)
+E5,completo,lento-pico,saga,E5-CO-1124224225-l-023,10.747,129.3,503,BULKHEAD_LLENO,Despacho abortado y compensado. Motivo: Transportista no disponible (BulkheadFullException)
+E5,completo,lento-pico,saga,E5-CO-1124224225-l-031,10.747,135.3,503,BULKHEAD_LLENO,Despacho abortado y compensado. Motivo: Transportista no disponible (BulkheadFullException)
+E5,completo,lento-pico,saga,E5-CO-1124224225-l-001,10.748,135.1,503,BULKHEAD_LLENO,Despacho abortado y compensado. Motivo: Transportista no disponible (BulkheadFullException)
+E5,completo,lento-pico,saga,E5-CO-1124224225-l-030,10.749,136.8,503,BULKHEAD_LLENO,Despacho abortado y compensado. Motivo: Transportista no disponible (BulkheadFullException)
+E5,completo,lento-pico,saga,E5-CO-1124224225-l-029,10.749,140.7,503,BULKHEAD_LLENO,Despacho abortado y compensado. Motivo: Transportista no disponible (BulkheadFullException)
+E5,completo,lento-pico,saga,E5-CO-1124224225-l-032,10.747,146.2,503,BULKHEAD_LLENO,Despacho abortado y compensado. Motivo: Transportista no disponible (BulkheadFullException)
+E5,completo,lento-pico,saga,E5-CO-1124224225-l-003,10.746,151.1,503,BULKHEAD_LLENO,Despacho abortado y compensado. Motivo: Transportista no disponible (BulkheadFullException)
+E5,completo,lento-pico,saga,E5-CO-1124224225-l-038,10.748,180.3,503,BULKHEAD_LLENO,Despacho abortado y compensado. Motivo: Transportista no disponible (BulkheadFullException)
+E5,completo,lento-pico,saga,E5-CO-1124224225-l-006,10.748,183.6,503,BULKHEAD_LLENO,Despacho abortado y compensado. Motivo: Transportista no disponible (BulkheadFullException)
+E5,completo,lento-pico,saga,E5-CO-1124224225-l-002,10.746,189.0,503,BULKHEAD_LLENO,Despacho abortado y compensado. Motivo: Transportista no disponible (BulkheadFullException)
+E5,completo,lento-pico,saga,E5-CO-1124224225-l-004,10.748,191.1,503,BULKHEAD_LLENO,Despacho abortado y compensado. Motivo: Transportista no disponible (BulkheadFullException)
+E5,completo,lento-pico,sonda-estado,E5-CO-1124224225-base,10.756,183.2,200,OK,Despacho completado
+E5,completo,lento-pico,saga,E5-CO-1124224225-l-027,10.749,197.1,503,BULKHEAD_LLENO,Despacho abortado y compensado. Motivo: Transportista no disponible (BulkheadFullException)
+E5,completo,lento-pico,saga,E5-CO-1124224225-l-015,10.748,201.3,503,BULKHEAD_LLENO,Despacho abortado y compensado. Motivo: Transportista no disponible (BulkheadFullException)
+E5,completo,lento-pico,saga,E5-CO-1124224225-l-039,10.746,215.5,503,BULKHEAD_LLENO,Despacho abortado y compensado. Motivo: Transportista no disponible (BulkheadFullException)
+E5,completo,lento-pico,saga,E5-CO-1124224225-l-021,10.747,233.0,503,BULKHEAD_LLENO,Despacho abortado y compensado. Motivo: Transportista no disponible (BulkheadFullException)
+E5,completo,lento-pico,saga,E5-CO-1124224225-l-014,10.747,236.9,503,BULKHEAD_LLENO,Despacho abortado y compensado. Motivo: Transportista no disponible (BulkheadFullException)
+E5,completo,lento-pico,saga,E5-CO-1124224225-l-028,10.747,243.5,503,BULKHEAD_LLENO,Despacho abortado y compensado. Motivo: Transportista no disponible (BulkheadFullException)
+E5,completo,lento-pico,saga,E5-CO-1124224225-l-026,10.747,247.1,503,BULKHEAD_LLENO,Despacho abortado y compensado. Motivo: Transportista no disponible (BulkheadFullException)
+E5,completo,lento-pico,saga,E5-CO-1124224225-l-022,10.749,250.1,503,BULKHEAD_LLENO,Despacho abortado y compensado. Motivo: Transportista no disponible (BulkheadFullException)
+E5,completo,lento-pico,saga,E5-CO-1124224225-l-036,10.747,256.2,503,BULKHEAD_LLENO,Despacho abortado y compensado. Motivo: Transportista no disponible (BulkheadFullException)
+E5,completo,lento-pico,saga,E5-CO-1124224225-l-020,10.749,286.0,503,BULKHEAD_LLENO,Despacho abortado y compensado. Motivo: Transportista no disponible (BulkheadFullException)
+E5,completo,lento-pico,saga,E5-CO-1124224225-l-007,10.748,288.3,503,BULKHEAD_LLENO,Despacho abortado y compensado. Motivo: Transportista no disponible (BulkheadFullException)
+E5,completo,lento-pico,saga,E5-CO-1124224225-l-017,10.748,292.5,503,BULKHEAD_LLENO,Despacho abortado y compensado. Motivo: Transportista no disponible (BulkheadFullException)
+E5,completo,lento-pico,saga,E5-CO-1124224225-l-018,10.747,299.5,503,BULKHEAD_LLENO,Despacho abortado y compensado. Motivo: Transportista no disponible (BulkheadFullException)
+E5,completo,lento-pico,sonda-estado,E5-CO-1124224225-base,10.955,93.0,200,OK,Despacho completado
+E5,completo,lento-pico,saga,E5-CO-1124224225-l-034,10.749,301.6,503,BULKHEAD_LLENO,Despacho abortado y compensado. Motivo: Transportista no disponible (BulkheadFullException)
+E5,completo,lento-pico,saga,E5-CO-1124224225-l-008,10.748,305.4,503,BULKHEAD_LLENO,Despacho abortado y compensado. Motivo: Transportista no disponible (BulkheadFullException)
+E5,completo,lento-pico,sonda-bff,E5-CO-1124224225-base,10.855,210.4,200,OK_DEGRADADO,degradado=true
+E5,completo,lento-pico,saga,E5-CO-1124224225-l-035,10.749,320.6,503,BULKHEAD_LLENO,Despacho abortado y compensado. Motivo: Transportista no disponible (BulkheadFullException)
+E5,completo,lento-pico,saga,E5-CO-1124224225-l-024,10.749,326.5,503,BULKHEAD_LLENO,Despacho abortado y compensado. Motivo: Transportista no disponible (BulkheadFullException)
+E5,completo,lento-pico,saga,E5-CO-1124224225-l-016,10.747,335.5,503,BULKHEAD_LLENO,Despacho abortado y compensado. Motivo: Transportista no disponible (BulkheadFullException)
+E5,completo,lento-pico,saga,E5-CO-1124224225-l-011,10.746,341.9,503,BULKHEAD_LLENO,Despacho abortado y compensado. Motivo: Transportista no disponible (BulkheadFullException)
+E5,completo,lento-pico,sonda-estado,E5-CO-1124224225-base,11.155,4.0,200,OK,Despacho completado
+E5,completo,lento-pico,sonda-estado,E5-CO-1124224225-base,11.355,5.4,200,OK,Despacho completado
+E5,completo,lento-antes,sonda-bff,E5-CO-1124224225-base,9.855,1519.0,200,OK_DEGRADADO,degradado=true
+E5,completo,lento-pico,sonda-bff,E5-CO-1124224225-base,11.355,19.1,200,OK_DEGRADADO,degradado=true
+E5,completo,lento-pico,sonda-estado,E5-CO-1124224225-base,11.555,4.0,200,OK,Despacho completado
+E5,completo,lento-pico,sonda-estado,E5-CO-1124224225-base,11.755,3.9,200,OK,Despacho completado
+E5,completo,lento-antes,sonda-bff,E5-CO-1124224225-base,10.355,1519.5,200,OK_DEGRADADO,degradado=true
+E5,completo,lento-pico,sonda-bff,E5-CO-1124224225-base,11.855,19.5,200,OK_DEGRADADO,degradado=true
+E5,completo,lento-pico,sonda-estado,E5-CO-1124224225-base,11.955,4.0,200,OK,Despacho completado
+E5,completo,lento-pico,sonda-estado,E5-CO-1124224225-base,12.155,4.4,200,OK,Despacho completado
+E5,completo,lento-pico,sonda-estado,E5-CO-1124224225-base,12.355,5.3,200,OK,Despacho completado
+E5,completo,lento-pico,sonda-bff,E5-CO-1124224225-base,12.355,19.3,200,OK_DEGRADADO,degradado=true
+E5,completo,lento-pico,sonda-estado,E5-CO-1124224225-base,12.555,3.8,200,OK,Despacho completado
+E5,completo,lento-pico,sonda-estado,E5-CO-1124224225-base,12.755,4.1,200,OK,Despacho completado
+E5,completo,lento-pico,saga,E5-CO-1124224225-l-000,10.746,2071.3,503,TIMEOUT,Despacho abortado y compensado. Motivo: Transportista no disponible (ResourceAccessException)
+E5,completo,lento-pico,saga,E5-CO-1124224225-l-013,10.748,2072.6,503,TIMEOUT,Despacho abortado y compensado. Motivo: Transportista no disponible (ResourceAccessException)
+E5,completo,lento-pico,saga,E5-CO-1124224225-l-005,10.746,2077.0,503,TIMEOUT,Despacho abortado y compensado. Motivo: Transportista no disponible (ResourceAccessException)
+E5,completo,lento-despues,sonda-bff,E5-CO-1124224225-base,12.855,19.3,200,OK_DEGRADADO,degradado=true
+E5,completo,lento-despues,sonda-estado,E5-CO-1124224225-base,12.955,4.4,200,OK,Despacho completado
+E5,completo,lento-despues,sonda-estado,E5-CO-1124224225-base,13.155,3.8,200,OK,Despacho completado
+E5,completo,lento-despues,sonda-estado,E5-CO-1124224225-base,13.355,4.8,200,OK,Despacho completado
+E5,completo,lento-despues,sonda-bff,E5-CO-1124224225-base,13.355,18.4,200,OK_DEGRADADO,degradado=true
+E5,completo,lento-despues,sonda-estado,E5-CO-1124224225-base,13.555,4.1,200,OK,Despacho completado
+E5,completo,lento-despues,sonda-estado,E5-CO-1124224225-base,13.755,4.0,200,OK,Despacho completado
+E5,completo,lento-despues,sonda-bff,E5-CO-1124224225-base,13.855,17.2,200,OK_DEGRADADO,degradado=true
+E5,completo,lento-despues,sonda-estado,E5-CO-1124224225-base,13.955,4.0,200,OK,Despacho completado
+E5,completo,lento-despues,sonda-estado,E5-CO-1124224225-base,14.155,4.1,200,OK,Despacho completado
+E5,completo,lento-despues,sonda-estado,E5-CO-1124224225-base,14.355,4.8,200,OK,Despacho completado
+E5,completo,lento-despues,sonda-bff,E5-CO-1124224225-base,14.355,17.2,200,OK_DEGRADADO,degradado=true
+E5,completo,lento-despues,sonda-estado,E5-CO-1124224225-base,14.555,4.1,200,OK,Despacho completado
+E5,completo,lento-despues,sonda-estado,E5-CO-1124224225-base,14.755,4.2,200,OK,Despacho completado
+E5,completo,lento-despues,sonda-bff,E5-CO-1124224225-base,14.855,17.5,200,OK_DEGRADADO,degradado=true
+E5,completo,lento-despues,sonda-estado,E5-CO-1124224225-base,14.955,3.8,200,OK,Despacho completado
+E5,completo,lento-despues,sonda-estado,E5-CO-1124224225-base,15.155,3.9,200,OK,Despacho completado
+E5,completo,lento-despues,sonda-estado,E5-CO-1124224225-base,15.355,4.4,200,OK,Despacho completado
+E5,completo,lento-despues,sonda-bff,E5-CO-1124224225-base,15.355,17.3,200,OK_DEGRADADO,degradado=true
+E5,completo,lento-despues,sonda-estado,E5-CO-1124224225-base,15.555,3.8,200,OK,Despacho completado
+E5,completo,lento-despues,sonda-estado,E5-CO-1124224225-base,15.755,4.1,200,OK,Despacho completado
+E5,completo,lento-despues,sonda-bff,E5-CO-1124224225-base,15.855,18.0,200,OK_DEGRADADO,degradado=true
+E5,completo,lento-despues,sonda-estado,E5-CO-1124224225-base,15.955,4.0,200,OK,Despacho completado
+E5,completo,lento-despues,sonda-estado,E5-CO-1124224225-base,16.155,4.3,200,OK,Despacho completado
+E5,completo,lento-despues,sonda-estado,E5-CO-1124224225-base,16.355,4.5,200,OK,Despacho completado
+E5,completo,lento-despues,sonda-bff,E5-CO-1124224225-base,16.355,16.7,200,OK_DEGRADADO,degradado=true
+E5,completo,lento-despues,sonda-estado,E5-CO-1124224225-base,16.555,3.7,200,OK,Despacho completado
+E5,completo,lento-despues,sonda-estado,E5-CO-1124224225-base,16.755,4.0,200,OK,Despacho completado
+E3,solo-timeout,normal,saga,E3-SO-1124224225-n-0000,0.113,15.1,404,HTTP_404,
+E3,solo-timeout,normal,saga,E3-SO-1124224225-n-0001,1.113,4.1,404,HTTP_404,
+E3,solo-timeout,normal,saga,E3-SO-1124224225-n-0002,2.113,3.9,404,HTTP_404,
+E3,solo-timeout,normal,saga,E3-SO-1124224225-n-0003,3.113,4.3,404,HTTP_404,
+E3,solo-timeout,normal,saga,E3-SO-1124224225-n-0004,4.113,3.8,404,HTTP_404,
+E3,solo-timeout,normal,saga,E3-SO-1124224225-n-0005,5.113,3.5,404,HTTP_404,
+E3,solo-timeout,normal,saga,E3-SO-1124224225-n-0006,6.113,5.0,404,HTTP_404,
+E3,solo-timeout,normal,saga,E3-SO-1124224225-n-0007,7.113,4.0,404,HTTP_404,
+E3,solo-timeout,normal,saga,E3-SO-1124224225-n-0008,8.113,3.7,404,HTTP_404,
+E3,solo-timeout,normal,saga,E3-SO-1124224225-n-0009,9.113,3.8,404,HTTP_404,
+E3,solo-timeout,normal,saga,E3-SO-1124224225-n-0010,10.113,3.8,404,HTTP_404,
+E3,solo-timeout,normal,saga,E3-SO-1124224225-n-0011,11.113,3.5,404,HTTP_404,
+E3,solo-timeout,normal,saga,E3-SO-1124224225-n-0012,12.113,3.8,404,HTTP_404,
+E3,solo-timeout,normal,saga,E3-SO-1124224225-n-0013,13.113,3.6,404,HTTP_404,
+E3,solo-timeout,normal,saga,E3-SO-1124224225-n-0014,14.113,3.6,404,HTTP_404,
+E3,solo-timeout,normal,saga,E3-SO-1124224225-n-0015,15.113,3.6,404,HTTP_404,
+E3,solo-timeout,normal,saga,E3-SO-1124224225-n-0016,16.113,3.7,404,HTTP_404,
+E3,solo-timeout,normal,saga,E3-SO-1124224225-n-0017,17.113,3.6,404,HTTP_404,
+E3,solo-timeout,normal,saga,E3-SO-1124224225-n-0018,18.113,4.0,404,HTTP_404,
+E3,solo-timeout,normal,saga,E3-SO-1124224225-n-0019,19.113,3.4,404,HTTP_404,
+E3,solo-timeout,lento,saga,E3-SO-1124224225-l-0000,20.116,3.4,404,HTTP_404,
+E3,solo-timeout,lento,saga,E3-SO-1124224225-l-0001,21.116,3.9,404,HTTP_404,
+E3,solo-timeout,lento,saga,E3-SO-1124224225-l-0002,22.116,3.2,404,HTTP_404,
+E3,solo-timeout,lento,saga,E3-SO-1124224225-l-0003,23.116,3.2,404,HTTP_404,
+E3,solo-timeout,lento,saga,E3-SO-1124224225-l-0004,24.116,3.1,404,HTTP_404,
+E3,solo-timeout,lento,saga,E3-SO-1124224225-l-0005,25.116,3.3,404,HTTP_404,
+E3,solo-timeout,lento,saga,E3-SO-1124224225-l-0006,26.116,3.4,404,HTTP_404,
+E3,solo-timeout,lento,saga,E3-SO-1124224225-l-0007,27.116,4.1,404,HTTP_404,
+E3,solo-timeout,lento,saga,E3-SO-1124224225-l-0008,28.116,3.7,404,HTTP_404,
+E3,solo-timeout,lento,saga,E3-SO-1124224225-l-0009,29.116,3.6,404,HTTP_404,
+E3,solo-timeout,lento,saga,E3-SO-1124224225-l-0010,30.116,3.7,404,HTTP_404,
+E3,solo-timeout,lento,saga,E3-SO-1124224225-l-0011,31.116,3.5,404,HTTP_404,
+E3,solo-timeout,lento,saga,E3-SO-1124224225-l-0012,32.116,3.7,404,HTTP_404,
+E3,solo-timeout,lento,saga,E3-SO-1124224225-l-0013,33.116,3.5,404,HTTP_404,
+E3,solo-timeout,lento,saga,E3-SO-1124224225-l-0014,34.116,3.6,404,HTTP_404,
+E3,solo-timeout,lento,saga,E3-SO-1124224225-l-0015,35.116,3.4,404,HTTP_404,
+E3,solo-timeout,lento,saga,E3-SO-1124224225-l-0016,36.116,3.3,404,HTTP_404,
+E3,solo-timeout,lento,saga,E3-SO-1124224225-l-0017,37.116,3.3,404,HTTP_404,
+E3,solo-timeout,lento,saga,E3-SO-1124224225-l-0018,38.116,3.8,404,HTTP_404,
+E3,solo-timeout,lento,saga,E3-SO-1124224225-l-0019,39.116,3.4,404,HTTP_404,
+E3,solo-timeout,lento,saga,E3-SO-1124224225-l-0020,40.116,3.8,404,HTTP_404,
+E3,solo-timeout,lento,saga,E3-SO-1124224225-l-0021,41.116,3.5,404,HTTP_404,
+E3,solo-timeout,lento,saga,E3-SO-1124224225-l-0022,42.116,3.2,404,HTTP_404,
+E3,solo-timeout,lento,saga,E3-SO-1124224225-l-0023,43.116,3.4,404,HTTP_404,
+E3,solo-timeout,lento,saga,E3-SO-1124224225-l-0024,44.116,3.1,404,HTTP_404,
+E3,solo-timeout,lento,saga,E3-SO-1124224225-l-0025,45.116,3.0,404,HTTP_404,
+E3,solo-timeout,lento,saga,E3-SO-1124224225-l-0026,46.116,3.0,404,HTTP_404,
+E3,solo-timeout,lento,saga,E3-SO-1124224225-l-0027,47.116,3.3,404,HTTP_404,
+E3,solo-timeout,lento,saga,E3-SO-1124224225-l-0028,48.116,3.2,404,HTTP_404,
+E3,solo-timeout,lento,saga,E3-SO-1124224225-l-0029,49.116,3.1,404,HTTP_404,
+E3,solo-timeout,lento,saga,E3-SO-1124224225-l-0030,50.116,2.9,404,HTTP_404,
+E3,solo-timeout,lento,saga,E3-SO-1124224225-l-0031,51.116,3.2,404,HTTP_404,
+E3,solo-timeout,lento,saga,E3-SO-1124224225-l-0032,52.116,3.0,404,HTTP_404,
+E3,solo-timeout,lento,saga,E3-SO-1124224225-l-0033,53.116,2.9,404,HTTP_404,
+E3,solo-timeout,lento,saga,E3-SO-1124224225-l-0034,54.116,2.9,404,HTTP_404,
+E3,solo-timeout,lento,saga,E3-SO-1124224225-l-0035,55.116,3.1,404,HTTP_404,
+E3,solo-timeout,lento,saga,E3-SO-1124224225-l-0036,56.116,3.0,404,HTTP_404,
+E3,solo-timeout,lento,saga,E3-SO-1124224225-l-0037,57.116,2.9,404,HTTP_404,
+E3,solo-timeout,lento,saga,E3-SO-1124224225-l-0038,58.116,3.3,404,HTTP_404,
+E3,solo-timeout,lento,saga,E3-SO-1124224225-l-0039,59.116,3.0,404,HTTP_404,
+E3,solo-timeout,lento,saga,E3-SO-1124224225-l-0040,60.116,3.0,404,HTTP_404,
+E3,solo-timeout,lento,saga,E3-SO-1124224225-l-0041,61.116,2.9,404,HTTP_404,
+E3,solo-timeout,lento,saga,E3-SO-1124224225-l-0042,62.116,2.9,404,HTTP_404,
+E3,solo-timeout,lento,saga,E3-SO-1124224225-l-0043,63.116,3.2,404,HTTP_404,
+E3,solo-timeout,lento,saga,E3-SO-1124224225-l-0044,64.116,3.0,404,HTTP_404,
+E3,solo-timeout,caido,saga,E3-SO-1124224225-c-0000,65.119,2.5,404,HTTP_404,
+E3,solo-timeout,caido,saga,E3-SO-1124224225-c-0001,66.119,2.9,404,HTTP_404,
+E3,solo-timeout,caido,saga,E3-SO-1124224225-c-0002,67.119,2.9,404,HTTP_404,
+E3,solo-timeout,caido,saga,E3-SO-1124224225-c-0003,68.119,3.0,404,HTTP_404,
+E3,solo-timeout,caido,saga,E3-SO-1124224225-c-0004,69.119,2.9,404,HTTP_404,
+E3,solo-timeout,caido,saga,E3-SO-1124224225-c-0005,70.119,3.2,404,HTTP_404,
+E3,solo-timeout,caido,saga,E3-SO-1124224225-c-0006,71.119,3.0,404,HTTP_404,
+E3,solo-timeout,caido,saga,E3-SO-1124224225-c-0007,72.119,2.8,404,HTTP_404,
+E3,solo-timeout,caido,saga,E3-SO-1124224225-c-0008,73.119,3.0,404,HTTP_404,
+E3,solo-timeout,caido,saga,E3-SO-1124224225-c-0009,74.119,2.9,404,HTTP_404,
+E3,solo-timeout,caido,saga,E3-SO-1124224225-c-0010,75.119,3.1,404,HTTP_404,
+E3,solo-timeout,caido,saga,E3-SO-1124224225-c-0011,76.119,3.1,404,HTTP_404,
+E3,solo-timeout,caido,saga,E3-SO-1124224225-c-0012,77.119,3.3,404,HTTP_404,
+E3,solo-timeout,caido,saga,E3-SO-1124224225-c-0013,78.119,2.9,404,HTTP_404,
+E3,solo-timeout,caido,saga,E3-SO-1124224225-c-0014,79.119,3.0,404,HTTP_404,
+E3,solo-timeout,caido,saga,E3-SO-1124224225-c-0015,80.119,3.0,404,HTTP_404,
+E3,solo-timeout,caido,saga,E3-SO-1124224225-c-0016,81.119,3.0,404,HTTP_404,
+E3,solo-timeout,caido,saga,E3-SO-1124224225-c-0017,82.119,2.9,404,HTTP_404,
+E3,solo-timeout,caido,saga,E3-SO-1124224225-c-0018,83.119,2.9,404,HTTP_404,
+E3,solo-timeout,caido,saga,E3-SO-1124224225-c-0019,84.119,2.9,404,HTTP_404,
+E3,solo-timeout,caido,saga,E3-SO-1124224225-c-0020,85.119,2.8,404,HTTP_404,
+E3,solo-timeout,caido,saga,E3-SO-1124224225-c-0021,86.119,2.9,404,HTTP_404,
+E3,solo-timeout,caido,saga,E3-SO-1124224225-c-0022,87.119,2.6,404,HTTP_404,
+E3,solo-timeout,caido,saga,E3-SO-1124224225-c-0023,88.119,2.8,404,HTTP_404,
+E3,solo-timeout,caido,saga,E3-SO-1124224225-c-0024,89.119,2.9,404,HTTP_404,
+E3,solo-timeout,caido,saga,E3-SO-1124224225-c-0025,90.119,2.7,404,HTTP_404,
+E3,solo-timeout,caido,saga,E3-SO-1124224225-c-0026,91.119,2.8,404,HTTP_404,
+E3,solo-timeout,caido,saga,E3-SO-1124224225-c-0027,92.119,3.0,404,HTTP_404,
+E3,solo-timeout,caido,saga,E3-SO-1124224225-c-0028,93.119,3.0,404,HTTP_404,
+E3,solo-timeout,caido,saga,E3-SO-1124224225-c-0029,94.119,2.9,404,HTTP_404,
+E3,solo-timeout,caido,saga,E3-SO-1124224225-c-0030,95.119,2.9,404,HTTP_404,
+E3,solo-timeout,caido,saga,E3-SO-1124224225-c-0031,96.119,2.9,404,HTTP_404,
+E3,solo-timeout,caido,saga,E3-SO-1124224225-c-0032,97.119,2.9,404,HTTP_404,
+E3,solo-timeout,caido,saga,E3-SO-1124224225-c-0033,98.119,3.0,404,HTTP_404,
+E3,solo-timeout,caido,saga,E3-SO-1124224225-c-0034,99.119,2.8,404,HTTP_404,
+E3,solo-timeout,caido,saga,E3-SO-1124224225-c-0035,100.119,2.7,404,HTTP_404,
+E3,solo-timeout,caido,saga,E3-SO-1124224225-c-0036,101.119,2.7,404,HTTP_404,
+E3,solo-timeout,caido,saga,E3-SO-1124224225-c-0037,102.119,3.1,404,HTTP_404,
+E3,solo-timeout,caido,saga,E3-SO-1124224225-c-0038,103.119,2.7,404,HTTP_404,
+E3,solo-timeout,caido,saga,E3-SO-1124224225-c-0039,104.119,2.6,404,HTTP_404,
+E3,solo-timeout,caido,saga,E3-SO-1124224225-c-0040,105.119,2.8,404,HTTP_404,
+E3,solo-timeout,caido,saga,E3-SO-1124224225-c-0041,106.119,2.9,404,HTTP_404,
+E3,solo-timeout,caido,saga,E3-SO-1124224225-c-0042,107.119,2.7,404,HTTP_404,
+E3,solo-timeout,caido,saga,E3-SO-1124224225-c-0043,108.119,3.0,404,HTTP_404,
+E3,solo-timeout,caido,saga,E3-SO-1124224225-c-0044,109.119,3.8,404,HTTP_404,
+E3,solo-timeout,recuperado,saga,E3-SO-1124224225-r-0000,110.122,3.2,404,HTTP_404,
+E3,solo-timeout,recuperado,saga,E3-SO-1124224225-r-0001,111.122,2.7,404,HTTP_404,
+E3,solo-timeout,recuperado,saga,E3-SO-1124224225-r-0002,112.122,3.2,404,HTTP_404,
+E3,solo-timeout,recuperado,saga,E3-SO-1124224225-r-0003,113.122,2.8,404,HTTP_404,
+E3,solo-timeout,recuperado,saga,E3-SO-1124224225-r-0004,114.122,3.0,404,HTTP_404,
+E3,solo-timeout,recuperado,saga,E3-SO-1124224225-r-0005,115.122,2.9,404,HTTP_404,
+E3,solo-timeout,recuperado,saga,E3-SO-1124224225-r-0006,116.122,2.8,404,HTTP_404,
+E3,solo-timeout,recuperado,saga,E3-SO-1124224225-r-0007,117.122,2.8,404,HTTP_404,
+E3,solo-timeout,recuperado,saga,E3-SO-1124224225-r-0008,118.122,2.8,404,HTTP_404,
+E3,solo-timeout,recuperado,saga,E3-SO-1124224225-r-0009,119.122,2.7,404,HTTP_404,
+E3,solo-timeout,recuperado,saga,E3-SO-1124224225-r-0010,120.122,2.7,404,HTTP_404,
+E3,solo-timeout,recuperado,saga,E3-SO-1124224225-r-0011,121.122,2.6,404,HTTP_404,
+E3,solo-timeout,recuperado,saga,E3-SO-1124224225-r-0012,122.122,2.6,404,HTTP_404,
+E3,solo-timeout,recuperado,saga,E3-SO-1124224225-r-0013,123.122,2.9,404,HTTP_404,
+E3,solo-timeout,recuperado,saga,E3-SO-1124224225-r-0014,124.122,2.6,404,HTTP_404,
+E3,solo-timeout,recuperado,saga,E3-SO-1124224225-r-0015,125.122,4.1,404,HTTP_404,
+E3,solo-timeout,recuperado,saga,E3-SO-1124224225-r-0016,126.122,3.6,404,HTTP_404,
+E3,solo-timeout,recuperado,saga,E3-SO-1124224225-r-0017,127.123,3.8,404,HTTP_404,
+E3,solo-timeout,recuperado,saga,E3-SO-1124224225-r-0018,128.122,2.8,404,HTTP_404,
+E3,solo-timeout,recuperado,saga,E3-SO-1124224225-r-0019,129.122,2.6,404,HTTP_404,
+E3,solo-timeout,recuperado,saga,E3-SO-1124224225-r-0020,130.122,2.6,404,HTTP_404,
+E3,solo-timeout,recuperado,saga,E3-SO-1124224225-r-0021,131.122,2.6,404,HTTP_404,
+E3,solo-timeout,recuperado,saga,E3-SO-1124224225-r-0022,132.122,2.6,404,HTTP_404,
+E3,solo-timeout,recuperado,saga,E3-SO-1124224225-r-0023,133.122,2.7,404,HTTP_404,
+E3,solo-timeout,recuperado,saga,E3-SO-1124224225-r-0024,134.122,2.4,404,HTTP_404,
+E3,solo-timeout,recuperado,saga,E3-SO-1124224225-r-0025,135.122,2.4,404,HTTP_404,
+E3,solo-timeout,recuperado,saga,E3-SO-1124224225-r-0026,136.122,2.4,404,HTTP_404,
+E3,solo-timeout,recuperado,saga,E3-SO-1124224225-r-0027,137.122,2.4,404,HTTP_404,
+E3,solo-timeout,recuperado,saga,E3-SO-1124224225-r-0028,138.122,2.5,404,HTTP_404,
+E3,solo-timeout,recuperado,saga,E3-SO-1124224225-r-0029,139.122,2.9,404,HTTP_404,
+E3,solo-timeout,recuperado,saga,E3-SO-1124224225-r-0030,140.122,2.5,404,HTTP_404,
+E3,solo-timeout,recuperado,saga,E3-SO-1124224225-r-0031,141.122,2.4,404,HTTP_404,
+E3,solo-timeout,recuperado,saga,E3-SO-1124224225-r-0032,142.122,2.6,404,HTTP_404,
+E3,solo-timeout,recuperado,saga,E3-SO-1124224225-r-0033,143.122,2.8,404,HTTP_404,
+E3,solo-timeout,recuperado,saga,E3-SO-1124224225-r-0034,144.122,2.9,404,HTTP_404,
+E3,solo-timeout,recuperado,saga,E3-SO-1124224225-r-0035,145.122,3.0,404,HTTP_404,
+E3,solo-timeout,recuperado,saga,E3-SO-1124224225-r-0036,146.122,2.6,404,HTTP_404,
+E3,solo-timeout,recuperado,saga,E3-SO-1124224225-r-0037,147.122,2.5,404,HTTP_404,
+E3,solo-timeout,recuperado,saga,E3-SO-1124224225-r-0038,148.122,2.5,404,HTTP_404,
+E3,solo-timeout,recuperado,saga,E3-SO-1124224225-r-0039,149.122,2.7,404,HTTP_404,
+E3,solo-timeout,recuperado,saga,E3-SO-1124224225-r-0040,150.122,2.6,404,HTTP_404,
+E3,solo-timeout,recuperado,saga,E3-SO-1124224225-r-0041,151.122,2.4,404,HTTP_404,
+E3,solo-timeout,recuperado,saga,E3-SO-1124224225-r-0042,152.122,2.5,404,HTTP_404,
+E3,solo-timeout,recuperado,saga,E3-SO-1124224225-r-0043,153.122,2.6,404,HTTP_404,
+E3,solo-timeout,recuperado,saga,E3-SO-1124224225-r-0044,154.122,2.5,404,HTTP_404,
+E5,solo-timeout,preparacion,saga-base,E5-SO-1124224225-base,0.109,18.8,404,HTTP_404,
+E5,solo-timeout,preparacion,sonda-estado,E5-SO-1124224225-base,0.128,6.4,404,HTTP_404,
+E5,solo-timeout,preparacion,sonda-bff,E5-SO-1124224225-base,0.128,23.2,404,HTTP_404,
+E5,solo-timeout,control-antes,sonda-estado,E5-SO-1124224225-base,0.328,4.7,404,HTTP_404,
+E5,solo-timeout,control-antes,sonda-estado,E5-SO-1124224225-base,0.528,4.2,404,HTTP_404,
+E5,solo-timeout,control-antes,sonda-bff,E5-SO-1124224225-base,0.628,5.0,404,HTTP_404,
+E5,solo-timeout,control-antes,sonda-estado,E5-SO-1124224225-base,0.728,4.0,404,HTTP_404,
+E5,solo-timeout,control-antes,sonda-estado,E5-SO-1124224225-base,0.928,4.1,404,HTTP_404,
+E5,solo-timeout,control-antes,sonda-estado,E5-SO-1124224225-base,1.128,4.0,404,HTTP_404,
+E5,solo-timeout,control-antes,sonda-bff,E5-SO-1124224225-base,1.128,5.2,404,HTTP_404,
+E5,solo-timeout,control-antes,sonda-estado,E5-SO-1124224225-base,1.328,4.0,404,HTTP_404,
+E5,solo-timeout,control-antes,sonda-estado,E5-SO-1124224225-base,1.528,3.8,404,HTTP_404,
+E5,solo-timeout,control-antes,sonda-bff,E5-SO-1124224225-base,1.628,5.0,404,HTTP_404,
+E5,solo-timeout,control-antes,sonda-estado,E5-SO-1124224225-base,1.728,3.6,404,HTTP_404,
+E5,solo-timeout,control-antes,sonda-estado,E5-SO-1124224225-base,1.928,3.8,404,HTTP_404,
+E5,solo-timeout,control-antes,sonda-estado,E5-SO-1124224225-base,2.128,4.1,404,HTTP_404,
+E5,solo-timeout,control-antes,sonda-bff,E5-SO-1124224225-base,2.128,4.8,404,HTTP_404,
+E5,solo-timeout,control-antes,sonda-estado,E5-SO-1124224225-base,2.328,4.3,404,HTTP_404,
+E5,solo-timeout,control-antes,sonda-estado,E5-SO-1124224225-base,2.528,4.1,404,HTTP_404,
+E5,solo-timeout,control-antes,sonda-bff,E5-SO-1124224225-base,2.628,4.7,404,HTTP_404,
+E5,solo-timeout,control-antes,sonda-estado,E5-SO-1124224225-base,2.728,3.8,404,HTTP_404,
+E5,solo-timeout,control-antes,sonda-estado,E5-SO-1124224225-base,2.928,4.0,404,HTTP_404,
+E5,solo-timeout,control-antes,sonda-estado,E5-SO-1124224225-base,3.128,4.2,404,HTTP_404,
+E5,solo-timeout,control-antes,sonda-bff,E5-SO-1124224225-base,3.128,4.8,404,HTTP_404,
+E5,solo-timeout,control-pico,saga,E5-SO-1124224225-c-031,3.14,9.9,404,HTTP_404,
+E5,solo-timeout,control-pico,saga,E5-SO-1124224225-c-036,3.138,13.3,404,HTTP_404,
+E5,solo-timeout,control-pico,saga,E5-SO-1124224225-c-009,3.141,9.7,404,HTTP_404,
+E5,solo-timeout,control-pico,saga,E5-SO-1124224225-c-010,3.14,11.4,404,HTTP_404,
+E5,solo-timeout,control-pico,saga,E5-SO-1124224225-c-021,3.141,10.7,404,HTTP_404,
+E5,solo-timeout,control-pico,saga,E5-SO-1124224225-c-025,3.139,13.6,404,HTTP_404,
+E5,solo-timeout,control-pico,saga,E5-SO-1124224225-c-013,3.138,16.7,404,HTTP_404,
+E5,solo-timeout,control-pico,saga,E5-SO-1124224225-c-008,3.14,15.3,404,HTTP_404,
+E5,solo-timeout,control-pico,saga,E5-SO-1124224225-c-020,3.143,13.2,404,HTTP_404,
+E5,solo-timeout,control-pico,saga,E5-SO-1124224225-c-000,3.138,14.5,404,HTTP_404,
+E5,solo-timeout,control-pico,saga,E5-SO-1124224225-c-034,3.141,16.5,404,HTTP_404,
+E5,solo-timeout,control-pico,saga,E5-SO-1124224225-c-007,3.139,19.1,404,HTTP_404,
+E5,solo-timeout,control-pico,saga,E5-SO-1124224225-c-006,3.14,18.7,404,HTTP_404,
+E5,solo-timeout,control-pico,saga,E5-SO-1124224225-c-003,3.14,19.2,404,HTTP_404,
+E5,solo-timeout,control-pico,saga,E5-SO-1124224225-c-037,3.141,19.2,404,HTTP_404,
+E5,solo-timeout,control-pico,saga,E5-SO-1124224225-c-026,3.139,21.6,404,HTTP_404,
+E5,solo-timeout,control-pico,saga,E5-SO-1124224225-c-027,3.144,16.7,404,HTTP_404,
+E5,solo-timeout,control-pico,saga,E5-SO-1124224225-c-028,3.144,17.5,404,HTTP_404,
+E5,solo-timeout,control-pico,saga,E5-SO-1124224225-c-035,3.141,21.7,404,HTTP_404,
+E5,solo-timeout,control-pico,saga,E5-SO-1124224225-c-019,3.142,20.6,404,HTTP_404,
+E5,solo-timeout,control-pico,saga,E5-SO-1124224225-c-029,3.139,20.9,404,HTTP_404,
+E5,solo-timeout,control-pico,saga,E5-SO-1124224225-c-018,3.138,25.2,404,HTTP_404,
+E5,solo-timeout,control-pico,saga,E5-SO-1124224225-c-016,3.14,23.5,404,HTTP_404,
+E5,solo-timeout,control-pico,saga,E5-SO-1124224225-c-014,3.149,14.5,404,HTTP_404,
+E5,solo-timeout,control-pico,saga,E5-SO-1124224225-c-039,3.138,26.3,404,HTTP_404,
+E5,solo-timeout,control-pico,saga,E5-SO-1124224225-c-022,3.14,24.2,404,HTTP_404,
+E5,solo-timeout,control-pico,saga,E5-SO-1124224225-c-017,3.15,14.1,404,HTTP_404,
+E5,solo-timeout,control-pico,saga,E5-SO-1124224225-c-015,3.138,26.9,404,HTTP_404,
+E5,solo-timeout,control-pico,saga,E5-SO-1124224225-c-023,3.143,22.1,404,HTTP_404,
+E5,solo-timeout,control-pico,saga,E5-SO-1124224225-c-038,3.14,26.0,404,HTTP_404,
+E5,solo-timeout,control-pico,saga,E5-SO-1124224225-c-001,3.139,26.6,404,HTTP_404,
+E5,solo-timeout,control-pico,saga,E5-SO-1124224225-c-005,3.143,23.0,404,HTTP_404,
+E5,solo-timeout,control-pico,saga,E5-SO-1124224225-c-030,3.141,25.3,404,HTTP_404,
+E5,solo-timeout,control-pico,saga,E5-SO-1124224225-c-032,3.139,27.0,404,HTTP_404,
+E5,solo-timeout,control-pico,saga,E5-SO-1124224225-c-024,3.143,23.9,404,HTTP_404,
+E5,solo-timeout,control-pico,saga,E5-SO-1124224225-c-011,3.138,28.6,404,HTTP_404,
+E5,solo-timeout,control-pico,saga,E5-SO-1124224225-c-004,3.138,29.1,404,HTTP_404,
+E5,solo-timeout,control-pico,saga,E5-SO-1124224225-c-033,3.143,24.0,404,HTTP_404,
+E5,solo-timeout,control-pico,saga,E5-SO-1124224225-c-002,3.141,26.2,404,HTTP_404,
+E5,solo-timeout,control-pico,saga,E5-SO-1124224225-c-012,3.144,23.7,404,HTTP_404,
+E5,solo-timeout,control-despues,sonda-estado,E5-SO-1124224225-base,3.328,3.9,404,HTTP_404,
+E5,solo-timeout,control-despues,sonda-estado,E5-SO-1124224225-base,3.528,3.6,404,HTTP_404,
+E5,solo-timeout,control-despues,sonda-bff,E5-SO-1124224225-base,3.628,4.9,404,HTTP_404,
+E5,solo-timeout,control-despues,sonda-estado,E5-SO-1124224225-base,3.728,3.4,404,HTTP_404,
+E5,solo-timeout,control-despues,sonda-estado,E5-SO-1124224225-base,3.928,3.4,404,HTTP_404,
+E5,solo-timeout,control-despues,sonda-estado,E5-SO-1124224225-base,4.129,3.7,404,HTTP_404,
+E5,solo-timeout,control-despues,sonda-bff,E5-SO-1124224225-base,4.128,6.2,404,HTTP_404,
+E5,solo-timeout,control-despues,sonda-estado,E5-SO-1124224225-base,4.328,4.1,404,HTTP_404,
+E5,solo-timeout,control-despues,sonda-estado,E5-SO-1124224225-base,4.528,3.6,404,HTTP_404,
+E5,solo-timeout,control-despues,sonda-bff,E5-SO-1124224225-base,4.628,4.5,404,HTTP_404,
+E5,solo-timeout,control-despues,sonda-estado,E5-SO-1124224225-base,4.728,3.5,404,HTTP_404,
+E5,solo-timeout,control-despues,sonda-estado,E5-SO-1124224225-base,4.928,3.4,404,HTTP_404,
+E5,solo-timeout,control-despues,sonda-estado,E5-SO-1124224225-base,5.128,3.8,404,HTTP_404,
+E5,solo-timeout,control-despues,sonda-bff,E5-SO-1124224225-base,5.128,4.5,404,HTTP_404,
+E5,solo-timeout,control-despues,sonda-estado,E5-SO-1124224225-base,5.328,4.3,404,HTTP_404,
+E5,solo-timeout,control-despues,sonda-estado,E5-SO-1124224225-base,5.528,5.9,404,HTTP_404,
+E5,solo-timeout,control-despues,sonda-bff,E5-SO-1124224225-base,5.628,5.7,404,HTTP_404,
+E5,solo-timeout,control-despues,sonda-estado,E5-SO-1124224225-base,5.728,3.6,404,HTTP_404,
+E5,solo-timeout,control-despues,sonda-estado,E5-SO-1124224225-base,5.928,3.9,404,HTTP_404,
+E5,solo-timeout,control-despues,sonda-estado,E5-SO-1124224225-base,6.128,3.8,404,HTTP_404,
+E5,solo-timeout,control-despues,sonda-bff,E5-SO-1124224225-base,6.128,5.0,404,HTTP_404,
+E5,solo-timeout,control-despues,sonda-estado,E5-SO-1124224225-base,6.328,3.5,404,HTTP_404,
+E5,solo-timeout,control-despues,sonda-estado,E5-SO-1124224225-base,6.528,3.6,404,HTTP_404,
+E5,solo-timeout,control-despues,sonda-bff,E5-SO-1124224225-base,6.628,5.1,404,HTTP_404,
+E5,solo-timeout,control-despues,sonda-estado,E5-SO-1124224225-base,6.728,3.5,404,HTTP_404,
+E5,solo-timeout,control-despues,sonda-estado,E5-SO-1124224225-base,6.928,3.8,404,HTTP_404,
+E5,solo-timeout,control-despues,sonda-estado,E5-SO-1124224225-base,7.128,3.7,404,HTTP_404,
+E5,solo-timeout,control-despues,sonda-bff,E5-SO-1124224225-base,7.128,4.9,404,HTTP_404,
+E5,solo-timeout,lento-antes,sonda-estado,E5-SO-1124224225-base,7.328,3.8,404,HTTP_404,
+E5,solo-timeout,lento-antes,sonda-estado,E5-SO-1124224225-base,7.528,3.6,404,HTTP_404,
+E5,solo-timeout,lento-antes,sonda-bff,E5-SO-1124224225-base,7.628,4.7,404,HTTP_404,
+E5,solo-timeout,lento-antes,sonda-estado,E5-SO-1124224225-base,7.728,4.5,404,HTTP_404,
+E5,solo-timeout,lento-antes,sonda-estado,E5-SO-1124224225-base,7.928,4.0,404,HTTP_404,
+E5,solo-timeout,lento-antes,sonda-estado,E5-SO-1124224225-base,8.128,3.5,404,HTTP_404,
+E5,solo-timeout,lento-antes,sonda-bff,E5-SO-1124224225-base,8.128,4.1,404,HTTP_404,
+E5,solo-timeout,lento-antes,sonda-estado,E5-SO-1124224225-base,8.328,3.3,404,HTTP_404,
+E5,solo-timeout,lento-antes,sonda-estado,E5-SO-1124224225-base,8.528,3.5,404,HTTP_404,
+E5,solo-timeout,lento-antes,sonda-bff,E5-SO-1124224225-base,8.628,4.4,404,HTTP_404,
+E5,solo-timeout,lento-antes,sonda-estado,E5-SO-1124224225-base,8.728,3.3,404,HTTP_404,
+E5,solo-timeout,lento-antes,sonda-estado,E5-SO-1124224225-base,8.928,3.2,404,HTTP_404,
+E5,solo-timeout,lento-antes,sonda-estado,E5-SO-1124224225-base,9.128,3.8,404,HTTP_404,
+E5,solo-timeout,lento-antes,sonda-bff,E5-SO-1124224225-base,9.128,4.4,404,HTTP_404,
+E5,solo-timeout,lento-antes,sonda-estado,E5-SO-1124224225-base,9.328,3.5,404,HTTP_404,
+E5,solo-timeout,lento-antes,sonda-estado,E5-SO-1124224225-base,9.528,3.7,404,HTTP_404,
+E5,solo-timeout,lento-antes,sonda-bff,E5-SO-1124224225-base,9.628,4.6,404,HTTP_404,
+E5,solo-timeout,lento-antes,sonda-estado,E5-SO-1124224225-base,9.728,3.3,404,HTTP_404,
+E5,solo-timeout,lento-antes,sonda-estado,E5-SO-1124224225-base,9.928,2.9,404,HTTP_404,
+E5,solo-timeout,lento-antes,sonda-estado,E5-SO-1124224225-base,10.128,3.5,404,HTTP_404,
+E5,solo-timeout,lento-antes,sonda-bff,E5-SO-1124224225-base,10.128,4.3,404,HTTP_404,
+E5,solo-timeout,lento-pico,saga,E5-SO-1124224225-l-037,10.177,9.4,404,HTTP_404,
+E5,solo-timeout,lento-pico,saga,E5-SO-1124224225-l-010,10.176,11.4,404,HTTP_404,
+E5,solo-timeout,lento-pico,saga,E5-SO-1124224225-l-012,10.176,13.9,404,HTTP_404,
+E5,solo-timeout,lento-pico,saga,E5-SO-1124224225-l-024,10.177,14.4,404,HTTP_404,
+E5,solo-timeout,lento-pico,saga,E5-SO-1124224225-l-039,10.174,18.8,404,HTTP_404,
+E5,solo-timeout,lento-pico,saga,E5-SO-1124224225-l-031,10.177,15.3,404,HTTP_404,
+E5,solo-timeout,lento-pico,saga,E5-SO-1124224225-l-004,10.176,16.9,404,HTTP_404,
+E5,solo-timeout,lento-pico,saga,E5-SO-1124224225-l-025,10.175,18.7,404,HTTP_404,
+E5,solo-timeout,lento-pico,saga,E5-SO-1124224225-l-008,10.176,17.8,404,HTTP_404,
+E5,solo-timeout,lento-pico,saga,E5-SO-1124224225-l-005,10.174,20.4,404,HTTP_404,
+E5,solo-timeout,lento-pico,saga,E5-SO-1124224225-l-009,10.174,21.3,404,HTTP_404,
+E5,solo-timeout,lento-pico,saga,E5-SO-1124224225-l-018,10.175,21.2,404,HTTP_404,
+E5,solo-timeout,lento-pico,saga,E5-SO-1124224225-l-028,10.177,19.7,404,HTTP_404,
+E5,solo-timeout,lento-pico,saga,E5-SO-1124224225-l-017,10.175,22.9,404,HTTP_404,
+E5,solo-timeout,lento-pico,saga,E5-SO-1124224225-l-020,10.177,22.8,404,HTTP_404,
+E5,solo-timeout,lento-pico,saga,E5-SO-1124224225-l-003,10.174,26.5,404,HTTP_404,
+E5,solo-timeout,lento-pico,saga,E5-SO-1124224225-l-021,10.177,23.7,404,HTTP_404,
+E5,solo-timeout,lento-pico,saga,E5-SO-1124224225-l-019,10.177,24.0,404,HTTP_404,
+E5,solo-timeout,lento-pico,saga,E5-SO-1124224225-l-027,10.175,25.7,404,HTTP_404,
+E5,solo-timeout,lento-pico,saga,E5-SO-1124224225-l-026,10.177,23.9,404,HTTP_404,
+E5,solo-timeout,lento-pico,saga,E5-SO-1124224225-l-011,10.174,26.5,404,HTTP_404,
+E5,solo-timeout,lento-pico,saga,E5-SO-1124224225-l-013,10.174,26.7,404,HTTP_404,
+E5,solo-timeout,lento-pico,saga,E5-SO-1124224225-l-032,10.175,26.3,404,HTTP_404,
+E5,solo-timeout,lento-pico,saga,E5-SO-1124224225-l-023,10.175,26.7,404,HTTP_404,
+E5,solo-timeout,lento-pico,saga,E5-SO-1124224225-l-016,10.175,27.3,404,HTTP_404,
+E5,solo-timeout,lento-pico,saga,E5-SO-1124224225-l-034,10.177,24.9,404,HTTP_404,
+E5,solo-timeout,lento-pico,saga,E5-SO-1124224225-l-007,10.174,28.7,404,HTTP_404,
+E5,solo-timeout,lento-pico,saga,E5-SO-1124224225-l-002,10.176,27.5,404,HTTP_404,
+E5,solo-timeout,lento-pico,saga,E5-SO-1124224225-l-006,10.176,27.4,404,HTTP_404,
+E5,solo-timeout,lento-pico,saga,E5-SO-1124224225-l-033,10.175,28.3,404,HTTP_404,
+E5,solo-timeout,lento-pico,saga,E5-SO-1124224225-l-022,10.175,28.9,404,HTTP_404,
+E5,solo-timeout,lento-pico,saga,E5-SO-1124224225-l-038,10.178,26.7,404,HTTP_404,
+E5,solo-timeout,lento-pico,saga,E5-SO-1124224225-l-014,10.176,28.8,404,HTTP_404,
+E5,solo-timeout,lento-pico,saga,E5-SO-1124224225-l-015,10.176,28.8,404,HTTP_404,
+E5,solo-timeout,lento-pico,saga,E5-SO-1124224225-l-000,10.174,29.7,404,HTTP_404,
+E5,solo-timeout,lento-pico,saga,E5-SO-1124224225-l-036,10.176,30.2,404,HTTP_404,
+E5,solo-timeout,lento-pico,saga,E5-SO-1124224225-l-035,10.175,30.7,404,HTTP_404,
+E5,solo-timeout,lento-pico,saga,E5-SO-1124224225-l-029,10.175,31.0,404,HTTP_404,
+E5,solo-timeout,lento-pico,saga,E5-SO-1124224225-l-030,10.177,29.1,404,HTTP_404,
+E5,solo-timeout,lento-pico,saga,E5-SO-1124224225-l-001,10.174,33.5,404,HTTP_404,
+E5,solo-timeout,lento-despues,sonda-estado,E5-SO-1124224225-base,10.328,3.5,404,HTTP_404,
+E5,solo-timeout,lento-despues,sonda-estado,E5-SO-1124224225-base,10.528,3.2,404,HTTP_404,
+E5,solo-timeout,lento-despues,sonda-bff,E5-SO-1124224225-base,10.628,4.1,404,HTTP_404,
+E5,solo-timeout,lento-despues,sonda-estado,E5-SO-1124224225-base,10.728,3.0,404,HTTP_404,
+E5,solo-timeout,lento-despues,sonda-estado,E5-SO-1124224225-base,10.928,3.0,404,HTTP_404,
+E5,solo-timeout,lento-despues,sonda-estado,E5-SO-1124224225-base,11.128,2.9,404,HTTP_404,
+E5,solo-timeout,lento-despues,sonda-bff,E5-SO-1124224225-base,11.128,4.1,404,HTTP_404,
+E5,solo-timeout,lento-despues,sonda-estado,E5-SO-1124224225-base,11.328,3.1,404,HTTP_404,
+E5,solo-timeout,lento-despues,sonda-estado,E5-SO-1124224225-base,11.528,3.0,404,HTTP_404,
+E5,solo-timeout,lento-despues,sonda-bff,E5-SO-1124224225-base,11.628,4.2,404,HTTP_404,
+E5,solo-timeout,lento-despues,sonda-estado,E5-SO-1124224225-base,11.728,3.2,404,HTTP_404,
+E5,solo-timeout,lento-despues,sonda-estado,E5-SO-1124224225-base,11.928,3.3,404,HTTP_404,
+E5,solo-timeout,lento-despues,sonda-estado,E5-SO-1124224225-base,12.128,3.5,404,HTTP_404,
+E5,solo-timeout,lento-despues,sonda-bff,E5-SO-1124224225-base,12.128,4.3,404,HTTP_404,
+E5,solo-timeout,lento-despues,sonda-estado,E5-SO-1124224225-base,12.328,3.2,404,HTTP_404,
+E5,solo-timeout,lento-despues,sonda-estado,E5-SO-1124224225-base,12.528,3.1,404,HTTP_404,
+E5,solo-timeout,lento-despues,sonda-bff,E5-SO-1124224225-base,12.628,4.3,404,HTTP_404,
+E5,solo-timeout,lento-despues,sonda-estado,E5-SO-1124224225-base,12.728,2.9,404,HTTP_404,
+E5,solo-timeout,lento-despues,sonda-estado,E5-SO-1124224225-base,12.928,2.9,404,HTTP_404,
+E5,solo-timeout,lento-despues,sonda-estado,E5-SO-1124224225-base,13.128,3.3,404,HTTP_404,
+E5,solo-timeout,lento-despues,sonda-bff,E5-SO-1124224225-base,13.128,4.2,404,HTTP_404,
+E5,solo-timeout,lento-despues,sonda-estado,E5-SO-1124224225-base,13.328,3.7,404,HTTP_404,
+E5,solo-timeout,lento-despues,sonda-estado,E5-SO-1124224225-base,13.528,3.1,404,HTTP_404,
+E5,solo-timeout,lento-despues,sonda-bff,E5-SO-1124224225-base,13.628,4.1,404,HTTP_404,
+E5,solo-timeout,lento-despues,sonda-estado,E5-SO-1124224225-base,13.728,3.7,404,HTTP_404,
+E5,solo-timeout,lento-despues,sonda-estado,E5-SO-1124224225-base,13.928,2.7,404,HTTP_404,
+E5,solo-timeout,lento-despues,sonda-estado,E5-SO-1124224225-base,14.128,3.7,404,HTTP_404,
+E5,solo-timeout,lento-despues,sonda-bff,E5-SO-1124224225-base,14.128,4.2,404,HTTP_404,

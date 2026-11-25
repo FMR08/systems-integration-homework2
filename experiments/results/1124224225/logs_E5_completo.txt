@@ -1,0 +1,456 @@
+2026-11-25T01:45:56.296Z  INFO 1 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 6 endpoints beneath base path '/actuator'
+2026-11-25T01:45:56.341Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-11-25T01:45:56.350Z  INFO 1 --- [           main] c.e.i.o.OrquestadorApplication           : Started OrquestadorApplication in 5.23 seconds (process running for 5.619)
+2026-11-25T01:45:56.812Z  INFO 1 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-25T01:45:56.812Z  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-25T01:45:56.813Z  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-11-25T01:45:57.232Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-base] Paso 1: Reservando inventario
+2026-11-25T01:45:57.294Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-base] Paso 2: Agendando transporte
+2026-11-25T01:45:57.316Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-base] Paso 3: Generando tracking
+2026-11-25T01:45:57.330Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-base] Tracking generado: TRK-0D338D88
+2026-11-25T01:45:57.333Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-base] COMPLETADA
+2026-11-25T01:46:00.372Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-022] Paso 1: Reservando inventario
+2026-11-25T01:46:00.374Z  INFO 1 --- [nio-8080-exec-1] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-035] Paso 1: Reservando inventario
+2026-11-25T01:46:00.374Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-004] Paso 1: Reservando inventario
+2026-11-25T01:46:00.378Z  INFO 1 --- [nio-8080-exec-6] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-000] Paso 1: Reservando inventario
+2026-11-25T01:46:00.379Z  INFO 1 --- [io-8080-exec-16] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-031] Paso 1: Reservando inventario
+2026-11-25T01:46:00.379Z  INFO 1 --- [nio-8080-exec-9] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-037] Paso 1: Reservando inventario
+2026-11-25T01:46:00.379Z  INFO 1 --- [io-8080-exec-14] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-038] Paso 1: Reservando inventario
+2026-11-25T01:46:00.379Z  INFO 1 --- [nio-8080-exec-7] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-036] Paso 1: Reservando inventario
+2026-11-25T01:46:00.380Z  INFO 1 --- [io-8080-exec-19] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-032] Paso 1: Reservando inventario
+2026-11-25T01:46:00.381Z  INFO 1 --- [io-8080-exec-15] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-008] Paso 1: Reservando inventario
+2026-11-25T01:46:00.398Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-022] Paso 2: Agendando transporte
+2026-11-25T01:46:00.402Z  INFO 1 --- [nio-8080-exec-9] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-037] Paso 2: Agendando transporte
+2026-11-25T01:46:00.406Z  INFO 1 --- [nio-8080-exec-1] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-035] Paso 2: Agendando transporte
+2026-11-25T01:46:00.412Z  INFO 1 --- [nio-8080-exec-6] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-000] Paso 2: Agendando transporte
+2026-11-25T01:46:00.412Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-022] Paso 3: Generando tracking
+2026-11-25T01:46:00.418Z  INFO 1 --- [io-8080-exec-16] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-031] Paso 2: Agendando transporte
+2026-11-25T01:46:00.419Z  INFO 1 --- [nio-8080-exec-9] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-037] Paso 3: Generando tracking
+2026-11-25T01:46:00.423Z  INFO 1 --- [io-8080-exec-14] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-038] Paso 2: Agendando transporte
+2026-11-25T01:46:00.423Z  INFO 1 --- [nio-8080-exec-1] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-035] Paso 3: Generando tracking
+2026-11-25T01:46:00.425Z  INFO 1 --- [nio-8080-exec-6] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-000] Paso 3: Generando tracking
+2026-11-25T01:46:00.427Z  INFO 1 --- [nio-8080-exec-7] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-036] Paso 2: Agendando transporte
+2026-11-25T01:46:00.430Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-022] Tracking generado: TRK-F7729597
+2026-11-25T01:46:00.435Z  INFO 1 --- [io-8080-exec-16] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-031] Paso 3: Generando tracking
+2026-11-25T01:46:00.435Z  INFO 1 --- [nio-8080-exec-9] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-037] Tracking generado: TRK-FDCE50FA
+2026-11-25T01:46:00.436Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-022] COMPLETADA
+2026-11-25T01:46:00.437Z  INFO 1 --- [io-8080-exec-15] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-008] Paso 2: Agendando transporte
+2026-11-25T01:46:00.441Z  INFO 1 --- [nio-8080-exec-1] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-035] Tracking generado: TRK-2F45629A
+2026-11-25T01:46:00.442Z  INFO 1 --- [io-8080-exec-14] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-038] Paso 3: Generando tracking
+2026-11-25T01:46:00.443Z  INFO 1 --- [nio-8080-exec-9] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-037] COMPLETADA
+2026-11-25T01:46:00.444Z  INFO 1 --- [io-8080-exec-17] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-025] Paso 1: Reservando inventario
+2026-11-25T01:46:00.445Z  INFO 1 --- [nio-8080-exec-6] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-000] Tracking generado: TRK-BB1E7A0C
+2026-11-25T01:46:00.455Z  INFO 1 --- [nio-8080-exec-1] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-035] COMPLETADA
+2026-11-25T01:46:00.455Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-004] Paso 2: Agendando transporte
+2026-11-25T01:46:00.457Z  INFO 1 --- [nio-8080-exec-6] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-000] COMPLETADA
+2026-11-25T01:46:00.458Z  INFO 1 --- [nio-8080-exec-7] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-036] Paso 3: Generando tracking
+2026-11-25T01:46:00.460Z  INFO 1 --- [io-8080-exec-18] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-019] Paso 1: Reservando inventario
+2026-11-25T01:46:00.460Z  INFO 1 --- [io-8080-exec-19] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-032] Paso 2: Agendando transporte
+2026-11-25T01:46:00.462Z  INFO 1 --- [io-8080-exec-14] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-038] Tracking generado: TRK-11C1B80A
+2026-11-25T01:46:00.465Z  INFO 1 --- [io-8080-exec-16] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-031] Tracking generado: TRK-BE914B0C
+2026-11-25T01:46:00.467Z  INFO 1 --- [io-8080-exec-14] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-038] COMPLETADA
+2026-11-25T01:46:00.467Z  INFO 1 --- [io-8080-exec-20] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-005] Paso 1: Reservando inventario
+2026-11-25T01:46:00.467Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-018] Paso 1: Reservando inventario
+2026-11-25T01:46:00.467Z  INFO 1 --- [io-8080-exec-15] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-008] Paso 3: Generando tracking
+2026-11-25T01:46:00.470Z  INFO 1 --- [io-8080-exec-16] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-031] COMPLETADA
+2026-11-25T01:46:00.473Z  INFO 1 --- [io-8080-exec-17] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-025] Paso 2: Agendando transporte
+2026-11-25T01:46:00.476Z  INFO 1 --- [io-8080-exec-13] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-039] Paso 1: Reservando inventario
+2026-11-25T01:46:00.478Z  INFO 1 --- [io-8080-exec-12] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-033] Paso 1: Reservando inventario
+2026-11-25T01:46:00.478Z  INFO 1 --- [io-8080-exec-19] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-032] Paso 3: Generando tracking
+2026-11-25T01:46:00.478Z  INFO 1 --- [nio-8080-exec-7] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-036] Tracking generado: TRK-7EBD2C50
+2026-11-25T01:46:00.480Z  INFO 1 --- [io-8080-exec-18] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-019] Paso 2: Agendando transporte
+2026-11-25T01:46:00.482Z  INFO 1 --- [nio-8080-exec-7] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-036] COMPLETADA
+2026-11-25T01:46:00.480Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-004] Paso 3: Generando tracking
+2026-11-25T01:46:00.484Z  INFO 1 --- [io-8080-exec-15] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-008] Tracking generado: TRK-34F8D115
+2026-11-25T01:46:00.484Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-018] Paso 2: Agendando transporte
+2026-11-25T01:46:00.488Z  INFO 1 --- [io-8080-exec-17] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-025] Paso 3: Generando tracking
+2026-11-25T01:46:00.489Z  INFO 1 --- [io-8080-exec-15] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-008] COMPLETADA
+2026-11-25T01:46:00.490Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-009] Paso 1: Reservando inventario
+2026-11-25T01:46:00.490Z  INFO 1 --- [io-8080-exec-20] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-005] Paso 2: Agendando transporte
+2026-11-25T01:46:00.495Z  INFO 1 --- [io-8080-exec-13] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-039] Paso 2: Agendando transporte
+2026-11-25T01:46:00.497Z  INFO 1 --- [io-8080-exec-19] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-032] Tracking generado: TRK-6E702C86
+2026-11-25T01:46:00.497Z  INFO 1 --- [io-8080-exec-24] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-007] Paso 1: Reservando inventario
+2026-11-25T01:46:00.497Z  WARN 1 --- [io-8080-exec-13] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: BulkheadFullException
+2026-11-25T01:46:00.497Z ERROR 1 --- [io-8080-exec-13] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-039] Fallo detectado: Transportista no disponible (BulkheadFullException)
+2026-11-25T01:46:00.499Z  INFO 1 --- [io-8080-exec-12] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-033] Paso 2: Agendando transporte
+2026-11-25T01:46:00.501Z  INFO 1 --- [io-8080-exec-18] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-019] Paso 3: Generando tracking
+2026-11-25T01:46:00.501Z  INFO 1 --- [io-8080-exec-19] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-032] COMPLETADA
+2026-11-25T01:46:00.501Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-004] Tracking generado: TRK-DBC81E8E
+2026-11-25T01:46:00.501Z  WARN 1 --- [io-8080-exec-13] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-039] Compensando Paso 1: Liberando inventario
+2026-11-25T01:46:00.503Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-018] Paso 3: Generando tracking
+2026-11-25T01:46:00.506Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-004] COMPLETADA
+2026-11-25T01:46:00.508Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-009] Paso 2: Agendando transporte
+2026-11-25T01:46:00.508Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-003] Paso 1: Reservando inventario
+2026-11-25T01:46:00.510Z  INFO 1 --- [io-8080-exec-20] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-005] Paso 3: Generando tracking
+2026-11-25T01:46:00.510Z  INFO 1 --- [io-8080-exec-17] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-025] Tracking generado: TRK-1497620B
+2026-11-25T01:46:00.515Z  INFO 1 --- [io-8080-exec-17] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-025] COMPLETADA
+2026-11-25T01:46:00.515Z  INFO 1 --- [io-8080-exec-22] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-015] Paso 1: Reservando inventario
+2026-11-25T01:46:00.515Z  INFO 1 --- [io-8080-exec-24] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-007] Paso 2: Agendando transporte
+2026-11-25T01:46:00.521Z  INFO 1 --- [io-8080-exec-13] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-039] COMPENSADA correctamente
+2026-11-25T01:46:00.522Z  INFO 1 --- [io-8080-exec-18] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-019] Tracking generado: TRK-AC56D988
+2026-11-25T01:46:00.524Z  INFO 1 --- [io-8080-exec-20] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-005] Tracking generado: TRK-7CE566B5
+2026-11-25T01:46:00.524Z  INFO 1 --- [io-8080-exec-21] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-021] Paso 1: Reservando inventario
+2026-11-25T01:46:00.525Z  INFO 1 --- [io-8080-exec-12] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-033] Paso 3: Generando tracking
+2026-11-25T01:46:00.526Z  INFO 1 --- [io-8080-exec-18] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-019] COMPLETADA
+2026-11-25T01:46:00.526Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-009] Paso 3: Generando tracking
+2026-11-25T01:46:00.527Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-018] Tracking generado: TRK-C00FF64D
+2026-11-25T01:46:00.528Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-003] Paso 2: Agendando transporte
+2026-11-25T01:46:00.528Z  INFO 1 --- [io-8080-exec-20] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-005] COMPLETADA
+2026-11-25T01:46:00.534Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-018] COMPLETADA
+2026-11-25T01:46:00.536Z  INFO 1 --- [io-8080-exec-24] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-007] Paso 3: Generando tracking
+2026-11-25T01:46:00.538Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-002] Paso 1: Reservando inventario
+2026-11-25T01:46:00.538Z  INFO 1 --- [io-8080-exec-25] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-028] Paso 1: Reservando inventario
+2026-11-25T01:46:00.541Z  INFO 1 --- [io-8080-exec-22] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-015] Paso 2: Agendando transporte
+2026-11-25T01:46:00.543Z  INFO 1 --- [io-8080-exec-23] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-020] Paso 1: Reservando inventario
+2026-11-25T01:46:00.545Z  INFO 1 --- [io-8080-exec-26] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-023] Paso 1: Reservando inventario
+2026-11-25T01:46:00.547Z  INFO 1 --- [io-8080-exec-21] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-021] Paso 2: Agendando transporte
+2026-11-25T01:46:00.547Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-009] Tracking generado: TRK-3A1B2572
+2026-11-25T01:46:00.551Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-003] Paso 3: Generando tracking
+2026-11-25T01:46:00.552Z  INFO 1 --- [io-8080-exec-12] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-033] Tracking generado: TRK-65090605
+2026-11-25T01:46:00.552Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-009] COMPLETADA
+2026-11-25T01:46:00.556Z  INFO 1 --- [io-8080-exec-12] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-033] COMPLETADA
+2026-11-25T01:46:00.556Z  INFO 1 --- [io-8080-exec-24] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-007] Tracking generado: TRK-F41F6D6C
+2026-11-25T01:46:00.558Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-002] Paso 2: Agendando transporte
+2026-11-25T01:46:00.562Z  INFO 1 --- [io-8080-exec-27] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-027] Paso 1: Reservando inventario
+2026-11-25T01:46:00.564Z  INFO 1 --- [io-8080-exec-24] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-007] COMPLETADA
+2026-11-25T01:46:00.564Z  INFO 1 --- [io-8080-exec-25] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-028] Paso 2: Agendando transporte
+2026-11-25T01:46:00.564Z  INFO 1 --- [io-8080-exec-11] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-012] Paso 1: Reservando inventario
+2026-11-25T01:46:00.566Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-003] Tracking generado: TRK-52474FA9
+2026-11-25T01:46:00.566Z  INFO 1 --- [io-8080-exec-22] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-015] Paso 3: Generando tracking
+2026-11-25T01:46:00.568Z  INFO 1 --- [io-8080-exec-26] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-023] Paso 2: Agendando transporte
+2026-11-25T01:46:00.566Z  INFO 1 --- [io-8080-exec-21] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-021] Paso 3: Generando tracking
+2026-11-25T01:46:00.570Z  INFO 1 --- [io-8080-exec-28] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-016] Paso 1: Reservando inventario
+2026-11-25T01:46:00.572Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-003] COMPLETADA
+2026-11-25T01:46:00.576Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-002] Paso 3: Generando tracking
+2026-11-25T01:46:00.578Z  INFO 1 --- [io-8080-exec-23] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-020] Paso 2: Agendando transporte
+2026-11-25T01:46:00.580Z  INFO 1 --- [io-8080-exec-29] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-034] Paso 1: Reservando inventario
+2026-11-25T01:46:00.582Z  INFO 1 --- [io-8080-exec-27] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-027] Paso 2: Agendando transporte
+2026-11-25T01:46:00.582Z  INFO 1 --- [io-8080-exec-25] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-028] Paso 3: Generando tracking
+2026-11-25T01:46:00.587Z  INFO 1 --- [io-8080-exec-22] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-015] Tracking generado: TRK-8B687350
+2026-11-25T01:46:00.588Z  INFO 1 --- [io-8080-exec-26] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-023] Paso 3: Generando tracking
+2026-11-25T01:46:00.589Z  INFO 1 --- [io-8080-exec-21] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-021] Tracking generado: TRK-A1BBEBF9
+2026-11-25T01:46:00.589Z  INFO 1 --- [io-8080-exec-11] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-012] Paso 2: Agendando transporte
+2026-11-25T01:46:00.591Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-002] Tracking generado: TRK-2147F5EB
+2026-11-25T01:46:00.592Z  INFO 1 --- [io-8080-exec-22] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-015] COMPLETADA
+2026-11-25T01:46:00.594Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-002] COMPLETADA
+2026-11-25T01:46:00.594Z  INFO 1 --- [io-8080-exec-28] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-016] Paso 2: Agendando transporte
+2026-11-25T01:46:00.594Z  INFO 1 --- [io-8080-exec-21] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-021] COMPLETADA
+2026-11-25T01:46:00.594Z  INFO 1 --- [io-8080-exec-23] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-020] Paso 3: Generando tracking
+2026-11-25T01:46:00.598Z  INFO 1 --- [io-8080-exec-29] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-034] Paso 2: Agendando transporte
+2026-11-25T01:46:00.598Z  INFO 1 --- [io-8080-exec-31] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-001] Paso 1: Reservando inventario
+2026-11-25T01:46:00.598Z  INFO 1 --- [io-8080-exec-27] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-027] Paso 3: Generando tracking
+2026-11-25T01:46:00.602Z  INFO 1 --- [io-8080-exec-25] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-028] Tracking generado: TRK-E4A5D8DF
+2026-11-25T01:46:00.603Z  INFO 1 --- [io-8080-exec-33] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-024] Paso 1: Reservando inventario
+2026-11-25T01:46:00.604Z  INFO 1 --- [io-8080-exec-30] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-014] Paso 1: Reservando inventario
+2026-11-25T01:46:00.605Z  INFO 1 --- [io-8080-exec-26] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-023] Tracking generado: TRK-05B46373
+2026-11-25T01:46:00.609Z  INFO 1 --- [io-8080-exec-11] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-012] Paso 3: Generando tracking
+2026-11-25T01:46:00.611Z  INFO 1 --- [io-8080-exec-23] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-020] Tracking generado: TRK-2A177D86
+2026-11-25T01:46:00.611Z  INFO 1 --- [io-8080-exec-25] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-028] COMPLETADA
+2026-11-25T01:46:00.611Z  INFO 1 --- [io-8080-exec-28] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-016] Paso 3: Generando tracking
+2026-11-25T01:46:00.611Z  INFO 1 --- [io-8080-exec-26] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-023] COMPLETADA
+2026-11-25T01:46:00.613Z  INFO 1 --- [io-8080-exec-29] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-034] Paso 3: Generando tracking
+2026-11-25T01:46:00.615Z  INFO 1 --- [io-8080-exec-23] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-020] COMPLETADA
+2026-11-25T01:46:00.619Z  INFO 1 --- [io-8080-exec-32] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-010] Paso 1: Reservando inventario
+2026-11-25T01:46:00.619Z  INFO 1 --- [io-8080-exec-34] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-029] Paso 1: Reservando inventario
+2026-11-25T01:46:00.620Z  INFO 1 --- [io-8080-exec-31] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-001] Paso 2: Agendando transporte
+2026-11-25T01:46:00.621Z  INFO 1 --- [io-8080-exec-27] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-027] Tracking generado: TRK-47CBFF13
+2026-11-25T01:46:00.621Z  INFO 1 --- [io-8080-exec-35] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-011] Paso 1: Reservando inventario
+2026-11-25T01:46:00.623Z  INFO 1 --- [io-8080-exec-30] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-014] Paso 2: Agendando transporte
+2026-11-25T01:46:00.625Z  INFO 1 --- [io-8080-exec-27] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-027] COMPLETADA
+2026-11-25T01:46:00.627Z  INFO 1 --- [io-8080-exec-28] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-016] Tracking generado: TRK-0F6B4D68
+2026-11-25T01:46:00.629Z  INFO 1 --- [io-8080-exec-11] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-012] Tracking generado: TRK-4E8A07DA
+2026-11-25T01:46:00.632Z  INFO 1 --- [io-8080-exec-33] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-024] Paso 2: Agendando transporte
+2026-11-25T01:46:00.632Z  INFO 1 --- [io-8080-exec-29] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-034] Tracking generado: TRK-6BE0D094
+2026-11-25T01:46:00.634Z  INFO 1 --- [io-8080-exec-28] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-016] COMPLETADA
+2026-11-25T01:46:00.635Z  INFO 1 --- [io-8080-exec-36] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-026] Paso 1: Reservando inventario
+2026-11-25T01:46:00.636Z  INFO 1 --- [io-8080-exec-29] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-034] COMPLETADA
+2026-11-25T01:46:00.636Z  INFO 1 --- [io-8080-exec-11] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-012] COMPLETADA
+2026-11-25T01:46:00.641Z  INFO 1 --- [io-8080-exec-39] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-013] Paso 1: Reservando inventario
+2026-11-25T01:46:00.641Z  INFO 1 --- [io-8080-exec-32] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-010] Paso 2: Agendando transporte
+2026-11-25T01:46:00.646Z  INFO 1 --- [io-8080-exec-37] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-006] Paso 1: Reservando inventario
+2026-11-25T01:46:00.646Z  INFO 1 --- [io-8080-exec-34] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-029] Paso 2: Agendando transporte
+2026-11-25T01:46:00.646Z  INFO 1 --- [io-8080-exec-31] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-001] Paso 3: Generando tracking
+2026-11-25T01:46:00.649Z  INFO 1 --- [io-8080-exec-30] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-014] Paso 3: Generando tracking
+2026-11-25T01:46:00.651Z  INFO 1 --- [io-8080-exec-38] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-017] Paso 1: Reservando inventario
+2026-11-25T01:46:00.653Z  INFO 1 --- [io-8080-exec-35] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-011] Paso 2: Agendando transporte
+2026-11-25T01:46:00.653Z  WARN 1 --- [io-8080-exec-35] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: BulkheadFullException
+2026-11-25T01:46:00.654Z ERROR 1 --- [io-8080-exec-35] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-011] Fallo detectado: Transportista no disponible (BulkheadFullException)
+2026-11-25T01:46:00.659Z  WARN 1 --- [io-8080-exec-35] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-011] Compensando Paso 1: Liberando inventario
+2026-11-25T01:46:00.659Z  INFO 1 --- [io-8080-exec-36] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-026] Paso 2: Agendando transporte
+2026-11-25T01:46:00.661Z  INFO 1 --- [io-8080-exec-32] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-010] Paso 3: Generando tracking
+2026-11-25T01:46:00.663Z  INFO 1 --- [io-8080-exec-34] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-029] Paso 3: Generando tracking
+2026-11-25T01:46:00.664Z  INFO 1 --- [io-8080-exec-33] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-024] Paso 3: Generando tracking
+2026-11-25T01:46:00.665Z  INFO 1 --- [io-8080-exec-39] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-013] Paso 2: Agendando transporte
+2026-11-25T01:46:00.670Z  INFO 1 --- [io-8080-exec-31] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-001] Tracking generado: TRK-FE1B1AEB
+2026-11-25T01:46:00.671Z  INFO 1 --- [io-8080-exec-35] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-011] COMPENSADA correctamente
+2026-11-25T01:46:00.672Z  INFO 1 --- [io-8080-exec-37] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-006] Paso 2: Agendando transporte
+2026-11-25T01:46:00.674Z  INFO 1 --- [io-8080-exec-36] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-026] Paso 3: Generando tracking
+2026-11-25T01:46:00.674Z  INFO 1 --- [io-8080-exec-31] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-001] COMPLETADA
+2026-11-25T01:46:00.675Z  INFO 1 --- [io-8080-exec-30] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-014] Tracking generado: TRK-3C56096C
+2026-11-25T01:46:00.678Z  INFO 1 --- [io-8080-exec-30] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-014] COMPLETADA
+2026-11-25T01:46:00.678Z  INFO 1 --- [io-8080-exec-33] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-024] Tracking generado: TRK-53B19E16
+2026-11-25T01:46:00.678Z  INFO 1 --- [io-8080-exec-32] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-010] Tracking generado: TRK-72FFDA50
+2026-11-25T01:46:00.679Z  INFO 1 --- [io-8080-exec-34] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-029] Tracking generado: TRK-07574E0C
+2026-11-25T01:46:00.680Z  INFO 1 --- [io-8080-exec-40] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-030] Paso 1: Reservando inventario
+2026-11-25T01:46:00.680Z  INFO 1 --- [io-8080-exec-38] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-017] Paso 2: Agendando transporte
+2026-11-25T01:46:00.682Z  INFO 1 --- [io-8080-exec-39] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-013] Paso 3: Generando tracking
+2026-11-25T01:46:00.683Z  INFO 1 --- [io-8080-exec-32] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-010] COMPLETADA
+2026-11-25T01:46:00.682Z  INFO 1 --- [io-8080-exec-33] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-024] COMPLETADA
+2026-11-25T01:46:00.682Z  INFO 1 --- [io-8080-exec-34] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-029] COMPLETADA
+2026-11-25T01:46:00.690Z  INFO 1 --- [io-8080-exec-36] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-026] Tracking generado: TRK-6D80BA05
+2026-11-25T01:46:00.690Z  INFO 1 --- [io-8080-exec-37] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-006] Paso 3: Generando tracking
+2026-11-25T01:46:00.694Z  INFO 1 --- [io-8080-exec-38] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-017] Paso 3: Generando tracking
+2026-11-25T01:46:00.694Z  INFO 1 --- [io-8080-exec-36] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-026] COMPLETADA
+2026-11-25T01:46:00.696Z  INFO 1 --- [io-8080-exec-40] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-030] Paso 2: Agendando transporte
+2026-11-25T01:46:00.698Z  INFO 1 --- [io-8080-exec-39] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-013] Tracking generado: TRK-91FA54CC
+2026-11-25T01:46:00.701Z  INFO 1 --- [io-8080-exec-39] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-013] COMPLETADA
+2026-11-25T01:46:00.705Z  INFO 1 --- [io-8080-exec-37] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-006] Tracking generado: TRK-FBF6C654
+2026-11-25T01:46:00.705Z  INFO 1 --- [io-8080-exec-38] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-017] Tracking generado: TRK-8939C284
+2026-11-25T01:46:00.708Z  INFO 1 --- [io-8080-exec-40] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-030] Paso 3: Generando tracking
+2026-11-25T01:46:00.709Z  INFO 1 --- [io-8080-exec-38] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-017] COMPLETADA
+2026-11-25T01:46:00.709Z  INFO 1 --- [io-8080-exec-37] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-006] COMPLETADA
+2026-11-25T01:46:00.720Z  INFO 1 --- [io-8080-exec-40] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-030] Tracking generado: TRK-D2522925
+2026-11-25T01:46:00.723Z  INFO 1 --- [io-8080-exec-40] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-c-030] COMPLETADA
+2026-11-25T01:46:07.751Z  INFO 1 --- [io-8080-exec-35] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-000] Paso 1: Reservando inventario
+2026-11-25T01:46:07.753Z  INFO 1 --- [io-8080-exec-31] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-019] Paso 1: Reservando inventario
+2026-11-25T01:46:07.753Z  INFO 1 --- [io-8080-exec-32] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-037] Paso 1: Reservando inventario
+2026-11-25T01:46:07.753Z  INFO 1 --- [io-8080-exec-34] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-033] Paso 1: Reservando inventario
+2026-11-25T01:46:07.753Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-012] Paso 1: Reservando inventario
+2026-11-25T01:46:07.753Z  INFO 1 --- [io-8080-exec-39] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-013] Paso 1: Reservando inventario
+2026-11-25T01:46:07.753Z  INFO 1 --- [io-8080-exec-37] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-010] Paso 1: Reservando inventario
+2026-11-25T01:46:07.753Z  INFO 1 --- [io-8080-exec-33] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-025] Paso 1: Reservando inventario
+2026-11-25T01:46:07.753Z  INFO 1 --- [io-8080-exec-19] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-005] Paso 1: Reservando inventario
+2026-11-25T01:46:07.753Z  INFO 1 --- [io-8080-exec-15] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-009] Paso 1: Reservando inventario
+2026-11-25T01:46:07.765Z  INFO 1 --- [io-8080-exec-35] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-000] Paso 2: Agendando transporte
+2026-11-25T01:46:07.768Z  INFO 1 --- [io-8080-exec-39] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-013] Paso 2: Agendando transporte
+2026-11-25T01:46:07.772Z  INFO 1 --- [io-8080-exec-19] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-005] Paso 2: Agendando transporte
+2026-11-25T01:46:07.776Z  INFO 1 --- [io-8080-exec-37] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-010] Paso 2: Agendando transporte
+2026-11-25T01:46:07.776Z  WARN 1 --- [io-8080-exec-37] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: BulkheadFullException
+2026-11-25T01:46:07.776Z ERROR 1 --- [io-8080-exec-37] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-010] Fallo detectado: Transportista no disponible (BulkheadFullException)
+2026-11-25T01:46:07.780Z  INFO 1 --- [io-8080-exec-34] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-033] Paso 2: Agendando transporte
+2026-11-25T01:46:07.780Z  WARN 1 --- [io-8080-exec-37] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-010] Compensando Paso 1: Liberando inventario
+2026-11-25T01:46:07.780Z  WARN 1 --- [io-8080-exec-34] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: BulkheadFullException
+2026-11-25T01:46:07.780Z ERROR 1 --- [io-8080-exec-34] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-033] Fallo detectado: Transportista no disponible (BulkheadFullException)
+2026-11-25T01:46:07.783Z  WARN 1 --- [io-8080-exec-34] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-033] Compensando Paso 1: Liberando inventario
+2026-11-25T01:46:07.783Z  INFO 1 --- [io-8080-exec-32] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-037] Paso 2: Agendando transporte
+2026-11-25T01:46:07.784Z  WARN 1 --- [io-8080-exec-32] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: BulkheadFullException
+2026-11-25T01:46:07.784Z ERROR 1 --- [io-8080-exec-32] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-037] Fallo detectado: Transportista no disponible (BulkheadFullException)
+2026-11-25T01:46:07.785Z  INFO 1 --- [io-8080-exec-15] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-009] Paso 2: Agendando transporte
+2026-11-25T01:46:07.786Z  WARN 1 --- [io-8080-exec-15] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: BulkheadFullException
+2026-11-25T01:46:07.786Z ERROR 1 --- [io-8080-exec-15] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-009] Fallo detectado: Transportista no disponible (BulkheadFullException)
+2026-11-25T01:46:07.787Z  WARN 1 --- [io-8080-exec-32] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-037] Compensando Paso 1: Liberando inventario
+2026-11-25T01:46:07.789Z  WARN 1 --- [io-8080-exec-15] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-009] Compensando Paso 1: Liberando inventario
+2026-11-25T01:46:07.791Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-012] Paso 2: Agendando transporte
+2026-11-25T01:46:07.791Z  WARN 1 --- [nio-8080-exec-3] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: BulkheadFullException
+2026-11-25T01:46:07.791Z ERROR 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-012] Fallo detectado: Transportista no disponible (BulkheadFullException)
+2026-11-25T01:46:07.794Z  WARN 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-012] Compensando Paso 1: Liberando inventario
+2026-11-25T01:46:07.794Z  INFO 1 --- [io-8080-exec-31] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-019] Paso 2: Agendando transporte
+2026-11-25T01:46:07.795Z  WARN 1 --- [io-8080-exec-31] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: BulkheadFullException
+2026-11-25T01:46:07.795Z ERROR 1 --- [io-8080-exec-31] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-019] Fallo detectado: Transportista no disponible (BulkheadFullException)
+2026-11-25T01:46:07.797Z  INFO 1 --- [io-8080-exec-37] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-010] COMPENSADA correctamente
+2026-11-25T01:46:07.798Z  INFO 1 --- [io-8080-exec-33] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-025] Paso 2: Agendando transporte
+2026-11-25T01:46:07.798Z  WARN 1 --- [io-8080-exec-31] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-019] Compensando Paso 1: Liberando inventario
+2026-11-25T01:46:07.798Z  WARN 1 --- [io-8080-exec-33] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: BulkheadFullException
+2026-11-25T01:46:07.798Z ERROR 1 --- [io-8080-exec-33] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-025] Fallo detectado: Transportista no disponible (BulkheadFullException)
+2026-11-25T01:46:07.801Z  INFO 1 --- [io-8080-exec-32] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-037] COMPENSADA correctamente
+2026-11-25T01:46:07.802Z  WARN 1 --- [io-8080-exec-33] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-025] Compensando Paso 1: Liberando inventario
+2026-11-25T01:46:07.808Z  INFO 1 --- [io-8080-exec-34] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-033] COMPENSADA correctamente
+2026-11-25T01:46:07.809Z  INFO 1 --- [io-8080-exec-20] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-031] Paso 1: Reservando inventario
+2026-11-25T01:46:07.812Z  INFO 1 --- [nio-8080-exec-3] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-012] COMPENSADA correctamente
+2026-11-25T01:46:07.815Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-023] Paso 1: Reservando inventario
+2026-11-25T01:46:07.816Z  INFO 1 --- [io-8080-exec-15] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-009] COMPENSADA correctamente
+2026-11-25T01:46:07.818Z  INFO 1 --- [io-8080-exec-40] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-029] Paso 1: Reservando inventario
+2026-11-25T01:46:07.820Z  INFO 1 --- [io-8080-exec-31] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-019] COMPENSADA correctamente
+2026-11-25T01:46:07.822Z  INFO 1 --- [io-8080-exec-17] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-001] Paso 1: Reservando inventario
+2026-11-25T01:46:07.823Z  INFO 1 --- [io-8080-exec-33] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-025] COMPENSADA correctamente
+2026-11-25T01:46:07.826Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-030] Paso 1: Reservando inventario
+2026-11-25T01:46:07.830Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-003] Paso 1: Reservando inventario
+2026-11-25T01:46:07.831Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-023] Paso 2: Agendando transporte
+2026-11-25T01:46:07.832Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: BulkheadFullException
+2026-11-25T01:46:07.832Z ERROR 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-023] Fallo detectado: Transportista no disponible (BulkheadFullException)
+2026-11-25T01:46:07.833Z  INFO 1 --- [io-8080-exec-13] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-032] Paso 1: Reservando inventario
+2026-11-25T01:46:07.835Z  WARN 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-023] Compensando Paso 1: Liberando inventario
+2026-11-25T01:46:07.835Z  INFO 1 --- [io-8080-exec-40] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-029] Paso 2: Agendando transporte
+2026-11-25T01:46:07.836Z  WARN 1 --- [io-8080-exec-40] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: BulkheadFullException
+2026-11-25T01:46:07.836Z ERROR 1 --- [io-8080-exec-40] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-029] Fallo detectado: Transportista no disponible (BulkheadFullException)
+2026-11-25T01:46:07.837Z  INFO 1 --- [io-8080-exec-17] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-001] Paso 2: Agendando transporte
+2026-11-25T01:46:07.837Z  WARN 1 --- [io-8080-exec-17] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: BulkheadFullException
+2026-11-25T01:46:07.837Z ERROR 1 --- [io-8080-exec-17] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-001] Fallo detectado: Transportista no disponible (BulkheadFullException)
+2026-11-25T01:46:07.839Z  WARN 1 --- [io-8080-exec-40] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-029] Compensando Paso 1: Liberando inventario
+2026-11-25T01:46:07.841Z  INFO 1 --- [io-8080-exec-20] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-031] Paso 2: Agendando transporte
+2026-11-25T01:46:07.841Z  WARN 1 --- [io-8080-exec-17] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-001] Compensando Paso 1: Liberando inventario
+2026-11-25T01:46:07.841Z  WARN 1 --- [io-8080-exec-20] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: BulkheadFullException
+2026-11-25T01:46:07.841Z ERROR 1 --- [io-8080-exec-20] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-031] Fallo detectado: Transportista no disponible (BulkheadFullException)
+2026-11-25T01:46:07.846Z  WARN 1 --- [io-8080-exec-20] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-031] Compensando Paso 1: Liberando inventario
+2026-11-25T01:46:07.846Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-030] Paso 2: Agendando transporte
+2026-11-25T01:46:07.847Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: BulkheadFullException
+2026-11-25T01:46:07.847Z ERROR 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-030] Fallo detectado: Transportista no disponible (BulkheadFullException)
+2026-11-25T01:46:07.850Z  INFO 1 --- [io-8080-exec-13] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-032] Paso 2: Agendando transporte
+2026-11-25T01:46:07.850Z  WARN 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-030] Compensando Paso 1: Liberando inventario
+2026-11-25T01:46:07.850Z  WARN 1 --- [io-8080-exec-13] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: BulkheadFullException
+2026-11-25T01:46:07.850Z ERROR 1 --- [io-8080-exec-13] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-032] Fallo detectado: Transportista no disponible (BulkheadFullException)
+2026-11-25T01:46:07.853Z  INFO 1 --- [nio-8080-exec-5] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-023] COMPENSADA correctamente
+2026-11-25T01:46:07.854Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-003] Paso 2: Agendando transporte
+2026-11-25T01:46:07.854Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: BulkheadFullException
+2026-11-25T01:46:07.854Z ERROR 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-003] Fallo detectado: Transportista no disponible (BulkheadFullException)
+2026-11-25T01:46:07.855Z  WARN 1 --- [io-8080-exec-13] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-032] Compensando Paso 1: Liberando inventario
+2026-11-25T01:46:07.857Z  WARN 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-003] Compensando Paso 1: Liberando inventario
+2026-11-25T01:46:07.859Z  INFO 1 --- [io-8080-exec-17] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-001] COMPENSADA correctamente
+2026-11-25T01:46:07.861Z  INFO 1 --- [io-8080-exec-20] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-031] COMPENSADA correctamente
+2026-11-25T01:46:07.865Z  INFO 1 --- [nio-8080-exec-8] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-030] COMPENSADA correctamente
+2026-11-25T01:46:07.865Z  INFO 1 --- [io-8080-exec-36] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-038] Paso 1: Reservando inventario
+2026-11-25T01:46:07.868Z  INFO 1 --- [io-8080-exec-40] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-029] COMPENSADA correctamente
+2026-11-25T01:46:07.871Z  INFO 1 --- [io-8080-exec-24] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-002] Paso 1: Reservando inventario
+2026-11-25T01:46:07.871Z  INFO 1 --- [io-8080-exec-21] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-006] Paso 1: Reservando inventario
+2026-11-25T01:46:07.872Z  INFO 1 --- [io-8080-exec-13] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-032] COMPENSADA correctamente
+2026-11-25T01:46:07.875Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-015] Paso 1: Reservando inventario
+2026-11-25T01:46:07.876Z  INFO 1 --- [nio-8080-exec-2] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-003] COMPENSADA correctamente
+2026-11-25T01:46:07.878Z  INFO 1 --- [io-8080-exec-38] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-039] Paso 1: Reservando inventario
+2026-11-25T01:46:07.882Z  INFO 1 --- [nio-8080-exec-6] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-004] Paso 1: Reservando inventario
+2026-11-25T01:46:07.883Z  INFO 1 --- [io-8080-exec-36] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-038] Paso 2: Agendando transporte
+2026-11-25T01:46:07.883Z  WARN 1 --- [io-8080-exec-36] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: BulkheadFullException
+2026-11-25T01:46:07.883Z ERROR 1 --- [io-8080-exec-36] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-038] Fallo detectado: Transportista no disponible (BulkheadFullException)
+2026-11-25T01:46:07.885Z  INFO 1 --- [io-8080-exec-30] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-027] Paso 1: Reservando inventario
+2026-11-25T01:46:07.887Z  WARN 1 --- [io-8080-exec-36] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-038] Compensando Paso 1: Liberando inventario
+2026-11-25T01:46:07.887Z  INFO 1 --- [io-8080-exec-24] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-002] Paso 2: Agendando transporte
+2026-11-25T01:46:07.887Z  WARN 1 --- [io-8080-exec-24] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: BulkheadFullException
+2026-11-25T01:46:07.887Z ERROR 1 --- [io-8080-exec-24] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-002] Fallo detectado: Transportista no disponible (BulkheadFullException)
+2026-11-25T01:46:07.892Z  INFO 1 --- [io-8080-exec-21] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-006] Paso 2: Agendando transporte
+2026-11-25T01:46:07.892Z  WARN 1 --- [io-8080-exec-24] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-002] Compensando Paso 1: Liberando inventario
+2026-11-25T01:46:07.893Z  WARN 1 --- [io-8080-exec-21] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: BulkheadFullException
+2026-11-25T01:46:07.893Z ERROR 1 --- [io-8080-exec-21] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-006] Fallo detectado: Transportista no disponible (BulkheadFullException)
+2026-11-25T01:46:07.896Z  WARN 1 --- [io-8080-exec-21] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-006] Compensando Paso 1: Liberando inventario
+2026-11-25T01:46:07.896Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-015] Paso 2: Agendando transporte
+2026-11-25T01:46:07.896Z  WARN 1 --- [nio-8080-exec-4] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: BulkheadFullException
+2026-11-25T01:46:07.896Z ERROR 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-015] Fallo detectado: Transportista no disponible (BulkheadFullException)
+2026-11-25T01:46:07.900Z  INFO 1 --- [nio-8080-exec-6] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-004] Paso 2: Agendando transporte
+2026-11-25T01:46:07.900Z  WARN 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-015] Compensando Paso 1: Liberando inventario
+2026-11-25T01:46:07.900Z  WARN 1 --- [nio-8080-exec-6] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: BulkheadFullException
+2026-11-25T01:46:07.900Z ERROR 1 --- [nio-8080-exec-6] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-004] Fallo detectado: Transportista no disponible (BulkheadFullException)
+2026-11-25T01:46:07.903Z  INFO 1 --- [io-8080-exec-30] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-027] Paso 2: Agendando transporte
+2026-11-25T01:46:07.903Z  WARN 1 --- [nio-8080-exec-6] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-004] Compensando Paso 1: Liberando inventario
+2026-11-25T01:46:07.904Z  WARN 1 --- [io-8080-exec-30] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: BulkheadFullException
+2026-11-25T01:46:07.904Z ERROR 1 --- [io-8080-exec-30] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-027] Fallo detectado: Transportista no disponible (BulkheadFullException)
+2026-11-25T01:46:07.906Z  INFO 1 --- [io-8080-exec-36] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-038] COMPENSADA correctamente
+2026-11-25T01:46:07.907Z  WARN 1 --- [io-8080-exec-30] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-027] Compensando Paso 1: Liberando inventario
+2026-11-25T01:46:07.907Z  INFO 1 --- [io-8080-exec-38] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-039] Paso 2: Agendando transporte
+2026-11-25T01:46:07.907Z  WARN 1 --- [io-8080-exec-38] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: BulkheadFullException
+2026-11-25T01:46:07.907Z ERROR 1 --- [io-8080-exec-38] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-039] Fallo detectado: Transportista no disponible (BulkheadFullException)
+2026-11-25T01:46:07.910Z  INFO 1 --- [io-8080-exec-21] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-006] COMPENSADA correctamente
+2026-11-25T01:46:07.911Z  WARN 1 --- [io-8080-exec-38] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-039] Compensando Paso 1: Liberando inventario
+2026-11-25T01:46:07.915Z  INFO 1 --- [io-8080-exec-24] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-002] COMPENSADA correctamente
+2026-11-25T01:46:07.917Z  INFO 1 --- [nio-8080-exec-6] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-004] COMPENSADA correctamente
+2026-11-25T01:46:07.918Z  INFO 1 --- [io-8080-exec-18] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-014] Paso 1: Reservando inventario
+2026-11-25T01:46:07.920Z  INFO 1 --- [nio-8080-exec-1] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-028] Paso 1: Reservando inventario
+2026-11-25T01:46:07.923Z  INFO 1 --- [io-8080-exec-30] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-027] COMPENSADA correctamente
+2026-11-25T01:46:07.923Z  INFO 1 --- [nio-8080-exec-7] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-021] Paso 1: Reservando inventario
+2026-11-25T01:46:07.928Z  INFO 1 --- [io-8080-exec-25] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-026] Paso 1: Reservando inventario
+2026-11-25T01:46:07.930Z  INFO 1 --- [nio-8080-exec-4] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-015] COMPENSADA correctamente
+2026-11-25T01:46:07.934Z  INFO 1 --- [io-8080-exec-16] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-036] Paso 1: Reservando inventario
+2026-11-25T01:46:07.936Z  INFO 1 --- [nio-8080-exec-7] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-021] Paso 2: Agendando transporte
+2026-11-25T01:46:07.937Z  WARN 1 --- [nio-8080-exec-7] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: BulkheadFullException
+2026-11-25T01:46:07.937Z ERROR 1 --- [nio-8080-exec-7] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-021] Fallo detectado: Transportista no disponible (BulkheadFullException)
+2026-11-25T01:46:07.938Z  INFO 1 --- [io-8080-exec-14] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-022] Paso 1: Reservando inventario
+2026-11-25T01:46:07.940Z  WARN 1 --- [nio-8080-exec-7] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-021] Compensando Paso 1: Liberando inventario
+2026-11-25T01:46:07.940Z  INFO 1 --- [io-8080-exec-18] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-014] Paso 2: Agendando transporte
+2026-11-25T01:46:07.940Z  WARN 1 --- [io-8080-exec-18] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: BulkheadFullException
+2026-11-25T01:46:07.940Z ERROR 1 --- [io-8080-exec-18] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-014] Fallo detectado: Transportista no disponible (BulkheadFullException)
+2026-11-25T01:46:07.941Z  INFO 1 --- [io-8080-exec-38] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-039] COMPENSADA correctamente
+2026-11-25T01:46:07.944Z  WARN 1 --- [io-8080-exec-18] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-014] Compensando Paso 1: Liberando inventario
+2026-11-25T01:46:07.948Z  INFO 1 --- [nio-8080-exec-1] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-028] Paso 2: Agendando transporte
+2026-11-25T01:46:07.948Z  WARN 1 --- [nio-8080-exec-1] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: BulkheadFullException
+2026-11-25T01:46:07.948Z ERROR 1 --- [nio-8080-exec-1] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-028] Fallo detectado: Transportista no disponible (BulkheadFullException)
+2026-11-25T01:46:07.949Z  INFO 1 --- [io-8080-exec-25] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-026] Paso 2: Agendando transporte
+2026-11-25T01:46:07.949Z  INFO 1 --- [io-8080-exec-23] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-020] Paso 1: Reservando inventario
+2026-11-25T01:46:07.950Z  WARN 1 --- [io-8080-exec-25] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: BulkheadFullException
+2026-11-25T01:46:07.950Z ERROR 1 --- [io-8080-exec-25] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-026] Fallo detectado: Transportista no disponible (BulkheadFullException)
+2026-11-25T01:46:07.951Z  WARN 1 --- [nio-8080-exec-1] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-028] Compensando Paso 1: Liberando inventario
+2026-11-25T01:46:07.953Z  WARN 1 --- [io-8080-exec-25] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-026] Compensando Paso 1: Liberando inventario
+2026-11-25T01:46:07.955Z  INFO 1 --- [io-8080-exec-16] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-036] Paso 2: Agendando transporte
+2026-11-25T01:46:07.955Z  WARN 1 --- [io-8080-exec-16] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: BulkheadFullException
+2026-11-25T01:46:07.956Z ERROR 1 --- [io-8080-exec-16] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-036] Fallo detectado: Transportista no disponible (BulkheadFullException)
+2026-11-25T01:46:07.957Z  INFO 1 --- [io-8080-exec-14] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-022] Paso 2: Agendando transporte
+2026-11-25T01:46:07.957Z  WARN 1 --- [io-8080-exec-14] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: BulkheadFullException
+2026-11-25T01:46:07.957Z ERROR 1 --- [io-8080-exec-14] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-022] Fallo detectado: Transportista no disponible (BulkheadFullException)
+2026-11-25T01:46:07.958Z  INFO 1 --- [nio-8080-exec-7] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-021] COMPENSADA correctamente
+2026-11-25T01:46:07.959Z  WARN 1 --- [io-8080-exec-16] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-036] Compensando Paso 1: Liberando inventario
+2026-11-25T01:46:07.961Z  WARN 1 --- [io-8080-exec-14] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-022] Compensando Paso 1: Liberando inventario
+2026-11-25T01:46:07.962Z  INFO 1 --- [io-8080-exec-18] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-014] COMPENSADA correctamente
+2026-11-25T01:46:07.968Z  INFO 1 --- [nio-8080-exec-9] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-007] Paso 1: Reservando inventario
+2026-11-25T01:46:07.970Z  INFO 1 --- [nio-8080-exec-1] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-028] COMPENSADA correctamente
+2026-11-25T01:46:07.970Z  INFO 1 --- [io-8080-exec-23] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-020] Paso 2: Agendando transporte
+2026-11-25T01:46:07.970Z  WARN 1 --- [io-8080-exec-23] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: BulkheadFullException
+2026-11-25T01:46:07.970Z ERROR 1 --- [io-8080-exec-23] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-020] Fallo detectado: Transportista no disponible (BulkheadFullException)
+2026-11-25T01:46:07.972Z  INFO 1 --- [io-8080-exec-22] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-018] Paso 1: Reservando inventario
+2026-11-25T01:46:07.973Z  INFO 1 --- [io-8080-exec-25] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-026] COMPENSADA correctamente
+2026-11-25T01:46:07.973Z  WARN 1 --- [io-8080-exec-23] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-020] Compensando Paso 1: Liberando inventario
+2026-11-25T01:46:07.976Z  INFO 1 --- [io-8080-exec-14] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-022] COMPENSADA correctamente
+2026-11-25T01:46:07.980Z  INFO 1 --- [io-8080-exec-27] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-035] Paso 1: Reservando inventario
+2026-11-25T01:46:07.983Z  INFO 1 --- [io-8080-exec-16] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-036] COMPENSADA correctamente
+2026-11-25T01:46:07.983Z  INFO 1 --- [io-8080-exec-28] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-017] Paso 1: Reservando inventario
+2026-11-25T01:46:07.988Z  INFO 1 --- [io-8080-exec-29] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-008] Paso 1: Reservando inventario
+2026-11-25T01:46:07.991Z  INFO 1 --- [io-8080-exec-12] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-034] Paso 1: Reservando inventario
+2026-11-25T01:46:07.995Z  INFO 1 --- [nio-8080-exec-9] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-007] Paso 2: Agendando transporte
+2026-11-25T01:46:07.995Z  WARN 1 --- [nio-8080-exec-9] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: BulkheadFullException
+2026-11-25T01:46:07.996Z ERROR 1 --- [nio-8080-exec-9] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-007] Fallo detectado: Transportista no disponible (BulkheadFullException)
+2026-11-25T01:46:07.999Z  WARN 1 --- [nio-8080-exec-9] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-007] Compensando Paso 1: Liberando inventario
+2026-11-25T01:46:07.999Z  INFO 1 --- [io-8080-exec-22] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-018] Paso 2: Agendando transporte
+2026-11-25T01:46:07.999Z  WARN 1 --- [io-8080-exec-22] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: BulkheadFullException
+2026-11-25T01:46:07.999Z ERROR 1 --- [io-8080-exec-22] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-018] Fallo detectado: Transportista no disponible (BulkheadFullException)
+2026-11-25T01:46:08.002Z  WARN 1 --- [io-8080-exec-22] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-018] Compensando Paso 1: Liberando inventario
+2026-11-25T01:46:08.002Z  INFO 1 --- [io-8080-exec-28] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-017] Paso 2: Agendando transporte
+2026-11-25T01:46:08.003Z  WARN 1 --- [io-8080-exec-28] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: BulkheadFullException
+2026-11-25T01:46:08.003Z ERROR 1 --- [io-8080-exec-28] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-017] Fallo detectado: Transportista no disponible (BulkheadFullException)
+2026-11-25T01:46:08.006Z  INFO 1 --- [io-8080-exec-29] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-008] Paso 2: Agendando transporte
+2026-11-25T01:46:08.006Z  WARN 1 --- [io-8080-exec-28] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-017] Compensando Paso 1: Liberando inventario
+2026-11-25T01:46:08.006Z  WARN 1 --- [io-8080-exec-29] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: BulkheadFullException
+2026-11-25T01:46:08.007Z ERROR 1 --- [io-8080-exec-29] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-008] Fallo detectado: Transportista no disponible (BulkheadFullException)
+2026-11-25T01:46:08.010Z  INFO 1 --- [io-8080-exec-12] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-034] Paso 2: Agendando transporte
+2026-11-25T01:46:08.010Z  WARN 1 --- [io-8080-exec-29] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-008] Compensando Paso 1: Liberando inventario
+2026-11-25T01:46:08.010Z  WARN 1 --- [io-8080-exec-12] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: BulkheadFullException
+2026-11-25T01:46:08.010Z ERROR 1 --- [io-8080-exec-12] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-034] Fallo detectado: Transportista no disponible (BulkheadFullException)
+2026-11-25T01:46:08.013Z  INFO 1 --- [io-8080-exec-23] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-020] COMPENSADA correctamente
+2026-11-25T01:46:08.013Z  WARN 1 --- [io-8080-exec-12] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-034] Compensando Paso 1: Liberando inventario
+2026-11-25T01:46:08.013Z  INFO 1 --- [io-8080-exec-27] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-035] Paso 2: Agendando transporte
+2026-11-25T01:46:08.014Z  WARN 1 --- [io-8080-exec-27] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: BulkheadFullException
+2026-11-25T01:46:08.014Z ERROR 1 --- [io-8080-exec-27] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-035] Fallo detectado: Transportista no disponible (BulkheadFullException)
+2026-11-25T01:46:08.016Z  INFO 1 --- [nio-8080-exec-9] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-007] COMPENSADA correctamente
+2026-11-25T01:46:08.017Z  WARN 1 --- [io-8080-exec-27] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-035] Compensando Paso 1: Liberando inventario
+2026-11-25T01:46:08.020Z  INFO 1 --- [io-8080-exec-28] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-017] COMPENSADA correctamente
+2026-11-25T01:46:08.022Z  INFO 1 --- [io-8080-exec-11] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-024] Paso 1: Reservando inventario
+2026-11-25T01:46:08.025Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-016] Paso 1: Reservando inventario
+2026-11-25T01:46:08.025Z  INFO 1 --- [io-8080-exec-22] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-018] COMPENSADA correctamente
+2026-11-25T01:46:08.029Z  INFO 1 --- [io-8080-exec-12] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-034] COMPENSADA correctamente
+2026-11-25T01:46:08.029Z  INFO 1 --- [io-8080-exec-41] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-011] Paso 1: Reservando inventario
+2026-11-25T01:46:08.032Z  INFO 1 --- [io-8080-exec-29] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-008] COMPENSADA correctamente
+2026-11-25T01:46:08.040Z  INFO 1 --- [io-8080-exec-11] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-024] Paso 2: Agendando transporte
+2026-11-25T01:46:08.040Z  WARN 1 --- [io-8080-exec-11] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: BulkheadFullException
+2026-11-25T01:46:08.040Z ERROR 1 --- [io-8080-exec-11] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-024] Fallo detectado: Transportista no disponible (BulkheadFullException)
+2026-11-25T01:46:08.043Z  WARN 1 --- [io-8080-exec-11] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-024] Compensando Paso 1: Liberando inventario
+2026-11-25T01:46:08.048Z  INFO 1 --- [io-8080-exec-27] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-035] COMPENSADA correctamente
+2026-11-25T01:46:08.049Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-016] Paso 2: Agendando transporte
+2026-11-25T01:46:08.049Z  WARN 1 --- [io-8080-exec-10] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: BulkheadFullException
+2026-11-25T01:46:08.049Z ERROR 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-016] Fallo detectado: Transportista no disponible (BulkheadFullException)
+2026-11-25T01:46:08.053Z  WARN 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-016] Compensando Paso 1: Liberando inventario
+2026-11-25T01:46:08.055Z  INFO 1 --- [io-8080-exec-11] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-024] COMPENSADA correctamente
+2026-11-25T01:46:08.056Z  INFO 1 --- [io-8080-exec-41] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-011] Paso 2: Agendando transporte
+2026-11-25T01:46:08.057Z  WARN 1 --- [io-8080-exec-41] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: BulkheadFullException
+2026-11-25T01:46:08.057Z ERROR 1 --- [io-8080-exec-41] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-011] Fallo detectado: Transportista no disponible (BulkheadFullException)
+2026-11-25T01:46:08.060Z  WARN 1 --- [io-8080-exec-41] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-011] Compensando Paso 1: Liberando inventario
+2026-11-25T01:46:08.061Z  INFO 1 --- [io-8080-exec-10] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-016] COMPENSADA correctamente
+2026-11-25T01:46:08.068Z  INFO 1 --- [io-8080-exec-41] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-011] COMPENSADA correctamente
+2026-11-25T01:46:09.767Z  WARN 1 --- [io-8080-exec-35] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: ResourceAccessException
+2026-11-25T01:46:09.767Z ERROR 1 --- [io-8080-exec-35] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-000] Fallo detectado: Transportista no disponible (ResourceAccessException)
+2026-11-25T01:46:09.770Z  WARN 1 --- [io-8080-exec-39] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: ResourceAccessException
+2026-11-25T01:46:09.770Z ERROR 1 --- [io-8080-exec-39] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-013] Fallo detectado: Transportista no disponible (ResourceAccessException)
+2026-11-25T01:46:09.776Z  WARN 1 --- [io-8080-exec-19] c.e.i.o.client.TransportistaClient       : [TRANSPORTISTA] fallback activado: ResourceAccessException
+2026-11-25T01:46:09.776Z ERROR 1 --- [io-8080-exec-19] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-005] Fallo detectado: Transportista no disponible (ResourceAccessException)
+2026-11-25T01:46:09.779Z  WARN 1 --- [io-8080-exec-35] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-000] Compensando Paso 2: Cancelando transporte
+2026-11-25T01:46:09.781Z  WARN 1 --- [io-8080-exec-39] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-013] Compensando Paso 2: Cancelando transporte
+2026-11-25T01:46:09.781Z  WARN 1 --- [io-8080-exec-19] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-005] Compensando Paso 2: Cancelando transporte
+2026-11-25T01:46:09.788Z  WARN 1 --- [io-8080-exec-35] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-000] Compensando Paso 1: Liberando inventario
+2026-11-25T01:46:09.790Z  WARN 1 --- [io-8080-exec-39] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-013] Compensando Paso 1: Liberando inventario
+2026-11-25T01:46:09.791Z  WARN 1 --- [io-8080-exec-19] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-005] Compensando Paso 1: Liberando inventario
+2026-11-25T01:46:09.796Z  INFO 1 --- [io-8080-exec-35] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-000] COMPENSADA correctamente
+2026-11-25T01:46:09.799Z  INFO 1 --- [io-8080-exec-39] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-013] COMPENSADA correctamente
+2026-11-25T01:46:09.803Z  INFO 1 --- [io-8080-exec-19] c.e.i.o.service.OrquestadorService       : [SAGA E5-CO-1124224225-l-005] COMPENSADA correctamente

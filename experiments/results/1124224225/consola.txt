@@ -1,0 +1,81 @@
+[22:42:25] Corrida 1124224225 -> /home/pixoll/github/systems-integration-homework2/experiments/results/1124224225
+[22:42:25] Verificando el gateway en http://localhost:8080 ...
+[22:42:25]    gateway OK (transportista responde; salud del orquestador: HTTP 200 UP)
+[22:42:25] == Perfil completo: recreando orquestador con la configuración del repo
+[22:42:25]    (recrear + arrancar Spring Boot suele tomar 30-90 s; sigue el detalle con: docker compose logs -f orquestador)
+[22:42:26]    contenedor recreado; reiniciando bff
+[22:42:33]    orquestador UP (6s)
+[22:42:33]    bff UP (0s)
+[22:42:33]    verificación: {'perfil': 'completo', 'agendar_read_timeout_ms': 2000, 'cb_umbral_fallo': 50.0, 'bulkhead_max': 3.0}
+[22:42:33] -- E1 camino feliz e idempotencia
+[22:42:34]    fase secuencial {'n': 10}
+[22:42:35]    fase reintento-mismo-id {'n': 10}
+[22:42:35]    reintentos con trackingNumber distinto al original: 0 de 10
+[22:42:35]    fase duplicados-concurrentes {'ids': 5, 'copias': 5}
+[22:42:38]    auditoría PASS: sagas={'COMPLETADA': 15} stock={'inicial': 100000, 'disponible': 99985, 'reservado': 15}
+[22:42:38] -- E2 fallo del último paso con compensación
+[22:42:38]    fase tracking-falla {'n': 10}
+[22:42:41]    auditoría PASS: sagas={'COMPENSADA': 10} stock={'inicial': 100000, 'disponible': 100000, 'reservado': 0}
+[22:42:41]    orden de compensación 3->2->1 en logs: 10 de 10 sagas
+[22:42:41] -- E6 rate limiting en el gateway
+[22:42:41]    esperando 20s al inicio del próximo minuto para no cruzar la ventana
+[22:43:01]    fase mismo-cliente {'n': 40, 'limite': 30}
+[22:43:02]    fase otro-cliente 
+[22:43:02]    fase sin-token 
+[22:43:02]    reiniciando orquestador y bff para partir con el circuito cerrado (~30-90 s)
+[22:43:08]    orquestador UP (6s)
+[22:43:09]    bff UP (0s)
+[22:43:09] -- E3 transportista lento y caído (línea de tiempo)
+[22:43:09]    fase normal {'delayMs': 0, 'down': False}
+[22:43:29]    fase lento {'delayMs': 3000, 'down': False}
+[22:44:14]    fase caido {'delayMs': 0, 'down': True}
+[22:44:59]    fase recuperado {'delayMs': 0, 'down': False}
+[22:45:49]    auditoría PASS: sagas={'COMPLETADA': 64, 'COMPENSADA': 91} stock={'inicial': 100000, 'disponible': 99936, 'reservado': 64}
+[22:45:49]    reiniciando orquestador y bff para partir con el circuito cerrado (~30-90 s)
+[22:45:56]    orquestador UP (6s)
+[22:45:56]    bff UP (0s)
+[22:45:56] -- E5 pico de carga con transportista lento (bulkhead y daño colateral)
+[22:45:57]    fase preparacion 
+[22:45:57]    fase control-antes {'delayMs': 0}
+[22:46:00]    fase control-pico {'delayMs': 0, 'k': 40}
+[22:46:00]    fase control-despues {'delayMs': 0}
+[22:46:04]    fase lento-antes {'delayMs': 5000}
+[22:46:07]    fase lento-pico {'delayMs': 5000, 'k': 40}
+[22:46:09]    fase lento-despues {'delayMs': 5000}
+[22:46:21]    auditoría PASS: sagas={'COMPLETADA': 39, 'COMPENSADA': 42} stock={'inicial': 100000, 'disponible': 99961, 'reservado': 39}
+[22:46:21] == Perfil solo-timeout: recreando orquestador con ['experiments/compose.solo-timeout.yml']
+[22:46:21]    (recrear + arrancar Spring Boot suele tomar 30-90 s; sigue el detalle con: docker compose logs -f orquestador)
+[22:46:22]    contenedor recreado; reiniciando bff
+[22:46:29]    orquestador UP (6s)
+[22:46:29]    bff UP (0s)
+[22:46:29]    verificación: {'perfil': 'solo-timeout', 'agendar_read_timeout_ms': 2000, 'cb_umbral_fallo': 100.0, 'bulkhead_max': 10000.0}
+[22:46:29]    reiniciando orquestador y bff para partir con el circuito cerrado (~30-90 s)
+[22:46:36]    orquestador UP (6s)
+[22:46:38]    bff UP (2s)
+[22:46:38] -- E3 transportista lento y caído (línea de tiempo)
+[22:46:38]    fase normal {'delayMs': 0, 'down': False}
+[22:46:58]    fase lento {'delayMs': 3000, 'down': False}
+[22:47:43]    fase caido {'delayMs': 0, 'down': True}
+[22:48:28]    fase recuperado {'delayMs': 0, 'down': False}
+[22:49:19]    auditoría PASS: sagas={} stock={'inicial': 100000, 'disponible': 100000, 'reservado': 0}
+[22:49:19]    reiniciando orquestador y bff para partir con el circuito cerrado (~30-90 s)
+[22:49:24]    orquestador UP (4s)
+[22:49:26]    bff UP (2s)
+[22:49:26] -- E5 pico de carga con transportista lento (bulkhead y daño colateral)
+[22:49:26]    fase preparacion 
+[22:49:26]    fase control-antes {'delayMs': 0}
+[22:49:29]    fase control-pico {'delayMs': 0, 'k': 40}
+[22:49:29]    fase control-despues {'delayMs': 0}
+[22:49:33]    fase lento-antes {'delayMs': 5000}
+[22:49:36]    fase lento-pico {'delayMs': 5000, 'k': 40}
+[22:49:36]    fase lento-despues {'delayMs': 5000}
+[22:49:48]    auditoría PASS: sagas={} stock={'inicial': 100000, 'disponible': 100000, 'reservado': 0}
+[22:49:48] == Perfil sin-patrones: recreando orquestador con ['experiments/compose.sin-patrones.yml']
+[22:49:48]    (recrear + arrancar Spring Boot suele tomar 30-90 s; sigue el detalle con: docker compose logs -f orquestador)
+[22:49:49]    contenedor recreado; reiniciando bff
+[22:49:54]    orquestador UP (4s)
+[22:49:56]    bff UP (2s)
+[22:49:56]    verificación: {'perfil': 'sin-patrones', 'agendar_read_timeout_ms': 60000, 'cb_umbral_fallo': 50.0, 'bulkhead_max': 3.0}
+[22:49:56]    PROBLEMA: bulkhead máximo = 3.0, se esperaba 10000 (neutralizado)
+[22:49:56]    Se omite el perfil sin-patrones: su configuración no quedó aplicada.
+[22:49:56] Restaurando: chaos apagado y orquestador con la configuración del repo
